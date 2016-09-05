@@ -19,14 +19,14 @@ var getData = function(langFolder) {
 }
 
 var compileLanguageTask = function(language) {
-  var src = [path.join(config.root.src, config.tasks.html.src, language, '/**/*.{' + config.tasks.html.extensions + '}'), exclude];
+  var src = [path.join(config.root.src, config.tasks.html.src, '/**/*.{' + config.tasks.html.extensions + '}'), exclude];
   var dest = path.join(config.root.dest, config.tasks.html.dest, language);
 
   return gulp.src(src)
     .pipe(data(getData(language)))
     .on('error', handleErrors)
     .pipe(render({
-      path: [path.join(config.root.src, config.tasks.html.src, language)],
+      path: [path.join(config.root.src, config.tasks.html.src)],
       envOptions: {
         watch: false
       }
