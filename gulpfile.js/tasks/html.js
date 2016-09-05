@@ -14,7 +14,7 @@ var fs           = require('fs')
 var exclude = path.normalize('!**/{' + config.tasks.html.excludeFolders.join(',') + '}/**');
 
 var getData = function(langFolder) {
-  var dataPath = path.resolve(config.root.src, config.tasks.html.src, langFolder, config.tasks.html.dataFile)
+  var dataPath = path.resolve(config.root.src, config.tasks.html.src, 'content/' + langFolder + '.json')
   return JSON.parse(fs.readFileSync(dataPath, 'utf8'))
 }
 
