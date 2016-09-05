@@ -11,35 +11,38 @@ var path         = require('path')
 var render       = require('gulp-nunjucks-render')
 var fs           = require('fs')
 
-var exclude = path.normalize('!**/{' + config.tasks.html.excludeFolders.join(',') + '}/**')
+var exclude = path.normalize('!**/{' + config.tasks.html.excludeFolders.join(',') + '}/**');
 
-var paths = {
-  src: [path.join(config.root.src, config.tasks.html.src, '/**/*.{' + config.tasks.html.extensions + '}'), exclude],
-  dest: path.join(config.root.dest, config.tasks.html.dest),
-}
-
-var getData = function(file) {
-  var dataPath = path.resolve(config.root.src, config.tasks.html.src, config.tasks.html.dataFile)
+var getData = function(langFolder) {
+  var dataPath = path.resolve(config.root.src, config.tasks.html.src, langFolder, config.tasks.html.dataFile)
   return JSON.parse(fs.readFileSync(dataPath, 'utf8'))
 }
 
-var htmlTask = function() {
+var compileLanguageTask = function(language) {
+  var src = [path.join(config.root.src, config.tasks.html.src, language, '/**/*.{' + config.tasks.html.extensions + '}'), exclude];
+  var dest = path.join(config.root.dest, config.tasks.html.dest, language);
 
-  return gulp.src(paths.src)
-    .pipe(data(getData))
+  return gulp.src(src)
+    .pipe(data(getData(language)))
     .on('error', handleErrors)
     .pipe(render({
-      path: [path.join(config.root.src, config.tasks.html.src)],
+      path: [path.join(config.root.src, config.tasks.html.src, language)],
       envOptions: {
         watch: false
       }
     }))
     .on('error', handleErrors)
     .pipe(gulpif(global.production, htmlmin(config.tasks.html.htmlmin)))
-    .pipe(gulp.dest(paths.dest))
+    .pipe(gulp.dest(dest))
     .on('end', browserSync.reload)
-
 }
 
-gulp.task('html', htmlTask)
-module.exports = htmlTask
+var languages = ["en", "fr"];
+var htmlLangTask = function() {
+  languages.forEach(function(langString) {
+    compileLanguageTask(langString);
+  });
+}
+
+gulp.task('html', htmlLangTask)
+module.exports = htmlLangTask
