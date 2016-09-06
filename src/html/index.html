@@ -1,13 +1,5 @@
 {% extends 'layouts/application.html' %}
 {% block content %}
-  <h1>{{ home.title }}</h1>
-
-  {{ home.intro|lines|safe }}
-
-  <h2>Languages</h2>
-  <a href="../en">English</a>
-  <a href="../fr">French</a>
-
-  <h2>Pages</h2>
-  <a href="page.html">Page 1</a>
+  <h1>{{ language }}</h1>
+  {{ text|lines|safe }}
 {% endblock %}
