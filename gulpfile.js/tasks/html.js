@@ -29,7 +29,7 @@ var manageEnvironment = function(environment) {
 
 var compileLanguageTask = function(language) {
   var src = [path.join(config.root.src, config.tasks.html.src, '/**/*.{' + ["html", "json"] + '}'), exclude];
-  var dest = path.join(config.root.dest, config.tasks.html.dest, language);
+  var dest = language === 'en' ? path.join(config.root.dest, config.tasks.html.dest) : path.join(config.root.dest, config.tasks.html.dest, language);
 
   return gulp.src(src)
     .pipe(data(getData(language)))
