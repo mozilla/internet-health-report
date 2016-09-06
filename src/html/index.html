@@ -2,7 +2,7 @@
 {% block content %}
   <h1>{{ home.title }}</h1>
 
-  <p>{{ home.intro|safe }}</p>
+  {{ home.intro|lines|safe }}
 
   <h2>Languages</h2>
   <a href="../en">English</a>

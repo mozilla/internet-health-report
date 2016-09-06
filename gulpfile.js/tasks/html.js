@@ -18,6 +18,15 @@ var getData = function(langFolder) {
   return JSON.parse(fs.readFileSync(dataPath, 'utf8'))
 }
 
+var manageEnvironment = function(environment) {
+  environment.addFilter('lines', function(str) {
+    if (str === undefined) {
+      str = '';
+    }
+    return '<p>' + str.replace(/\r|\n|\r\n/g, '</p><p>') + '</p>';
+  });
+};
+
 var compileLanguageTask = function(language) {
   var src = [path.join(config.root.src, config.tasks.html.src, '/**/*.{' + config.tasks.html.extensions + '}'), exclude];
   var dest = path.join(config.root.dest, config.tasks.html.dest, language);
@@ -26,6 +35,7 @@ var compileLanguageTask = function(language) {
     .pipe(data(getData(language)))
     .on('error', handleErrors)
     .pipe(render({
+      manageEnv: manageEnvironment,
       path: [path.join(config.root.src, config.tasks.html.src)],
       envOptions: {
         watch: false
