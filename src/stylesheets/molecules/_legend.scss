@@ -1,0 +1,28 @@
+.legend {
+  max-width: rem(300);
+
+  &__title {
+    font-size: rem(14);
+  }
+
+  &__scale {
+    height: rem(10);
+    background: linear-gradient(to right, rgba($red, 0) 0%, $red 100%);
+  }
+
+  &__key {
+    @include outer-container();
+  }
+
+  &__value {
+    font-size: rem(12);
+
+    &:first-child {
+      float: left;
+    }
+
+    &:last-child {
+      float: right;
+    }
+  }
+}

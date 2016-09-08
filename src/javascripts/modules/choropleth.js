@@ -82,12 +82,12 @@ class Choropleth {
 
     d3.selectAll('.choropleth__item')
       .attr('fill-opacity', (d) => {
-        return this.getOpacity(d.penetration, dataRange);
+        return this.getOpacity(d[this.dataValueKey], dataRange);
       });
   }
 
   getDataRange() {
-    const dataArray = this.vizData.map((object) => object.penetration);
+    const dataArray = this.vizData.map((object) => object[this.dataValueKey]);
     const min = Math.min(...dataArray);
     const max = Math.max(...dataArray);
 
@@ -104,7 +104,7 @@ class Choropleth {
 }
 
 const setChoropleths = () => {
-  const penetrationChoropleth = new Choropleth('#map', 'data/world-shape-data.json', 'data/internet-penetration.csv', 'countries', 'penetration');
+  const penetrationChoropleth = new Choropleth('.map', 'data/world-shape-data.json', 'data/internet-penetration.csv', 'countries', 'penetration');
   penetrationChoropleth.init();
 };
 
