@@ -1,4 +1,10 @@
+.map {
+  width: 50%;
+}
+
 .choropleth {
+  display: block;
+
   &__item {
     fill: red;
   }

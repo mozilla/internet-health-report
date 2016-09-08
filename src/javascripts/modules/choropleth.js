@@ -1,19 +1,27 @@
+import $ from 'jquery';
 import * as d3 from 'd3';
 import topojson from 'topojson';
+window.$ = $;
 
 class Choropleth {
-  constructor(el, width, height, shapeUrl, dataUrl) {
+  constructor(el, shapeUrl, dataUrl, dataObjectsKey, dataValueKey) {
     this.el = el;
-    this.width = width;
-    this.height = 0.9599 * this.width;
+    this.width = $(this.el).width();
+    this.height = Math.ceil(0.4823 * this.width);
     this.shapeUrl = shapeUrl;
     this.dataUrl = dataUrl;
+    this.dataObjectsKey = dataObjectsKey;
+    this.dataValueKey = dataValueKey;
+    this.svg = undefined;
+    this.shapeData = undefined;
+    this.vizData = undefined;
   }
 
   init() {
     this.svg = d3.select(this.el).append('svg')
       .attr('width', this.width)
       .attr('height', this.height)
+      .attr('class', 'choropleth')
       .append('g');
 
     this.loadData();
@@ -34,22 +42,21 @@ class Choropleth {
     this.shapeData = shapeData;
     this.vizData = vizData;
 
-    const countries = topojson.feature(this.shapeData, this.shapeData.objects.countries).features;
-    const projection = d3.geoMercator()
-      .scale(120)
-      .translate([this.width / 2, this.height / 2]);
+    const countries = topojson.feature(this.shapeData, this.shapeData.objects[this.dataObjectsKey]);
+    const projection = d3.geoEquirectangular()
+      .fitSize([this.width, this.height], countries);
     const path = d3.geoPath().projection(projection);
 
-    countries.forEach((country) => {
+    countries.features.forEach((country) => {
       this.vizData.forEach((data) => {
         if (country.id === data.country) {
-          country['penetration'] = Number(data.penetration);
+          country[this.dataValueKey] = Number(data[this.dataValueKey]);
         }
       });
     });
 
     this.svg.selectAll('.choropleth__item')
-      .data(countries)
+      .data(countries.features)
       .enter().append('path')
       .attr('class', 'choropleth__item')
       .attr('id', (d) => d.id, true)
@@ -85,7 +92,7 @@ class Choropleth {
 }
 
 const setChoropleths = () => {
-  const penetrationChoropleth = new Choropleth('#map', 800, 450, 'data/world-shape-data.json', 'data/internet-penetration.csv');
+  const penetrationChoropleth = new Choropleth('#map', 'data/world-shape-data.json', 'data/internet-penetration.csv', 'countries', 'penetration');
   penetrationChoropleth.init();
 };
 
