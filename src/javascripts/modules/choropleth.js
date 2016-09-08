@@ -8,6 +8,7 @@ class Choropleth {
     this.el = el;
     this.width = $(this.el).width();
     this.height = Math.ceil(0.4823 * this.width);
+    this.mapWidth = this.width;
     this.shapeUrl = shapeUrl;
     this.dataUrl = dataUrl;
     this.dataObjectsKey = dataObjectsKey;
@@ -19,12 +20,23 @@ class Choropleth {
 
   init() {
     this.svg = d3.select(this.el).append('svg')
-      .attr('width', this.width)
+      .attr('width', '100%')
       .attr('height', this.height)
       .attr('class', 'choropleth')
       .append('g');
 
     this.loadData();
+    d3.select(window).on('resize', this.resizeChoropleth.bind(this));
+  }
+
+  resizeChoropleth() {
+    window.requestAnimationFrame(() => {
+      this.width = $(this.el).width();
+      this.height = Math.ceil(0.4823 * this.width);
+
+      d3.select('g').attr('transform', 'scale(' + this.width / this.mapWidth + ')');
+      d3.select('.choropleth').attr('height', this.height);
+    });
   }
 
   loadData() {
