@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import * as d3 from 'd3';
+import { TweenLite, CSSPlugin } from 'gsap';
 import topojson from 'topojson';
 window.$ = $;
 
@@ -31,10 +32,11 @@ class Choropleth {
 
   resizeChoropleth() {
     window.requestAnimationFrame(() => {
+      const chart = $(this.el).find('g');
       this.width = $(this.el).width();
       this.height = Math.ceil(0.4823 * this.width);
 
-      d3.select('g').attr('transform', 'scale(' + this.width / this.mapWidth + ')');
+      TweenLite.set(chart, { scale: this.width / this.mapWidth });
       d3.select('.choropleth').attr('height', this.height);
     });
   }
