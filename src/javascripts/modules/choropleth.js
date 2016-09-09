@@ -1,3 +1,4 @@
+import * as constants from './constants';
 import $ from 'jquery';
 import * as d3 from 'd3';
 import { TweenLite, CSSPlugin } from 'gsap';
@@ -106,7 +107,7 @@ class Choropleth {
 }
 
 const setChoropleths = () => {
-  const penetrationChoropleth = new Choropleth('.map', 'data/world-shape-data.json', 'data/internet-penetration.csv', 'countries', 'penetration');
+  const penetrationChoropleth = new Choropleth('.map', `${constants.homeURL}/data/world-shape-data.json`, `${constants.homeURL}/data/internet-penetration.csv`, 'countries', 'penetration');
   penetrationChoropleth.init();
 };
 

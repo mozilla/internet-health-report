@@ -14,7 +14,7 @@ var fs           = require('fs');
 var exclude      = path.normalize('!**/{' + config.tasks.html.excludeFolders.join(',') + '}/**');
 
 var getData = function(langFolder) {
-  var dataPath = path.resolve(config.root.src, config.tasks.html.src, 'content/' + langFolder + '.yml')
+  var dataPath = path.resolve(config.root.src, config.tasks.html.src, 'locales/' + langFolder + '.yml')
   return yaml.safeLoad(fs.readFileSync(dataPath, 'utf8'))
 }
 
@@ -29,7 +29,7 @@ var manageEnvironment = function(environment) {
 
 var compileLanguageTask = function(language) {
   var src = [path.join(config.root.src, config.tasks.html.src, '/**/*.{' + ["html", "json"] + '}'), exclude];
-  var dest = language === 'en' ? path.join(config.root.dest, config.tasks.html.dest) : path.join(config.root.dest, config.tasks.html.dest, language);
+  var dest = language === 'en-us' ? path.join(config.root.dest, config.tasks.html.dest) : path.join(config.root.dest, config.tasks.html.dest, language);
 
   return gulp.src(src)
     .pipe(data(getData(language)))
@@ -47,7 +47,7 @@ var compileLanguageTask = function(language) {
     .on('end', browserSync.reload)
 }
 
-var languages = ["en", "fr"];
+var languages = ["en-us", "fr"];
 var htmlLangTask = function() {
   languages.forEach(function(langString) {
     compileLanguageTask(langString);

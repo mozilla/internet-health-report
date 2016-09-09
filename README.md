@@ -1,4 +1,4 @@
-# ![Gulp Starter](extras/demo/src/images/gulp-starter-logo.png)
+# Gulp Starter
 
 [![Build Status](https://travis-ci.org/vigetlabs/gulp-starter.svg?branch=static-server)](https://travis-ci.org/vigetlabs/gulp-starter)
 
@@ -25,7 +25,7 @@ Features | Tools Used
 **Deployment** | Quickly deploy `public` folder to gh-pages with [`gulp-gh-pages`](https://github.com/shinnn/gulp-gh-pages)
 
 ## Usage
-Make sure Node installed. I recommend using [NVM](https://github.com/creationix/nvm) to manage versions. 
+Make sure Node installed. I recommend using [NVM](https://github.com/creationix/nvm) to manage versions.
 
 This has been tested on Node `0.12.x` - `5.9.0`, and should work on newer versions as well. [File an issue](https://github.com/vigetlabs/gulp-starter/issues) if it doesn't!
 
