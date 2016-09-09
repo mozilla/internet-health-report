@@ -1,5 +1,9 @@
 .choropleth {
-  display: block;
+  position: relative;
+
+  &__svg {
+    display: block;
+  }
 
   &__item {
     fill: $red;

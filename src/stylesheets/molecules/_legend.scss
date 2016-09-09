@@ -1,5 +1,11 @@
 .legend {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  padding: 1em 1.5em;
   max-width: rem(300);
+  background-color: rgba($white, 0.98);
+  border: rem(1) solid;
 
   &__title {
     font-size: rem(14);
@@ -7,6 +13,7 @@
 
   &__scale {
     height: rem(10);
+    margin: 0.2em 0;
     background: linear-gradient(to right, rgba($red, 0) 0%, $red 100%);
   }
 

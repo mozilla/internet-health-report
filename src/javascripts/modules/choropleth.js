@@ -6,15 +6,15 @@ import topojson from 'topojson';
 window.$ = $;
 
 class Choropleth {
-  constructor(el, shapeUrl, dataUrl, dataObjectsKey, dataValueKey) {
+  constructor(el, shapeUrl, dataUrl, dataValueKey, title) {
     this.el = el;
     this.width = $(this.el).width();
     this.height = Math.ceil(0.4823 * this.width);
     this.mapWidth = this.width;
     this.shapeUrl = shapeUrl;
     this.dataUrl = dataUrl;
-    this.dataObjectsKey = dataObjectsKey;
     this.dataValueKey = dataValueKey;
+    this.title = title;
     this.svg = undefined;
     this.shapeData = undefined;
     this.vizData = undefined;
@@ -24,7 +24,7 @@ class Choropleth {
     this.svg = d3.select(this.el).append('svg')
       .attr('width', '100%')
       .attr('height', this.height)
-      .attr('class', 'choropleth')
+      .attr('class', 'choropleth__svg')
       .append('g');
 
     this.loadData();
@@ -38,7 +38,7 @@ class Choropleth {
       this.height = Math.ceil(0.4823 * this.width);
 
       TweenLite.set(chart, { scale: this.width / this.mapWidth });
-      d3.select('.choropleth').attr('height', this.height);
+      d3.select('.choropleth__svg').attr('height', this.height);
     });
   }
 
@@ -57,7 +57,7 @@ class Choropleth {
     this.shapeData = shapeData;
     this.vizData = vizData;
 
-    const countries = topojson.feature(this.shapeData, this.shapeData.objects[this.dataObjectsKey]);
+    const countries = topojson.feature(this.shapeData, this.shapeData.objects['countries']);
     const projection = d3.geoEquirectangular()
       .fitSize([this.width, this.height], countries);
     const path = d3.geoPath().projection(projection);
@@ -78,6 +78,23 @@ class Choropleth {
       .attr('d', path);
 
     this.setData();
+    this.drawLegend();
+  }
+
+  drawLegend() {
+    const dataRange = this.getDataRange();
+    const min = dataRange[0];
+    const max = dataRange[1];
+    const legendString = '<div class="legend">' +
+      '<p class="legend__title">' + this.title + '</p>' +
+      '<div class="legend__scale"></div>' +
+      '<div class="legend__key">' +
+        '<p class="legend__value">' + Math.floor((min / 1) * 100) + '%</p>' +
+        '<p class="legend__value">' + Math.floor((max / 1) * 100) + '%</p>' +
+      '</div>' +
+    '</div>';
+
+    $(this.el).append(legendString);
   }
 
   setData() {
@@ -107,7 +124,7 @@ class Choropleth {
 }
 
 const setChoropleths = () => {
-  const penetrationChoropleth = new Choropleth('.map', `${constants.homeURL}/data/world-shape-data.json`, `${constants.homeURL}/data/internet-penetration.csv`, 'countries', 'penetration');
+  const penetrationChoropleth = new Choropleth('.map', `${constants.homeURL}/data/world-shape-data.json`, `${constants.homeURL}/data/internet-penetration.csv`, 'penetration', 'Internet penetration (% 2016)');
   penetrationChoropleth.init();
 };
 

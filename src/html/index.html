@@ -1,14 +1,5 @@
 {% extends 'layouts/application.html' %}
 {% block content %}
   <h1>{{ title }}</h1>
-  <div class="map">
-    <div class="legend">
-      <p class="legend__title">Internet penetration (% 2016)</p>
-      <div class="legend__scale"></div>
-      <div class="legend__key">
-        <p class="legend__value">0%</p>
-        <p class="legend__value">100%</p>
-      </div>
-    </div>
-  </div>
+  <div class="map choropleth"></div>
 {% endblock %}
