@@ -9,13 +9,12 @@ var handleErrors = require('../lib/handleErrors');
 var htmlmin      = require('gulp-htmlmin');
 var path         = require('path');
 var render       = require('gulp-nunjucks-render');
-var yaml         = require('js-yaml');
-var fs           = require('fs');
+var properties   = require('properties-parser');
 var exclude      = path.normalize('!**/{' + config.tasks.html.excludeFolders.join(',') + '}/**');
 
 var getData = function(langFolder) {
-  var dataPath = path.resolve(config.root.src, config.tasks.html.src, 'locales/' + langFolder + '.yml')
-  return yaml.safeLoad(fs.readFileSync(dataPath, 'utf8'))
+  var dataPath = path.resolve(config.root.src, config.tasks.html.src, 'locales/' + langFolder + '/content.properties')
+  return properties.read(dataPath);
 }
 
 var manageEnvironment = function(environment) {

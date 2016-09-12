@@ -53,7 +53,7 @@
       "htmlmin": {
         "collapseWhitespace": true
       },
-      "extensions": ["html", "json", "yml"],
+      "extensions": ["html", "json", "properties"],
       "excludeFolders": ["layouts", "shared", "macros", "content"]
     },
 
