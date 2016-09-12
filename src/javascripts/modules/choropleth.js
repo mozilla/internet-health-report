@@ -124,7 +124,7 @@ class Choropleth {
 }
 
 const setChoropleths = () => {
-  const penetrationChoropleth = new Choropleth('.map', `${constants.homeURL}/data/world-shape-data.json`, `${constants.homeURL}/data/internet-penetration.csv`, 'penetration', 'Internet penetration (% 2016)');
+  const penetrationChoropleth = new Choropleth('#map', `${constants.homeURL}/data/world-shape-data.json`, `${constants.homeURL}/data/internet-penetration.csv`, 'penetration', 'Internet penetration (% 2016)');
   penetrationChoropleth.init();
 };
 
