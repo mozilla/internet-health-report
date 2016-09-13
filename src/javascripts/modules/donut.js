@@ -17,9 +17,7 @@ class Donut {
     this.el = el;
     this.data = data;
     this.width = $(this.el).width();
-    this.height = this.width;
-    this.svg = null;
-    this.radius = Math.min(this.width, this.height) / 2;
+    this.radius = Math.min(this.width) * 0.5;
     this.color = d3.scaleOrdinal()
       .range(constants.colorRange);
     this.arc = d3.arc()
@@ -28,45 +26,67 @@ class Donut {
     this.pie = d3.pie()
       .value(d => d[dataKey])
       .sort(null);
-  }
-
-  init() {
-    this.render();
+    this.classes = ['donut__svg', 'donut__g', 'donut__arc', 'donut__text'];
   }
 
   render() {
-    this.svg = d3.select(this.el)
+    const donut = d3.select(this.el)
       .append('svg')
-      .attr('width', this.width)
-      .attr('height', this.height)
-      .attr('class', 'donut__svg')
+        .attr('width', this.width)
+        .attr('height', this.width)
+        .attr('class', this.classes[0])
       .append('g')
-      .attr('transform', `translate(${this.width / 2}, ${this.height / 2})`);
+        .attr('class', this.classes[1])
+        .attr('transform', `translate(${this.radius}, ${this.radius})`);
 
-    const g = this.svg.selectAll('.donut__section')
+    const g = donut.selectAll('g')
       .data(this.pie(this.data))
-      .enter().append('g')
-        .attr('class', 'donut__section');
+      .enter().append('g');
 
     g.append('path')
-      .attr('class', 'donut__arc')
+      .attr('class', this.classes[2])
       .attr('d', this.arc)
       .attr('fill', (d, i) => this.color(d.data.label));
 
     g.append('text')
+      .attr('class', this.classes[3])
       .attr('transform', d => `translate(${this.arc.centroid(d)})`)
       .attr('dy', '.5em')
-      .attr('dx', '-.5em')
+      .attr('dx', '-.8em')
       .style('font-size', '12px')
       .style('fill', '#fff')
-      .text(d => d.data.count);
+      .text(d => `${d.data.count}%`);
 
+    d3.select(window).on('resize', this.resize.bind(this));
+  }
+
+  resize() {
+    const donut = d3.select(this.el);
+
+    this.width = $(this.el).width();
+    this.radius = Math.min(this.width) / 2;
+    this.arc = d3.arc()
+      .innerRadius((this.radius/10) * 7)
+      .outerRadius(this.radius);
+
+    donut.select(`.${this.classes[0]}`)
+      .attr('width', this.width)
+      .attr('height', this.width);
+
+    donut.select(`.${this.classes[1]}`)
+      .attr('transform', `translate(${this.radius}, ${this.radius})`);
+
+    donut.selectAll(`.${this.classes[2]}`)
+      .attr('d', this.arc);
+
+    donut.selectAll(`.${this.classes[3]}`)
+      .attr('transform', d => `translate(${this.arc.centroid(d)})`);
   }
 }
 
 const setDonuts = () => {
   const testDonut = new Donut('#donut', donutData, 'count');
-  testDonut.init();
+  testDonut.render();
 };
 
 export { setDonuts };
