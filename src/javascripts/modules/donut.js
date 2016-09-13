@@ -57,7 +57,7 @@ class Donut {
       .style('fill', '#fff')
       .text(d => `${d.data.count}%`);
 
-    d3.select(window).on('resize', this.resize.bind(this));
+    $(window).on('resize', this.resize.bind(this));
   }
 
   resize() {
@@ -85,8 +85,7 @@ class Donut {
 }
 
 const setDonuts = () => {
-  const testDonut = new Donut('#donut', donutData, 'count');
-  testDonut.render();
+  new Donut('#donut', donutData, 'count').render();
 };
 
 export { setDonuts };

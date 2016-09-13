@@ -28,7 +28,7 @@ class Choropleth {
       .append('g');
 
     this.loadData();
-    d3.select(window).on('resize', this.resizeChoropleth.bind(this));
+    $(window).on('resize', this.resizeChoropleth.bind(this));
   }
 
   resizeChoropleth() {
@@ -60,7 +60,8 @@ class Choropleth {
     const countries = topojson.feature(this.shapeData, this.shapeData.objects['countries']);
     const projection = d3.geoEquirectangular()
       .fitSize([this.width, this.height], countries);
-    const path = d3.geoPath().projection(projection);
+    const path = d3.geoPath()
+      .projection(projection);
 
     countries.features.forEach((country) => {
       this.vizData.forEach((data) => {
@@ -124,8 +125,7 @@ class Choropleth {
 }
 
 const setChoropleths = () => {
-  const penetrationChoropleth = new Choropleth('#map', `${constants.homeURL}/data/world-shape-data.json`, `${constants.homeURL}/data/internet-penetration.csv`, 'penetration', 'Internet penetration (% 2016)');
-  penetrationChoropleth.init();
+  new Choropleth('#map', `${constants.homeURL}/data/world-shape-data.json`, `${constants.homeURL}/data/internet-penetration.csv`, 'penetration', 'Internet penetration (% 2016)').init();
 };
 
 export { setChoropleths };
