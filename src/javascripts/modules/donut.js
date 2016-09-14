@@ -57,7 +57,6 @@ class Donut {
       .attr('dy', '.5em')
       .attr('dx', '-.8em')
       .style('font-size', '12px')
-      .style('fill', '#fff')
       .text(d => `${d.data.count}%`);
 
     this.renderLegend();
