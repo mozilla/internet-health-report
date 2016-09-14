@@ -6,12 +6,12 @@ import topojson from 'topojson';
 window.$ = $;
 
 class Choropleth {
-  constructor(el, shapeUrl, dataUrl, dataValueKey, title) {
+  constructor(el, dataUrl, dataValueKey, title) {
     this.el = el;
     this.width = $(this.el).width();
     this.height = Math.ceil(0.4823 * this.width);
     this.mapWidth = this.width;
-    this.shapeUrl = shapeUrl;
+    this.shapeUrl = `${constants.homeURL}/data/world-shape-data.json`;
     this.dataUrl = dataUrl;
     this.dataValueKey = dataValueKey;
     this.title = title;
@@ -20,7 +20,7 @@ class Choropleth {
     this.vizData = undefined;
   }
 
-  init() {
+  render() {
     this.svg = d3.select(this.el).append('svg')
       .attr('width', '100%')
       .attr('height', this.height)
@@ -124,8 +124,18 @@ class Choropleth {
   }
 }
 
-const setChoropleths = () => {
-  new Choropleth('#map', `${constants.homeURL}/data/world-shape-data.json`, `${constants.homeURL}/data/internet-penetration.csv`, 'penetration', 'Internet penetration (% 2016)').init();
+const loadChoropleths = () => {
+  const $choropleth = $('.js-choropleth');
+
+  $choropleth.each((index) => {
+    const $this = $choropleth.eq(index);
+    const id = $this.attr('id');
+    const url = $this.data('url');
+    const value = $this.data('value');
+    const title = $this.data('title');
+
+    new Choropleth(`#${id}`, url, value, title).render();
+  });
 };
 
-export { setChoropleths };
+export { loadChoropleths };

@@ -115,8 +115,16 @@ class StackedArea {
   }
 };
 
-const setArea = () => {
-  new StackedArea('#area', `${constants.homeURL}/data/stacked-area.tsv`).render();
+const loadStackedAreaCharts = () => {
+  const $stackedArea = $('.js-stacked-area');
+
+  $stackedArea.each((index) => {
+    const $this = $stackedArea.eq(index);
+    const id = $this.attr('id');
+    const url = $this.data('url');
+
+    new StackedArea(`#${id}`, url).render();
+  });
 };
 
-export { setArea };
+export { loadStackedAreaCharts };

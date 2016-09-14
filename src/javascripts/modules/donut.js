@@ -128,8 +128,17 @@ class Donut {
   }
 }
 
-const setDonuts = () => {
-  new Donut('#donut', donutData, 'count').render();
+const loadDonuts = () => {
+  const $donuts = $('.js-donut');
+
+  $donuts.each((index) => {
+    const $this = $donuts.eq(index);
+    const id = $this.attr('id');
+    const url = $this.data('url');
+    const value = $this.data('value');
+
+    new Donut(`#${id}`, donutData, value).render();
+  });
 };
 
-export { setDonuts };
+export { loadDonuts };

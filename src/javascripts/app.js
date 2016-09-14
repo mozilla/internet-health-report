@@ -1,8 +1,8 @@
-import { setChoropleths } from './modules/choropleth';
-setChoropleths();
+import { loadChoropleths } from './modules/choropleth';
+loadChoropleths();
 
-import { setDonuts } from './modules/donut';
-setDonuts();
+import { loadDonuts } from './modules/donut';
+loadDonuts();
 
-import { setArea } from './modules/stackedArea';
-setArea();
+import { loadStackedAreaCharts } from './modules/stackedArea';
+loadStackedAreaCharts();
