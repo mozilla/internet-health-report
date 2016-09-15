@@ -1,14 +1,14 @@
-{% from 'macros/helpers.html' import sprite %}
-{% set homeURL = 'http://localhost:3000' %}
+
+
 <!doctype html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title>{% block title %}{{ title }}{% endblock %}</title>
-    <link rel="stylesheet" href="{{ homeURL }}/stylesheets/app.css">
+    <title>Language: English</title>
+    <link rel="stylesheet" href="http://localhost:3000/stylesheets/app.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% include "shared/app-icons.html" %}
-    {% block head %}{% endblock %}
+    
+    
 
     <script>
       if (localStorage.getItem('languageSet') === null) {
@@ -18,8 +18,8 @@
           var url = window.location.href;
 
           if (url.indexOf('/' + language + '/') === -1) {
-            var targetDirectory = url.replace('{{ homeURL }}', '');
-            var targetURL = '{{ homeURL }}/' + language + targetDirectory;
+            var targetDirectory = url.replace('http://localhost:3000', '');
+            var targetURL = 'http://localhost:3000/' + language + targetDirectory;
 
             if (url != targetURL) {
               localStorage.setItem('languageSet', true);
@@ -33,7 +33,9 @@
     </script>
   </head>
   <body>
-    {% block content %}{% endblock %}
-    {% block javascript %}<script src="{{ homeURL }}/javascripts/app.js"></script>{% endblock %}
+    
+  <div id="stacked1" class="stacked-area js-stacked-area" data-url="http://localhost:3000/data/stacked-area.tsv"></div>
+
+    <script src="http://localhost:3000/javascripts/app.js"></script>
   </body>
 </html>

@@ -5,10 +5,32 @@
   <head>
     <meta charset="utf-8">
     <title>Language: English</title>
-    <link rel="stylesheet" href="../stylesheets/app.css">
+    <link rel="stylesheet" href="http://localhost:3000/stylesheets/app.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     
+
+    <script>
+      if (localStorage.getItem('languageSet') === null) {
+        var language = window.navigator.language || window.navigator.userLanguage;
+
+        if (language != 'en-US' && language != 'en') {
+          var url = window.location.href;
+
+          if (url.indexOf('/' + language + '/') === -1) {
+            var targetDirectory = url.replace('http://localhost:3000', '');
+            var targetURL = 'http://localhost:3000/' + language + targetDirectory;
+
+            if (url != targetURL) {
+              localStorage.setItem('languageSet', true);
+              window.location.replace(targetURL);
+            }
+          } else {
+            localStorage.setItem('languageSet', true);
+          }
+        }
+      }
+    </script>
   </head>
   <body>
     
@@ -16,6 +38,6 @@
   <div id="choropleth" class="choropleth js-choropleth" data-url="http://localhost:3000/data/internet-penetration.csv" data-value="penetration" data-title="Internet penetration (% 2016)"></div>
   <div id="donut" class="donut js-donut" data-url="" data-value="count"></div>
 
-    <script src="../javascripts/app.js"></script>
+    <script src="http://localhost:3000/javascripts/app.js"></script>
   </body>
 </html>
