@@ -1,8 +1,11 @@
-import { loadChoropleths } from './modules/choropleth';
+import { loadChoropleths } from './modules/visualizations/Choropleth';
 loadChoropleths();
 
-import { loadDonuts } from './modules/donut';
+import { loadDonuts } from './modules/visualizations/Donut';
 loadDonuts();
 
-import { loadStackedAreaCharts } from './modules/stackedArea';
+import { loadStackedAreaCharts } from './modules/visualizations/StackedArea';
 loadStackedAreaCharts();
+
+import { loadAreaCharts } from './modules/visualizations/Area';
+loadAreaCharts();

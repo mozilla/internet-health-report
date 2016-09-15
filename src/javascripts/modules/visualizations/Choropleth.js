@@ -1,4 +1,4 @@
-import * as constants from './constants';
+import * as constants from '../constants';
 import $ from 'jquery';
 import * as d3 from 'd3';
 import { TweenLite, CSSPlugin } from 'gsap';
