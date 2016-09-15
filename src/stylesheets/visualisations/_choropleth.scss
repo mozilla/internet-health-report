@@ -8,5 +8,7 @@
 
   &__item {
     fill: $blue;
+    stroke-width: 0.07em;
+    stroke: rgba($white, 0.5);
   }
 }
