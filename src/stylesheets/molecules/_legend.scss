@@ -1,35 +1,25 @@
 .legend {
   position: absolute;
-  bottom: 1em;
+  bottom: 2em;
   left: 1em;
-  padding: 1em 1.5em;
   max-width: rem(300);
   background-color: rgba($white, 0.98);
-  border: rem(1) solid;
 
-  &__title {
-    font-size: rem(14);
+  &__scale,
+  &__value {
+    display: inline-block;
+    vertical-align: middle;
   }
 
   &__scale {
+    width: rem(80);
     height: rem(10);
-    margin: 0.2em 0;
-    background: linear-gradient(to right, rgba($blue, 0) 0%, $blue 100%);
-  }
-
-  &__key {
-    @include outer-container();
+    margin: 0 0.25em;
+    border-radius: rem(10);
+    background: linear-gradient(to right, rgba($blue, 0.1) 0%, $blue 100%);
   }
 
   &__value {
     font-size: rem(12);
-
-    &:first-child {
-      float: left;
-    }
-
-    &:last-child {
-      float: right;
-    }
   }
 }

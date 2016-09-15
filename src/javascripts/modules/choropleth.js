@@ -8,8 +8,9 @@ window.$ = $;
 class Choropleth {
   constructor(el, dataUrl, dataValueKey, title) {
     this.el = el;
+    this.aspectRatio = 0.6663;
     this.width = $(this.el).width();
-    this.height = Math.ceil(0.4823 * this.width);
+    this.height = Math.ceil(this.aspectRatio * this.width);
     this.mapWidth = this.width;
     this.shapeUrl = `${constants.homeURL}/data/world-shape-data.json`;
     this.dataUrl = dataUrl;
@@ -35,7 +36,7 @@ class Choropleth {
     window.requestAnimationFrame(() => {
       const chart = $(this.el).find('g');
       this.width = $(this.el).width();
-      this.height = Math.ceil(0.4823 * this.width);
+      this.height = Math.ceil(this.aspectRatio * this.width);
 
       TweenLite.set(chart, { scale: this.width / this.mapWidth });
       d3.select('.choropleth__svg').attr('height', this.height);
@@ -58,7 +59,7 @@ class Choropleth {
     this.vizData = vizData;
 
     const countries = topojson.feature(this.shapeData, this.shapeData.objects['countries']);
-    const projection = d3.geoEquirectangular()
+    const projection = d3.geoMercator()
       .fitSize([this.width, this.height], countries);
     const path = d3.geoPath()
       .projection(projection);
@@ -87,12 +88,9 @@ class Choropleth {
     const min = dataRange[0];
     const max = dataRange[1];
     const legendString = '<div class="legend">' +
-      '<p class="legend__title">' + this.title + '</p>' +
+      '<p class="legend__value">' + Math.floor((min / 1) * 100) + '%</p>' +
       '<div class="legend__scale"></div>' +
-      '<div class="legend__key">' +
-        '<p class="legend__value">' + Math.floor((min / 1) * 100) + '%</p>' +
-        '<p class="legend__value">' + Math.floor((max / 1) * 100) + '%</p>' +
-      '</div>' +
+      '<p class="legend__value">' + Math.floor((max / 1) * 100) + '%</p>' +
     '</div>';
 
     $(this.el).append(legendString);

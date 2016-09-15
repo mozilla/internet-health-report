@@ -1,5 +1,6 @@
 .choropleth {
   position: relative;
+  max-width: rem(860);
 
   &__svg {
     display: block;
