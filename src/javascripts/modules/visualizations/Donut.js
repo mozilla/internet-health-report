@@ -5,25 +5,15 @@ import { TweenLite, CSSPlugin } from 'gsap';
 import topojson from 'topojson';
 window.$ = $;
 
-const donutData = [
-  { label: 'Abulia', count: 10 },
-  { label: 'Betelgeuse', count: 20 },
-  { label: 'Cantaloupe', count: 30 },
-  { label: 'Dijkstra', count: 40 }
-];
-
 class Donut {
-  constructor(el, data, dataKey) {
+  constructor(el, dataUrl) {
     this.el = el;
-    this.data = data;
+    this.dataUrl = dataUrl;
     this.width = $(this.el).width();
     this.radius = Math.min(this.width) * 0.5;
     this.arc = d3.arc()
       .innerRadius((this.radius/10) * 7)
       .outerRadius(this.radius);
-    this.pie = d3.pie()
-      .value(d => d[dataKey])
-      .sort(null);
     this.legendRectSize = 18;
     this.legendSpacing = 4;
     this.legendHeight = this.legendRectSize + this.legendSpacing;
@@ -33,35 +23,75 @@ class Donut {
   }
 
   render() {
-    const donut = d3.select(this.el)
-      .append('svg')
-        .attr('width', this.width)
-        .attr('height', this.width)
-        .attr('class', this.classes[0])
-      .append('g')
-        .attr('class', this.classes[1])
-        .attr('transform', `translate(${this.radius}, ${this.radius})`);
+    d3.csv(this.dataUrl, this.type.bind(this), (error, data) => {
+      if (error) throw error;
 
-    const g = donut.selectAll('g')
-      .data(this.pie(this.data))
-      .enter().append('g');
+      this.data = data;
+      this.setDataKeys();
 
-    g.append('path')
-      .attr('class', this.classes[2])
-      .attr('d', this.arc)
-      .attr('fill', (d, i) => this.color(d.data.label));
+      this.pie = d3.pie()
+        .value(d => d[this.dataKey])
+        .sort(null);
 
-    g.append('text')
-      .attr('class', this.classes[3])
-      .attr('transform', d => `translate(${this.arc.centroid(d)})`)
-      .attr('dy', '.5em')
-      .attr('dx', '-.8em')
-      .style('font-size', '12px')
-      .text(d => `${d.data.count}%`);
+      this.isSingleValue = this.data.length === 1 ? true : false;
+      if (this.isSingleValue) {
+        const value = this.data[0][this.dataKey];
+        const newData = {};
 
-    this.renderLegend();
+        newData[this.dataTitle] = 'other';
+        newData[this.dataKey] = 100 - value;
+        this.data.push(newData);
+      }
 
-    $(window).on('resize', this.resize.bind(this));
+      const donut = d3.select(this.el)
+        .append('svg')
+          .attr('width', this.width)
+          .attr('height', this.width)
+          .attr('class', this.classes[0])
+        .append('g')
+          .attr('class', this.classes[1])
+          .attr('transform', `translate(${this.radius}, ${this.radius})`);
+
+      const g = donut.selectAll('g')
+        .data(this.pie(this.data))
+        .enter().append('g');
+
+      g.append('path')
+        .attr('class', this.classes[2])
+        .attr('d', this.arc)
+        .attr('fill', (d, i) => this.color(d.data[this.dataTitle]));
+
+      if (!this.isSingleValue) {
+        g.append('text')
+          .attr('class', this.classes[3])
+          .attr('transform', d => `translate(${this.arc.centroid(d)})`)
+          .attr('dy', '.5em')
+          .attr('dx', '-.8em')
+          .style('font-size', '12px')
+          .style('fill', '#fff')
+          .text(d => `${d.data[this.dataKey]}`);
+
+        this.renderLegend();
+      }
+
+      $(window).on('resize', this.resize.bind(this));
+    });
+  }
+
+  setDataKeys() {
+    this.dataKeys = [];
+
+    for (let prop in this.data[0]) {
+      this.dataKeys.push(prop);
+    }
+
+    this.dataTitle = this.dataKeys[0];
+    this.dataKey = this.dataKeys[1];
+  }
+
+  type(d) {
+    d[this.dataKey] = +d[this.dataKey];
+    return d;
   }
 
   renderLegend() {
@@ -100,7 +130,7 @@ class Donut {
     const donut = d3.select(this.el);
 
     this.width = $(this.el).width();
-    this.height = this.width + (this.color.domain().length * this.legendHeight);
+    this.height = this.isSingleValue ? this.width : this.width + (this.color.domain().length * this.legendHeight);
     this.radius = Math.min(this.width) / 2;
     this.arc = d3.arc()
       .innerRadius((this.radius/10) * 7)
@@ -135,9 +165,8 @@ const loadDonuts = () => {
     const $this = $donuts.eq(index);
     const id = $this.attr('id');
     const url = $this.data('url');
-    const value = $this.data('value');
 
-    new Donut(`#${id}`, donutData, value).render();
+    new Donut(`#${id}`, url).render();
   });
 };
 
