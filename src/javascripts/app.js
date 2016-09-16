@@ -9,3 +9,6 @@ loadStackedAreaCharts();
 
 import { loadAreaCharts } from './modules/visualizations/Area';
 loadAreaCharts();
+
+import { loadLineCharts } from './modules/visualizations/Line';
+loadLineCharts();
