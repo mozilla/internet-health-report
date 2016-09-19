@@ -9,11 +9,11 @@ class Line {
     this.dataUrl = dataUrl;
     this.parseDate = d3.timeParse('%d-%b-%y');
     this.margin = {top: 20, right: 20, bottom: 30, left: 40};
-    this.classes = ['line__svg', 'line__layer'];
+    this.classes = ['line__svg', 'line__data', 'x-axis', 'y-axis'];
     this.svg = d3.select(this.el)
       .append('svg')
         .attr('class', this.classes[0]);
-    this.g = this.svg.append('g')
+    this.svgData = this.svg.append('g')
       .attr('transform', `translate(${this.margin.left},${this.margin.top})`);
   }
 
@@ -22,50 +22,21 @@ class Line {
     this.height = constants.getWindowWidth() < constants.breakpointM ? 400 : Math.ceil(this.width * 0.52);
     this.innerWidth = this.width - this.margin.left - this.margin.right;
     this.innerHeight = this.height - this.margin.top - this.margin.bottom;
+
     this.x = d3.scaleTime()
       .range([0, this.innerWidth]);
+
     this.y = d3.scaleLinear()
       .range([this.innerHeight, 0]);
+
     this.line = d3.line()
       .curve(d3.curveBasis)
       .x((d) => this.x(d.date))
       .y((d) => this.y(d.close));
+
     this.svg
       .attr('width', this.width)
       .attr('height', this.height);
-  }
-
-  render() {
-    this.setSizes();
-
-    d3.tsv(this.dataUrl, this.type.bind(this), (error, data) => {
-      if (error) throw error;
-
-      this.data = data;
-
-      this.x.domain(d3.extent(this.data, (d) => d.date));
-      this.y.domain([0, d3.max(this.data, (d) => d.close)]);
-
-      this.g.append('path')
-        .datum(this.data)
-        .attr('class', this.classes[1])
-        .attr('d', this.line);
-
-      this.g.append('g')
-        .attr('class', 'axis axis--x')
-        .attr('transform', `translate(0,${this.innerHeight})`)
-        .call(d3.axisBottom(this.x));
-
-      this.g.append('g')
-        .attr('class', 'axis axis--y')
-        .call(d3.axisLeft(this.y));
-    });
-
-    $(window).on('resize', this.resize.bind(this));
-  }
-
-  resize() {
-    this.setSizes();
 
     this.x.domain(d3.extent(this.data, (d) => d.date));
     this.y.domain([0, d3.max(this.data, (d) => d.close)]);
@@ -73,12 +44,40 @@ class Line {
     this.svg.select(`.${this.classes[1]}`)
       .attr('d', this.line);
 
-    this.svg.select('.axis--x')
+    this.svg.select(`.${this.classes[2]}`)
       .attr('transform', `translate(0,${this.innerHeight})`)
       .call(d3.axisBottom(this.x));
 
-    this.svg.select('.axis--y')
+    this.svg.select(`.${this.classes[3]}`)
       .call(d3.axisLeft(this.y));
+  }
+
+  render() {
+    d3.tsv(this.dataUrl, this.type.bind(this), (error, data) => {
+      if (error) throw error;
+
+      this.data = data;
+
+      this.svgData.append('path')
+        .datum(this.data)
+        .attr('class', this.classes[1]);
+
+      // append x-axis
+      this.svgData.append('g')
+        .attr('class', this.classes[2]);
+
+      // append y-axis
+      this.svgData.append('g')
+        .attr('class', this.classes[3]);
+
+      this.setSizes();
+    });
+
+    $(window).on('resize', this.resize.bind(this));
+  }
+
+  resize() {
+    this.setSizes();
   }
 
   type(d) {
