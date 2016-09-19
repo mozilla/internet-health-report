@@ -31,7 +31,8 @@ class MultiLine {
       .range([0, this.innerWidth]);
     this.y = d3.scaleLinear()
       .range([this.innerHeight, 0]);
-    this.z = d3.scaleOrdinal(d3.schemeCategory10);
+    this.z = d3.scaleOrdinal()
+      .range(constants.colorRange);;
 
     this.line = d3.line()
       .curve(d3.curveBasis)
