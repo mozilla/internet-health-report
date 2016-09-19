@@ -9,7 +9,7 @@ class Area {
     this.dataUrl = dataUrl;
     this.parseDate = d3.timeParse('%d-%b-%y');
     this.margin = {top: 20, right: 20, bottom: 30, left: 40};
-    this.classes = ['area__svg', 'area__layer'];
+    this.classes = ['area__svg', 'area__layer', 'x-axis', 'y-axis'];
     this.svg = d3.select(this.el)
       .append('svg')
         .attr('class', this.classes[0]);
@@ -22,22 +22,36 @@ class Area {
     this.height = constants.getWindowWidth() < constants.breakpointM ? 400 : Math.ceil(this.width * 0.52);
     this.innerWidth = this.width - this.margin.left - this.margin.right;
     this.innerHeight = this.height - this.margin.top - this.margin.bottom;
+
+    this.svg
+      .attr('width', this.width)
+      .attr('height', this.height);
+
     this.x = d3.scaleTime()
       .range([0, this.innerWidth]);
     this.y = d3.scaleLinear()
       .range([this.innerHeight, 0]);
+
+    this.x.domain(d3.extent(this.data, (d) => d.date));
+    this.y.domain([0, d3.max(this.data, (d) => d.close)]);
+
     this.area = d3.area()
       .x((d) => this.x(d.date))
       .y0(this.innerHeight)
       .y1((d) => this.y(d.close));
-    this.svg
-      .attr('width', this.width)
-      .attr('height', this.height);
+
+    this.svg.select(`.${this.classes[1]}`)
+      .attr('d', this.area);
+
+    this.svg.select(`.${this.classes[2]}`)
+      .attr('transform', `translate(0,${this.innerHeight})`)
+      .call(d3.axisBottom(this.x));
+
+    this.svg.select(`.${this.classes[3]}`)
+      .call(d3.axisLeft(this.y));
   }
 
   render() {
-    this.setSizes();
-
     d3.tsv(this.dataUrl, (error, data) => {
       if (error) throw error;
       const that = this;
@@ -48,22 +62,17 @@ class Area {
         d.close = +d.close;
       });
 
-      this.x.domain(d3.extent(this.data, (d) => d.date));
-      this.y.domain([0, d3.max(this.data, (d) => d.close)]);
-
       this.g.append('path')
         .datum(this.data)
-        .attr('class', this.classes[1])
-        .attr('d', this.area);
+        .attr('class', this.classes[1]);
 
       this.g.append('g')
-        .attr('class', 'axis axis--x')
-        .attr('transform', `translate(0,${this.innerHeight})`)
-        .call(d3.axisBottom(this.x));
+        .attr('class', this.classes[2]);
 
       this.g.append('g')
-        .attr('class', 'axis axis--y')
-        .call(d3.axisLeft(this.y));
+        .attr('class', this.classes[3]);
+
+      this.setSizes();
     });
 
     $(window).on('resize', this.resize.bind(this));
@@ -71,19 +80,6 @@ class Area {
 
   resize() {
     this.setSizes();
-
-    this.x.domain(d3.extent(this.data, (d) => d.date));
-    this.y.domain([0, d3.max(this.data, (d) => d.close)]);
-
-    this.svg.select(`.${this.classes[1]}`)
-      .attr('d', this.area);
-
-    this.svg.select('.axis--x')
-      .attr('transform', `translate(0,${this.innerHeight})`)
-      .call(d3.axisBottom(this.x));
-
-    this.svg.select('.axis--y')
-      .call(d3.axisLeft(this.y));
   }
 };
 
