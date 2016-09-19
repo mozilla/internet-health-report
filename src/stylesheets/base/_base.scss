@@ -10,10 +10,14 @@
 }
 
 body {
-  padding: rem(30);
+  padding: rem(15);
   @include rem('font-size',16);
   line-height: 1.5;
   font-family: $ff-primary;
   color: $black;
   background-color: $white;
+
+  @include media($medium-screen-up) {
+    padding: rem(30);
+  }
 }

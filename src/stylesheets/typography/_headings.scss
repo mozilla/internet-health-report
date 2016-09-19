@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6 {
 @mixin h-l() {
   font: em(24px) $ff-primary;
 
-  @include media($m) {
+  @include media($medium-screen-up) {
     font-size: em(48px);
   }
 }
@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 @mixin h-m() {
   font: em(21px) $ff-primary;
 
-  @include media($m) {
+  @include media($medium-screen-up) {
     font-size: em(36px);
   }
 }
@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
 @mixin h-s() {
   font: em(18px) $ff-primary;
 
-  @include media($m) {
+  @include media($medium-screen-up) {
     font-size: em(24px);
   }
 }

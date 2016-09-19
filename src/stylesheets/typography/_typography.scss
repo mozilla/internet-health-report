@@ -5,7 +5,7 @@
 @mixin t-l() {
   font: em(21px) $ff-primary;
 
-  @include media($m) {
+  @include media($medium-screen-up) {
     font-size: em(32px);
   }
 }
@@ -13,7 +13,7 @@
 @mixin t-m() {
   font: em(18px) $ff-primary;
 
-  @include media($m) {
+  @include media($medium-screen-up) {
     font-size: em(20px);
   }
 }

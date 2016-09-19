@@ -37,10 +37,15 @@ $cols        : 12;
 //  $Media Queries
 //------------------------------------------------------------------------
 
-$s  : new-breakpoint(min-width 480px);
-$m  : new-breakpoint(min-width 768px);
-$l  : new-breakpoint(min-width 1024px);
-$xl : new-breakpoint(min-width 1280px);
+$small  : em(480);
+$medium : em(768);
+$large  : em(1024);
+$xlarge : em(1280);
+
+$small-screen-up  : new-breakpoint(min-width $small);
+$medium-screen-up : new-breakpoint(min-width $medium);
+$large-screen-up  : new-breakpoint(min-width $large);
+$xlarge-screen-up : new-breakpoint(min-width $xlarge);
 
 //------------------------------------------------------------------------
 //  $zindex map

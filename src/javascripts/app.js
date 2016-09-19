@@ -12,3 +12,6 @@ loadAreaCharts();
 
 import { loadLineCharts } from './modules/visualizations/Line';
 loadLineCharts();
+
+import { loadMultiLineCharts } from './modules/visualizations/MultiLine';
+loadMultiLineCharts();
