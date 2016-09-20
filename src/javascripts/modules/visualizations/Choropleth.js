@@ -2,7 +2,7 @@ import * as constants from '../constants';
 import $ from 'jquery';
 import * as d3 from 'd3';
 import { TweenLite } from 'gsap';
-import topojson from 'topojson';
+import * as topojson from 'topojson';
 window.$ = $;
 
 class Choropleth {
