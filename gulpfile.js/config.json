@@ -76,6 +76,11 @@
       "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
     },
 
+    "lint": {
+      "src": "javascripts",
+      "extensions": ["js", "json"]
+    },
+
     "svgSprite": {
       "src": "icons",
       "dest": "images",

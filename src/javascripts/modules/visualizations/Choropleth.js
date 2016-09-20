@@ -1,7 +1,7 @@
 import * as constants from '../constants';
 import $ from 'jquery';
 import * as d3 from 'd3';
-import { TweenLite, CSSPlugin } from 'gsap';
+import { TweenLite } from 'gsap';
 import topojson from 'topojson';
 window.$ = $;
 
@@ -22,24 +22,25 @@ class Choropleth {
   }
 
   render() {
-    this.svg = d3.select(this.el).append('svg')
-      .attr('width', '100%')
-      .attr('height', this.height)
-      .attr('class', 'choropleth__svg')
-      .append('g');
+    this.svg = d3.select(this.el).append(`svg`)
+      .attr(`width`, `100%`)
+      .attr(`height`, this.height)
+      .attr(`class`, `choropleth__svg`)
+      .append(`g`);
 
     this.loadData();
-    $(window).on('resize', this.resizeChoropleth.bind(this));
+    $(window).on(`resize`, this.resizeChoropleth.bind(this));
   }
 
   resizeChoropleth() {
     window.requestAnimationFrame(() => {
-      const chart = $(this.el).find('g');
+      const chart = $(this.el).find(`g`);
+
       this.width = $(this.el).width();
       this.height = Math.ceil(this.aspectRatio * this.width);
 
       TweenLite.set(chart, { scale: this.width / this.mapWidth });
-      d3.select('.choropleth__svg').attr('height', this.height);
+      d3.select(`.choropleth__svg`).attr(`height`, this.height);
     });
   }
 
@@ -58,7 +59,7 @@ class Choropleth {
     this.shapeData = shapeData;
     this.vizData = vizData;
 
-    const countries = topojson.feature(this.shapeData, this.shapeData.objects['countries']);
+    const countries = topojson.feature(this.shapeData, this.shapeData.objects[`countries`]);
     const projection = d3.geoMercator()
       .fitSize([this.width, this.height], countries);
     const path = d3.geoPath()
@@ -72,12 +73,12 @@ class Choropleth {
       });
     });
 
-    this.svg.selectAll('.choropleth__item')
+    this.svg.selectAll(`.choropleth__item`)
       .data(countries.features)
-      .enter().append('path')
-      .attr('class', 'choropleth__item')
-      .attr('id', (d) => d.id, true)
-      .attr('d', path);
+      .enter().append(`path`)
+      .attr(`class`, `choropleth__item`)
+      .attr(`id`, (d) => d.id, true)
+      .attr(`d`, path);
 
     this.setData();
     this.drawLegend();
@@ -87,11 +88,11 @@ class Choropleth {
     const dataRange = this.getDataRange();
     const min = dataRange[0];
     const max = dataRange[1];
-    const legendString = '<div class="legend">' +
-      '<p class="legend__value">' + Math.floor((min / 1) * 100) + '%</p>' +
-      '<div class="legend__scale"></div>' +
-      '<p class="legend__value">' + Math.floor((max / 1) * 100) + '%</p>' +
-    '</div>';
+    const legendString = `<div class="legend">` +
+      `<p class="legend__value">` + Math.floor((min / 1) * 100) + `%</p>` +
+      `<div class="legend__scale"></div>` +
+      `<p class="legend__value">` + Math.floor((max / 1) * 100) + `%</p>` +
+    `</div>`;
 
     $(this.el).append(legendString);
   }
@@ -99,8 +100,8 @@ class Choropleth {
   setData() {
     const dataRange = this.getDataRange();
 
-    d3.selectAll('.choropleth__item')
-      .attr('fill-opacity', (d) => {
+    d3.selectAll(`.choropleth__item`)
+      .attr(`fill-opacity`, (d) => {
         return this.getOpacity(d[this.dataValueKey], dataRange);
       });
   }
@@ -123,14 +124,14 @@ class Choropleth {
 }
 
 const loadChoropleths = () => {
-  const $choropleth = $('.js-choropleth');
+  const $choropleth = $(`.js-choropleth`);
 
   $choropleth.each((index) => {
     const $this = $choropleth.eq(index);
-    const id = $this.attr('id');
-    const url = $this.data('url');
-    const value = $this.data('value');
-    const title = $this.data('title');
+    const id = $this.attr(`id`);
+    const url = $this.data(`url`);
+    const value = $this.data(`value`);
+    const title = $this.data(`title`);
 
     new Choropleth(`#${id}`, url, value, title).render();
   });
