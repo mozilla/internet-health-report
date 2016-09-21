@@ -1,4 +1,3 @@
-{% from 'macros/helpers.html' import sprite %}
 {% set homeURL = 'http://localhost:3000' %}
 <!doctype html>
 <html>
@@ -7,8 +6,6 @@
     <title>{% block title %}{{ title }}{% endblock %}</title>
     <link rel="stylesheet" href="{{ homeURL }}/stylesheets/app.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% include "shared/app-icons.html" %}
-    {% block head %}{% endblock %}
 
     <script>
       if (localStorage.getItem('languageSet') === null) {
@@ -33,7 +30,3 @@
     </script>
   </head>
   <body>
-    {% block content %}{% endblock %}
-    {% block javascript %}<script src="{{ homeURL }}/javascripts/app.js"></script>{% endblock %}
-  </body>
-</html>

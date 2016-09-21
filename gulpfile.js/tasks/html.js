@@ -13,7 +13,7 @@ var properties   = require('properties-parser');
 var exclude      = path.normalize('!**/{' + config.tasks.html.excludeFolders.join(',') + '}/**');
 
 var getData = function(langFolder) {
-  var dataPath = path.resolve(config.root.src, config.tasks.html.src, 'locales/' + langFolder + '/content.properties')
+  var dataPath = path.resolve(config.root.src, config.tasks.html.src, '_locales/' + langFolder + '/content.properties')
   return properties.read(dataPath);
 }
 
