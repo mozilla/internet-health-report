@@ -81,7 +81,11 @@ module.exports = function(env) {
         }
       }),
       new webpack.optimize.DedupePlugin(),
-      new webpack.optimize.UglifyJsPlugin(),
+      new webpack.optimize.UglifyJsPlugin({
+        compress: {
+          warnings: false
+        }
+      }),
       new webpack.NoErrorsPlugin()
     )
   }
