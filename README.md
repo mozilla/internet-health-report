@@ -24,7 +24,7 @@ This runs the default gulp task, which starts compiling, watching, and live upda
 Localised text content is managed in individual `content.properties` files within a language specific directory:
 
 ```
-src/html/locales/en-us
+src/html/_locales/en-us
 ```
 
 The HTML task compiles these with `.html` markup files to build seperate language directories.
