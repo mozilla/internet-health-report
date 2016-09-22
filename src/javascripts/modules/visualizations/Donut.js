@@ -57,25 +57,27 @@ class Donut {
   }
 
   render() {
-    d3.csv(this.dataUrl, this.type.bind(this), (error, data) => {
+    d3.csv(this.dataUrl, (error, data) => {
       if (error) {
         throw error;
       }
 
       this.data = data;
-      this.setDataKeys();
+      this.dataKeys = constants.getDataKeys(this.data);
+
+      this.data.forEach(this.type.bind(this));
 
       this.pie = d3.pie()
-        .value(d => d[this.dataKey])
+        .value(d => d[this.dataKeys[1]])
         .sort(null);
 
       this.isSingleValue = this.data.length === 1;
       if (this.isSingleValue) {
-        const value = this.data[0][this.dataKey];
+        const value = this.data[0][this.dataKeys[1]];
         const newData = {};
 
-        newData[this.dataTitle] = `other`;
-        newData[this.dataKey] = 100 - value;
+        newData[this.dataKeys[0]] = `other`;
+        newData[this.dataKeys[1]] = 100 - value;
         this.data.push(newData);
       }
 
@@ -86,7 +88,7 @@ class Donut {
           .attr(`class`, this.classes[5])
         .append(`path`)
           .attr(`class`, this.classes[2])
-          .attr(`fill`, (d) => this.color(d.data[this.dataTitle]));
+          .attr(`fill`, (d) => this.color(d.data[this.dataKeys[0]]));
 
       if (!this.isSingleValue) {
         this.svg.selectAll(`.${this.classes[5]}`).append(`text`)
@@ -95,7 +97,7 @@ class Donut {
           .attr(`dx`, `-.8em`)
           .style(`font-size`, `12px`)
           .style(`fill`, `#fff`)
-          .text(d => `${d.data[this.dataKey]}`);
+          .text(d => `${d.data[this.dataKeys[1]]}`);
 
         this.renderLegend();
       }
@@ -106,21 +108,8 @@ class Donut {
     });
   }
 
-  setDataKeys() {
-    this.dataKeys = [];
-
-    for (let prop in this.data[0]) {
-      if ({}.hasOwnProperty.call(this.data[0], prop)) {
-        this.dataKeys.push(prop);
-      }
-    }
-
-    this.dataTitle = this.dataKeys[0];
-    this.dataKey = this.dataKeys[1];
-  }
-
   type(d) {
-    d[this.dataKey] = +d[this.dataKey];
+    d[this.dataKeys[1]] = +d[this.dataKeys[1]];
     return d;
   }
 

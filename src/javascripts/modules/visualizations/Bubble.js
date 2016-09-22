@@ -69,7 +69,7 @@ class Bubble {
   formatData(data) {
     let formattedData = { children: [] };
 
-    this.setDataKeys(data);
+    this.dataKeys = constants.getDataKeys(data);
 
     data.forEach((d) => {
       d[this.dataKeys[1]] = parseInt(d[this.dataKeys[1]], 10);
@@ -77,19 +77,6 @@ class Bubble {
     });
 
     this.data = formattedData;
-  }
-
-  setDataKeys(data) {
-    this.dataKeys = [];
-
-    for (let prop in data[0]) {
-      if ({}.hasOwnProperty.call(data[0], prop)) {
-        this.dataKeys.push(prop);
-      }
-    }
-
-    this.dataTitle = this.dataKeys[0];
-    this.dataKey = this.dataKeys[1];
   }
 }
 
