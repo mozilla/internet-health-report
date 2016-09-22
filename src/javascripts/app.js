@@ -15,3 +15,6 @@ loadLineCharts();
 
 import { loadMultiLineCharts } from './modules/visualizations/MultiLine';
 loadMultiLineCharts();
+
+import { loadBubbleCharts } from './modules/visualizations/Bubble';
+loadBubbleCharts();

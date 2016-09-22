@@ -11,21 +11,19 @@ class Choropleth {
     this.aspectRatio = 0.6663;
     this.width = $(this.el).width();
     this.height = Math.ceil(this.aspectRatio * this.width);
+    this.classes = [`choropleth__svg`, `choropleth__item`, `choropleth__tooltip`];
     this.mapWidth = this.width;
     this.shapeUrl = `${constants.homeURL}/data/world-shape-data.json`;
     this.dataUrl = dataUrl;
     this.dataValueKey = dataValueKey;
     this.title = title;
-    this.svg = undefined;
-    this.shapeData = undefined;
-    this.vizData = undefined;
   }
 
   render() {
     this.svg = d3.select(this.el).append(`svg`)
       .attr(`width`, `100%`)
       .attr(`height`, this.height)
-      .attr(`class`, `choropleth__svg`)
+      .attr(`class`, this.classes[0])
       .append(`g`);
 
     this.loadData();
@@ -40,7 +38,7 @@ class Choropleth {
       this.height = Math.ceil(this.aspectRatio * this.width);
 
       TweenLite.set(chart, { scale: this.width / this.mapWidth });
-      d3.select(`.choropleth__svg`).attr(`height`, this.height);
+      d3.select(`.${this.classes[0]}`).attr(`height`, this.height);
     });
   }
 
@@ -58,6 +56,8 @@ class Choropleth {
 
     this.shapeData = shapeData;
     this.vizData = vizData;
+    this.dataKeys = constants.getDataKeys(this.vizData);
+    this.draWTooltip();
 
     const countries = topojson.feature(this.shapeData, this.shapeData.objects[`countries`]);
     const projection = d3.geoMercator()
@@ -67,21 +67,42 @@ class Choropleth {
 
     countries.features.forEach((country) => {
       this.vizData.forEach((data) => {
-        if (country.id === data.country) {
+        if (country.id === data[this.dataKeys[0]]) {
           country[this.dataValueKey] = Number(data[this.dataValueKey]);
         }
       });
     });
 
-    this.svg.selectAll(`.choropleth__item`)
+    this.svg.selectAll(`.${this.classes[1]}`)
       .data(countries.features)
       .enter().append(`path`)
-      .attr(`class`, `choropleth__item`)
+      .attr(`class`, this.classes[1])
       .attr(`id`, (d) => d.id, true)
-      .attr(`d`, path);
+      .attr(`d`, path)
+      .on(`mouseover`, (d) => {
+        this.tooltip
+          .html(`${d.id}: ${d[this.dataKeys[1]]}`)
+          .classed(`is-active`, true);
+      })
+      .on(`mousemove`, () => {
+        this.tooltip
+          .style(`top`, `${d3.event.pageY}px`)
+          .style(`left`, `${d3.event.pageX}px`);
+      })
+      .on(`mouseout`, () => {
+        this.tooltip
+          .classed(`is-active`, false);
+      });
 
     this.setData();
     this.drawLegend();
+  }
+
+
+  draWTooltip() {
+    this.tooltip = d3.select(this.el)
+      .append(`div`)
+      .attr(`class`, this.classes[2]);
   }
 
   drawLegend() {
@@ -100,7 +121,7 @@ class Choropleth {
   setData() {
     const dataRange = this.getDataRange();
 
-    d3.selectAll(`.choropleth__item`)
+    d3.selectAll(`.${this.classes[1]}`)
       .attr(`fill-opacity`, (d) => {
         return this.getOpacity(d[this.dataValueKey], dataRange);
       });

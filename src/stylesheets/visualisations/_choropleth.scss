@@ -11,4 +11,22 @@
     stroke-width: 0.07em;
     stroke: rgba($white, 0.5);
   }
+
+  &__tooltip {
+    position: absolute;
+    transform: translateY(-100%);
+    pointer-events: none;
+    padding: 0.5em 1em;
+    font-size: rem(12);
+    color: $white;
+    background-color: rgba($black, 0.8);
+    border: rem(1) solid $black;
+    border-radius: rem(5);
+    opacity: 0;
+    transition: opacity 0.1s ease;
+
+    &.is-active {
+      opacity: 1;
+    }
+  }
 }
