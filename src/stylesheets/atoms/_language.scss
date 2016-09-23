@@ -1,0 +1,9 @@
+.language {
+  &-select {
+    @include media($large-screen-up) {
+      display: block;
+      padding: 1em 0;
+      text-decoration: none;
+    }
+  }
+}

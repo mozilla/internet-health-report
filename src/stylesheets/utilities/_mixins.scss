@@ -39,12 +39,17 @@
 //  Neat Outer Container
 //------------------------------------------------------------------------
 
-@mixin outer-container($local-max-width: $max-width) {
+@mixin wrapper($local-max-width: $max-width) {
   @include clearfix;
-  max-width: em($local-max-width);
-  margin: {
-    left: auto;
-    right: auto;
+  padding-left: em($gtr-half);
+  padding-right: em($gtr-half);
+
+  @include media($medium-screen-up) {
+    max-width: em($local-max-width + ($gtr * 2));
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: em($gtr);
+    padding-right: em($gtr);
   }
 }
 

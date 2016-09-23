@@ -1,0 +1,27 @@
+.menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    @include media($large-screen-up) {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    + .menu__item {
+      @include media($large-screen-up) {
+        margin-left: 2em;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+
+    @include media($large-screen-up) {
+      padding: 1em 0;
+    }
+  }
+}

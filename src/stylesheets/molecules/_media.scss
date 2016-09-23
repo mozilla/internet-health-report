@@ -1,0 +1,52 @@
+.media {
+  @include media($medium-screen-up) {
+    display: table;
+    width: 100%;
+  }
+
+  &__figure,
+  &__body {
+    @include media($medium-screen-up) {
+      display: table-cell;
+      vertical-align: top;
+    }
+  }
+
+  &__figure {
+    width: 100%;
+
+    @include media($medium-screen-up) {
+      width: 40%;
+      margin-right: 1em;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-bottom: 70%;
+    background-color: $black;
+
+    @include media($medium-screen-up) {
+      width: 90%;
+    }
+  }
+
+  &__body {
+    position: relative;
+    margin-top: 1em;
+
+    @include media($medium-screen-up) {
+      margin-top: 0;
+    }
+
+    p {
+      @include media($large-screen-up) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+}

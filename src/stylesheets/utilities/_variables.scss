@@ -15,6 +15,7 @@ $fw-bold    : 700;
 
 $white: #fff;
 $black: #000;
+$grey: lightgrey;
 $theme1: #f7bda7;
 $theme2: #ee8596;
 $theme3: #e05487;
@@ -27,11 +28,10 @@ $theme7: #391550;
 //  $Layout
 //------------------------------------------------------------------------
 
-$max-width   : 1280;
-$max-width-s : 960;
-$gtr         : 30;
-$gtr-half    : 15;
-$cols        : 12;
+$max-width : 1280;
+$gtr       : 30;
+$gtr-half  : 15;
+$cols      : 12;
 
 //------------------------------------------------------------------------
 //  $Media Queries
@@ -46,12 +46,3 @@ $small-screen-up  : new-breakpoint(min-width $small);
 $medium-screen-up : new-breakpoint(min-width $medium);
 $large-screen-up  : new-breakpoint(min-width $large);
 $xlarge-screen-up : new-breakpoint(min-width $xlarge);
-
-//------------------------------------------------------------------------
-//  $zindex map
-//------------------------------------------------------------------------
-
-$zindex: (
-    top:    500,
-    bottom: 200
-);

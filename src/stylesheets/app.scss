@@ -15,8 +15,12 @@
 @import "typography/typography";
 
 @import "atoms/buttons";
+@import "atoms/language";
 
+@import "molecules/menu";
 @import "molecules/legend";
+@import "molecules/media";
+@import "molecules/table";
 
 @import "visualisations/choropleth";
 @import "visualisations/donut";
