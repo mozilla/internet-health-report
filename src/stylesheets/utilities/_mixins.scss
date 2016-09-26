@@ -41,15 +41,15 @@
 
 @mixin wrapper($local-max-width: $max-width) {
   @include clearfix;
-  padding-left: em($gtr-half);
-  padding-right: em($gtr-half);
+  padding-left: em($space * 0.5);
+  padding-right: em($space * 0.5);
 
   @include media($medium-screen-up) {
-    max-width: em($local-max-width + ($gtr * 2));
+    max-width: em($local-max-width + ($space * 2));
     margin-left: auto;
     margin-right: auto;
-    padding-left: em($gtr);
-    padding-right: em($gtr);
+    padding-left: em($space);
+    padding-right: em($space);
   }
 }
 

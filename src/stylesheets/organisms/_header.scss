@@ -4,8 +4,8 @@
 
 .header {
   position: relative;
-  padding-top: em($gtr-half);
-  padding-bottom: em($gtr-half);
+  padding-top: em($space * 0.5);
+  padding-bottom: em($space * 0.5);
   background-color: $grey;
 
   @include media($large-screen-up) {

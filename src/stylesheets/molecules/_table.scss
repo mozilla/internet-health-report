@@ -1,32 +1,25 @@
 .table {
   @include media($medium-screen-up) {
-    display: table;
-    vertical-align: top;
-    width: 100%;
+    @include row(table);
+    border-top: em(1) solid $grey;
   }
 
   &__cell {
     @include media($medium-screen-up) {
-      display: table-cell;
+      @include span-columns(6);
       vertical-align: top;
-      padding-right: 2em;
+      @include pad(0 default 0 0);
     }
 
-    &:first-child {
+    &--last {
       @include media($medium-screen-up) {
-        width: 50%;
+        @include pad(0 0 0 default);
+        border-left: em(2) solid $grey;
       }
     }
+  }
 
-    &:last-child {
-      @include media($medium-screen-up) {
-        padding-left: 2em;
-        border-left: rem(1) solid;
-      }
-    }
-
-    a {
-      display: block;
-    }
+  &__link {
+    display: block;
   }
 }
