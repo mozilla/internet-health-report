@@ -9,7 +9,7 @@
       vertical-align: middle;
     }
 
-    + .menu__item {
+    + #{&} {
       @include media($large-screen-up) {
         margin-left: 2em;
       }

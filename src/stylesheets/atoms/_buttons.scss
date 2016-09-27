@@ -4,4 +4,10 @@
 
 .btn {
   display: inline-block;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $black;
+  border-radius: 0.4em;
 }
