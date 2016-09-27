@@ -1,6 +1,6 @@
 .stacked-area {
   width: 100%;
-  @include rem('max-width', 960);
+  @include rem(max-width, 960);
   overflow: hidden;
 
   &__svg {

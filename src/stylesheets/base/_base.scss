@@ -10,7 +10,7 @@
 }
 
 body {
-  @include rem('font-size',16);
+  @include rem(font-size,16);
   line-height: 1.5;
   font-family: $ff-primary;
   color: $black;

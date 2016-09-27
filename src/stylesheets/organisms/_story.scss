@@ -1,0 +1,9 @@
+.story {
+  &__header {
+    padding-bottom: em($space * 2);
+  }
+
+  &__share {
+    margin-top: 2em;
+  }
+}

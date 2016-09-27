@@ -1,6 +1,6 @@
 .donut {
   width: 100%;
-  @include rem('max-width', 320);
+  @include rem(max-width, 320);
   overflow: hidden;
 
   &__svg {
