@@ -1,6 +1,6 @@
 <header class="header">
   <div class="wrapper">
-    <a href="#" class="header__link"><h1 class="header__title">{{ title }}</h1>
+    <a href="/{% if iso != 'en' %}{{ iso }}{% endif %}" class="header__link"><h1 class="header__title">{{ title }}</h1>
       <p class="header__subtitle">{{ headerSubtitle }}</p></a>
   </div>
 
@@ -24,7 +24,7 @@
         </li>
       </ul>
 
-      <a href="#" class="header__language-select language-select">English</a>
+      <div class="header__language-select language-container js-language" data-language="{{ language }}"></div>
     </div>
   </nav>
 </header>

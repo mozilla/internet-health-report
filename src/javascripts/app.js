@@ -1,3 +1,5 @@
+// Visualizations
+
 import { loadChoropleths } from './modules/visualizations/Choropleth';
 loadChoropleths();
 
@@ -18,3 +20,8 @@ loadMultiLineCharts();
 
 import { loadBubbleCharts } from './modules/visualizations/Bubble';
 loadBubbleCharts();
+
+// UI
+
+import { renderLanguageSelect } from './modules/languageSelect';
+renderLanguageSelect();
