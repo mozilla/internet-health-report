@@ -13,7 +13,7 @@ class Choropleth {
     this.height = Math.ceil(this.aspectRatio * this.width);
     this.classes = [`choropleth__svg`, `choropleth__item`, `choropleth__tooltip`];
     this.mapWidth = this.width;
-    this.shapeUrl = `${constants.homeURL}/data/world-shape-data.json`;
+    this.shapeUrl = `/data/world-shape-data.json`;
     this.dataUrl = dataUrl;
     this.dataValueKey = dataValueKey;
     this.title = title;

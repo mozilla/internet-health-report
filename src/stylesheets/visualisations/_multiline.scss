@@ -2,6 +2,6 @@
   &__data {
     fill: none;
     stroke: $theme2;
-    stroke-width: rem(2);
+    @include rem('stroke-width', 2);
   }
 }

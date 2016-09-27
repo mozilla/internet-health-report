@@ -2,4 +2,42 @@
 //  $Header
 //------------------------------------------------------------------------
 
-.header {}
+.header {
+  position: relative;
+  padding-top: em($space * 0.5);
+  padding-bottom: em($space * 0.5);
+  background-color: $grey;
+
+  @include media($large-screen-up) {
+    padding-bottom: em(260);
+  }
+
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  &__nav {
+    @include media($large-screen-up) {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__menu {
+    margin-top: 1em;
+
+    @include media($large-screen-up) {
+      float: left;
+      margin-top: 0;
+    }
+  }
+
+  &__language-select {
+    @include media($large-screen-up) {
+      float: right;
+    }
+  }
+}

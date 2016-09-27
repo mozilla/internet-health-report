@@ -6,16 +6,24 @@
   @include flow;
 }
 
-//------------------------------------------------------------------------
-//  $Wrappers
-//------------------------------------------------------------------------
+.u-space-tb {
+  &--s {
+    padding-top: em($space * 0.5);
+    padding-bottom: em($space * 0.5);
+  }
 
-.wrapper {
-  @include rem(max-width,$max-width);
-  @include rem(padding-left,$gtr-half);
-  @include rem(padding-right,$gtr-half);
-}
+  &--m {
+    padding-top: em($space);
+    padding-bottom: em($space);
+  }
 
-.wrapper--s {
-  @include rem(max-width,$max-width-s);
+  &--l {
+    padding-top: em($space);
+    padding-bottom: em($space);
+
+    @include media($medium-screen-up) {
+      padding-top: em($space * 2);
+      padding-bottom: em($space * 2);
+    }
+  }
 }

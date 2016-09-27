@@ -1,0 +1,25 @@
+.table {
+  @include media($medium-screen-up) {
+    @include row(table);
+    border-top: em(1) solid $grey;
+  }
+
+  &__cell {
+    @include media($medium-screen-up) {
+      @include span-columns(6);
+      vertical-align: top;
+      @include pad(0 default 0 0);
+    }
+
+    &--last {
+      @include media($medium-screen-up) {
+        @include pad(0 0 0 default);
+        border-left: em(2) solid $grey;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+  }
+}
