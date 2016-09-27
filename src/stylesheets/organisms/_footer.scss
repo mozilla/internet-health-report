@@ -2,4 +2,31 @@
 //  $Footer
 //------------------------------------------------------------------------
 
-.footer {}
+.footer {
+  background-color: $grey;
+
+  &__col {
+    @include flow();
+
+    @include media($medium-screen-up) {
+      @include span-columns(6)
+    }
+
+    &--first {
+      @include media($large-screen-up) {
+        @include span-columns(4)
+      }
+    }
+
+    &--last {
+      @include media($large-screen-up) {
+        @include shift(2);
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    margin-right: 2em;
+  }
+}

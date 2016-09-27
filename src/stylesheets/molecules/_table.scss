@@ -1,20 +1,34 @@
 .table {
   @include media($medium-screen-up) {
-    @include row(table);
+    @include table();
     border-top: em(1) solid $grey;
   }
 
   &__cell {
     @include media($medium-screen-up) {
-      @include span-columns(6);
+      @include display-context(table) {
+        @include span-columns(6);
+      }
       vertical-align: top;
       @include pad(0 default 0 0);
+    }
+
+    @include media($large-screen-up) {
+      @include display-context(table) {
+        @include span-columns(8);
+      }
     }
 
     &--last {
       @include media($medium-screen-up) {
         @include pad(0 0 0 default);
         border-left: em(2) solid $grey;
+      }
+
+      @include media($large-screen-up) {
+        @include display-context(table) {
+          @include span-columns(4);
+        }
       }
     }
   }
