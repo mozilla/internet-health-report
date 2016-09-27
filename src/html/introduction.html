@@ -1,0 +1,41 @@
+{% extends '_layouts/application.html' %}
+{% block content %}
+  <article class="article story wrapper u-space-tb--l">
+    <div class="article__copy">
+      <!-- <div class="story__header">
+        <h1>Why don't more women code?</h1>
+        <p>A conversation with Melissa Sariffodeen, co-founder and CEO of the Canadian nonprofit Ladies Learning Code</p>
+        <div class="story__share share">
+          <a href="#" class="share__btn btn btn--outline">{{ facebookShareText }}</a>
+          <a href="#" class="share__btn btn btn--outline">{{ twitterShareText }}</a>
+          <a href="#" class="share__btn btn btn--outline">{{ emailShareText }}</a>
+        </div>
+      </div> -->
+      <h2>{{ introTitle }}</h2>
+      <h1>{{ introSubtitle }}</h1>
+      <p>{{ introDate }}</p>
+      <p>{{ introP1 }}</p>
+      <p>{{ introP2 }}</p>
+      <p>{{ introP3 }}</p>
+      <p>{{ introP4 }}</p>
+    </div>
+
+    <figure class="article__figure">
+      <img src="/images/dummy.jpg" alt="">
+    </figure>
+
+    <div class="article__copy">
+      <p>{{ introP5 }}</p>
+      <p>{{ introP6 }}</p>
+      <p>{{ introP7 }}</p>
+      <div class="article__share share">
+        <a href="#" class="share__btn btn btn--outline">{{ facebookShareText }}</a>
+        <a href="#" class="share__btn btn btn--outline">{{ twitterShareText }}</a>
+        <a href="#" class="share__btn btn btn--outline">{{ emailShareText }}</a>
+      </div>
+    </div>
+  </article>
+
+  {% include '_partials/section-nav.html' %}
+
+{% endblock %}

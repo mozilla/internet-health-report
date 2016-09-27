@@ -20,6 +20,6 @@
   }
 
   &__value {
-    @include rem('font-size', 12);
+    @include rem(font-size, 12);
   }
 }

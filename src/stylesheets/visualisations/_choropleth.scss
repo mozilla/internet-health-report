@@ -1,6 +1,6 @@
 .choropleth {
   position: relative;
-  @include rem('max-width', 860);
+  @include rem(max-width, 860);
 
   &__svg {
     display: block;
@@ -17,11 +17,11 @@
     transform: translateY(-100%);
     pointer-events: none;
     padding: 0.5em 1em;
-    @include rem('font-size', 12);
+    @include rem(font-size, 12);
     color: $white;
     background-color: rgba($black, 0.8);
     border: em(1) solid $black;
-    @include rem('border-radius', 5);
+    @include rem(border-radius, 5);
     opacity: 0;
     transition: opacity 0.1s ease;
 

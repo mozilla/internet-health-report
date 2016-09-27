@@ -1,6 +1,6 @@
 .bubble {
   width: 100%;
-  @include rem('max-width', 600);
+  @include rem(max-width, 600);
   overflow: hidden;
 
   &__svg {

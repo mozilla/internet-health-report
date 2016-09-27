@@ -71,7 +71,7 @@
       @include media($large-screen-up) {
         position: absolute;
         bottom: 0;
-        @include rem('left', $space);
+        @include rem(left, $space);
       }
     }
   }

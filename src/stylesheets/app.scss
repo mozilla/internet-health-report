@@ -22,6 +22,7 @@
 @import "molecules/legend";
 @import "molecules/media";
 @import "molecules/table";
+@import "molecules/share";
 
 @import "visualisations/choropleth";
 @import "visualisations/donut";
@@ -33,4 +34,6 @@
 
 @import "organisms/header";
 @import "organisms/navigation";
+@import "organisms/article";
+@import "organisms/story";
 @import "organisms/footer";
