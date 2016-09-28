@@ -4,7 +4,7 @@ const e = d.documentElement;
 const g = d.getElementsByTagName(`body`)[0];
 
 export const colorRange = [`#f7bda7`, `#ee8596`, `#e05487`, `#a83e90`, `#712998`, `#542277`, `#391550`];
-export const breakpointM = 640;
+export const breakpointM = 768;
 
 export const getWindowWidth = () => {
   const windowWidth = w.innerWidth||e.clientWidth||g.clientWidth;

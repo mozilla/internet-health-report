@@ -1,10 +1,10 @@
 .subsection {
-  background-color: rgba($black, 0.75);
+  background-color: $dark-grey;
 
   &__header {
     padding-top: em($space * 0.5);
     padding-bottom: em($space * 0.5);
-    background-color: $lightgrey;
+    background-color: $light-grey;
   }
 
   &__main {
@@ -20,7 +20,7 @@
 
   &__text-strong {
     @include rem(font-size, 20);
-    font-weight: bold;
+    font-weight: $fw-bold;
 
     @include media($medium-screen-up) {
       @include span-columns(5);

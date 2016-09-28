@@ -5,9 +5,9 @@
 $ff-primary   : 'Open Sans', sans-serif;
 $ff-secondary : Georgia, serif;
 
-$fw-light   : 300;
-$fw-regular : 400;
-$fw-bold    : 700;
+$fw-regular   : 400;
+$fw-bold      : 700;
+$fw-extrabold : 800;
 
 //------------------------------------------------------------------------
 //  $Colours
@@ -15,8 +15,9 @@ $fw-bold    : 700;
 
 $white: #fff;
 $black: #000;
-$grey: grey;
-$lightgrey: lightgrey;
+$light-grey: #D8D8D8;
+$grey: #5D5D5D;
+$dark-grey: #494949;
 $theme1: #f7bda7;
 $theme2: #ee8596;
 $theme3: #e05487;

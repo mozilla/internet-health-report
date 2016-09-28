@@ -1,0 +1,43 @@
+.data {
+  padding: em($space * 0.5);
+  background-color: $grey;
+  @include rem(border-radius, 10);
+
+  @include media($medium-screen-up) {
+    padding: em($space);
+  }
+
+  &__header {
+    display: none;
+    text-align: center;
+
+    .subsection & {
+      display: block;
+    }
+
+    @include media($medium-screen-up) {
+      text-align: right;
+    }
+  }
+
+  &__link {
+    padding: 0;
+    @include rem(font-size,14);
+    font-weight: $fw-extrabold;
+    text-transform: uppercase;
+    color: $white;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+
+    + #{&} {
+      @include rem(margin-left, 20);
+    }
+  }
+
+  &__source {
+    @include rem(margin-top, $space);
+    @include rem(font-size, 14);
+    text-align: right;
+  }
+}

@@ -1,7 +1,7 @@
 .table {
   @include media($medium-screen-up) {
     @include table();
-    border-top: em(1) solid $lightgrey;
+    border-top: em(1) solid $light-grey;
   }
 
   &__cell {
@@ -22,7 +22,7 @@
     &--last {
       @include media($medium-screen-up) {
         @include pad(0 0 0 default);
-        border-left: em(2) solid $lightgrey;
+        border-left: em(2) solid $light-grey;
       }
 
       @include media($large-screen-up) {

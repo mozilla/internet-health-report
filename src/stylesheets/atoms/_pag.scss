@@ -2,7 +2,7 @@
   display: block;
   padding: em($space);
   text-decoration: none;
-  background-color: $lightgrey;
+  background-color: $light-grey;
 
   + #{&} {
     margin-top: 1em;
@@ -19,6 +19,7 @@
   &:hover,
   &:active,
   &:focus {
+    color: $white;
     background-color: $grey;
   }
 

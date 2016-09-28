@@ -8,7 +8,7 @@ class Area {
     this.el = el;
     this.dataUrl = dataUrl;
     this.parseDate = d3.timeParse(`%d-%b-%y`);
-    this.margin = {top: 20, right: 20, bottom: 30, left: 40};
+    this.margin = {top: 20, right: 0, bottom: 30, left: 30};
     this.classes = [`area__svg`, `area__layer`, `x-axis`, `y-axis`];
     this.svg = d3.select(this.el)
       .append(`svg`)
