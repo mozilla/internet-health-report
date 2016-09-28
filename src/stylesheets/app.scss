@@ -17,6 +17,7 @@
 @import "atoms/buttons";
 @import "atoms/links";
 @import "atoms/language";
+@import "atoms/pag";
 
 @import "molecules/menu";
 @import "molecules/legend";
@@ -36,4 +37,6 @@
 @import "organisms/navigation";
 @import "organisms/article";
 @import "organisms/story";
+@import "organisms/section";
+@import "organisms/subsection";
 @import "organisms/footer";

@@ -6,7 +6,7 @@
   position: relative;
   padding-top: em($space * 0.5);
   padding-bottom: em($space * 0.5);
-  background-color: $grey;
+  background-color: $lightgrey;
 
   @include media($large-screen-up) {
     padding-bottom: em(260);
