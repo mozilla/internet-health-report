@@ -23,7 +23,10 @@ module.exports = function(env) {
     plugins: [],
     resolve: {
       root: jsSrc,
-      extensions: [''].concat(extensions)
+      extensions: [''].concat(extensions),
+      alias: {
+        'TweenLite': 'gsap/src/uncompressed/TweenLite'
+      }
     },
     module: {
       loaders: [
