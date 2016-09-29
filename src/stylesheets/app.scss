@@ -17,12 +17,14 @@
 @import "atoms/buttons";
 @import "atoms/links";
 @import "atoms/language";
+@import "atoms/pag";
 
 @import "molecules/menu";
 @import "molecules/legend";
 @import "molecules/media";
 @import "molecules/table";
 @import "molecules/share";
+@import "molecules/data";
 
 @import "visualisations/choropleth";
 @import "visualisations/donut";
@@ -36,4 +38,6 @@
 @import "organisms/navigation";
 @import "organisms/article";
 @import "organisms/story";
+@import "organisms/section";
+@import "organisms/subsection";
 @import "organisms/footer";

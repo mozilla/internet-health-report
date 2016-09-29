@@ -1,0 +1,27 @@
+.section {
+  &__intro {
+    @include flow(0.5);
+
+    @include media($medium-screen-up) {
+      @include span-columns(6);
+    }
+  }
+
+  &__related {
+    margin-top: 2em;
+
+    @include media($medium-screen-up) {
+      @include span-columns(6);
+      margin-top: 0;
+    }
+
+    @include media($large-screen-up) {
+      @include span-columns(5);
+      @include shift(1);
+    }
+  }
+
+  &__pag {
+    @include clearfix;
+  }
+}

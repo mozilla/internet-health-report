@@ -2,9 +2,9 @@
 //  $Type flow
 //------------------------------------------------------------------------
 
-@mixin flow {
+@mixin flow($factor: 1) {
 	& > * + * {
-		margin-top: 1em;
+		margin-top: #{$factor}em;
 	}
 }
 

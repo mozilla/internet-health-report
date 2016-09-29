@@ -1,0 +1,39 @@
+.subsection {
+  background-color: $dark-grey;
+
+  &__header {
+    padding-top: em($space * 0.5);
+    padding-bottom: em($space * 0.5);
+    background-color: $light-grey;
+  }
+
+  &__main {
+    @include flow(3);
+    padding-top: em($space * 1.5);
+    padding-bottom: em($space * 1.5);
+    color: $white;
+  }
+
+  &__text-block {
+    @include clearfix;
+  }
+
+  &__text-strong {
+    @include rem(font-size, 20);
+    font-weight: $fw-bold;
+
+    @include media($medium-screen-up) {
+      @include span-columns(5);
+    }
+  }
+
+  &__text {
+    margin-top: 1em;
+    @include rem(font-size, 18);
+
+    @include media($medium-screen-up) {
+      margin-top: 0;
+      @include span-columns(7);
+    }
+  }
+}

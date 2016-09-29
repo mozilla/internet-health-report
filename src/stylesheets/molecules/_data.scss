@@ -1,0 +1,70 @@
+.data {
+  padding: em($space * 0.5);
+  color: $white;
+  background-color: $grey;
+  @include rem(border-radius, 10);
+
+  @include media($medium-screen-up) {
+    padding: em($space);
+  }
+
+  &__header {
+    position: relative;
+    display: none;
+    text-align: center;
+
+    .subsection & {
+      display: block;
+    }
+
+    @include media($medium-screen-up) {
+      text-align: right;
+    }
+  }
+
+  &__link {
+    padding: 0;
+    @include rem(font-size,14);
+    font-weight: $fw-extrabold;
+    text-transform: uppercase;
+    color: $white;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    + #{&} {
+      @include rem(margin-left, 20);
+    }
+  }
+
+  &__source {
+    @include rem(margin-top, $space);
+    @include rem(font-size, 14);
+    text-align: right;
+  }
+
+  &__embed {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    max-width: em(600);
+    margin-top: 1em;
+    padding: em($space);
+    text-align: left;
+    background-color: rgba($black,0.9);
+    @include rem(border-radius, 8);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__textarea {
+    width: 100%;
+    height: em(60);
+    margin-top: 1em;
+    overflow: hidden;
+    border: none;
+  }
+}
