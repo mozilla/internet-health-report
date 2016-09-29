@@ -37,7 +37,8 @@ var compileLanguageTask = function(language) {
       manageEnv: manageEnvironment,
       path: [path.join(config.root.src, config.tasks.html.src)],
       envOptions: {
-        watch: false
+        watch: false,
+        autoescape: false
       }
     }))
     .on('error', handleErrors)
