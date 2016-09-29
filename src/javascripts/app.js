@@ -33,3 +33,6 @@ smoothScrollInit();
 
 import { embedInit } from './modules/interaction/embed';
 embedInit();
+
+import { scrollHandler } from './modules/interaction/scrollHandler';
+scrollHandler();

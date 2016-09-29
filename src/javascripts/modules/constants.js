@@ -1,8 +1,12 @@
+import $ from 'jquery';
+window.$ = $;
+
 const w = window;
 const d = document;
 const e = d.documentElement;
 const g = d.getElementsByTagName(`body`)[0];
 
+export let headerNavOffsetTop = $(`.js-header-nav`).offset().top;
 export const colorRange = [`#f7bda7`, `#ee8596`, `#e05487`, `#a83e90`, `#712998`, `#542277`, `#391550`];
 export const breakpointM = 768;
 

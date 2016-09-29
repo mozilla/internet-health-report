@@ -1,0 +1,55 @@
+{% extends '_layouts/application.html' %}
+{% block content %}
+  <article class="article story wrapper u-space--l">
+    <div class="article__copy">
+      <div class="story__header">
+        <h1>{{ story4Title }}</h1>
+        <p>{{ story4P1 }}</p>
+
+        <div class="story__share share">
+          <a href="#" class="share__btn btn btn--outline">{{ facebookShareText }}</a>
+          <a href="#" class="share__btn btn btn--outline">{{ twitterShareText }}</a>
+          <a href="#" class="share__btn btn btn--outline">{{ emailShareText }}</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="article__copy">
+      <p>{{ story4P2 }}</p>
+      <p>{{ story4P3 }}</p>
+      <p>{{ story4P4 }}</p>
+      <p>{{ story4P5 }}</p>
+      <p>{{ story4P6 }}</p>
+      <p>{{ story4P7 }}</p>
+      <p>{{ story4P8 }}</p>
+      <p>{{ story4P9 }}</p>
+      <p>{{ story4P10 }}</p>
+    </div>
+
+    <figure class="article__figure">
+      <img src="/images/localization-at-mozfest@1x.jpg" alt="">
+      <figcaption class="article__figcaption">{{ story4P11 }}</figcaption>
+    </figure>
+
+    <div class="article__copy">
+      <p>{{ story4P12 }}</p>
+      <p>{{ story4P13 }}</p>
+      <p>{{ story4P14 }}</p>
+      <p>{{ story4P15 }}</p>
+      <p>{{ story4P16 }}</p>
+      <p>{{ story4P17 }}</p>
+      <p>{{ story4P18 }}</p>
+      <p>{{ story4P19 }}</p>
+      <p>{{ story4P20 }}</p>
+
+      <div class="article__share share">
+        <a href="#" class="share__btn btn btn--outline">{{ facebookShareText }}</a>
+        <a href="#" class="share__btn btn btn--outline">{{ twitterShareText }}</a>
+        <a href="#" class="share__btn btn btn--outline">{{ emailShareText }}</a>
+      </div>
+    </div>
+  </article>
+
+  {% include '_partials/section-nav.html' %}
+
+{% endblock %}

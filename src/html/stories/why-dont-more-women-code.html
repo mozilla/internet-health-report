@@ -1,0 +1,60 @@
+{% extends '_layouts/application.html' %}
+{% block content %}
+  <article class="article story wrapper u-space--l">
+    <div class="article__copy">
+      <div class="story__header">
+        <h1>{{ story1Title }}</h1>
+        <p>{{ story1P1 }}</p>
+
+        <div class="story__share share">
+          <a href="#" class="share__btn btn btn--outline">{{ facebookShareText }}</a>
+          <a href="#" class="share__btn btn btn--outline">{{ twitterShareText }}</a>
+          <a href="#" class="share__btn btn btn--outline">{{ emailShareText }}</a>
+        </div>
+      </div>
+
+      <p>{{ story1P1 }}</p>
+      <p>{{ story1P2 }}</p>
+      <p>{{ story1P3 }}</p>
+      <p>{{ story1P4 }}</p>
+      <p>{{ story1P5 }}</p>
+      <p>{{ story1P6 }}</p>
+    </div>
+
+    <figure class="article__figure">
+      <img src="/images/dummy.jpg" alt="">
+      <figcaption class="article__figcaption">{{ story1P7 }}</figcaption>
+    </figure>
+
+    <div class="article__copy">
+      <p>{{ story1P8 }}</p>
+      <p>{{ story1P9 }}</p>
+      <p>{{ story1P10 }}</p>
+      <p>{{ story1P11 }}</p>
+      <p>{{ story1P12 }}</p>
+      <p>{{ story1P13 }}</p>
+    </div>
+
+    <figure class="article__figure">
+      <img src="/images/dummy.jpg" alt="">
+      <figcaption class="article__figcaption">{{ story1P14 }}</figcaption>
+    </figure>
+
+    <div class="article__copy">
+      <p>{{ story1P15 }}</p>
+      <p>{{ story1P16 }}</p>
+      <p>{{ story1P17 }}</p>
+      <p>{{ story1P18 }}</p>
+      <p>{{ story1P19 }}</p>
+
+      <div class="article__share share">
+        <a href="#" class="share__btn btn btn--outline">{{ facebookShareText }}</a>
+        <a href="#" class="share__btn btn btn--outline">{{ twitterShareText }}</a>
+        <a href="#" class="share__btn btn btn--outline">{{ emailShareText }}</a>
+      </div>
+    </div>
+  </article>
+
+  {% include '_partials/section-nav.html' %}
+
+{% endblock %}
