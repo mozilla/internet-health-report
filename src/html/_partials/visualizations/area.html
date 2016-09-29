@@ -2,7 +2,12 @@
   <div class="data__header">
     <a href="#" class="data__link">Share</a>
     <a href="#" class="data__link">Tweet</a>
-    <button class="data__link js-embed">Embed</button>
+    <button class="data__link js-embed-toggle" data-embed="area">Embed</button>
+
+    <div class="data__embed js-embed">
+      <p>Copy & paste code</p>
+      <textarea class="data__textarea" name="" id="" cols="30" rows="10"></textarea>
+    </div>
   </div>
 
   <div id="area" class="area js-area" data-url="/data/area.tsv"></div>

@@ -1,3 +1,4 @@
+import * as constants from '../constants';
 import $ from 'jquery';
 window.$ = $;
 
@@ -26,10 +27,8 @@ const renderLanguageSelect = () => {
     const selectValue = e.currentTarget.value;
     const localeDir = selectValue === `en` ? `` : selectValue;
     const url = window.location.href;
-    const protocol = window.location.protocol;
-    const hostname = window.location.hostname;
-    const port = window.location.port === `3000` ? `:3000` : ``;
-    const origin = window.location.origin || `${protocol}//${hostname}${port}`;
+    const origin = constants.getOrigin();
+
     const targetDirectory = url.replace(origin, ``).replace(`/${locales[currentLanguage]}/`, ``);
     const targetURL = `${origin}/${localeDir}${targetDirectory}`;
 

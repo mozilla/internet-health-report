@@ -23,3 +23,12 @@ export const getDataKeys = (data) => {
 
   return dataKeys;
 };
+
+export const getOrigin = () => {
+  const protocol = window.location.protocol;
+  const hostname = window.location.hostname;
+  const port = window.location.port === `3000` ? `:3000` : ``;
+  const origin = window.location.origin || `${protocol}//${hostname}${port}`;
+
+  return origin;
+};

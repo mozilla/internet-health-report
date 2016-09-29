@@ -30,3 +30,6 @@ renderLanguageSelect();
 
 import { smoothScrollInit } from './modules/interaction/smoothScroll';
 smoothScrollInit();
+
+import { embedInit } from './modules/interaction/embed';
+embedInit();
