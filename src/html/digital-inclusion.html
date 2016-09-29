@@ -21,13 +21,7 @@
           <img src="/images/dummy.jpg" alt="">
           <h4>{{ story1Title }}</h4>
           <p>{{ story1Desc }}</p>
-          <a href="{{ story1Link }}" class="link">{{ linkCTA }}</a>
-        </article>
-
-        <article class="story-link">
-          <h4>{{ story1Title }}</h4>
-          <p>{{ story1Desc }}</p>
-          <a href="{{ story1Link }}" class="link">{{ linkCTA }}</a>
+          <a href="{{ locale(iso) }}{{ story1Link }}" class="link">{{ linkCTA }}</a>
         </article>
       </aside>
     </div>
@@ -81,7 +75,7 @@
     </div>
 
     <div class="section__pag wrapper u-space--l">
-      <a href="{{ section2Link }}" class="pag pag--next"><span class="pag__item">{{ next }}</span> <span class="pag__item">{{ section2Subtitle }}</span></a>
+      <a href="{{ locale(iso) }}{{ section2Link }}" class="pag pag--next"><span class="pag__item">{{ next }}</span> <span class="pag__item">{{ section2Subtitle }}</span></a>
     </div>
   </section>
 

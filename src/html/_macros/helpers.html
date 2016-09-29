@@ -4,3 +4,7 @@
     <svg viewBox="{{viewBox}}"><use xlink:href='images/icons.svg#{{id}}' /></use></svg>
   </span>
 {% endmacro %}
+
+{% macro locale(iso) %}
+  {% if iso != 'en' %}/{{ iso }}{% endif %}
+{% endmacro %}
