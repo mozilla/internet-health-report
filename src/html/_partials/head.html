@@ -9,6 +9,8 @@
 
     <script>
       (function() {
+        document.getElementsByTagName('html')[0].className += 'js';
+
         if (localStorage.getItem('languageSet') === null) {
           var language = window.navigator.language || window.navigator.userLanguage;
           var languageString = language.toLowerCase();

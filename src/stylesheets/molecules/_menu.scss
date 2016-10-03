@@ -23,5 +23,56 @@
     @include media($large-screen-up) {
       padding: 1em 0;
     }
+
+    &--active {
+      font-weight: $fw-bold;
+    }
+  }
+}
+
+.submenu-wrapper {
+  @include media($medium-screen-up) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: $white;
+  }
+}
+
+.submenu {
+  display: none;
+  margin: 0 -0.5em;
+
+  @include media($medium-screen-up) {
+    margin: 0 auto;
+  }
+
+  .menu__item--active & {
+    display: block;
+  }
+
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0.5em;
+
+    @include media($medium-screen-up) {
+      margin: 0;
+
+      + #{&} {
+        margin-left: 1em;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 0;
+    text-decoration: none;
+
+    @include media($medium-screen-up) {
+      padding: 1em 0;
+    }
   }
 }

@@ -1,4 +1,10 @@
 .section {
+  &__header {
+    @include media($medium-screen-up) {
+      padding-top: em($space * 3);
+    }
+  }
+
   &__intro {
     @include flow(0.5);
 

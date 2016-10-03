@@ -1,6 +1,8 @@
 {% extends '_layouts/application.html' %}
 {% block content %}
-  <section class="section">
+  {% set privacy = true %}
+  {% include './_partials/header.html' %}
+  <section class="section js-page" data-page="{{ section3Title|lower|replace(' ', '-') }}">
     <!-- <nav class="wrapper">
       <ul class="menu">
         <li class="menu__item"><a href="#{{ section3Sub1 | lower | replace(' ', '-') }}" class="menu__link js-scroll-to">{{ section3Sub1 }}</a></li>

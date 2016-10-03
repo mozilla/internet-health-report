@@ -1,6 +1,8 @@
 {% extends '_layouts/application.html' %}
 {% block content %}
-  <section class="section">
+  {% set decentralisation = true %}
+  {% include './_partials/header.html' %}
+  <section class="section js-page" data-page="{{ section5Title|lower|replace(' ', '-') }}">
     <!-- <nav class="wrapper">
       <ul class="menu">
         <li class="menu__item"><a href="#{{ section5Sub1 | lower | replace(' ', '-') }}" class="menu__link js-scroll-to">{{ section5Sub1 }}</a></li>
