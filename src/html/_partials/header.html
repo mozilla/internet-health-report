@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header {{ activeNav }}">
   <div class="wrapper">
     <a href="/{% if iso != 'en' %}{{ iso }}{% endif %}" class="header__link"><h1 class="header__title">{{ title }}</h1>
       <p class="header__subtitle">{{ headerSubtitle }}</p></a>
@@ -7,20 +7,59 @@
   <nav class="header__nav js-header-nav">
     <div class="wrapper">
       <ul class="header__menu menu">
-        <li class="menu__item">
-          <a href="{{ locale(iso) }}{{ section1Link }}" class="menu__link">{{ section1Title }}</a>
+        <li class="menu__item {% if digital %}menu__item--active{% endif %}">
+          <a href="{{ locale(iso) }}{{ section1Link }}" class="menu__link {% if digital %}menu__link--active{% endif %}">{{ section1Title }}</a>
+          <div class="submenu-wrapper">
+            <ul class="submenu wrapper">
+              <li class="submenu__item"><a href="#{{ section1Sub1|lower|replace(' ', '-') }}" class="submenu__link js-scroll-to">{{ section1Sub1 }}</a></li>
+              <li class="submenu__item"><a href="#{{ section1Sub2|lower|replace(' ', '-') }}" class="submenu__link js-scroll-to">{{ section1Sub2 }}</a></li>
+              <li class="submenu__item"><a href="#{{ section1Sub3|lower|replace(' ', '-') }}" class="submenu__link js-scroll-to">{{ section1Sub3 }}</a></li>
+              <li class="submenu__item"><a href="#{{ section1Sub4|lower|replace(' ', '-') }}" class="submenu__link js-scroll-to">{{ section1Sub4 }}</a></li>
+            </ul>
+          </div>
         </li>
-        <li class="menu__item">
-          <a href="{{ locale(iso) }}{{ section2Link }}" class="menu__link">{{ section2Title }}</a>
+        <li class="menu__item {% if web %}menu__item--active{% endif %}">
+          <a href="{{ locale(iso) }}{{ section2Link }}" class="menu__link {% if web %}menu__link--active{% endif %}">{{ section2Title }}</a>
+          <div class="submenu-wrapper">
+            <ul class="submenu wrapper">
+              <li class="submenu__item"><a href="#{{ section1Sub1|lower|replace(' ', '-') }}" class="submenu__link js-scroll-to">{{ section2Sub1 }}</a></li>
+              <li class="submenu__item"><a href="#{{ section1Sub2|lower|replace(' ', '-') }}" class="submenu__link js-scroll-to">{{ section2Sub2 }}</a></li>
+              <li class="submenu__item"><a href="#{{ section1Sub3|lower|replace(' ', '-') }}" class="submenu__link js-scroll-to">{{ section2Sub3 }}</a></li>
+            </ul>
+          </div>
         </li>
-        <li class="menu__item">
-          <a href="{{ locale(iso) }}{{ section3Link }}" class="menu__link">{{ section3Title }}</a>
+        <li class="menu__item {% if privacy %}menu__item--active{% endif %}">
+          <a href="{{ locale(iso) }}{{ section3Link }}" class="menu__link {% if privacy %}menu__link--active{% endif %}">{{ section3Title }}</a>
+          <div class="submenu-wrapper">
+            <ul class="submenu wrapper">
+              <li class="submenu__item"><a href="#{{ section1Sub1|lower|replace(' ', '-') }}" class="submenu__link js-scroll-to">{{ section3Sub1 }}</a></li>
+              <li class="submenu__item"><a href="#{{ section1Sub2|lower|replace(' ', '-') }}" class="submenu__link js-scroll-to">{{ section3Sub2 }}</a></li>
+              <li class="submenu__item"><a href="#{{ section1Sub3|lower|replace(' ', '-') }}" class="submenu__link js-scroll-to">{{ section3Sub3 }}</a></li>
+              <li class="submenu__item"><a href="#{{ section1Sub4|lower|replace(' ', '-') }}" class="submenu__link js-scroll-to">{{ section3Sub4 }}</a></li>
+            </ul>
+          </div>
         </li>
-        <li class="menu__item">
-          <a href="{{ locale(iso) }}{{ section4Link }}" class="menu__link">{{ section4Title }}</a>
+        <li class="menu__item {% if open %}menu__item--active{% endif %}">
+          <a href="{{ locale(iso) }}{{ section4Link }}" class="menu__link {% if open %}menu__link--active{% endif %}">{{ section4Title }}</a>
+          <div class="submenu-wrapper">
+            <ul class="submenu wrapper">
+              <li class="submenu__item"><a href="#{{ section1Sub1|lower|replace(' ', '-') }}" class="submenu__link js-scroll-to">{{ section4Sub1 }}</a></li>
+              <li class="submenu__item"><a href="#{{ section1Sub2|lower|replace(' ', '-') }}" class="submenu__link js-scroll-to">{{ section4Sub2 }}</a></li>
+              <li class="submenu__item"><a href="#{{ section1Sub3|lower|replace(' ', '-') }}" class="submenu__link js-scroll-to">{{ section4Sub3 }}</a></li>
+              <li class="submenu__item"><a href="#{{ section1Sub4|lower|replace(' ', '-') }}" class="submenu__link js-scroll-to">{{ section4Sub4 }}</a></li>
+            </ul>
+          </div>
         </li>
-        <li class="menu__item">
-          <a href="{{ locale(iso) }}{{ section5Link }}" class="menu__link">{{ section5Title }}</a>
+        <li class="menu__item {% if decentralisation %}menu__item--active{% endif %}">
+          <a href="{{ locale(iso) }}{{ section5Link }}" class="menu__link {% if decentralisation %}menu__link--active{% endif %}">{{ section5Title }}</a>
+          <div class="submenu-wrapper">
+            <ul class="submenu wrapper">
+              <li class="submenu__item"><a href="#{{ section1Sub1|lower|replace(' ', '-') }}" class="submenu__link js-scroll-to">{{ section5Sub1 }}</a></li>
+              <li class="submenu__item"><a href="#{{ section1Sub2|lower|replace(' ', '-') }}" class="submenu__link js-scroll-to">{{ section5Sub2 }}</a></li>
+              <li class="submenu__item"><a href="#{{ section1Sub3|lower|replace(' ', '-') }}" class="submenu__link js-scroll-to">{{ section5Sub3 }}</a></li>
+              <li class="submenu__item"><a href="#{{ section1Sub4|lower|replace(' ', '-') }}" class="submenu__link js-scroll-to">{{ section5Sub4 }}</a></li>
+            </ul>
+          </div>
         </li>
       </ul>
 

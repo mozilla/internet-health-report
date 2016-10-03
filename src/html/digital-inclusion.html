@@ -1,15 +1,8 @@
 {% extends '_layouts/application.html' %}
 {% block content %}
-  <section class="section">
-    <nav class="wrapper">
-      <ul class="menu">
-        <li class="menu__item"><a href="#{{ section1Sub1 | lower | replace(' ', '-') }}" class="menu__link js-scroll-to">{{ section1Sub1 }}</a></li>
-        <li class="menu__item"><a href="#{{ section1Sub2 | lower | replace(' ', '-') }}" class="menu__link js-scroll-to">{{ section1Sub2 }}</a></li>
-        <li class="menu__item"><a href="#{{ section1Sub3 | lower | replace(' ', '-') }}" class="menu__link js-scroll-to">{{ section1Sub3 }}</a></li>
-        <li class="menu__item"><a href="#{{ section1Sub4 | lower | replace(' ', '-') }}" class="menu__link js-scroll-to">{{ section1Sub4 }}</a></li>
-      </ul>
-    </nav>
-
+  {% set digital = true %}
+  {% include './_partials/header.html' %}
+  <section class="section js-page" data-page="{{ section1Title|lower|replace(' ', '-') }}">
     <div class="section__header wrapper u-space--m">
       <div class="section__intro">
         <h2>{{ section1Subtitle }}</h2>

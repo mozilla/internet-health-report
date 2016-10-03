@@ -36,3 +36,6 @@ embedInit();
 
 import { scrollHandler } from './modules/interaction/scrollHandler';
 scrollHandler();
+
+import { resizeHandler } from './modules/interaction/resizeHandler';
+resizeHandler();
