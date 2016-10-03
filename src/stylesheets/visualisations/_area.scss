@@ -7,7 +7,7 @@
     content: '';
     display: block;
     width: 100%;
-    height: em(400);
+    height: em(300);
 
     @include media($medium-screen-up) {
       height: 0;
