@@ -51,6 +51,16 @@
           <h3>{{ section1Sub2 }}</h3>
         </div>
       </div>
+
+      <div class="subsection__main wrapper">
+        <div class="subsection__text-block">
+          <p class="subsection__text-strong">{{ section1Sub1P1 }}</p>
+
+          <p class="subsection__text">{{ section1Sub1P2 }}</p>
+        </div>
+
+        {% include '_partials/visualizations/internet-affordability.html' %}
+      </div>
     </div>
 
     <div id="{{ section1Sub3 | lower | replace(' ', '-') }}" class="subsection">

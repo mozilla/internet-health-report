@@ -4,7 +4,7 @@ import * as _ from 'lodash';
 import * as constants from '../constants';
 
 const resizeEvents = () => {
-  constants.headerNavOffsetTop = $(`.js-header-nav`).offset().top;
+  constants.headerNavOffsetTop = $(`.js-header-nav`).length ? $(`.js-header-nav`).offset().top : 0;
 };
 
 const resizeHandler = () => {

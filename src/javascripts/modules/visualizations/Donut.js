@@ -11,8 +11,8 @@ class Donut {
     this.legendSpacing = 4;
     this.legendHeight = this.legendRectSize + this.legendSpacing;
     this.color = d3.scaleOrdinal()
-      .range(constants.colorRange);
-    this.classes = [`donut__svg`, `donut__g`, `donut__arc`, `donut__text`, `donut__legend`, `donut__layer`];
+      .range(constants.colorRangeBlack);
+    this.classes = [`donut__svg`, `donut__g`, `donut__arc`, `donut__text`, `donut__legend`, `donut__layer`, `donut__value`];
     this.svg = d3.select(this.el)
       .append(`svg`)
         .attr(`class`, this.classes[0]);
@@ -39,6 +39,9 @@ class Donut {
 
     this.svg.selectAll(`.${this.classes[3]}`)
       .attr(`transform`, d => `translate(${this.arc.centroid(d)})`);
+
+    this.svg.selectAll(`.${this.classes[6]}`)
+      .attr(`transform`, `translate(${this.radius}, ${this.radius})`);
 
     if (!this.isSingleValue) {
       this.height = this.width + (this.color.domain().length * this.legendHeight);
@@ -100,6 +103,14 @@ class Donut {
           .text(d => `${d.data[this.dataKeys[1]]}`);
 
         this.renderLegend();
+      } else {
+        this.svg.append(`text`)
+          .attr(`class`, this.classes[6])
+          .style(`font-size`, `40px`)
+          .style(`fill`, `#fff`)
+          .attr(`text-anchor`, `middle`)
+          .attr(`alignment-baseline`, `central`)
+          .text(`${this.data[0][this.dataKeys[1]]}%`);
       }
 
       this.setSizes();

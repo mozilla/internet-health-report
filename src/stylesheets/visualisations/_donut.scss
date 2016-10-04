@@ -1,9 +1,36 @@
+.donuts {
+  text-align: center;
+}
+
 .donut {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
   width: 100%;
   @include rem(max-width, 320);
   overflow: hidden;
 
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    @include rem(max-width, 320);
+    height: 0;
+    padding-bottom: 100%;
+  }
+
+  .donuts & {
+    margin: em($space * 0.5) 0;
+
+    @include media($small-screen-up) {
+      margin: em($space * 0.5);
+    }
+  }
+
   &__svg {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: block;
   }
 }
