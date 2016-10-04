@@ -1,8 +1,19 @@
 .choropleth {
   position: relative;
 
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-bottom: 66.63%;
+  }
+
   &__svg {
     display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   &__item {
