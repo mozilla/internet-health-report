@@ -6,7 +6,8 @@ const d = document;
 const e = d.documentElement;
 const g = d.getElementsByTagName(`body`)[0];
 
-export let headerNavOffsetTop = $(`.js-header-nav`).offset().top;
+export let headerNavOffsetTop = $(`.js-header-nav`).length ? $(`.js-header-nav`).offset().top : 0;
+export const colorRangeBlack = [`#333333`, `#9a9a9a`];
 export const colorRange = [`#f7bda7`, `#ee8596`, `#e05487`, `#a83e90`, `#712998`, `#542277`, `#391550`];
 export const breakpointM = 768;
 

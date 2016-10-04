@@ -11,7 +11,7 @@
 
       <aside class="section__related">
         <article class="story-link">
-          <img src="/images/dummy.jpg" alt="">
+          <img src="/images/dummy.jpg" width="516" height="342" alt="">
           <h4>{{ story1Title }}</h4>
           <p>{{ story1Desc }}</p>
           <a href="{{ locale(iso) }}{{ story1Link }}" class="link">{{ linkCTA }}</a>
@@ -33,13 +33,15 @@
           <p class="subsection__text">{{ section1Sub1P2 }}</p>
         </div>
 
-        {% include '_partials/visualizations/area.html' %}
+        {% include '_partials/visualizations/number-of-people-online.html' %}
 
         <div class="subsection__text-block">
           <p class="subsection__text-strong">{{ section1Sub1P1 }}</p>
 
           <p class="subsection__text">{{ section1Sub1P2 }}</p>
         </div>
+
+        {% include '_partials/visualizations/internet-penetration-countries.html' %}
       </div>
     </div>
 
@@ -48,6 +50,16 @@
         <div class="wrapper">
           <h3>{{ section1Sub2 }}</h3>
         </div>
+      </div>
+
+      <div class="subsection__main wrapper">
+        <div class="subsection__text-block">
+          <p class="subsection__text-strong">{{ section1Sub1P1 }}</p>
+
+          <p class="subsection__text">{{ section1Sub1P2 }}</p>
+        </div>
+
+        {% include '_partials/visualizations/internet-affordability.html' %}
       </div>
     </div>
 

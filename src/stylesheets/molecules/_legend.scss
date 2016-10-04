@@ -1,9 +1,8 @@
 .legend {
   position: absolute;
-  bottom: 2em;
+  top: 2em;
   left: 1em;
   max-width: em(300);
-  background-color: rgba($white, 0.98);
 
   &__scale,
   &__value {
@@ -16,7 +15,7 @@
     height: em(10);
     margin: 0 0.25em;
     border-radius: em(10);
-    background: linear-gradient(to right, rgba($theme2, 0.1) 0%, $theme2 100%);
+    background: linear-gradient(to right, rgba($white, 0.1) 0%, $white 100%);
   }
 
   &__value {

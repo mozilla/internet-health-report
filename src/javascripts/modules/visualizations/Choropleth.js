@@ -6,7 +6,7 @@ import * as topojson from 'topojson';
 window.$ = $;
 
 class Choropleth {
-  constructor(el, dataUrl, dataValueKey, title) {
+  constructor(el, dataUrl, dataUnits, title) {
     this.el = el;
     this.aspectRatio = 0.6663;
     this.width = $(this.el).width();
@@ -15,7 +15,7 @@ class Choropleth {
     this.mapWidth = this.width;
     this.shapeUrl = `/data/world-shape-data.json`;
     this.dataUrl = dataUrl;
-    this.dataValueKey = dataValueKey;
+    this.dataUnits = dataUnits ? dataUnits : ``;
     this.title = title;
   }
 
@@ -68,7 +68,7 @@ class Choropleth {
     countries.features.forEach((country) => {
       this.vizData.forEach((data) => {
         if (country.id === data[this.dataKeys[0]]) {
-          country[this.dataValueKey] = Number(data[this.dataValueKey]);
+          country[this.dataKeys[1]] = Number(data[this.dataKeys[1]]);
         }
       });
     });
@@ -81,13 +81,19 @@ class Choropleth {
       .attr(`d`, path)
       .on(`mouseover`, (d) => {
         this.tooltip
-          .html(`${d.id}: ${d[this.dataKeys[1]]}`)
+          .html(() => {
+            if (d[this.dataKeys[1]]) {
+              return `${d.id}: ${d[this.dataKeys[1]]}${this.dataUnits}`;
+            } else {
+              return `${d.id}: n/a`;
+            }
+          })
           .classed(`is-active`, true);
       })
       .on(`mousemove`, () => {
         this.tooltip
-          .style(`top`, `${d3.event.pageY}px`)
-          .style(`left`, `${d3.event.pageX}px`);
+          .style(`top`, `${d3.event.pageY - $(this.el).offset().top}px`)
+          .style(`left`, `${d3.event.pageX - $(this.el).offset().left}px`);
       })
       .on(`mouseout`, () => {
         this.tooltip
@@ -110,9 +116,9 @@ class Choropleth {
     const min = dataRange[0];
     const max = dataRange[1];
     const legendString = `<div class="legend">` +
-      `<p class="legend__value">` + Math.floor((min / 1) * 100) + `%</p>` +
+      `<p class="legend__value">${Math.floor(min / 1)}%</p>` +
       `<div class="legend__scale"></div>` +
-      `<p class="legend__value">` + Math.floor((max / 1) * 100) + `%</p>` +
+      `<p class="legend__value">${Math.floor(max / 1)}%</p>` +
     `</div>`;
 
     $(this.el).append(legendString);
@@ -123,12 +129,12 @@ class Choropleth {
 
     d3.selectAll(`.${this.classes[1]}`)
       .attr(`fill-opacity`, (d) => {
-        return this.getOpacity(d[this.dataValueKey], dataRange);
+        return this.getOpacity(d[this.dataKeys[1]], dataRange);
       });
   }
 
   getDataRange() {
-    const dataArray = this.vizData.map((object) => object[this.dataValueKey]);
+    const dataArray = this.vizData.map((object) => object[this.dataKeys[1]]);
     const min = Math.min(...dataArray);
     const max = Math.max(...dataArray);
 
@@ -151,10 +157,10 @@ const loadChoropleths = () => {
     const $this = $choropleth.eq(index);
     const id = $this.attr(`id`);
     const url = $this.data(`url`);
-    const value = $this.data(`value`);
+    const units = $this.data(`units`);
     const title = $this.data(`title`);
 
-    new Choropleth(`#${id}`, url, value, title).render();
+    new Choropleth(`#${id}`, url, units, title).render();
   });
 };
 
