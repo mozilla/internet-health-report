@@ -1,13 +1,12 @@
 .choropleth {
   position: relative;
-  @include rem(max-width, 860);
 
   &__svg {
     display: block;
   }
 
   &__item {
-    fill: $theme2;
+    fill: $white;
     stroke-width: 0.07em;
     stroke: rgba($white, 0.5);
   }
