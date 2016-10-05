@@ -3,58 +3,61 @@
   {% set privacy = true %}
   {% include './_partials/header.html' %}
   <section class="section js-page" data-page="{{ section3Title|lower|replace(' ', '-') }}">
-    <!-- <nav class="wrapper">
-      <ul class="menu">
-        <li class="menu__item"><a href="#{{ section3Sub1 | lower | replace(' ', '-') }}" class="menu__link js-scroll-to">{{ section3Sub1 }}</a></li>
-        <li class="menu__item"><a href="#{{ section3Sub2 | lower | replace(' ', '-') }}" class="menu__link js-scroll-to">{{ section3Sub2 }}</a></li>
-        <li class="menu__item"><a href="#{{ section3Sub3 | lower | replace(' ', '-') }}" class="menu__link js-scroll-to">{{ section3Sub3 }}</a></li>
-        <li class="menu__item"><a href="#{{ section3Sub4 | lower | replace(' ', '-') }}" class="menu__link js-scroll-to">{{ section3Sub4 }}</a></li>
-      </ul>
-    </nav> -->
-
     <div class="section__header wrapper u-space--m">
       <div class="section__intro">
         <h2>{{ section3Subtitle }}</h2>
-        <!-- <p>{{ section3Intro1 }}</p> -->
+        <p>{{ section3Intro1 }}</p>
       </div>
 
-      <!-- <aside class="section__related">
+      <aside class="section__related">
         <article class="story-link">
-          <img src="/images/dummy.jpg" alt="">
-          <h4>{{ story1Title }}</h4>
-          <p>{{ story1Desc }}</p>
-          <a href="{{ story1Link }}" class="link">{{ linkCTA }}</a>
+          <img src="/images/dummy.jpg" width="516" height="342" alt="">
+          <h4>{{ story3Title }}</h4>
+          <p>{{ story3Desc }}</p>
+          <a href="{{ locale(iso) }}{{ story3Link }}" class="link">{{ linkCTA }}</a>
         </article>
-
-        <article class="story-link">
-          <h4>{{ story1Title }}</h4>
-          <p>{{ story1Desc }}</p>
-          <a href="{{ story1Link }}" class="link">{{ linkCTA }}</a>
-        </article>
-      </aside> -->
+      </aside>
     </div>
 
-    <!-- <div id="{{ section3Sub1 | lower | replace(' ', '-') }}" class="subsection">
+    <div id="{{ section3Sub1 | lower | replace(' ', '-') }}" class="subsection">
       <div class="subsection__header">
         <div class="wrapper">
           <h3>{{ section3Sub1 }}</h3>
         </div>
       </div>
 
-      <div class="subsection__main wrapper">
-        <div class="subsection__text-block">
-          <p class="subsection__text-strong">{{ section3Sub1P1 }}</p>
+      <div class="subsection__main wrapper"></div>
+    </div>
 
-          <p class="subsection__text">{{ section3Sub1P2 }}</p>
-        </div>
-
-        <div class="subsection__text-block">
-          <p class="subsection__text-strong">{{ section3Sub1P1 }}</p>
-
-          <p class="subsection__text">{{ section3Sub1P2 }}</p>
+    <div id="{{ section3Sub2 | lower | replace(' ', '-') }}" class="subsection">
+      <div class="subsection__header">
+        <div class="wrapper">
+          <h3>{{ section3Sub2 }}</h3>
         </div>
       </div>
-    </div> -->
+
+      <div class="subsection__main wrapper"></div>
+    </div>
+
+    <div id="{{ section3Sub3 | lower | replace(' ', '-') }}" class="subsection">
+      <div class="subsection__header">
+        <div class="wrapper">
+          <h3>{{ section3Sub3 }}</h3>
+        </div>
+      </div>
+
+      <div class="subsection__main wrapper"></div>
+    </div>
+
+    <div id="{{ section3Sub4 | lower | replace(' ', '-') }}" class="subsection">
+      <div class="subsection__header">
+        <div class="wrapper">
+          <h3>{{ section3Sub4 }}</h3>
+        </div>
+      </div>
+
+      <div class="subsection__main wrapper"></div>
+    </div>
 
     <div class="section__pag wrapper u-space--l">
       <a href="{{ locale(iso) }}{{ section2Link }}" class="pag pag--prev"><span class="pag__item">{{ prev }}</span> <span class="pag__item">{{ section2Subtitle }}</span></a>
