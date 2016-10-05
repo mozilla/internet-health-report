@@ -22,7 +22,7 @@ class StackedArea {
 
   setSizes() {
     this.width = $(this.el).width();
-    this.height = constants.getWindowWidth() < constants.breakpointM ? 400 : Math.ceil(this.width * 0.52);
+    this.height = constants.getWindowWidth() < constants.breakpointM ? 300 : Math.ceil(this.width * 0.52);
     this.innerWidth = this.width - this.margin.left - this.margin.right;
     this.innerHeight = this.height - this.margin.top - this.margin.bottom;
     this.svg
