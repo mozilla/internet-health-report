@@ -2,7 +2,7 @@
   <div class="data__header">
     <a href="#" class="data__link">{{ dataShare }}</a>
     <a href="#" class="data__link">{{ dataTweet }}</a>
-    <button class="data__link js-embed-toggle" data-embed="number-of-people-online">{{ dataEmbed }}</button>
+    <button class="data__link js-embed-toggle" data-embed="share-of-content-by-language">{{ dataEmbed }}</button>
 
     <div class="data__embed js-embed">
       <p>{{ dataEmbedCta }}</p>
@@ -10,7 +10,7 @@
     </div>
   </div>
 
-  <div id="number-of-people-online" class="area js-area" data-url="/data/number-of-people-online.tsv" data-percentage="true"></div>
+  <div id="share-of-content-by-language" class="stacked-area js-stacked-area" data-url="/data/share-of-content-by-language.tsv"></div>
 
   <p class="data__source">{{ dataSource }} <a href="#">Title of data source</a></p>
 </div>

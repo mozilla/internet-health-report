@@ -1,16 +1,16 @@
 <div class="data">
   <div class="data__header">
-    <a href="#" class="data__link">Share</a>
-    <a href="#" class="data__link">Tweet</a>
-    <button class="data__link js-embed-toggle" data-embed="area">Embed</button>
+    <a href="#" class="data__link">{{ dataShare }}</a>
+    <a href="#" class="data__link">{{ dataTweet }}</a>
+    <button class="data__link js-embed-toggle" data-embed="internet-penetration-countries">{{ dataEmbed }}</button>
 
     <div class="data__embed js-embed">
-      <p>Copy & paste code</p>
+      <p>{{ dataEmbedCta }}</p>
       <textarea class="data__textarea" name="" id="" cols="30" rows="10"></textarea>
     </div>
   </div>
 
-  <div id="choropleth" class="choropleth js-choropleth" data-url="/data/internet-penetration.csv" data-units="%" data-title="Internet penetration (% 2016)"></div>
+  <div id="internet-penetration-countries" class="choropleth js-choropleth" data-url="/data/internet-penetration-countries.csv" data-units="%" data-title="Internet penetration (% 2016)"></div>
 
-  <p class="data__source">Source: <a href="#">Title of data source</a></p>
+  <p class="data__source">{{ dataSource }} <a href="#">Title of data source</a></p>
 </div>
