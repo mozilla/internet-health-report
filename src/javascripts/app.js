@@ -12,6 +12,12 @@ loadStackedAreaCharts();
 import { loadAreaCharts } from './modules/visualizations/Area';
 loadAreaCharts();
 
+import { loadBarCharts } from './modules/visualizations/Bar';
+loadBarCharts();
+
+import { loadBarHorizontalCharts } from './modules/visualizations/BarHorizontal';
+loadBarHorizontalCharts();
+
 import { loadLineCharts } from './modules/visualizations/Line';
 loadLineCharts();
 

@@ -6,17 +6,17 @@ import * as topojson from 'topojson';
 window.$ = $;
 
 class Choropleth {
-  constructor(el, dataUrl, dataUnits, title) {
+  constructor(el, dataUrl, dataUnits = ``, isDataOrdinal = false) {
     this.el = el;
     this.aspectRatio = 0.6663;
     this.width = $(this.el).width();
     this.height = Math.ceil(this.aspectRatio * this.width);
-    this.classes = [`choropleth__svg`, `choropleth__item`, `choropleth__tooltip`];
+    this.classes = [`choropleth__svg`, `choropleth__item`, `choropleth__tooltip`, `choropleth__legend`];
     this.mapWidth = this.width;
     this.shapeUrl = `/data/world-shape-data.json`;
     this.dataUrl = dataUrl;
-    this.dataUnits = dataUnits ? dataUnits : ``;
-    this.title = title;
+    this.dataUnits = dataUnits;
+    this.isDataOrdinal = isDataOrdinal;
   }
 
   render() {
@@ -57,6 +57,7 @@ class Choropleth {
     this.shapeData = shapeData;
     this.vizData = vizData;
     this.dataKeys = constants.getDataKeys(this.vizData);
+    this.setOrdinalScale();
     this.draWTooltip();
 
     const countries = topojson.feature(this.shapeData, this.shapeData.objects[`countries`]);
@@ -66,11 +67,20 @@ class Choropleth {
       .projection(projection);
 
     countries.features.forEach((country) => {
+      let countrySet = false;
+
       this.vizData.forEach((data) => {
         if (country.id === data[this.dataKeys[0]]) {
-          country[this.dataKeys[1]] = Number(data[this.dataKeys[1]]);
+          country[this.dataKeys[1]] = this.isDataOrdinal ? data[this.dataKeys[1]] : Number(data[this.dataKeys[1]]);
+          countrySet = true;
         }
       });
+
+      if (!countrySet) {
+        if (this.isDataOrdinal) {
+          country[this.dataKeys[1]] = `Unknown`;
+        }
+      }
     });
 
     this.svg.selectAll(`.${this.classes[1]}`)
@@ -78,32 +88,55 @@ class Choropleth {
       .enter().append(`path`)
       .attr(`class`, this.classes[1])
       .attr(`id`, (d) => d.id, true)
-      .attr(`d`, path)
-      .on(`mouseover`, (d) => {
-        this.tooltip
-          .html(() => {
-            if (d[this.dataKeys[1]]) {
-              return `${d.id}: ${d[this.dataKeys[1]]}${this.dataUnits}`;
-            } else {
-              return `${d.id}: n/a`;
-            }
-          })
-          .classed(`is-active`, true);
-      })
-      .on(`mousemove`, () => {
-        this.tooltip
-          .style(`top`, `${d3.event.pageY - $(this.el).offset().top}px`)
-          .style(`left`, `${d3.event.pageX - $(this.el).offset().left}px`);
-      })
-      .on(`mouseout`, () => {
-        this.tooltip
-          .classed(`is-active`, false);
-      });
+      .attr(`d`, path);
 
-    this.setData();
-    this.drawLegend();
+    if (!this.isDataOrdinal) {
+      this.svg.selectAll(`.${this.classes[1]}`)
+        .on(`mouseover`, (d) => {
+          this.tooltip
+            .html(() => {
+              if (d[this.dataKeys[1]]) {
+                return `${d.id}: ${d[this.dataKeys[1]]}${this.dataUnits}`;
+              } else {
+                return `${d.id}: n/a`;
+              }
+            })
+            .classed(`is-active`, true);
+        })
+        .on(`mousemove`, () => {
+          this.tooltip
+            .style(`top`, `${d3.event.pageY - $(this.el).offset().top}px`)
+            .style(`left`, `${d3.event.pageX - $(this.el).offset().left}px`);
+        })
+        .on(`mouseout`, () => {
+          this.tooltip
+            .classed(`is-active`, false);
+        });
+
+      this.setDataRange();
+      this.setData();
+      this.drawLegend();
+    } else {
+      this.setDataOrdinal();
+      this.drawOrdinalLegend();
+    }
   }
 
+  setOrdinalScale() {
+    this.scaleKeys = [];
+
+    this.vizData.forEach(el => {
+      const scaleKey = el[this.dataKeys[1]];
+
+      if (this.scaleKeys.indexOf(scaleKey) === -1) {
+        this.scaleKeys.push(scaleKey);
+      }
+    });
+
+    this.colorScale = d3.scaleOrdinal()
+      .domain([this.scaleKeys])
+      .range(constants.colorRange);
+  }
 
   draWTooltip() {
     this.tooltip = d3.select(this.el)
@@ -112,9 +145,8 @@ class Choropleth {
   }
 
   drawLegend() {
-    const dataRange = this.getDataRange();
-    const min = dataRange[0];
-    const max = dataRange[1];
+    const min = this.dataRange[0];
+    const max = this.dataRange[1];
     const legendString = `<div class="legend">` +
       `<p class="legend__value">${Math.floor(min / 1)}%</p>` +
       `<div class="legend__scale"></div>` +
@@ -124,26 +156,47 @@ class Choropleth {
     $(this.el).append(legendString);
   }
 
-  setData() {
-    const dataRange = this.getDataRange();
+  drawOrdinalLegend() {
+    const legendId = $(this.el).next(`.legend`).attr(`id`);
+    const ordinalLegend = d3.select(`#${legendId}`).selectAll(`li`)
+      .data(this.scaleKeys)
+      .enter().append(`li`)
+      .attr(`class`, `legend__item`);
 
+    ordinalLegend.append(`span`)
+      .attr(`class`, `legend__key`)
+      .style(`background-color`, (d) => this.colorScale(d));
+
+    ordinalLegend.append(`span`)
+      .attr(`class`, `legend__value`)
+      .text((d, i) => this.scaleKeys[i]);
+  }
+
+  setData() {
     d3.selectAll(`.${this.classes[1]}`)
       .attr(`fill-opacity`, (d) => {
-        return this.getOpacity(d[this.dataKeys[1]], dataRange);
+        return this.getOpacity(d[this.dataKeys[1]]);
       });
   }
 
-  getDataRange() {
+  setDataOrdinal() {
+    d3.selectAll(`.${this.classes[1]}`)
+      .style(`fill`, (d) => {
+        return this.colorScale(d[this.dataKeys[1]]);
+      });
+  }
+
+  setDataRange() {
     const dataArray = this.vizData.map((object) => object[this.dataKeys[1]]);
     const min = Math.min(...dataArray);
     const max = Math.max(...dataArray);
 
-    return [min, max];
+    this.dataRange = [min, max];
   }
 
-  getOpacity(value, valueRange) {
+  getOpacity(value) {
     const opacity = d3.scaleLinear()
-      .domain([valueRange[0], valueRange[1]])
+      .domain([this.dataRange[0], this.dataRange[1]])
       .range([0.1, 1]);
 
     return opacity(value);
@@ -158,9 +211,9 @@ const loadChoropleths = () => {
     const id = $this.attr(`id`);
     const url = $this.data(`url`);
     const units = $this.data(`units`);
-    const title = $this.data(`title`);
+    const ordinal = $this.data(`ordinal`);
 
-    new Choropleth(`#${id}`, url, units, title).render();
+    new Choropleth(`#${id}`, url, units, ordinal).render();
   });
 };
 

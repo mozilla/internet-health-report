@@ -1,0 +1,17 @@
+<div class="data">
+  <div class="data__header">
+    <a href="#" class="data__link">{{ dataShare }}</a>
+    <a href="#" class="data__link">{{ dataTweet }}</a>
+    <button class="data__link js-embed-toggle" data-embed="data-protection-rights">{{ dataEmbed }}</button>
+
+    <div class="data__embed js-embed">
+      <p>{{ dataEmbedCta }}</p>
+      <textarea class="data__textarea" name="" id="" cols="30" rows="10"></textarea>
+    </div>
+  </div>
+
+  <div id="data-protection-rights" class="choropleth js-choropleth" data-url="/data/data-protection-rights.csv" data-ordinal="true"></div>
+  <ul id="data-protection-rights-legend" class="legend legend--ordinal"></ul>
+
+  <p class="data__source">{{ dataSource }} <a href="#">Title of data source</a></p>
+</div>

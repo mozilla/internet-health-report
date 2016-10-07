@@ -1,0 +1,24 @@
+.bar-horizontal {
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    @include rem(height, 300);
+  }
+
+  &__svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__data {
+    fill: $white;
+  }
+
+  text {
+    fill: $white;
+  }
+}
