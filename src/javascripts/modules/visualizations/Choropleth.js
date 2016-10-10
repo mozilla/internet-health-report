@@ -147,7 +147,7 @@ class Choropleth {
   drawLegend() {
     const min = this.dataRange[0];
     const max = this.dataRange[1];
-    const legendString = `<div class="legend">` +
+    const legendString = `<div class="legend legend--scale">` +
       `<p class="legend__value">${Math.floor(min / 1)}%</p>` +
       `<div class="legend__scale"></div>` +
       `<p class="legend__value">${Math.floor(max / 1)}%</p>` +
@@ -168,7 +168,7 @@ class Choropleth {
       .style(`background-color`, d => this.colorScale(d));
 
     ordinalLegend.append(`span`)
-      .attr(`class`, `legend__value`)
+      .attr(`class`, `legend__name`)
       .text((d, i) => this.scaleKeys[i]);
   }
 
