@@ -1,22 +1,25 @@
 .donuts {
   text-align: center;
+
+  &__col {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    @include rem(max-width, 320);
+  }
 }
 
 .donut {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  width: 100%;
-  @include rem(max-width, 320);
   overflow: hidden;
 
-  &:before {
-    content: '';
-    display: block;
-    width: 100%;
-    @include rem(max-width, 320);
-    height: 0;
-    padding-bottom: 100%;
+  &--single {
+    &__svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+    }
   }
 
   .donuts & {
@@ -25,12 +28,5 @@
     @include media($small-screen-up) {
       margin: em($space * 0.5);
     }
-  }
-
-  &__svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
   }
 }

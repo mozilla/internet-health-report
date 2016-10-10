@@ -1,36 +1,36 @@
 .legend {
-  position: absolute;
-  top: 2em;
-  left: 1em;
-  max-width: em(300);
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
-  &--ordinal {
-    position: relative;
-    top: auto;
-    left: auto;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  &--scale {
+    position: absolute;
+    top: 2em;
+    left: 1em;
+    max-width: em(300);
   }
 
-  &__scale,
-  &__key,
-  &__value {
+  &--donut {
     display: inline-block;
-    vertical-align: middle;
+    margin-top: 0.5em;
+    column-count: 2;
   }
 
   &__item {
-    display: table;
+    display: block;
+    text-align: left;
 
     + #{&} {
       margin-top: em(5);
     }
+  }
 
-    .legend__key,
-    .legend__value {
-      display: table-cell;
-    }
+  &__scale,
+  &__key,
+  &__value,
+  &__name {
+    display: inline-block;
+    vertical-align: middle;
   }
 
   &__key {
@@ -39,19 +39,20 @@
     background-color: $white;
   }
 
+  &__value,
+  &__name {
+    @include rem(font-size, 12);
+  }
+
+  &__name {
+    @include rem(padding-left,10);
+  }
+
   &__scale {
     width: em(80);
     height: em(10);
     margin: 0 0.25em;
     border-radius: em(10);
     background: linear-gradient(to right, rgba($white, 0.1) 0%, $white 100%);
-  }
-
-  &__value {
-    @include rem(font-size, 12);
-
-    .legend--ordinal & {
-      @include rem(padding-left,10);
-    }
   }
 }
