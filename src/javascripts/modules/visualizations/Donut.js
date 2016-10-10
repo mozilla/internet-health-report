@@ -91,7 +91,7 @@ class Donut {
           .attr(`class`, this.classes[5])
         .append(`path`)
           .attr(`class`, this.classes[2])
-          .attr(`fill`, (d) => this.color(d.data[this.dataKeys[0]]));
+          .attr(`fill`, d => this.color(d.data[this.dataKeys[0]]));
 
       if (!this.isSingleValue) {
         this.svg.selectAll(`.${this.classes[5]}`).append(`text`)
@@ -143,7 +143,7 @@ class Donut {
         .attr(`x`, this.legendRectSize + this.legendSpacing)
         .attr(`y`, this.legendRectSize - this.legendSpacing)
         .style(`font-size`, `12px`)
-        .text((d) => d);
+        .text(d => d);
   }
 
   resize() {

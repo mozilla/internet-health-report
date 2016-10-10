@@ -36,13 +36,13 @@ class MultiLine {
 
     this.line = d3.line()
       .curve(d3.curveBasis)
-      .x((d) => this.x(d.date))
-      .y((d) => this.y(d.dataValue));
+      .x(d => this.x(d.date))
+      .y(d => this.y(d.dataValue));
 
-    this.x.domain(d3.extent(this.data, (d) => d.date));
+    this.x.domain(d3.extent(this.data, d => d.date));
     this.y.domain([
-      d3.min(this.dataColumns, (c) => d3.min(c.values, (d) => d.dataValue)),
-      d3.max(this.dataColumns, (c) => d3.max(c.values, (d) => d.dataValue))
+      d3.min(this.dataColumns, (c) => d3.min(c.values, d => d.dataValue)),
+      d3.max(this.dataColumns, (c) => d3.max(c.values, d => d.dataValue))
     ]);
     this.z.domain(this.dataColumns.map((c) => c.id));
 
@@ -54,8 +54,8 @@ class MultiLine {
       .call(d3.axisLeft(this.y));
 
     this.svg.selectAll(`.${this.classes[1]}`)
-      .attr(`d`, (d) => this.line(d.values))
-      .style(`stroke`, (d) => this.z(d.id));
+      .attr(`d`, d => this.line(d.values))
+      .style(`stroke`, d => this.z(d.id));
   }
 
   render() {
@@ -68,7 +68,7 @@ class MultiLine {
       this.dataColumns = data.columns.slice(1).map((id) => {
         return {
           id: id,
-          values: data.map((d) => {
+          values: data.map(d => {
             return {
               date: d.date,
               dataValue: d[id]

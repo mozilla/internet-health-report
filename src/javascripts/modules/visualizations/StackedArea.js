@@ -35,20 +35,20 @@ class StackedArea {
     this.y = d3.scaleLinear()
       .range([this.innerHeight, 0]);
 
-    this.x.domain(d3.extent(this.data, (d) => d.date));
+    this.x.domain(d3.extent(this.data, d => d.date));
     this.z.domain(this.keys);
 
     this.area = d3.area()
-      .x((d) => this.x(d.data.date))
-      .y0((d) => this.y(d[0]))
-      .y1((d) => this.y(d[1]));
+      .x(d => this.x(d.data.date))
+      .y0(d => this.y(d[0]))
+      .y1(d => this.y(d[1]));
 
     this.layer.selectAll(`path`)
       .attr(`d`, this.area);
 
     this.layer.selectAll(`text`)
       .attr(`x`, this.innerWidth - 6)
-      .attr(`y`, (d) => this.y((d[d.length - 1][0] + d[d.length - 1][1]) / 2));
+      .attr(`y`, d => this.y((d[d.length - 1][0] + d[d.length - 1][1]) / 2));
 
     this.svg.select(`.${this.classes[2]}`)
       .attr(`transform`, `translate(0,${this.innerHeight})`)
@@ -75,15 +75,15 @@ class StackedArea {
           .attr(`class`, this.classes[1]);
 
       this.layer.append(`path`)
-        .style(`fill`, (d) => this.z(d.key));
+        .style(`fill`, d => this.z(d.key));
 
-      this.layer.filter((d) => d[d.length - 1][1] - d[d.length - 1][0] > 0.01)
+      this.layer.filter(d => d[d.length - 1][1] - d[d.length - 1][0] > 0.01)
         .append(`text`)
           .attr(`dy`, `.35em`)
           .style(`font`, `10px sans-serif`)
           .style(`text-anchor`, `end`)
           .style(`fill`, `#fff`)
-          .text((d) => d.key);
+          .text(d => d.key);
 
       // render x-axis
       this.g.append(`g`)

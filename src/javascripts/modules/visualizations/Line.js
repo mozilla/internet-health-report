@@ -30,15 +30,15 @@ class Line {
 
     this.line = d3.line()
       // .curve(d3.curveBasis)
-      .x((d) => this.x(d[this.dataKeys[0]]))
-      .y((d) => this.y(d[this.dataKeys[1]]));
+      .x(d => this.x(d[this.dataKeys[0]]))
+      .y(d => this.y(d[this.dataKeys[1]]));
 
     this.svg
       .attr(`width`, this.width)
       .attr(`height`, this.height);
 
     this.x.domain([this.minDate - this.xPad, this.maxDate + this.xPad]);
-    this.y.domain([d3.min(this.data, (d) => d[this.dataKeys[1]]) - 1, d3.max(this.data, (d) => d[this.dataKeys[1]])]);
+    this.y.domain([d3.min(this.data, d => d[this.dataKeys[1]]) - 1, d3.max(this.data, d => d[this.dataKeys[1]])]);
 
     this.svg.select(`.${this.classes[1]}`)
       .attr(`d`, this.line);

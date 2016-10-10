@@ -87,12 +87,12 @@ class Choropleth {
       .data(countries.features)
       .enter().append(`path`)
       .attr(`class`, this.classes[1])
-      .attr(`id`, (d) => d.id, true)
+      .attr(`id`, d => d.id, true)
       .attr(`d`, path);
 
     if (!this.isDataOrdinal) {
       this.svg.selectAll(`.${this.classes[1]}`)
-        .on(`mouseover`, (d) => {
+        .on(`mouseover`, d => {
           this.tooltip
             .html(() => {
               if (d[this.dataKeys[1]]) {
@@ -165,7 +165,7 @@ class Choropleth {
 
     ordinalLegend.append(`span`)
       .attr(`class`, `legend__key`)
-      .style(`background-color`, (d) => this.colorScale(d));
+      .style(`background-color`, d => this.colorScale(d));
 
     ordinalLegend.append(`span`)
       .attr(`class`, `legend__value`)
@@ -174,14 +174,14 @@ class Choropleth {
 
   setData() {
     d3.selectAll(`.${this.classes[1]}`)
-      .attr(`fill-opacity`, (d) => {
+      .attr(`fill-opacity`, d => {
         return this.getOpacity(d[this.dataKeys[1]]);
       });
   }
 
   setDataOrdinal() {
     d3.selectAll(`.${this.classes[1]}`)
-      .style(`fill`, (d) => {
+      .style(`fill`, d => {
         return this.colorScale(d[this.dataKeys[1]]);
       });
   }
