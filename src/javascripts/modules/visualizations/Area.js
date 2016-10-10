@@ -28,11 +28,11 @@ class Area {
       .attr(`width`, this.width)
       .attr(`height`, this.height);
 
-    this.yMax = this.dataIsPercent ? 100 : d3.max(this.data, (d) => d[this.dataKeys[1]]);
+    this.yMax = this.dataIsPercent ? 100 : d3.max(this.data, d => d[this.dataKeys[1]]);
 
     this.x = d3.scaleTime()
       .range([0, this.innerWidth])
-      .domain(d3.extent(this.data, (d) => d[this.dataKeys[0]]));
+      .domain(d3.extent(this.data, d => d[this.dataKeys[0]]));
     this.y = d3.scaleLinear()
       .range([this.innerHeight, 0])
       .domain([0, this.yMax]);
@@ -40,9 +40,9 @@ class Area {
     this.axisBottom = constants.getWindowWidth() < constants.breakpointM ? d3.axisBottom(this.x).ticks(4) : d3.axisBottom(this.x);
 
     this.area = d3.area()
-      .x((d) => this.x(d[this.dataKeys[0]]))
+      .x(d => this.x(d[this.dataKeys[0]]))
       .y0(this.innerHeight)
-      .y1((d) => this.y(d[this.dataKeys[1]]));
+      .y1(d => this.y(d[this.dataKeys[1]]));
 
     this.svg.select(`.${this.classes[1]}`)
       .attr(`d`, this.area);
@@ -64,7 +64,7 @@ class Area {
 
       this.data = data;
       this.dataKeys = constants.getDataKeys(this.data);
-      this.data.forEach((d) => {
+      this.data.forEach(d => {
         d[this.dataKeys[0]] = self.parseDate(d[this.dataKeys[0]]);
         d[this.dataKeys[1]] = +d[this.dataKeys[1]];
       });

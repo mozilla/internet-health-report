@@ -1,7 +1,33 @@
 .line {
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0;
+    @include rem(padding-bottom, 300);
+
+    @include media($medium-screen-up) {
+      padding-bottom: 52%;
+    }
+  }
+
+  &__svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
   &__data {
     fill: none;
-    stroke: $theme2;
+    stroke: $white;
     @include rem(stroke-width, 2);
+  }
+
+  &__dot {
+    stroke: $white;
+    stroke-width: 2;
+    fill: $black;
   }
 }

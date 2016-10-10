@@ -40,25 +40,25 @@ class Bubble {
       .padding(1.5);
 
     this.nodes = d3.hierarchy(this.data)
-      .sum((d) => d[this.dataKeys[1]]);
+      .sum(d => d[this.dataKeys[1]]);
 
     this.node = this.svg.selectAll(`.${this.classes[2]}`)
       .data(this.bubble(this.nodes).descendants())
       .enter()
-      .filter((d) => !d.children)
+      .filter(d => !d.children)
       .append(`g`)
       .attr(`class`, this.classes[2])
-      .attr(`transform`, (d) => `translate(${d.x},${d.y})`);
+      .attr(`transform`, d => `translate(${d.x},${d.y})`);
 
     this.node.append(`circle`)
-      .attr(`r`, (d) => d.r)
-      .style(`fill`, (d) => this.color(d[this.dataKeys[1]]));
+      .attr(`r`, d => d.r)
+      .style(`fill`, d => this.color(d[this.dataKeys[1]]));
 
     this.node.append(`text`)
       .attr(`dy`, `.3em`)
       .style(`text-anchor`, `middle`)
       .style(`font-size`, constants.getWindowWidth() < constants.breakpointM ? `12px` : `16px`)
-      .text((d) => d.data[this.dataKeys[0]]);
+      .text(d => d.data[this.dataKeys[0]]);
   }
 
   resize() {
@@ -71,7 +71,7 @@ class Bubble {
 
     this.dataKeys = constants.getDataKeys(data);
 
-    data.forEach((d) => {
+    data.forEach(d => {
       d[this.dataKeys[1]] = parseInt(d[this.dataKeys[1]], 10);
       formattedData.children.push(d);
     });
