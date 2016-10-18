@@ -1,6 +1,8 @@
+/* global Waypoint */
 import * as constants from '../constants';
 import $ from 'jquery';
 import * as d3 from 'd3';
+import '../../plugins/noframework.waypoints';
 window.$ = $;
 
 class Line {
@@ -9,6 +11,7 @@ class Line {
     this.dataUrl = dataUrl;
     this.parseDate = d3.timeParse(`%d-%b-%y`);
     this.margin = {top: 20, right: 20, bottom: 30, left: 40};
+    this.animationDuration = 1000;
     this.classes = [`line__svg`, `line__data`, `x-axis`, `y-axis`, `line__dot`];
     this.svg = d3.select(this.el).append(`svg`)
       .attr(`class`, this.classes[0]);
@@ -16,7 +19,7 @@ class Line {
       .attr(`transform`, `translate(${this.margin.left},${this.margin.top})`);
   }
 
-  setSizes() {
+  setSizes(transition = false) {
     this.width = $(this.el).width();
     this.height = constants.getWindowWidth() < constants.breakpointM ? 300 : Math.ceil(this.width * 0.52);
     this.innerWidth = this.width - this.margin.left - this.margin.right;
@@ -29,7 +32,6 @@ class Line {
       .range([this.innerHeight, 0]);
 
     this.line = d3.line()
-      // .curve(d3.curveBasis)
       .x(d => this.x(d[this.dataKeys[0]]))
       .y(d => this.y(d[this.dataKeys[1]]));
 
@@ -43,10 +45,20 @@ class Line {
     this.svg.select(`.${this.classes[1]}`)
       .attr(`d`, this.line);
 
+    // set data
     this.svg.selectAll(`.${this.classes[4]}`)
       .attr(`cx`, d => this.x(d[this.dataKeys[0]]))
       .attr(`cy`, d => this.y(d[this.dataKeys[1]]));
 
+    // transition line
+    if (transition) {
+      this.animateChart();
+    }
+
+    this.setAxes();
+  }
+
+  setAxes() {
     this.axisBottom = constants.getWindowWidth() < constants.breakpointM ? d3.axisBottom(this.x).ticks(4).tickFormat(d3.timeFormat(`%b`)) : d3.axisBottom(this.x).tickFormat(d3.timeFormat(`%b`));
 
     this.svg.select(`.${this.classes[2]}`)
@@ -55,6 +67,33 @@ class Line {
 
     this.svg.select(`.${this.classes[3]}`)
       .call(d3.axisLeft(this.y));
+  }
+
+  animateChart() {
+    this.pathLength = this.svg.select(`.${this.classes[1]}`).node().getTotalLength();
+    $(this.el).addClass(`is-active`);
+
+    this.svg.select(`.${this.classes[1]}`)
+      .attr(`stroke-dasharray`, `${this.pathLength} ${this.pathLength}`)
+      .attr(`stroke-dashoffset`, this.pathLength)
+      .style(`opacity`, 1)
+      .transition()
+        .duration(this.animationDuration)
+        .ease(d3.easePolyInOut)
+        .attr(`stroke-dashoffset`, 0)
+        .on(`end`, () => {
+          this.svg.select(`.${this.classes[1]}`)
+            .attr(`stroke-dasharray`, `none`);
+        });
+
+    this.svg.selectAll(`.${this.classes[4]}`)
+      .transition()
+      .duration(500)
+      .delay((d, i) => {
+        return i * 50;
+      })
+      .ease(d3.easeElasticIn)
+      .style(`opacity`, 1);
   }
 
   render() {
@@ -81,7 +120,8 @@ class Line {
         .data(this.data)
         .enter().append(`circle`)
           .attr(`class`, this.classes[4])
-          .attr(`r`, 4.5);
+          .attr(`r`, 4.5)
+          .style(`opacity`, 0);
 
       // append x-axis
       this.svgData.append(`g`)
@@ -92,6 +132,15 @@ class Line {
         .attr(`class`, this.classes[3]);
 
       this.setSizes();
+
+      const waypoint = new Waypoint({
+        element: document.getElementById(this.el.substr(1)),
+        handler: () => {
+          this.setSizes(true);
+          waypoint.destroy();
+        },
+        offset: `50%`,
+      });
     });
 
     $(window).on(`resize`, this.resize.bind(this));
