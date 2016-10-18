@@ -1,6 +1,7 @@
 import * as constants from '../constants';
 import $ from 'jquery';
 import * as d3 from 'd3';
+import '../../plugins/noframework.waypoints';
 window.$ = $;
 
 class BarHorizontal {
@@ -16,7 +17,7 @@ class BarHorizontal {
       .attr(`transform`, `translate(${this.margin.left},${this.margin.top})`);
   }
 
-  setSizes() {
+  setSizes(transition = false) {
     this.width = $(this.el).width();
     this.height = 300;
     this.innerWidth = this.width - this.margin.left - this.margin.right;
@@ -42,6 +43,36 @@ class BarHorizontal {
       .attr(`height`, this.y.bandwidth())
       .attr(`width`, d => this.x(d[this.dataKeys[1]]));
 
+    this.setAxes();
+
+    if (transition) {
+      this.animateChart();
+    }
+  }
+
+  animateChart() {
+    const x = this.x;
+    const valueKey = this.dataKeys[1];
+
+    $(this.el).addClass(`is-active`);
+
+    this.svg.selectAll(`.${this.classes[1]}`)
+      .attr(`width`, 0)
+      .style(`opacity`, 1)
+
+    this.svg.selectAll(`.${this.classes[1]}`)
+      .transition()
+        .delay((d, i) => {
+          return constants.chartFadeIn + (i * 150);
+        })
+        .ease(d3.easeExpOut)
+        .duration(750)
+        .attr(`width`, (d) => {
+          return x(d[valueKey]);
+        });
+  }
+
+  setAxes() {
     this.axisBottom = constants.getWindowWidth() < constants.breakpointM ? d3.axisBottom(this.x).ticks(4) : d3.axisBottom(this.x);
 
     this.svg.select(`.${this.classes[2]}`)
@@ -67,7 +98,8 @@ class BarHorizontal {
       this.svgData.selectAll(`.${this.classes[1]}`)
         .data(this.data)
         .enter().append(`rect`)
-        .attr(`class`, this.classes[1]);
+        .attr(`class`, this.classes[1])
+        .style(`opacity`, 0);
 
       // append x-axis
       this.svgData.append(`g`)
@@ -78,6 +110,15 @@ class BarHorizontal {
         .attr(`class`, this.classes[3]);
 
       this.setSizes();
+
+      const waypoint = new Waypoint({
+        element: document.getElementById(this.el.substr(1)),
+        handler: () => {
+          this.setSizes(true);
+          waypoint.destroy();
+        },
+        offset: `50%`,
+      });
     });
 
     $(window).on(`resize`, this.resize.bind(this));

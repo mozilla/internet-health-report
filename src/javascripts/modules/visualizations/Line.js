@@ -50,7 +50,6 @@ class Line {
       .attr(`cx`, d => this.x(d[this.dataKeys[0]]))
       .attr(`cy`, d => this.y(d[this.dataKeys[1]]));
 
-    // transition line
     if (transition) {
       this.animateChart();
     }
