@@ -14,13 +14,15 @@ class Donut {
     this.legendHeight = this.legendRectSize + this.legendSpacing;
     this.color = d3.scaleOrdinal()
       .range(constants.colorRange);
-    this.classes = [`donut__svg`, `donut__g`, `donut__arc`, `donut__text`, `donut__layer`, `donut__value`];
+    this.classes = [`donut__svg-container`,`donut__svg`, `donut__g`, `donut__arc`, `donut__text`, `donut__layer`, `donut__value`];
     this.legendClasses = [`legend legend--donut`, `legend__item`, `legend__key`, `legend__name`];
     this.svg = d3.select(this.el)
+      .append(`div`)
+        .attr(`class`, this.classes[0])
       .append(`svg`)
-        .attr(`class`, this.classes[0]);
+        .attr(`class`, this.classes[1]);
     this.svgData = this.svg.append(`g`)
-      .attr(`class`, this.classes[1]);
+      .attr(`class`, this.classes[2]);
   }
 
   setSizes(transition = false) {
@@ -38,13 +40,13 @@ class Donut {
     this.svgData
       .attr(`transform`, `translate(${this.radius}, ${this.radius})`);
 
-    this.svg.selectAll(`.${this.classes[5]}`)
+    this.svg.selectAll(`.${this.classes[6]}`)
       .attr(`transform`, `translate(${this.radius}, ${this.radius})`);
 
     if (transition) {
       this.animateChart();
     } else {
-      this.svg.selectAll(`.${this.classes[2]}`)
+      this.svg.selectAll(`.${this.classes[3]}`)
         .attr(`d`, this.arc);
     }
   }
@@ -54,7 +56,7 @@ class Donut {
 
     $(this.el).addClass(`is-active`);
 
-    this.svg.selectAll(`.${this.classes[2]}`)
+    this.svg.selectAll(`.${this.classes[3]}`)
       .transition()
         .duration(arcAnimationDuration)
         .ease(d3.easeCubicOut)
@@ -67,7 +69,7 @@ class Donut {
           };
         });
 
-    this.svg.selectAll(`.${this.classes[5]}`)
+    this.svg.selectAll(`.${this.classes[6]}`)
       .transition()
       .duration(300)
       .delay(arcAnimationDuration)
@@ -104,16 +106,16 @@ class Donut {
         .data(this.pie(this.data))
         .enter()
         .append(`g`)
-          .attr(`class`, this.classes[4])
+          .attr(`class`, this.classes[5])
         .append(`path`)
-          .attr(`class`, this.classes[2])
+          .attr(`class`, this.classes[3])
           .attr(`fill`, d => this.color(d.data[this.dataKeys[0]]));
 
       if (!this.isSingleValue) {
         this.renderLegend();
       } else {
         this.svg.append(`text`)
-          .attr(`class`, this.classes[5])
+          .attr(`class`, this.classes[6])
           .style(`font-size`, `40px`)
           .style(`fill`, `#fff`)
           .style(`opacity`, 0)
