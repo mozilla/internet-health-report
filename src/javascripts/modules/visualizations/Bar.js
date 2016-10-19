@@ -1,13 +1,15 @@
+/* global Waypoint */
 import * as constants from '../constants';
 import $ from 'jquery';
 import * as d3 from 'd3';
+import '../../plugins/noframework.waypoints';
 window.$ = $;
 
 class Bar {
   constructor(el, dataUrl) {
     this.el = el;
     this.dataUrl = dataUrl;
-    this.margin = {top: 20, right: 20, bottom: 30, left: 40};
+    this.margin = {top: 20, right: 20, bottom: 70, left: 40};
     this.classes = [`bar-horizontal__svg`, `bar-horizontal__data`, `x-axis`, `y-axis`];
     this.svg = d3.select(this.el)
       .append(`svg`)
@@ -16,7 +18,7 @@ class Bar {
       .attr(`transform`, `translate(${this.margin.left},${this.margin.top})`);
   }
 
-  setSizes() {
+  setSizes(transition = false) {
     this.width = $(this.el).width();
     this.height = constants.getWindowWidth() < constants.breakpointM ? 400 : Math.ceil(this.width * 0.52);
     this.innerWidth = this.width - this.margin.left - this.margin.right;
@@ -29,25 +31,53 @@ class Bar {
     this.y = d3.scaleLinear()
       .rangeRound([this.innerHeight, 0]);
 
+    this.x.domain(this.data.map(d => d[this.dataKeys[0]]));
+    this.y.domain([0, d3.max(this.data, d => d[this.dataKeys[1]])]);
+
     this.svg
       .attr(`width`, this.width)
       .attr(`height`, this.height);
 
-    this.x.domain(this.data.map(d => d[this.dataKeys[0]]));
-    this.y.domain([0, d3.max(this.data, d => d[this.dataKeys[1]])]);
-
     this.svg.selectAll(`.${this.classes[1]}`)
       .attr(`x`, d => this.x(d[this.dataKeys[0]]))
-      .attr(`y`, d => this.y(d[this.dataKeys[1]]))
-      .attr(`width`, this.x.bandwidth())
-      .attr(`height`, d => this.innerHeight - this.y(d[this.dataKeys[1]]));
+      .attr(`y`, this.innerHeight)
+      .attr(`width`, this.x.bandwidth());
 
+    this.setAxes();
+
+    if (transition) {
+      this.animateChart();
+    } else {
+      this.svg.selectAll(`.${this.classes[1]}`)
+        .attr(`y`, d => this.y(d[this.dataKeys[1]]))
+        .attr(`height`, d => this.innerHeight - this.y(d[this.dataKeys[1]]));
+    }
+  }
+
+  animateChart() {
+    $(this.el).addClass(`is-active`);
+
+    this.svg.selectAll(`.${this.classes[1]}`)
+      .transition()
+      .duration(constants.chartFadeIn + 500)
+      .delay((d, i) => i * 100)
+      .attr(`y`, d => this.y(d[this.dataKeys[1]]))
+      .attr(`height`, d => this.innerHeight - this.y(d[this.dataKeys[1]]));
+  }
+
+  setAxes() {
     this.svg.select(`.${this.classes[2]}`)
       .attr(`transform`, `translate(0,${this.innerHeight})`)
-      .call(d3.axisBottom(this.x));
+      .call(d3.axisBottom(this.x))
+      .selectAll(`text`)
+        .attr(`x`, -6)
+        .attr(`y`, 6)
+        .attr(`text-anchor`, `end`)
+        .attr(`transform`, `rotate(-45)`);
 
     this.svg.select(`.${this.classes[3]}`)
-      .call(d3.axisLeft(this.y));
+      .call(d3.axisLeft(this.y)
+        .tickFormat(d3.formatPrefix(`.0`, 1e6)));
   }
 
   render() {
@@ -73,7 +103,14 @@ class Bar {
       this.svgData.append(`g`)
         .attr(`class`, this.classes[3]);
 
-      this.setSizes();
+      const waypoint = new Waypoint({
+        element: document.getElementById(this.el.substr(1)),
+        handler: () => {
+          this.setSizes(true);
+          waypoint.destroy();
+        },
+        offset: `50%`,
+      });
     });
 
     $(window).on(`resize`, this.resize.bind(this));
@@ -84,6 +121,7 @@ class Bar {
   }
 
   type(d) {
+    d[this.dataKeys[1]] = parseInt(d[this.dataKeys[1]], 10);
     d[this.dataKeys[1]] = +d[this.dataKeys[1]];
     return d;
   }
