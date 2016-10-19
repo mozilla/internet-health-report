@@ -1,6 +1,8 @@
+/* global Waypoint */
 import * as constants from '../constants';
 import $ from 'jquery';
 import * as d3 from 'd3';
+import '../../plugins/noframework.waypoints';
 import { TweenLite } from 'gsap';
 import * as topojson from 'topojson';
 window.$ = $;
@@ -120,6 +122,15 @@ class Choropleth {
       this.setDataOrdinal();
       this.drawOrdinalLegend();
     }
+
+    const waypoint = new Waypoint({
+      element: document.getElementById(this.el.substr(1)),
+      handler: () => {
+        $(this.el).addClass(`is-active`);
+        waypoint.destroy();
+      },
+      offset: `40%`,
+    });
   }
 
   setOrdinalScale() {

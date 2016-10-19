@@ -1,6 +1,8 @@
+/* global Waypoint */
 import * as constants from '../constants';
 import $ from 'jquery';
 import * as d3 from 'd3';
+import '../../plugins/noframework.waypoints';
 window.$ = $;
 
 class StackedArea {
@@ -20,7 +22,7 @@ class StackedArea {
     this.stack = d3.stack();
   }
 
-  setSizes() {
+  setSizes(transition = false) {
     this.width = $(this.el).width();
     this.height = constants.getWindowWidth() < constants.breakpointM ? 300 : Math.ceil(this.width * 0.52);
     this.innerWidth = this.width - this.margin.left - this.margin.right;
@@ -43,13 +45,35 @@ class StackedArea {
       .y0(d => this.y(d[0]))
       .y1(d => this.y(d[1]));
 
-    this.layer.selectAll(`path`)
-      .attr(`d`, this.area);
-
     this.layer.selectAll(`text`)
       .attr(`x`, this.innerWidth - 6)
       .attr(`y`, d => this.y((d[d.length - 1][0] + d[d.length - 1][1]) / 2));
 
+    this.setAxes();
+
+    if (transition) {
+      this.animateChart();
+    } else {
+      this.layer.selectAll(`path`)
+        .attr(`d`, this.area);
+    }
+  }
+
+  animateChart() {
+    $(this.el).addClass(`is-active`);
+
+    this.layer.selectAll(`path`)
+      .attr(`d`, this.area);
+
+    // this.layer.selectAll(`path`)
+    //   .data(this.stack(this.data))
+    //   .transition()
+    //   .duration(800)
+    //   .ease(d3.easeExpOut)
+    //   .attr(`d`, this.area);
+  }
+
+  setAxes() {
     this.svg.select(`.${this.classes[2]}`)
       .attr(`transform`, `translate(0,${this.innerHeight})`)
       .call(d3.axisBottom(this.x));
@@ -66,6 +90,18 @@ class StackedArea {
 
       this.data = data;
       this.keys = this.data.columns.slice(1);
+
+      this.startData = this.data.map((datum) => {
+        const startDatum = {};
+
+        startDatum.date = datum.date;
+
+        this.keys.forEach((el) => {
+          startDatum[el] = 0;
+        });
+
+        return startDatum;
+      });
 
       this.stack.keys(this.keys);
 
@@ -93,7 +129,14 @@ class StackedArea {
       this.g.append(`g`)
         .attr(`class`, this.classes[3]);
 
-      this.setSizes();
+      const waypoint = new Waypoint({
+        element: document.getElementById(this.el.substr(1)),
+        handler: () => {
+          this.setSizes(true);
+          waypoint.destroy();
+        },
+        offset: `50%`,
+      });
     });
 
     $(window).on(`resize`, this.resize.bind(this));

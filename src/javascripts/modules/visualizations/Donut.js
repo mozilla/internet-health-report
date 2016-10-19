@@ -1,6 +1,8 @@
+/* global Waypoint */
 import * as constants from '../constants';
 import $ from 'jquery';
 import * as d3 from 'd3';
+import '../../plugins/noframework.waypoints';
 window.$ = $;
 
 class Donut {
@@ -12,37 +14,66 @@ class Donut {
     this.legendHeight = this.legendRectSize + this.legendSpacing;
     this.color = d3.scaleOrdinal()
       .range(constants.colorRange);
-    this.classes = [`donut__svg`, `donut__g`, `donut__arc`, `donut__text`, `donut__layer`, `donut__value`];
+    this.classes = [`donut__svg-container`,`donut__svg`, `donut__g`, `donut__arc`, `donut__text`, `donut__layer`, `donut__value`];
     this.legendClasses = [`legend legend--donut`, `legend__item`, `legend__key`, `legend__name`];
     this.svg = d3.select(this.el)
+      .append(`div`)
+        .attr(`class`, this.classes[0])
       .append(`svg`)
-        .attr(`class`, this.classes[0]);
+        .attr(`class`, this.classes[1]);
     this.svgData = this.svg.append(`g`)
-      .attr(`class`, this.classes[1]);
+      .attr(`class`, this.classes[2]);
   }
 
-  setSizes() {
+  setSizes(transition = false) {
     this.width = $(this.el).width();
     this.radius = Math.min(this.width) * 0.5;
-    this.arc = d3.arc()
-      .innerRadius((this.radius/10) * 7)
-      .outerRadius(this.radius);
 
     this.svg
       .attr(`width`, this.width)
       .attr(`height`, this.width);
 
+    this.arc = d3.arc()
+      .innerRadius((this.radius/10) * 7)
+      .outerRadius(this.radius);
+
     this.svgData
       .attr(`transform`, `translate(${this.radius}, ${this.radius})`);
 
-    this.svg.selectAll(`.${this.classes[2]}`)
-      .attr(`d`, this.arc);
+    this.svg.selectAll(`.${this.classes[6]}`)
+      .attr(`transform`, `translate(${this.radius}, ${this.radius})`);
+
+    if (transition) {
+      this.animateChart();
+    } else {
+      this.svg.selectAll(`.${this.classes[3]}`)
+        .attr(`d`, this.arc);
+    }
+  }
+
+  animateChart() {
+    const arcAnimationDuration = 800;
+
+    $(this.el).addClass(`is-active`);
 
     this.svg.selectAll(`.${this.classes[3]}`)
-      .attr(`transform`, d => `translate(${this.arc.centroid(d)})`);
+      .transition()
+        .duration(arcAnimationDuration)
+        .ease(d3.easeCubicOut)
+        .attrTween(`d`, (d) => {
+          const i = d3.interpolate(d.startAngle, d.endAngle);
 
-    this.svg.selectAll(`.${this.classes[5]}`)
-      .attr(`transform`, `translate(${this.radius}, ${this.radius})`);
+          return (t) => {
+            d.endAngle = i(t);
+            return this.arc(d);
+          };
+        });
+
+    this.svg.selectAll(`.${this.classes[6]}`)
+      .transition()
+      .duration(300)
+      .delay(arcAnimationDuration)
+      .style(`opacity`, 1);
   }
 
   render() {
@@ -56,11 +87,12 @@ class Donut {
 
       this.data.forEach(this.type.bind(this));
 
+      this.isSingleValue = this.data.length === 1;
+
       this.pie = d3.pie()
         .value(d => d[this.dataKeys[1]])
         .sort(null);
 
-      this.isSingleValue = this.data.length === 1;
       if (this.isSingleValue) {
         const value = this.data[0][this.dataKeys[1]];
         const newData = {};
@@ -74,32 +106,32 @@ class Donut {
         .data(this.pie(this.data))
         .enter()
         .append(`g`)
-          .attr(`class`, this.classes[4])
+          .attr(`class`, this.classes[5])
         .append(`path`)
-          .attr(`class`, this.classes[2])
+          .attr(`class`, this.classes[3])
           .attr(`fill`, d => this.color(d.data[this.dataKeys[0]]));
 
       if (!this.isSingleValue) {
-        this.svg.selectAll(`.${this.classes[4]}`).append(`text`)
-          .attr(`class`, this.classes[3])
-          .attr(`dy`, `.5em`)
-          .attr(`dx`, `-.8em`)
-          .style(`font-size`, `12px`)
-          .style(`fill`, `#fff`)
-          .text(d => `${d.data[this.dataKeys[1]]}`);
-
         this.renderLegend();
       } else {
         this.svg.append(`text`)
-          .attr(`class`, this.classes[5])
+          .attr(`class`, this.classes[6])
           .style(`font-size`, `40px`)
           .style(`fill`, `#fff`)
+          .style(`opacity`, 0)
           .attr(`text-anchor`, `middle`)
           .attr(`alignment-baseline`, `central`)
           .text(`${this.data[0][this.dataKeys[1]]}%`);
       }
 
-      this.setSizes();
+      const waypoint = new Waypoint({
+        element: document.getElementById(this.el.substr(1)),
+        handler: () => {
+          this.setSizes(true);
+          waypoint.destroy();
+        },
+        offset: `50%`,
+      });
 
       $(window).on(`resize`, this.resize.bind(this));
     });
