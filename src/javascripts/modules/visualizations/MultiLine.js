@@ -1,13 +1,15 @@
+/* global Waypoint */
 import * as constants from '../constants';
 import $ from 'jquery';
 import * as d3 from 'd3';
+import '../../plugins/noframework.waypoints';
 window.$ = $;
 
 class MultiLine {
   constructor(el, dataUrl) {
     this.el = el;
     this.dataUrl = dataUrl;
-    this.parseDate = d3.timeParse(`%Y%m%d`);
+    this.parseDate = d3.timeParse(`%d-%m-%Y`);
     this.margin = {top: 20, right: 20, bottom: 30, left: 40};
     this.classes = [`multiline__svg`, `multiline__data`, `multiline__dataset`, `x-axis`, `y-axis`];
     this.svg = d3.select(this.el)
@@ -17,7 +19,7 @@ class MultiLine {
       .attr(`transform`, `translate(${this.margin.left},${this.margin.top})`);
   }
 
-  setSizes() {
+  setSizes(transition = false) {
     this.width = $(this.el).width();
     this.height = constants.getWindowWidth() < constants.breakpointM ? 400 : Math.ceil(this.width * 0.52);
     this.innerWidth = this.width - this.margin.left - this.margin.right;
@@ -35,7 +37,7 @@ class MultiLine {
       .range(constants.colorRange);
 
     this.line = d3.line()
-      .curve(d3.curveBasis)
+      // .curve(d3.curveBasis)
       .x(d => this.x(d.date))
       .y(d => this.y(d.dataValue));
 
@@ -48,7 +50,7 @@ class MultiLine {
 
     this.svg.select(`.${this.classes[3]}`)
       .attr(`transform`, `translate(0,${this.innerHeight})`)
-      .call(d3.axisBottom(this.x));
+      .call(d3.axisBottom(this.x).tickFormat(d3.timeFormat(`%Y`)));
 
     this.svg.select(`.${this.classes[4]}`)
       .call(d3.axisLeft(this.y));
@@ -56,6 +58,41 @@ class MultiLine {
     this.svg.selectAll(`.${this.classes[1]}`)
       .attr(`d`, d => this.line(d.values))
       .style(`stroke`, d => this.z(d.id));
+
+    if (transition) {
+      this.animateChart();
+    }
+  }
+
+  animateChart() {
+    this.svg.selectAll(`.${this.classes[1]}`)
+      .style(`opacity`, 0);
+
+    $(this.el).addClass(`is-active`);
+
+    const paths = this.svg.selectAll(`.${this.classes[1]}`);
+    const pathsLength = paths.size();
+
+    for (let i = 0; i < pathsLength; i++) {
+      const pathLength = paths
+        .filter((d, index) => index === i)
+        .node().getTotalLength();
+
+      paths
+        .filter((d, index) => index === i)
+        .attr(`stroke-dasharray`, `${pathLength} ${pathLength}`)
+        .attr(`stroke-dashoffset`, pathLength)
+        .style(`opacity`, 1)
+        .transition()
+          .duration(500)
+          .delay(i * 100)
+          .ease(d3.easePolyInOut)
+          .attr(`stroke-dashoffset`, 0)
+          .on(`end`, () => {
+            paths.filter((d, index) => index === i)
+              .attr(`stroke-dasharray`, `none`);
+          });
+    }
   }
 
   render() {
@@ -90,7 +127,14 @@ class MultiLine {
         .append(`path`)
           .attr(`class`, this.classes[1]);
 
-      this.setSizes();
+      const waypoint = new Waypoint({
+        element: document.getElementById(this.el.substr(1)),
+        handler: () => {
+          this.setSizes(true);
+          waypoint.destroy();
+        },
+        offset: `50%`,
+      });
     });
 
     $(window).on(`resize`, this.resize.bind(this));
