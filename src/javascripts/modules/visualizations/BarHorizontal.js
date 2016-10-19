@@ -1,3 +1,4 @@
+/* global Waypoint */
 import * as constants from '../constants';
 import $ from 'jquery';
 import * as d3 from 'd3';
@@ -58,7 +59,7 @@ class BarHorizontal {
 
     this.svg.selectAll(`.${this.classes[1]}`)
       .attr(`width`, 0)
-      .style(`opacity`, 1)
+      .style(`opacity`, 1);
 
     this.svg.selectAll(`.${this.classes[1]}`)
       .transition()
