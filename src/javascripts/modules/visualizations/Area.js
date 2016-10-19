@@ -1,6 +1,8 @@
+/* global Waypoint */
 import * as constants from '../constants';
 import $ from 'jquery';
 import * as d3 from 'd3';
+import '../../plugins/noframework.waypoints';
 window.$ = $;
 
 class Area {
@@ -18,7 +20,7 @@ class Area {
       .attr(`transform`, `translate(${this.margin.left},${this.margin.top})`);
   }
 
-  setSizes() {
+  setSizes(transition = false) {
     this.width = $(this.el).width();
     this.height = constants.getWindowWidth() < constants.breakpointM ? 300 : Math.ceil(this.width * 0.52);
     this.innerWidth = this.width - this.margin.left - this.margin.right;
@@ -44,9 +46,34 @@ class Area {
       .y0(this.innerHeight)
       .y1(d => this.y(d[this.dataKeys[1]]));
 
-    this.svg.select(`.${this.classes[1]}`)
-      .attr(`d`, this.area);
+    this.setAxes();
 
+    if (transition) {
+      this.animateChart();
+    } else {
+      this.svg.select(`.${this.classes[1]}`)
+        .attr(`d`, this.area);
+    }
+  }
+
+  animateChart() {
+    $(this.el).addClass(`is-active`);
+
+    this.svg.select(`.${this.classes[1]}`)
+      .transition()
+      .duration(800)
+      .delay(constants.chartFadeIn)
+      .ease(d3.easeExpOut)
+      .attrTween(`d`, () => {
+        const interpolator = d3.interpolateArray(this.startData, this.data);
+
+        return (t) => {
+          return this.area(interpolator(t));
+        };
+      });
+  }
+
+  setAxes() {
     this.svg.select(`.${this.classes[2]}`)
       .attr(`transform`, `translate(0,${this.innerHeight})`)
       .call(this.axisBottom);
@@ -69,6 +96,15 @@ class Area {
         d[this.dataKeys[1]] = +d[this.dataKeys[1]];
       });
 
+      this.startData = this.data.map((datum) => {
+        const startDatum = {};
+
+        startDatum[this.dataKeys[0]] = datum[this.dataKeys[0]];
+        startDatum[this.dataKeys[1]] = 0;
+
+        return startDatum;
+      });
+
       this.g.append(`path`)
         .datum(this.data)
         .attr(`class`, this.classes[1]);
@@ -79,7 +115,14 @@ class Area {
       this.g.append(`g`)
         .attr(`class`, this.classes[3]);
 
-      this.setSizes();
+      const waypoint = new Waypoint({
+        element: document.getElementById(this.el.substr(1)),
+        handler: () => {
+          this.setSizes(true);
+          waypoint.destroy();
+        },
+        offset: `40%`,
+      });
     });
 
     $(window).on(`resize`, this.resize.bind(this));
