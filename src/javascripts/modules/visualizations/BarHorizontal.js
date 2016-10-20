@@ -25,6 +25,12 @@ class BarHorizontal {
     this.innerWidth = this.width - this.margin.left - this.margin.right;
     this.innerHeight = this.height - this.margin.top - this.margin.bottom;
 
+    if (this.el === `#women-online`) {
+      this.xDomainMax = constants.getWindowWidth() < constants.breakpointM ? 5 : 10;
+    } else {
+      this.xDomainMax = d3.max(this.data, d => d[this.dataKeys[1]]);
+    }
+
     this.x = d3.scaleLinear()
       .rangeRound([0, this.innerWidth]);
 
@@ -36,7 +42,7 @@ class BarHorizontal {
       .attr(`width`, this.width)
       .attr(`height`, this.height);
 
-    this.x.domain([0, d3.max(this.data, d => d[this.dataKeys[1]])]);
+    this.x.domain([0, this.xDomainMax]);
     this.y.domain(this.data.map(d => d[this.dataKeys[0]]));
 
     this.svg.selectAll(`.${this.classes[1]}`)
@@ -75,7 +81,11 @@ class BarHorizontal {
   }
 
   setAxes() {
-    this.axisBottom = constants.getWindowWidth() < constants.breakpointM ? d3.axisBottom(this.x).ticks(4) : d3.axisBottom(this.x);
+    if (this.el === `#women-online`) {
+      this.axisBottom = constants.getWindowWidth() < constants.breakpointM ? d3.axisBottom(this.x).ticks(5) : d3.axisBottom(this.x).ticks(10);
+    } else {
+      this.axisBottom = constants.getWindowWidth() < constants.breakpointM ? d3.axisBottom(this.x).ticks(4) : d3.axisBottom(this.x);
+    }
 
     this.svg.select(`.${this.classes[2]}`)
       .attr(`transform`, `translate(0,${this.innerHeight})`)
