@@ -6,10 +6,11 @@ import '../../plugins/noframework.waypoints';
 window.$ = $;
 
 class BarHorizontal {
-  constructor(el, dataUrl, marginLeft = 40) {
+  constructor(el, dataUrl, marginLeft = 40, chartHeight = 300) {
     this.el = el;
     this.dataUrl = dataUrl;
     this.margin = {top: 20, right: 20, bottom: 30, left: marginLeft};
+    this.chartHeight = chartHeight;
     this.classes = [`bar-horizontal__svg`, `bar-horizontal__data`, `x-axis`, `y-axis`];
     this.svg = d3.select(this.el)
       .append(`svg`)
@@ -20,7 +21,7 @@ class BarHorizontal {
 
   setSizes(transition = false) {
     this.width = $(this.el).width();
-    this.height = 300;
+    this.height = this.chartHeight;
     this.innerWidth = this.width - this.margin.left - this.margin.right;
     this.innerHeight = this.height - this.margin.top - this.margin.bottom;
 
@@ -78,7 +79,8 @@ class BarHorizontal {
 
     this.svg.select(`.${this.classes[2]}`)
       .attr(`transform`, `translate(0,${this.innerHeight})`)
-      .call(this.axisBottom);
+      .call(this.axisBottom
+        .tickFormat(this.tickFormat));
 
     this.svg.select(`.${this.classes[3]}`)
       .call(d3.axisLeft(this.y))
@@ -110,6 +112,7 @@ class BarHorizontal {
       this.svgData.append(`g`)
         .attr(`class`, this.classes[3]);
 
+      this.setTickFormat();
       this.setSizes();
 
       const waypoint = new Waypoint({
@@ -123,6 +126,20 @@ class BarHorizontal {
     });
 
     $(window).on(`resize`, this.resize.bind(this));
+  }
+
+  setTickFormat() {
+    let dataValues = this.data.map((obj) => {
+      return obj[this.dataKeys[1]];
+    });
+
+    const minDataValue = Math.min(...dataValues);
+
+    if (minDataValue >= 1000000) {
+      this.tickFormat = d3.formatPrefix(`.0`, 1e6);
+    } else {
+      this.tickFormat = d3.formatPrefix(`.0`, 10);
+    }
   }
 
   resize() {
@@ -186,8 +203,9 @@ const loadBarHorizontalCharts = () => {
     const id = $this.attr(`id`);
     const url = $this.data(`url`);
     const marginLeft = $this.data(`margin-left`);
+    const chartHeight = $this.data(`height`);
 
-    new BarHorizontal(`#${id}`, url, marginLeft).render();
+    new BarHorizontal(`#${id}`, url, marginLeft, chartHeight).render();
   });
 };
 
