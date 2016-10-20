@@ -13,7 +13,8 @@
   &--donut {
     display: inline-block;
     margin-top: 1em;
-    column-count: 2;
+    width: 100%;
+    text-align: left;
   }
 
   &--multiline {
@@ -35,6 +36,11 @@
         margin-top: 0;
         margin-left: 1em;
       }
+    }
+
+    .legend--donut & {
+      display: inline-block;
+      width: 50%;
     }
 
     .legend--multiline & {
@@ -72,6 +78,11 @@
 
   &__name {
     @include rem(padding-left,10);
+
+    .legend--donut & {
+      max-width: calc(100% - #{rem(20)});
+      @include rem(padding-right,10);
+    }
 
     .legend--multiline & {
       @include rem(padding-left,5);
