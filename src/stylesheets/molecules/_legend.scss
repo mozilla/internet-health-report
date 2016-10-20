@@ -16,12 +16,29 @@
     column-count: 2;
   }
 
+  &--multiline {
+    text-align: center;
+
+    @include media($medium-screen-up) {
+      text-align: left;
+    }
+  }
+
   &__item {
     display: block;
     text-align: left;
 
     + #{&} {
       margin-top: em(5);
+
+      .legend--multiline & {
+        margin-top: 0;
+        margin-left: 1em;
+      }
+    }
+
+    .legend--multiline & {
+      display: inline-block;
     }
   }
 
@@ -34,9 +51,18 @@
   }
 
   &__key {
-    width: em(20);
-    height: em(20);
+    width: em(16);
+    height: em(16);
     background-color: $white;
+
+    @include media($medium-screen-up) {
+      width: em(20);
+      height: em(20);
+    }
+
+    .legend--multiline & {
+      border-radius: 50%;
+    }
   }
 
   &__value,
@@ -46,6 +72,10 @@
 
   &__name {
     @include rem(padding-left,10);
+
+    .legend--multiline & {
+      @include rem(padding-left,5);
+    }
   }
 
   &__scale {
