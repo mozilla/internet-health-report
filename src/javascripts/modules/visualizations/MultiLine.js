@@ -11,10 +11,13 @@ class MultiLine {
     this.dataUrl = dataUrl;
     this.parseDate = d3.timeParse(`%d-%m-%Y`);
     this.margin = {top: 20, right: 20, bottom: 30, left: 40};
-    this.classes = [`multiline__svg`, `multiline__data`, `multiline__dataset`, `x-axis`, `y-axis`];
+    this.classes = [`multiline__container`, `multiline__svg`, `multiline__data`, `multiline__dataset`, `x-axis`, `y-axis`];
+    this.legendClasses = [`legend`, `legend--multiline`, `legend__item`, `legend__key`, `legend__name`];
     this.svg = d3.select(this.el)
+      .append(`div`)
+        .attr(`class`, this.classes[0])
       .append(`svg`)
-        .attr(`class`, this.classes[0]);
+        .attr(`class`, this.classes[1]);
     this.g = this.svg.append(`g`)
       .attr(`transform`, `translate(${this.margin.left},${this.margin.top})`);
   }
@@ -48,29 +51,30 @@ class MultiLine {
     ]);
     this.z.domain(this.dataColumns.map((c) => c.id));
 
-    this.svg.select(`.${this.classes[3]}`)
+    this.svg.select(`.${this.classes[4]}`)
       .attr(`transform`, `translate(0,${this.innerHeight})`)
       .call(d3.axisBottom(this.x).tickFormat(d3.timeFormat(`%Y`)));
 
-    this.svg.select(`.${this.classes[4]}`)
+    this.svg.select(`.${this.classes[5]}`)
       .call(d3.axisLeft(this.y));
 
-    this.svg.selectAll(`.${this.classes[1]}`)
+    this.svg.selectAll(`.${this.classes[2]}`)
       .attr(`d`, d => this.line(d.values))
       .style(`stroke`, d => this.z(d.id));
 
     if (transition) {
+      this.renderLegend();
       this.animateChart();
     }
   }
 
   animateChart() {
-    this.svg.selectAll(`.${this.classes[1]}`)
+    this.svg.selectAll(`.${this.classes[2]}`)
       .style(`opacity`, 0);
 
     $(this.el).addClass(`is-active`);
 
-    const paths = this.svg.selectAll(`.${this.classes[1]}`);
+    const paths = this.svg.selectAll(`.${this.classes[2]}`);
     const pathsLength = paths.size();
 
     for (let i = 0; i < pathsLength; i++) {
@@ -115,17 +119,17 @@ class MultiLine {
       });
 
       this.g.append(`g`)
-        .attr(`class`, this.classes[3]);
-
-      this.g.append(`g`)
         .attr(`class`, this.classes[4]);
 
-      this.g.selectAll(`.${this.classes[2]}`)
+      this.g.append(`g`)
+        .attr(`class`, this.classes[5]);
+
+      this.g.selectAll(`.${this.classes[3]}`)
         .data(this.dataColumns)
         .enter().append(`g`)
-          .attr(`class`, this.classes[2])
+          .attr(`class`, this.classes[3])
         .append(`path`)
-          .attr(`class`, this.classes[1]);
+          .attr(`class`, this.classes[2]);
 
       const waypoint = new Waypoint({
         element: document.getElementById(this.el.substr(1)),
@@ -138,6 +142,25 @@ class MultiLine {
     });
 
     $(window).on(`resize`, this.resize.bind(this));
+  }
+
+  renderLegend() {
+    const legend = d3.select(this.el).insert(`ul`)
+      .lower()
+      .attr(`class`, `${this.legendClasses[0]} ${this.legendClasses[1]}`);
+
+    const legendItems = legend.selectAll(`li`)
+      .data(this.dataColumns)
+      .enter().append(`li`)
+      .attr(`class`, this.legendClasses[2]);
+
+    legendItems.append(`span`)
+      .attr(`class`, this.legendClasses[3])
+      .style(`background-color`, d => this.z(d.id));
+
+    legendItems.append(`span`)
+      .attr(`class`, this.legendClasses[4])
+      .text((d, i) => this.dataColumns[i][`id`]);
   }
 
   resize() {

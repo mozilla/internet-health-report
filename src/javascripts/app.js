@@ -18,6 +18,9 @@ loadBarCharts();
 import { loadBarHorizontalCharts } from './modules/visualizations/BarHorizontal';
 loadBarHorizontalCharts();
 
+import { loadBarStackedCharts } from './modules/visualizations/BarStacked';
+loadBarStackedCharts();
+
 import { loadLineCharts } from './modules/visualizations/Line';
 loadLineCharts();
 
