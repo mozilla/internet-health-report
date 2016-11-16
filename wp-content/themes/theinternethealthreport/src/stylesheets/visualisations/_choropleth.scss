@@ -1,0 +1,42 @@
+.choropleth {
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-bottom: 66.63%;
+  }
+
+  &__svg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__item {
+    fill: $white;
+    stroke-width: 0.03em;
+    stroke: rgba($black, 0.5);
+  }
+
+  &__tooltip {
+    position: absolute;
+    transform: translateY(-100%);
+    pointer-events: none;
+    padding: 0.5em 1em;
+    @include rem(font-size, 12);
+    color: $white;
+    background-color: rgba($black, 0.8);
+    border: em(1) solid $black;
+    @include rem(border-radius, 5);
+    opacity: 0;
+    transition: opacity 0.1s ease;
+
+    &.is-active {
+      opacity: 1;
+    }
+  }
+}

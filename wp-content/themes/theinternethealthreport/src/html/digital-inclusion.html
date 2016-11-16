@@ -1,0 +1,95 @@
+{% extends '_layouts/application.html' %}
+{% block content %}
+  {% set digital = true %}
+  {% include './_partials/header.html' %}
+  <section class="section js-page" data-page="{{ section1Title|lower|replace(' ', '-') }}">
+    <div class="section__header wrapper u-space--m">
+      <div class="section__intro">
+        <h2>{{ section1Subtitle }}</h2>
+        <p>{{ section1Intro1 }}</p>
+      </div>
+
+      <aside class="section__related">
+        <article class="story-link">
+          <img src="/images/dummy.jpg" width="516" height="342" alt="">
+          <h4>{{ story1Title }}</h4>
+          <p>{{ story1Desc }}</p>
+          <a href="{{ locale(iso) }}{{ story1Link }}" class="link">{{ linkCTA }}</a>
+        </article>
+      </aside>
+    </div>
+
+    <div id="{{ section1Sub1 | lower | replace(' ', '-') }}" class="subsection">
+      <div class="subsection__header">
+        <div class="wrapper">
+          <h3>{{ section1Sub1 }}</h3>
+        </div>
+      </div>
+
+      <div class="subsection__main wrapper">
+        <div class="subsection__text-block">
+          <p class="subsection__text-strong">{{ section1Sub1P1 }}</p>
+
+          <p class="subsection__text">{{ section1Sub1P2 }}</p>
+        </div>
+
+        {% include '_partials/visualizations/number-of-people-online.html' %}
+
+        <div class="subsection__text-block">
+          <p class="subsection__text-strong">{{ section1Sub1P1 }}</p>
+
+          <p class="subsection__text">{{ section1Sub1P2 }}</p>
+        </div>
+
+        {% include '_partials/visualizations/internet-penetration-countries.html' %}
+      </div>
+    </div>
+
+    <div id="{{ section1Sub2 | lower | replace(' ', '-') }}" class="subsection">
+      <div class="subsection__header">
+        <div class="wrapper">
+          <h3>{{ section1Sub2 }}</h3>
+        </div>
+      </div>
+
+      <div class="subsection__main wrapper">
+        <div class="subsection__text-block">
+          <p class="subsection__text-strong">{{ section1Sub1P1 }}</p>
+
+          <p class="subsection__text">{{ section1Sub1P2 }}</p>
+        </div>
+
+        {% include '_partials/visualizations/internet-affordability.html' %}
+      </div>
+    </div>
+
+    <div id="{{ section1Sub3 | lower | replace(' ', '-') }}" class="subsection">
+      <div class="subsection__header">
+        <div class="wrapper">
+          <h3>{{ section1Sub3 }}</h3>
+        </div>
+      </div>
+
+      <div class="subsection__main wrapper">
+        {% include '_partials/visualizations/women-online.html' %}
+      </div>
+    </div>
+
+    <div id="{{ section1Sub4 | lower | replace(' ', '-') }}" class="subsection">
+      <div class="subsection__header">
+        <div class="wrapper">
+          <h3>{{ section1Sub4 }}</h3>
+        </div>
+      </div>
+
+      <div class="subsection__main wrapper">
+        {% include '_partials/visualizations/share-of-content-by-language.html' %}
+      </div>
+    </div>
+
+    <div class="section__pag wrapper u-space--l">
+      <a href="{{ locale(iso) }}{{ section2Link }}" class="pag pag--next"><span class="pag__item">{{ next }}</span> <span class="pag__item">{{ section2Subtitle }}</span></a>
+    </div>
+  </section>
+
+{% endblock %}

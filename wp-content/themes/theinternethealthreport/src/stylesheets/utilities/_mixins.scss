@@ -1,0 +1,119 @@
+//------------------------------------------------------------------------
+//  $Type flow
+//------------------------------------------------------------------------
+
+@mixin flow($factor: 1) {
+	& > * + * {
+		margin-top: #{$factor}em;
+	}
+}
+
+//-------------------------------------------------
+//  @font-face
+//-------------------------------------------------
+
+// Based on http://codepen.io/javasteve99/pen/hDxpn
+@mixin font-face($font-family, $file-path, $font-weight: normal, $font-style: normal) {
+  @font-face {
+    font-family: $font-family;
+    src: url('#{$file-path}.eot');
+    src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+         url('#{$file-path}.woff2') format('woff2'),
+         url('#{$file-path}.woff') format('woff'),
+         url('#{$file-path}.ttf') format('truetype'),
+         url('#{$file-path}.svg##{$font-family}') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+
+  // Chrome for Windows rendering fix: http://www.adtrak.co.uk/blog/font-face-chrome-rendering/
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+      font-family: $font-family;
+      src: url('#{$file-path}.svg##{$font-family}') format('svg')
+    }
+  }
+}
+
+//------------------------------------------------------------------------
+//  Neat Outer Container
+//------------------------------------------------------------------------
+
+@mixin wrapper($local-max-width: $max-width) {
+  @include clearfix;
+  padding-left: em($space * 0.5);
+  padding-right: em($space * 0.5);
+
+  @include media($medium-screen-up) {
+    max-width: em($local-max-width + ($space * 2));
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: em($space);
+    padding-right: em($space);
+  }
+}
+
+@mixin table() {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+//------------------------------------------------------------------------
+//  REM conversion
+//------------------------------------------------------------------------
+
+@mixin rem($property, $px-values) {
+	// Print the first line in pixel values
+	#{$property}: $px-values * 1px;
+	// If there is only one (numeric) value, return the property/value line for it.
+	@if type-of($px-values) == "number" {
+		#{$property}: rem($px-values);
+	} @else {
+		// Create an empty list that we can dump values into
+		$rem-values: ();
+		@each $value in $px-values {
+			// If the value is zero or not a number, return it
+			@if $value == 0 or type-of( $value ) != "number" {
+				$rem-values: append($rem-values, $value);
+			} @else {
+				$rem-values: append($rem-values, rem($value));
+			}
+		}
+		// Return the property and its list of converted values
+		#{$property}: $rem-values;
+	}
+}
+
+//------------------------------------------------------------------------
+//  $Responsive Type
+//------------------------------------------------------------------------
+
+@mixin fluidType($min, $max, $vw) {
+	$min-width: $min / ($vw / 100);
+	$max-width: $max / ($vw / 100);
+
+	font-size: em($min);
+
+	// Min required font-size / (number of viewport units/100)
+	@media (min-width: em($min-width)) {
+		font-size: em($max/1.5);
+		font-size: #{$vw}vw;
+	}
+
+	// Max required font-size / (number of viewport units/100)
+	@media (min-width: em($max-width)) {
+		font-size: em($max);
+	}
+}
+
+//------------------------------------------------------------------------
+//  $Placeholder
+//------------------------------------------------------------------------
+
+@mixin placeholder {
+	::-webkit-input-placeholder {@content}
+	:-moz-placeholder           {@content}
+	::-moz-placeholder          {@content}
+	:-ms-input-placeholder      {@content}
+}

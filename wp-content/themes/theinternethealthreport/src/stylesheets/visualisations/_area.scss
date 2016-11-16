@@ -1,0 +1,38 @@
+.area {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: em(300);
+
+    @include media($medium-screen-up) {
+      height: 0;
+      padding-bottom: 52%;
+    }
+  }
+
+  &__svg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &__layer {
+    fill: $white;
+  }
+
+  .x-axis,
+  .y-axis {
+    path,
+    line,
+    text {
+      stroke: white;
+    }
+  }
+}

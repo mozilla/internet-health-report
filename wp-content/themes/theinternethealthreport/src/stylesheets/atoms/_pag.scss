@@ -1,0 +1,37 @@
+.pag {
+  display: block;
+  padding: em($space);
+  text-decoration: none;
+  background-color: $light-grey;
+
+  + #{&} {
+    margin-top: 1em;
+
+    @include media($medium-screen-up) {
+      margin-top: 0;
+    }
+  }
+
+  @include media($medium-screen-up) {
+    @include span-columns(6);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $white;
+    background-color: $grey;
+  }
+
+  &--next {
+    text-align: right;
+
+    @include media($medium-screen-up) {
+      float: right;
+    }
+  }
+
+  &__item {
+    display: block;
+  }
+}

@@ -1,0 +1,99 @@
+.legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &--scale {
+    position: absolute;
+    top: 2em;
+    left: 1em;
+    max-width: em(300);
+  }
+
+  &--donut {
+    display: inline-block;
+    margin-top: 1em;
+    width: 100%;
+    text-align: left;
+  }
+
+  &--multiline {
+    text-align: center;
+
+    @include media($medium-screen-up) {
+      text-align: left;
+    }
+  }
+
+  &__item {
+    display: block;
+    text-align: left;
+
+    + #{&} {
+      margin-top: em(5);
+
+      .legend--multiline & {
+        margin-top: 0;
+        margin-left: 1em;
+      }
+    }
+
+    .legend--donut & {
+      display: inline-block;
+      width: 50%;
+    }
+
+    .legend--multiline & {
+      display: inline-block;
+    }
+  }
+
+  &__scale,
+  &__key,
+  &__value,
+  &__name {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__key {
+    width: em(16);
+    height: em(16);
+    background-color: $white;
+
+    @include media($medium-screen-up) {
+      width: em(20);
+      height: em(20);
+    }
+
+    .legend--multiline & {
+      border-radius: 50%;
+    }
+  }
+
+  &__value,
+  &__name {
+    @include rem(font-size, 12);
+  }
+
+  &__name {
+    @include rem(padding-left,10);
+
+    .legend--donut & {
+      max-width: calc(100% - #{rem(20)});
+      @include rem(padding-right,10);
+    }
+
+    .legend--multiline & {
+      @include rem(padding-left,5);
+    }
+  }
+
+  &__scale {
+    width: em(80);
+    height: em(10);
+    margin: 0 0.25em;
+    border-radius: em(10);
+    background: linear-gradient(to right, rgba($white, 0.1) 0%, $white 100%);
+  }
+}

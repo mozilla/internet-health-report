@@ -1,0 +1,39 @@
+//------------------------------------------------------------------------
+//  $Type mixins
+//------------------------------------------------------------------------
+
+@mixin t-l() {
+  font: em(21px) $ff-primary;
+
+  @include media($medium-screen-up) {
+    font-size: em(32px);
+  }
+}
+
+@mixin t-m() {
+  font: em(18px) $ff-primary;
+
+  @include media($medium-screen-up) {
+    font-size: em(20px);
+  }
+}
+
+@mixin t-s() {
+  font: em(16px) $ff-primary;
+}
+
+//------------------------------------------------------------------------
+//  $Typography classes
+//------------------------------------------------------------------------
+
+.t-l {
+  @include t-l();
+}
+
+.t-m {
+  @include t-m();
+}
+
+.t-s {
+  @include t-s();
+}

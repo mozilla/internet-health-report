@@ -1,0 +1,48 @@
+.article {
+  &__copy {
+    @include flow();
+
+    @include media($medium-screen-up) {
+      @include span-columns(8);
+      @include shift(2);
+    }
+
+    @include media($large-screen-up) {
+      @include span-columns(6);
+      @include shift(3);
+    }
+  }
+
+  &__figure {
+    margin: 0;
+    padding-top: em($space);
+    padding-bottom: em($space);
+
+    @include media($medium-screen-up) {
+      @include span-columns(10);
+      @include shift(1);
+    }
+
+    @include media($large-screen-up) {
+      @include span-columns(8);
+      @include shift(2);
+      padding-top: em($space * 1.5);
+      padding-bottom: em($space * 1.5);
+    }
+
+    img {
+      display: block;
+    }
+  }
+
+  &__figcaption {
+    margin-top: 0.25em;
+    @include rem(font-size, 14);
+    font-style: italic;
+    text-align: right;
+  }
+
+  &__share {
+    margin-top: 3em;
+  }
+}

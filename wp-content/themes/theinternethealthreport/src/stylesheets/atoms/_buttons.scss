@@ -1,0 +1,27 @@
+//------------------------------------------------------------------------
+//  $Buttons
+//------------------------------------------------------------------------
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 2em;
+  font-weight: $fw-bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $black;
+  border-radius: 0.4em;
+
+  &--outline {
+    color: $black;
+    background-color: transparent;
+    border: 2px solid;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      background-color: $black;
+    }
+  }
+}

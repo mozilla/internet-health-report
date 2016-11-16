@@ -1,0 +1,29 @@
+//------------------------------------------------------------------------
+//  $Document flow
+//------------------------------------------------------------------------
+
+.flow {
+  @include flow;
+}
+
+.u-space {
+  &--s {
+    padding-top: em($space * 0.5);
+    padding-bottom: em($space * 0.5);
+  }
+
+  &--m {
+    padding-top: em($space);
+    padding-bottom: em($space);
+  }
+
+  &--l {
+    padding-top: em($space);
+    padding-bottom: em($space);
+
+    @include media($medium-screen-up) {
+      padding-top: em($space * 2);
+      padding-bottom: em($space * 2);
+    }
+  }
+}

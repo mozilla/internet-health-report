@@ -1,0 +1,20 @@
+<div class="data">
+  <div class="data__header">
+    <a href="#" class="data__link">{{ dataShare }}</a>
+    <a href="#" class="data__link">{{ dataTweet }}</a>
+    <button class="data__link js-embed-toggle" data-embed="cms-marketshare">{{ dataEmbed }}</button>
+
+    <div class="data__embed js-embed">
+      <p>{{ dataEmbedCta }}</p>
+      <textarea class="data__textarea" name="" id="" cols="30" rows="10"></textarea>
+    </div>
+  </div>
+
+  <div class="donuts">
+    <div class="donuts__col">
+      <div id="cms-marketshare" class="chart donut donut--multi js-donut" data-url="/data/cms-marketshare.csv"></div>
+    </div>
+  </div>
+
+  <p class="data__source">{{ dataSource }} <a href="#">Title of data source</a></p>
+</div>

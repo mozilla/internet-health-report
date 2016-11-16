@@ -1,0 +1,42 @@
+{% extends '_layouts/application.html' %}
+{% block content %}
+  {% include './_partials/header.html' %}
+  <article class="article story wrapper u-space--l">
+    <div class="article__copy">
+      <div class="story__header">
+        <h1>{{ story3Title }}</h1>
+        <p>{{ story3P1 }}</p>
+
+        <div class="story__share share">
+          <a href="#" class="share__btn btn btn--outline">{{ facebookShareText }}</a>
+          <a href="#" class="share__btn btn btn--outline">{{ twitterShareText }}</a>
+          <a href="#" class="share__btn btn btn--outline">{{ emailShareText }}</a>
+        </div>
+      </div>
+
+      <p>{{ story3P2 }}</p>
+      <p>{{ story3P3 }}</p>
+      <p>{{ story3P4 }}</p>
+      <p>{{ story3P5 }}</p>
+      <p>{{ story3P6 }}</p>
+      <p>{{ story3P7 }}</p>
+      <p>{{ story3P8 }}</p>
+      <p>{{ story3P9 }}</p>
+      <p>{{ story3P10 }}</p>
+      <p>{{ story3P11 }}</p>
+      <p>{{ story3P12 }}</p>
+      <p>{{ story3P13 }}</p>
+      <p>{{ story3P14 }}</p>
+      <p>{{ story3P15 }}</p>
+
+      <div class="article__share share">
+        <a href="#" class="share__btn btn btn--outline">{{ facebookShareText }}</a>
+        <a href="#" class="share__btn btn btn--outline">{{ twitterShareText }}</a>
+        <a href="#" class="share__btn btn btn--outline">{{ emailShareText }}</a>
+      </div>
+    </div>
+  </article>
+
+  {% include '_partials/section-nav.html' %}
+
+{% endblock %}

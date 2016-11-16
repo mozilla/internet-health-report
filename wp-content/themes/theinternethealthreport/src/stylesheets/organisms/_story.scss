@@ -1,0 +1,19 @@
+.story {
+  &__header {
+    padding-bottom: em($space * 2);
+  }
+
+  &__share {
+    margin-top: 2em;
+  }
+
+  &-link {
+    @include flow(0.5);
+    padding-bottom: 2em;
+
+    + #{&} {
+      padding-top: 2em;
+      border-top: em(1) solid rgba($black, 0.2);
+    }
+  }
+}
