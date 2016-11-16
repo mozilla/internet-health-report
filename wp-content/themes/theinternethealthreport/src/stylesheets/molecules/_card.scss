@@ -1,0 +1,96 @@
+.card-wrapper {
+  padding-top: em(50);
+  padding-bottom: em(100);
+}
+
+.card {
+  padding: em(30);
+  box-shadow: em(0) em(0) em(10) em(5) rgba($black, 0.04);
+
+  @include media($medium-screen-up) {
+    @include table();
+  }
+
+  + #{&} {
+    margin-top: em(30);
+  }
+
+  &__cell {
+    @include media($medium-screen-up) {
+      @include display-context(table) {
+        @include span-columns(6);
+      }
+      vertical-align: top;
+      @include pad(#{em(12)} default #{em(12)} 0);
+    }
+
+    @include media($large-screen-up) {
+      @include display-context(table) {
+        @include span-columns(7);
+      }
+    }
+
+    &--last {
+      margin-top: em(30);
+
+      @include media($medium-screen-up) {
+        margin-top: 0;
+        @include pad(#{em(12)} 0 #{em(12)} default);
+        border-left: em(1) solid $light-grey;
+      }
+
+      @include media($large-screen-up) {
+        @include display-context(table) {
+          @include span-columns(5);
+        }
+      }
+    }
+  }
+
+  &__link-wrapper {
+    display: block;
+    text-decoration: none;
+  }
+
+  &__link {
+    display: block;
+    @include rem(margin-top, 16);
+    @include rem(font-size, 16);
+    line-height: 1.1875;
+    font-weight: $fw-light;
+    letter-spacing: 0.01em;
+    color: $navy;
+  }
+
+  &__title {
+    @include rem(margin-top, 20);
+    @include rem(font-size, 38);
+    font-weight: $fw-regular;
+    line-height: 1.21;
+    letter-spacing: 0.025em;
+    color: $black;
+  }
+
+  &__subtitle {
+    @include rem(font-size, 19);
+    line-height: 1.16;
+    font-weight: $fw-medium;
+    letter-spacing: 0.025em;
+
+    &:before {
+      counter-increment: card-index;
+      content: '0' counter(card-index);
+      font-weight: $fw-light;
+      margin-right: 1em;
+    }
+  }
+
+  &__featured {
+    @include rem(font-size, 16);
+    line-height: 1.2;
+    font-weight: $fw-light;
+    letter-spacing: 0.135em;
+    text-transform: uppercase;
+    color: $dark-grey;
+  }
+}

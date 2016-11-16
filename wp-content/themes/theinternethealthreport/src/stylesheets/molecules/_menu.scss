@@ -11,17 +11,22 @@
 
     + #{&} {
       @include media($large-screen-up) {
-        margin-left: 2em;
+        margin-left: em(70);
       }
     }
   }
 
   a {
     display: block;
+    @include rem(font-size, 15);
+    font-weight: $fw-light;
+    line-height: 1.2;
+    letter-spacing: 0.025em;
     text-decoration: none;
+    color: $dark-grey;
 
     @include media($large-screen-up) {
-      padding: 1em 0;
+      padding: em(34, 15) 0;
     }
   }
 }

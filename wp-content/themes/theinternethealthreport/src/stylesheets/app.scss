@@ -16,13 +16,11 @@
 
 @import "atoms/buttons";
 @import "atoms/links";
-@import "atoms/language";
 @import "atoms/pag";
 
 @import "molecules/menu";
 @import "molecules/legend";
-@import "molecules/media";
-@import "molecules/table";
+@import "molecules/card";
 @import "molecules/share";
 @import "molecules/data";
 
@@ -39,7 +37,6 @@
 @import "visualisations/bar-stacked";
 
 @import "organisms/header";
-@import "organisms/navigation";
 @import "organisms/article";
 @import "organisms/story";
 @import "organisms/section";

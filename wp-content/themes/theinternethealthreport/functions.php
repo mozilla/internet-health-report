@@ -88,6 +88,7 @@ function jquery_footer_load() {
 add_action('wp_enqueue_scripts', 'jquery_footer_load');
 
 function theme_scripts() {
+  wp_enqueue_style( 'theme-fonts', 'https://code.cdn.mozilla.net/fonts/fira.css');
   wp_enqueue_style( 'theme-styles', get_template_directory_uri() . '/css/app.css');
   wp_enqueue_script( 'theme-script', get_template_directory_uri() . '/js/app.js', array('jquery'), '', true);
 }

@@ -2,10 +2,12 @@
 //  $Typography
 //------------------------------------------------------------------------
 
-$ff-primary   : 'Open Sans', sans-serif;
+$ff-primary   : 'Fira Sans', serif;
 $ff-secondary : Georgia, serif;
 
+$fw-light     : 300;
 $fw-regular   : 400;
+$fw-medium    : 500;
 $fw-bold      : 700;
 $fw-extrabold : 800;
 
@@ -14,10 +16,15 @@ $fw-extrabold : 800;
 //------------------------------------------------------------------------
 
 $white: #fff;
+$off-white: #f7f7f7;
 $black: #000;
-$light-grey: #D8D8D8;
+$light-grey: #e6e6e6;
 $grey: #5D5D5D;
-$dark-grey: #494949;
+$dark-grey: #404040;
+$primary-colour: #ff4570;
+$navy: #003561;
+$yellow: #f0c72f;
+
 $theme1: #f7bda7;
 $theme2: #ee8596;
 $theme3: #e05487;
