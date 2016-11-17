@@ -1,0 +1,27 @@
+.intro {
+  padding-top: em($space * 2);
+  padding-bottom: em($space * 2);
+  text-align: center;
+  border-bottom: em(1) solid $light-grey;
+
+  &__text {
+    max-width: em(830,19);
+    margin-left: auto;
+    margin-right: auto;
+    @include rem(font-size, 19);
+    font-weight: $fw-light;
+    line-height: 1.47;
+    letter-spacing: 0.01em;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-top: 1.5em;
+    @include rem(font-size, 19);
+    font-weight: $fw-medium;
+    line-height: 1.37;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    color: $black;
+  }
+}

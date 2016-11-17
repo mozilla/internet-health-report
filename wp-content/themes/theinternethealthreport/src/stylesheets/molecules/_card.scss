@@ -1,6 +1,6 @@
 .card-wrapper {
-  padding-top: em(50);
-  padding-bottom: em(100);
+  padding-top: em($space * 2);
+  padding-bottom: em($space * 2);
 }
 
 .card {
