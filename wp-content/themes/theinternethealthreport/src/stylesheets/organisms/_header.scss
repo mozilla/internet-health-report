@@ -20,10 +20,11 @@
   }
 
   &__title {
+    font-family: $ff-secondary;
     @include rem(font-size, 48);
     font-weight: $fw-medium;
-    line-height: 1.62;
-    letter-spacing: 0.01em;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
   }
 
   &__subtitle {
