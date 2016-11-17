@@ -25,7 +25,7 @@
   &__link {
     padding: 0;
     @include rem(font-size,14);
-    font-weight: $fw-extrabold;
+    font-weight: $fw-bold;
     text-transform: uppercase;
     color: $white;
     text-decoration: none;
