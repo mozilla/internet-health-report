@@ -3,30 +3,84 @@
 //------------------------------------------------------------------------
 
 .footer {
-  background-color: $light-grey;
+  border-top: em(1) solid $light-grey;
+
+  &__grid {
+    @include media($medium-screen-up) {
+      @include table();
+    }
+  }
 
   &__col {
     @include flow();
+    padding: em($space);
 
     @include media($medium-screen-up) {
-      @include span-columns(6)
+      @include display-context(table) {
+        @include span-columns(6)
+      }
     }
 
     &--first {
+      @include media($medium-screen-up) {
+        border-right: em(1) solid $light-grey;
+      }
+
       @include media($large-screen-up) {
-        @include span-columns(4)
+        @include display-context(table) {
+          @include span-columns(5);
+        }
       }
     }
 
     &--last {
       @include media($large-screen-up) {
-        @include shift(2);
+        @include display-context(table) {
+          @include span-columns(7);
+        }
       }
     }
   }
 
+  &__title {
+    @include rem(font-size, 19);
+    font-weight: $fw-medium;
+    line-height: 1.37;
+    letter-spacing: 0.01em;
+  }
+
+  &__text {
+    @include rem(font-size, 15);
+    font-weight: $fw-light;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+
+    &--2 {
+      margin-top: 1.5em;
+      padding-top: 1.5em;
+      border-top: 1px solid $light-grey;
+    }
+  }
+
+  &__links {
+    margin-left: -0.25em;
+    margin-right: -0.25em;
+  }
+
   &__link {
-    display: inline-block;
-    margin-right: 2em;
+    display: block;
+    margin: 0 0.25em;
+    font-weight: $fw-medium;
+    color: $black;
+    text-decoration: none;
+
+    @include media($small-screen-up) {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    svg {
+      margin-left: 0.5em;
+    }
   }
 }

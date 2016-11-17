@@ -1,0 +1,91 @@
+.signup-form {
+  position: relative;
+  @include flow();
+  width: 100%;
+  max-width: em(340);
+
+  &__email,
+  &__select {
+    display: block;
+    width: 100%;
+    padding: em(12, 14) em(14, 14);
+    @include rem(font-size, 14);
+    line-height: 1.64;
+    font-family: $ff-primary;
+    font-weight: $fw-light;
+    letter-spacing: 0.01em;
+    appearance: none;
+    border: 1px solid $light-grey;
+    border-radius: 0;
+    background: none;
+
+    &:focus,
+    &:active {
+      outline: 1px solid $primary-colour;
+    }
+  }
+
+  &__checkbox {
+    position: absolute;
+    right: 110%;
+    opacity: 0;
+
+    &:focus,
+    &:active {
+      ~ .signup-form__checkbox-label {
+        &:before {
+          border-width: 2px;
+        }
+      }
+    }
+
+    &:checked {
+      ~ .signup-form__checkbox-label {
+        &:before {
+          background-color: $black;
+        }
+      }
+    }
+
+    &-label {
+      position: relative;
+      display: block;
+      padding-left: em(26, 10);
+      @include rem(font-size, 10);
+      line-height: 1.2;
+      font-family: $ff-primary;
+      font-weight: $fw-light;
+      letter-spacing: 0.01em;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: em(14,10);
+        height: em(14,10);
+        border: 1px solid $black;
+      }
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: em(160, 14);
+    padding: em(11, 14) em(11, 14);
+    @include rem(font-size, 14);
+    line-height: 1.64;
+    font-family: $ff-primary;
+    font-weight: $fw-medium;
+    letter-spacing: 0.01em;
+    color: $white;
+    border: none;
+    background-color: $primary-colour;
+
+    &:active,
+    &:focus {
+      outline: 1px solid $primary-colour;
+    }
+  }
+}
