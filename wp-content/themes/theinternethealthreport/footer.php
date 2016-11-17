@@ -1,4 +1,4 @@
-<footer class="footer u-space--l">
+<footer class="footer">
   <div class="wrapper">
     <div class="footer__col footer__col--first">
       <h4>Keep me informed</h4>

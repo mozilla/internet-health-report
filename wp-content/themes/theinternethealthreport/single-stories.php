@@ -6,7 +6,7 @@
   $permalink = get_permalink();
 ?>
 
-<article class="article story wrapper u-space--l">
+<article class="article story wrapper">
   <div class="article__copy">
     <div class="story__header">
       <h1><?php echo $title; ?></h1>
