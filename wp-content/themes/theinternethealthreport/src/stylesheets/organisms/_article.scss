@@ -1,15 +1,49 @@
 .article {
+  padding-top: em($space * 2);
+
   &__copy {
     @include flow();
+    @include rem(font-size, 18);
+    line-height: 1.62;
+    letter-spacing: 0.01em;
+    color: $dark-grey;
 
     @include media($medium-screen-up) {
       @include span-columns(8);
       @include shift(2);
+      @include omega;
+      @include rem(font-size, 21);
     }
 
     @include media($large-screen-up) {
       @include span-columns(6);
       @include shift(3);
+      @include omega;
+    }
+  }
+
+  blockquote {
+    position: relative;
+    max-width: em(530, 26);
+    margin: 2em 0;
+    padding: em(38, 26) em(4, 26) em(4, 26);
+    @include rem(font-size, 26);
+    line-height: 1.38;
+    font-weight: $fw-medium;
+    color: $white;
+    background-color: $dark-grey;
+
+    @include media($medium-screen-up) {
+      left: flex-grid(-1, 12);
+    }
+
+    &:before {
+      content: '“';
+      position: absolute;
+      top: 0;
+      left: em(4, 48);
+      display: block;
+      @include rem(font-size, 48);
     }
   }
 
@@ -40,9 +74,5 @@
     @include rem(font-size, 14);
     font-style: italic;
     text-align: right;
-  }
-
-  &__share {
-    margin-top: 3em;
   }
 }

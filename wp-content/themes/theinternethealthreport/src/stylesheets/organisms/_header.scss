@@ -7,7 +7,7 @@
   background-color: $yellow;
 
   @include media($medium-screen-up) {
-    height: em(440);
+    height: em($header-height);
   }
 
   &__top {

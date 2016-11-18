@@ -36,9 +36,10 @@ $theme7: #391550;
 //  $Layout
 //------------------------------------------------------------------------
 
-$max-width : 1280;
-$space     : 30;
-$cols      : 12;
+$max-width     : 1280;
+$space         : 30;
+$header-height : 440;
+$share-width   : 40;
 
 //------------------------------------------------------------------------
 //  $Media Queries
@@ -49,7 +50,8 @@ $medium : em(768);
 $large  : em(1024);
 $xlarge : em(1280);
 
-$small-screen-up  : new-breakpoint(min-width $small);
-$medium-screen-up : new-breakpoint(min-width $medium);
-$large-screen-up  : new-breakpoint(min-width $large);
-$xlarge-screen-up : new-breakpoint(min-width $xlarge);
+$small-screen-up     : new-breakpoint(min-width $small);
+$medium-screen-up    : new-breakpoint(min-width $medium);
+$large-screen-up     : new-breakpoint(min-width $large);
+$xlarge-screen-up    : new-breakpoint(min-width $xlarge);
+$max-width-screen-up : new-breakpoint(min-width em($max-width));

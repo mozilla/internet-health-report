@@ -1,5 +1,73 @@
 .share {
+  margin-top: 2em;
+  text-align: center;
+
+  @include media($medium-screen-up) {
+    position: fixed;
+    top: em($header-height + ($space * 2));
+    left: calc(#{flex-grid(1, 12)} - #{em($share-width / 2)});
+    width: em($share-width);
+    margin-top: 0;
+  }
+
+  @include media($large-screen-up) {
+    left: calc(#{flex-grid(2, 12)} - #{em($share-width)});
+  }
+
+  @include media($max-width-screen-up) {
+    left: calc(50% - #{em(500)});
+  }
+
   &__btn {
-    margin-right: 1em;
+    display: inline-block;
+    text-decoration: none;
+    color: $dark-grey;
+
+    @include media($medium-screen-up) {
+      display: block;
+    }
+
+    + #{&} {
+      margin-left: 1em;
+
+      @include media($medium-screen-up) {
+        margin-left: 0;
+        margin-top: 0.75em;
+      }
+    }
+  }
+
+  &__text,
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+
+    @include media($medium-screen-up) {
+      display: block;
+    }
+  }
+
+  &__text {
+    margin-right: 0.5em;
+    @include rem(font-size, 18);
+    font-weight: $fw-light;
+    line-height: 1.2;
+    letter-spacing: 0.025em;
+
+    @include media($medium-screen-up) {
+      @include rem(font-size, 14);
+      margin-right: 0;
+      margin-bottom: 0.5em;
+    }
+  }
+
+  &__icon {
+    @include media($medium-screen-up) {
+      display: inline-block;
+    }
+
+    svg {
+      display: block;
+    }
   }
 }

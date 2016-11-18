@@ -7,22 +7,6 @@
 ?>
 
 <article class="article story wrapper">
-  <div class="article__copy">
-    <div class="story__header">
-      <h1><?php echo $title; ?></h1>
-
-      <?php if ($subtitle) : ?>
-        <p><?php echo $subtitle; ?></p>
-      <?php endif; ?>
-
-      <div class="story__share share">
-        <a href="<?php echo get_facebook_share_url($permalink); ?>" target="_blank" class="share__btn btn btn--outline js-social-share">Share</a>
-        <a href="<?php echo get_twitter_share_url($permalink, $title); ?>" target="_blank" class="share__btn btn btn--outline js-social-share">Tweet</a>
-        <a href="mailto:?subject=<?php echo $title; ?>&body=<?php echo $permalink; ?>" class="share__btn btn btn--outline">Email</a>
-      </div>
-    </div>
-  </div>
-
   <?php if (have_rows('story')) : while (have_rows('story')) : the_row(); ?>
 
     <?php if (get_row_layout() == 'story_text') : ?>
@@ -49,12 +33,12 @@
 
   <?php endwhile; endif; ?>
 
-  <div class="article__copy">
-    <div class="article__share share">
-      <a href="<?php echo get_facebook_share_url($permalink); ?>" target="_blank" class="share__btn btn btn--outline js-social-share">Share</a>
-      <a href="<?php echo get_twitter_share_url($permalink, $title); ?>" target="_blank" class="share__btn btn btn--outline js-social-share">Tweet</a>
-      <a href="mailto:?subject=<?php echo esc_url($title); ?>&body=<?php echo esc_url($permalink); ?>" class="share__btn btn btn--outline">Email</a>
-    </div>
+  <div class="share js-share">
+    <a href="<?php echo get_facebook_share_url($permalink); ?>" target="_blank" class="share__btn js-social-share"><span class="share__text">Share</span><span class="share__icon"><?php get_template_part('assets/icons/icon', 'facebook.svg'); ?></span></a><!--
+
+    --><a href="<?php echo get_twitter_share_url($permalink, $title); ?>" target="_blank" class="share__btn js-social-share"><span class="share__text">Tweet</span><span class="share__icon"><?php get_template_part('assets/icons/icon', 'twitter.svg'); ?></span></a>
+
+    <!-- <a href="mailto:?subject=<?php echo esc_url($title); ?>&body=<?php echo esc_url($permalink); ?>" class="share__btn btn btn--outline">Email</a> -->
   </div>
 </article>
 
