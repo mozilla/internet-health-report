@@ -10,6 +10,10 @@
     height: em(440);
   }
 
+  &__top {
+    padding-top: em(24);
+  }
+
   &__main {
     position: absolute;
     top: 50%;
@@ -28,6 +32,10 @@
   }
 
   &__subtitle {
+    max-width: em(680, 21);
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
     @include rem(font-size, 21);
     line-height: 1.62;
     letter-spacing: 0.01em;

@@ -26,7 +26,7 @@
     <div class="card__cell">
       <a href="<?php echo get_permalink(); ?>" class="card__link-wrapper">
         <h4 class="card__subtitle"><?php the_title(); ?></h4>
-        <h3 class="card__title"><?php the_field('section_subtitle'); ?></h3>
+        <h3 class="card__title"><?php the_field('page_subtitle'); ?></h3>
       </a>
     </div>
 
