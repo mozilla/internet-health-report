@@ -59,7 +59,7 @@ var paths = {
 
   js: {
     app: {
-      modules: src + 'javascripts/modules/*js',
+      modules: src + 'javascripts/modules/**/*.js',
       src: src + 'javascripts/app.js',
       dist: 'js/',
     },

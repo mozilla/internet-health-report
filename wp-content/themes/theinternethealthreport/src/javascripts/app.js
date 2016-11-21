@@ -32,9 +32,6 @@ loadBubbleCharts();
 
 // UI
 
-import { renderLanguageSelect } from './modules/ui/languageSelect';
-renderLanguageSelect();
-
 // Interaction
 
 import { smoothScrollInit } from './modules/interaction/smoothScroll';

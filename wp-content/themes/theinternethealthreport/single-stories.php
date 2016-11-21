@@ -6,7 +6,7 @@
   $permalink = get_permalink();
 ?>
 
-<article class="article story wrapper">
+<article class="article story wrapper js-article">
   <?php if (have_rows('story')) : while (have_rows('story')) : the_row(); ?>
 
     <?php if (get_row_layout() == 'story_text') : ?>

@@ -1,17 +1,22 @@
 .share {
   margin-top: 2em;
   text-align: center;
+  transition: opacity 0.2s ease;
+
+  &.is-hidden {
+    opacity: 0;
+  }
 
   @include media($medium-screen-up) {
     position: fixed;
     top: em($header-height + ($space * 2));
-    left: calc(#{flex-grid(1, 12)} - #{em($share-width / 2)});
+    left: em($space);
     width: em($share-width);
     margin-top: 0;
   }
 
   @include media($large-screen-up) {
-    left: calc(#{flex-grid(2, 12)} - #{em($share-width)});
+    left: 12%;
   }
 
   @include media($max-width-screen-up) {
