@@ -1,26 +1,56 @@
 .subsection {
-  background-color: $dark-grey;
+  @include clearfix();
+  padding-bottom: em($space * 1.5);
+
+  &__wrapper {
+    @include media($large-screen-up) {
+      @include span-columns(10 of 12);
+      @include shift(1);
+    }
+  }
 
   &__header {
-    padding-top: em($space * 0.5);
-    padding-bottom: em($space * 0.5);
-    background-color: $light-grey;
+    padding-top: 1em;
+    @include rem(font-size, 21);
+    font-weight: $fw-medium;
+    line-height: 1.62;
+    letter-spacing: 0.025em;
+    border-top: 1px solid $light-grey;
+
+    .subsection__row ~ & {
+      margin-top: em($space * 1.5, 21);
+    }
   }
 
-  &__main {
-    @include flow(3);
-    padding-top: em($space * 1.5);
-    padding-bottom: em($space * 1.5);
-    color: $white;
+  &__chart-title {
+    margin-top: 1.75em;
+    padding: em($space * 0.5, 21) em($space * 0.5, 21);
+    @include rem(font-size, 21);
+    line-height: 1.62;
+    font-weight: $fw-medium;
+    letter-spacing: 0.025em;
+    background-color: $primary-colour;
+
+    @include media($medium-screen-up) {
+      padding: em($space * 0.6, 21) em($space * 1.5, 21);
+    }
   }
 
-  &__text-block {
+  &__row {
     @include clearfix;
+    padding: em($space) em($space * 0.5);
+    background-color: $light-grey2;
+
+    @include media($medium-screen-up) {
+      padding: em($space * 1.5) em($space * 1.5);
+    }
   }
 
-  &__text-strong {
-    @include rem(font-size, 20);
-    font-weight: $fw-bold;
+  &__subtitle {
+    @include rem(font-size, 26);
+    font-weight: $fw-medium;
+    line-height: 1.38;
+    letter-spacing: 0.01em;
 
     @include media($medium-screen-up) {
       @include span-columns(5);
@@ -29,11 +59,17 @@
 
   &__text {
     margin-top: 1em;
-    @include rem(font-size, 18);
+    @include rem(font-size, 15);
+    line-height: 1.6;
+    letter-spacing: 0.01em;
 
     @include media($medium-screen-up) {
       margin-top: 0;
       @include span-columns(7);
     }
+  }
+
+  &__chart {
+    margin-bottom: em($space * 2);
   }
 }

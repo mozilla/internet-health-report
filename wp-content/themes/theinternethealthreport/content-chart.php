@@ -10,9 +10,9 @@
 ?>
 <div class="data">
   <div class="data__header">
-    <a href="<?php echo get_facebook_share_url($permalink); ?>" target="_blank" class="data__link js-social-share">Share</a>
-    <a href="<?php echo get_twitter_share_url($permalink); ?>" target="_blank" class="data__link js-social-share">Tweet</a>
-    <button class="data__link js-embed-toggle" data-embed="<?php echo $permalink; ?>">Embed</button>
+    <a href="<?php echo get_facebook_share_url($permalink); ?>" target="_blank" class="data__link js-social-share"><?php get_template_part('assets/icons/icon', 'facebook.svg'); ?> <span class="data__link-text">Share</span></a>
+    <a href="<?php echo get_twitter_share_url($permalink); ?>" target="_blank" class="data__link js-social-share"><?php get_template_part('assets/icons/icon', 'twitter.svg'); ?> <span class="data__link-text">Tweet</span></a>
+    <button class="data__link js-embed-toggle" data-embed="<?php echo $permalink; ?>"><?php get_template_part('assets/icons/icon', 'embed.svg'); ?> <span class="data__link-text">Embed</span></button>
 
     <div class="data__embed js-embed">
       <p>Copy & paste code</p>

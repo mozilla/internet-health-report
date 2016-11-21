@@ -1,11 +1,10 @@
 .data {
   padding: em($space * 0.5);
   color: $white;
-  background-color: $grey;
-  @include rem(border-radius, 10);
+  background-color: $dark-grey;
 
   @include media($medium-screen-up) {
-    padding: em($space);
+    padding: em($space) em($space * 1.5);
   }
 
   &__header {
@@ -24,9 +23,10 @@
 
   &__link {
     padding: 0;
+    font-family: $ff-primary;
     @include rem(font-size,14);
-    font-weight: $fw-bold;
-    text-transform: uppercase;
+    font-weight: $fw-medium;
+    letter-spacing: 0.01em;
     color: $white;
     text-decoration: none;
     background-color: transparent;
@@ -35,6 +35,19 @@
 
     + #{&} {
       @include rem(margin-left, 20);
+    }
+
+    > * {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &-text {
+      margin-left: 0.25em;
+    }
+
+    path {
+      fill: $white;
     }
   }
 
@@ -59,7 +72,6 @@
     padding: em($space);
     text-align: left;
     background-color: rgba($black,0.9);
-    @include rem(border-radius, 8);
     opacity: 0;
     visibility: hidden;
   }
