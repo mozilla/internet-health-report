@@ -1,0 +1,1637 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: wpDiscuz - supercharged native comments\n"
+"POT-Creation-Date: 2016-04-29 13:32+0200\n"
+"PO-Revision-Date: 2016-05-06 15:11+0200\n"
+"Language-Team: Robin Roelofsen <info@dreamdesignsolutions.nl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: class.WpdiscuzCore.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: nl_NL\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: class.WpdiscuzCore.php:889 options/options-layouts/settings-social.php:40
+#: options/options-layouts/settings-social.php:42
+#: options/options-layouts/settings-social.php:44
+#: options/options-layouts/settings-social.php:46
+msgid "Settings"
+msgstr "Instellingen"
+
+#: class.WpdiscuzCore.php:891
+msgid "Phrases"
+msgstr "Zinnen"
+
+#: class.WpdiscuzCore.php:932 options/phrases-layouts/phrases-comment.php:116
+msgid "Admin"
+msgstr "Admin"
+
+#: class.WpdiscuzCore.php:934 class.WpdiscuzCore.php:943
+#: options/phrases-layouts/phrases-comment.php:118
+msgid "Author"
+msgstr "Auteur"
+
+#: class.WpdiscuzCore.php:938 options/phrases-layouts/phrases-comment.php:124
+msgid "Member"
+msgstr "Lid"
+
+#: class.WpdiscuzCore.php:944 options/phrases-layouts/phrases-comment.php:122
+msgid "Guest"
+msgstr "Gast"
+
+#: options/class.WpdiscuzOptions.php:30 options/class.WpdiscuzOptions.php:103
+#: options/class.WpdiscuzOptions.php:223
+msgid "Hacker?"
+msgstr "Hacker?"
+
+#: options/class.WpdiscuzOptions.php:258
+msgid ""
+"Brings an ocean of emotions to your comments. It comes with an awesome smile "
+"package."
+msgstr ""
+"Brengt een zee van emoties naar uw commentaren. Wordt geleverd met een "
+"geweldige smile pakket."
+
+#: options/class.WpdiscuzOptions.php:259
+msgid ""
+"Comment reporting tools. Auto-moderates comments based on number of flags "
+"and dislikes."
+msgstr ""
+"Commentaren rapportage tools. Bewerkt automatisch commentaren gebaseerd op "
+"het aantal flags en dislikes."
+
+#: options/class.WpdiscuzOptions.php:260
+msgid ""
+"Adds a smart and intuitive AJAX \"Translate\" button with 60 language "
+"options. Uses free translation API."
+msgstr ""
+"Voegt een slimme en intu&#239;tieve AJAX \"Vertaal\" knop met 60 taalopties "
+"toe. Maakt gebruik van gratis vertalings-API."
+
+#: options/class.WpdiscuzOptions.php:261
+msgid ""
+"AJAX powered front-end comment search. It starts searching while you type "
+"search words. "
+msgstr ""
+"AJAX front-end commentaar zoekfunctie. Begint te zoeken terwijl u uw "
+"zoekwoorden typt."
+
+#: options/class.WpdiscuzOptions.php:262
+msgid ""
+"Most voted comments, Active comment threads, Most commented posts, Active "
+"comment authors"
+msgstr ""
+"Meest op gestemde commentaren, actieve commentaar threads, berichten met de "
+"meeste commentaren, actieve commentatoren."
+
+#: options/class.WpdiscuzOptions.php:263
+msgid ""
+"All in one powerful yet simple admin toolkit to moderate comments on front-"
+"end."
+msgstr ""
+"Alles-in-&#233;&#233;n, krachtige, en toch eenvoudige font-end admin toolkit "
+"voor het bewerken van commentaren."
+
+#: options/class.WpdiscuzOptions.php:264
+msgid ""
+"Extended comment attachment system. Allows to upload images, videos, audios "
+"and other file types."
+msgstr ""
+"Uitgebreide commentaar bevestigingssysteem. Maakt het mogelijk om foto&#39;"
+"s, video&#39;s, audio, en andere bestandssoorten te uploaden."
+
+#: options/class.WpdiscuzOptions.php:265
+msgid ""
+"Adds No CAPTCHA on all comment forms. Stops spam and bot comments with "
+"Google reCAPTCHA"
+msgstr ""
+"Voegt No CAPTCHA reCAPTCHA toe aan alle commentaarformulieren. Stopt spam en "
+"bot commentaren met Google reCAPTCHA"
+
+#: options/class.WpdiscuzOptions.php:266
+msgid ""
+"Integrates myCRED Badges and Ranks. Converts wpDiscuz comment votes/likes to "
+"myCRED points. "
+msgstr ""
+"Integreert myCRED Badges en Ranks. Zet wpDiscuz commentaarstemmen om naar "
+"myCRED points."
+
+#: options/class.WpdiscuzOptions.php:267
+msgid ""
+"Allows censoring comment words. Filters comments and replaces those phrases "
+"with custom words."
+msgstr ""
+"Hiermee kunt u bepaalde woorden in de commentaren censureren. Filtert "
+"commentaren en vervangt deze zinnen met aangepaste woorden."
+
+#: options/class.WpdiscuzOptions.php:279
+msgid "New Addons are available for wpDiscuz Comments Plugin"
+msgstr ""
+"Er zijn nieuwe extra&#39;s beschikbaar voor de wpDiscuz Comments plug-in"
+
+#: options/class.WpdiscuzOptions.php:286 options/class.WpdiscuzOptions.php:292
+msgid "Go to wpDiscuz Addons subMenu"
+msgstr "Ga naar het wpDiscuz Extra submenu"
+
+#: options/class.WpdiscuzOptionsSerialized.php:568
+#: options/phrases-layouts/phrases-general.php:12
+msgid "Leave a Reply"
+msgstr "Reageer op dit artikel"
+
+#: options/class.WpdiscuzOptionsSerialized.php:569
+msgid "Be the First to Comment!"
+msgstr "Laat als eerste een commentaar achter!"
+
+#: options/class.WpdiscuzOptionsSerialized.php:570 options/html-phrases.php:22
+#: options/phrases-layouts/phrases-general.php:32
+msgid "Comment"
+msgstr "Commentaar"
+
+#: options/class.WpdiscuzOptionsSerialized.php:571
+msgid "Comments"
+msgstr "Commentaren"
+
+#: options/class.WpdiscuzOptionsSerialized.php:572
+msgid "on"
+msgstr "op"
+
+#: options/class.WpdiscuzOptionsSerialized.php:573
+msgid "Start the discussion"
+msgstr "Begin de discussie"
+
+#: options/class.WpdiscuzOptionsSerialized.php:574
+msgid "Join the discussion"
+msgstr "Discussieer mee"
+
+#: options/class.WpdiscuzOptionsSerialized.php:575 options/html-phrases.php:24
+msgid "Email"
+msgstr "Email"
+
+#: options/class.WpdiscuzOptionsSerialized.php:576
+msgid "Name"
+msgstr "Naam"
+
+#: options/class.WpdiscuzOptionsSerialized.php:577
+msgid "WebSite URL"
+msgstr "Website URL"
+
+#: options/class.WpdiscuzOptionsSerialized.php:578
+msgid "Please insert the code above to comment"
+msgstr "Vul de code hierboven in om uw reactie te kunnen geven"
+
+#: options/class.WpdiscuzOptionsSerialized.php:579
+msgid "Post Comment"
+msgstr "Plaats Commentaar"
+
+#: options/class.WpdiscuzOptionsSerialized.php:580
+#: options/phrases-layouts/phrases-form.php:82
+#: options/phrases-layouts/phrases-form.php:86
+msgid "Notify of"
+msgstr "Laat het mij weten wanneer er"
+
+#: options/class.WpdiscuzOptionsSerialized.php:581
+#: options/phrases-layouts/phrases-form.php:96
+msgid "new follow-up comments"
+msgstr "nieuwe opvolg commentaren zijn"
+
+#: options/class.WpdiscuzOptionsSerialized.php:582
+msgid "new replies to my comments"
+msgstr "nieuwe reacties op mijn commentaren zijn"
+
+#: options/class.WpdiscuzOptionsSerialized.php:583
+#: options/phrases-layouts/phrases-form.php:116
+msgid "Notify of new replies to this comment"
+msgstr "Laat het mij weten wanneer er nieuwe reacties op dit commentaar zijn"
+
+#: options/class.WpdiscuzOptionsSerialized.php:584
+#: options/phrases-layouts/phrases-form.php:122
+#: options/phrases-layouts/phrases-form.php:126
+msgid "Sort by"
+msgstr "Sorteren op"
+
+#: options/class.WpdiscuzOptionsSerialized.php:585
+#: options/phrases-layouts/phrases-form.php:132
+#: options/phrases-layouts/phrases-form.php:136
+msgid "newest"
+msgstr "nieuwste"
+
+#: options/class.WpdiscuzOptionsSerialized.php:586
+#: options/phrases-layouts/phrases-form.php:142
+#: options/phrases-layouts/phrases-form.php:146
+msgid "oldest"
+msgstr "oudste"
+
+#: options/class.WpdiscuzOptionsSerialized.php:587
+#: options/phrases-layouts/phrases-form.php:152
+#: options/phrases-layouts/phrases-form.php:156
+msgid "most voted"
+msgstr "meest gestemd"
+
+#: options/class.WpdiscuzOptionsSerialized.php:588
+msgid "Load More Comments"
+msgstr "Laat meer commentaren"
+
+#: options/class.WpdiscuzOptionsSerialized.php:589
+#: options/phrases-layouts/phrases-general.php:72
+msgid "Load Rest of Comments"
+msgstr "Laad de rest van de commentaren"
+
+#: options/class.WpdiscuzOptionsSerialized.php:590
+#: options/phrases-layouts/phrases-comment.php:12
+msgid "Reply"
+msgstr "Reageer"
+
+#: options/class.WpdiscuzOptionsSerialized.php:591
+#: options/phrases-layouts/phrases-comment.php:22
+msgid "Share"
+msgstr "Delen"
+
+#: options/class.WpdiscuzOptionsSerialized.php:592
+#: options/phrases-layouts/phrases-comment.php:32
+msgid "Edit"
+msgstr "Bewerken"
+
+#: options/class.WpdiscuzOptionsSerialized.php:593
+#: options/phrases-layouts/phrases-comment.php:42
+msgid "Share On Facebook"
+msgstr "Deel op Facebook"
+
+#: options/class.WpdiscuzOptionsSerialized.php:594
+#: options/phrases-layouts/phrases-comment.php:52
+msgid "Share On Twitter"
+msgstr "Deel op Twitter"
+
+#: options/class.WpdiscuzOptionsSerialized.php:595
+#: options/phrases-layouts/phrases-comment.php:62
+msgid "Share On Google"
+msgstr "Deel op Google"
+
+#: options/class.WpdiscuzOptionsSerialized.php:596
+#: options/phrases-layouts/phrases-comment.php:72
+msgid "Share On VKontakte"
+msgstr "Deel op VKontakte"
+
+#: options/class.WpdiscuzOptionsSerialized.php:597
+#: options/phrases-layouts/phrases-comment.php:82
+msgid "Share On Odnoklassniki"
+msgstr "Deel op Odnoklassniki"
+
+#: options/class.WpdiscuzOptionsSerialized.php:598
+#: options/phrases-layouts/phrases-comment.php:92
+msgid "Hide Replies"
+msgstr "Verberg Reacties"
+
+#: options/class.WpdiscuzOptionsSerialized.php:599
+#: options/phrases-layouts/phrases-comment.php:102
+msgid "Show Replies"
+msgstr "Toon Reacties"
+
+#: options/class.WpdiscuzOptionsSerialized.php:600
+#: options/phrases-layouts/phrases-general.php:86
+msgid "New Comment"
+msgstr "Nieuw Commentaar"
+
+#: options/class.WpdiscuzOptionsSerialized.php:601
+msgid "New comment on the discussion section you've been interested in"
+msgstr ""
+"Nieuwe commentaar in de discussiesectie waar u ge&#239;nteresseerd in bent"
+
+#: options/class.WpdiscuzOptionsSerialized.php:602
+#: options/phrases-layouts/phrases-email.php:36
+#: options/phrases-layouts/phrases-general.php:106
+#: utils/class.WpdiscuzEmailHelper.php:154
+msgid "New Reply"
+msgstr "Nieuwe Reactie"
+
+#: options/class.WpdiscuzOptionsSerialized.php:603
+#: utils/class.WpdiscuzEmailHelper.php:155
+msgid "New reply on the discussion section you've been interested in"
+msgstr ""
+"Nieuwe reactie in de discussiesectie waar u ge&#239;nteresseerd in bent"
+
+#: options/class.WpdiscuzOptionsSerialized.php:604
+msgid "You're subscribed for new replies on this comment"
+msgstr "U heeft zich aangemeld voor nieuwe reacties op dit commentaar"
+
+#: options/class.WpdiscuzOptionsSerialized.php:605
+msgid "You're subscribed for new replies on all your comments"
+msgstr "U heeft zich aangemeld voor nieuwe reacties op al uw commentaren"
+
+#: options/class.WpdiscuzOptionsSerialized.php:606
+msgid "You're subscribed for new follow-up comments on this post"
+msgstr "U heeft zich aangemeld voor nieuwe opvolg commentaren voor dit bericht"
+
+#: options/class.WpdiscuzOptionsSerialized.php:607
+#: options/phrases-layouts/phrases-email.php:52
+#: options/phrases-layouts/phrases-email.php:56
+msgid "Unsubscribe"
+msgstr "Afmelden"
+
+#: options/class.WpdiscuzOptionsSerialized.php:608
+#: options/phrases-layouts/phrases-email.php:66
+msgid "Cancel subscription"
+msgstr "Aanmelding verwijderen"
+
+#: options/class.WpdiscuzOptionsSerialized.php:609
+#: options/phrases-layouts/phrases-notification.php:32
+msgid "You've successfully unsubscribed."
+msgstr "U heeft zich met succes afgemeld."
+
+#: options/class.WpdiscuzOptionsSerialized.php:610
+#: options/phrases-layouts/phrases-notification.php:22
+msgid "You've successfully subscribed."
+msgstr "U heeft zich met succes aangemeld."
+
+#: options/class.WpdiscuzOptionsSerialized.php:611
+#: options/phrases-layouts/phrases-email.php:72
+#: options/phrases-layouts/phrases-email.php:76
+msgid "Confirm your subscription"
+msgstr "Bevestig uw aanmelding"
+
+#: options/class.WpdiscuzOptionsSerialized.php:612
+#: options/phrases-layouts/phrases-email.php:82
+#: options/phrases-layouts/phrases-email.php:86
+msgid "You've successfully confirmed your subscription."
+msgstr "U heeft uw aanmelding met succes bevestigd."
+
+#: options/class.WpdiscuzOptionsSerialized.php:613
+#: options/phrases-layouts/phrases-email.php:96
+#: utils/class.WpdiscuzEmailHelper.php:47
+msgid "Subscribe Confirmation"
+msgstr "Aanmeldingsbevestiging"
+
+#: options/class.WpdiscuzOptionsSerialized.php:614
+#: options/phrases-layouts/phrases-email.php:106
+#: utils/class.WpdiscuzEmailHelper.php:48
+msgid ""
+"Hi, <br/> You just subscribed for new comments on our website. This means "
+"you will receive an email when new comments are posted according to "
+"subscription option you've chosen. <br/> To activate, click confirm below. "
+"If you believe this is an error, ignore this message and we'll never bother "
+"you again."
+msgstr ""
+"Hallo, <br/> U heeft zich net aangemeld op nieuwe commentaren op mijn "
+"website. Dit betekent dat u een e-mail ontvangen wanneer er nieuwe "
+"commentaren worden geplaatst volgens de aanmeldingsoptie die u heeft "
+"gekozen. <br/> Om deze aanmelding te activeren klikt u hieronder op "
+"bevestigen. Wanneer u denkt dat dit een fout is, negeer dan dit bericht, en "
+"we zullen u nooit meer lastig vallen."
+
+#: options/class.WpdiscuzOptionsSerialized.php:615
+msgid "please fill out this field to comment"
+msgstr "vul dit veld in om commentaar te geven"
+
+#: options/class.WpdiscuzOptionsSerialized.php:616
+msgid "email address is invalid"
+msgstr "email adres is ongeldig"
+
+#: options/class.WpdiscuzOptionsSerialized.php:617
+msgid "url is invalid"
+msgstr "url is ongeldig"
+
+#: options/class.WpdiscuzOptionsSerialized.php:618
+msgid "year"
+msgstr "jaar"
+
+#: options/class.WpdiscuzOptionsSerialized.php:619
+msgid "years"
+msgstr "jaren"
+
+#: options/class.WpdiscuzOptionsSerialized.php:620
+msgid "month"
+msgstr "maand"
+
+#: options/class.WpdiscuzOptionsSerialized.php:621
+msgid "months"
+msgstr "maanden"
+
+#: options/class.WpdiscuzOptionsSerialized.php:622
+msgid "day"
+msgstr "dag"
+
+#: options/class.WpdiscuzOptionsSerialized.php:623
+msgid "days"
+msgstr "dagen"
+
+#: options/class.WpdiscuzOptionsSerialized.php:624
+msgid "hour"
+msgstr "uur"
+
+#: options/class.WpdiscuzOptionsSerialized.php:625
+msgid "hours"
+msgstr "uren"
+
+#: options/class.WpdiscuzOptionsSerialized.php:626
+msgid "minute"
+msgstr "minuut"
+
+#: options/class.WpdiscuzOptionsSerialized.php:627
+msgid "minutes"
+msgstr "minuten"
+
+#: options/class.WpdiscuzOptionsSerialized.php:628
+msgid "second"
+msgstr "seconde"
+
+#: options/class.WpdiscuzOptionsSerialized.php:629
+msgid "seconds"
+msgstr "seconden"
+
+#: options/class.WpdiscuzOptionsSerialized.php:630
+msgid "right now"
+msgstr "op dit moment"
+
+#: options/class.WpdiscuzOptionsSerialized.php:631
+msgid "ago"
+msgstr "geleden"
+
+#: options/class.WpdiscuzOptionsSerialized.php:632
+#: options/phrases-layouts/phrases-datetime.php:156
+msgid "Today"
+msgstr "Vandaag"
+
+#: options/class.WpdiscuzOptionsSerialized.php:633
+#: options/phrases-layouts/phrases-notification.php:84
+msgid "You must be"
+msgstr "U moet"
+
+#: options/class.WpdiscuzOptionsSerialized.php:634
+msgid "You are logged in as"
+msgstr "U bent aangemeld als"
+
+#: options/class.WpdiscuzOptionsSerialized.php:635
+#: options/phrases-layouts/phrases-notification.php:104
+msgid "Log out"
+msgstr "Uitloggen"
+
+#: options/class.WpdiscuzOptionsSerialized.php:636
+msgid "logged in"
+msgstr "ingelogd zijn"
+
+#: options/class.WpdiscuzOptionsSerialized.php:637
+msgid "to post a comment."
+msgstr "om een commentaar achter te kunnen laten."
+
+#: options/class.WpdiscuzOptionsSerialized.php:638
+#: options/phrases-layouts/phrases-comment.php:138
+msgid "Vote Up"
+msgstr "Stem omhoog"
+
+#: options/class.WpdiscuzOptionsSerialized.php:639
+#: options/phrases-layouts/phrases-comment.php:148
+msgid "Vote Down"
+msgstr "Stem omlaag"
+
+#: options/class.WpdiscuzOptionsSerialized.php:640
+#: options/phrases-layouts/phrases-notification.php:134
+msgid "Vote Counted"
+msgstr "Stem geteld"
+
+#: options/class.WpdiscuzOptionsSerialized.php:641
+msgid "You've already voted for this comment"
+msgstr "U heeft al gestemd op dit commentaar"
+
+#: options/class.WpdiscuzOptionsSerialized.php:642
+#: options/phrases-layouts/phrases-notification.php:154
+msgid "Voting Error"
+msgstr "Stemfout"
+
+#: options/class.WpdiscuzOptionsSerialized.php:643
+msgid "You Must Be Logged In To Vote"
+msgstr "U moet ingelogd zijn om te kunnen stemmen"
+
+#: options/class.WpdiscuzOptionsSerialized.php:644
+msgid "You cannot vote for your comment"
+msgstr "U kunt niet op uw eigen commentaar stemmen"
+
+#: options/class.WpdiscuzOptionsSerialized.php:645
+msgid "You are not allowed to vote for this comment"
+msgstr "U mag niet op dit commentaar stemmen"
+
+#: options/class.WpdiscuzOptionsSerialized.php:646
+#: options/phrases-layouts/phrases-notification.php:194
+msgid "Invalid Captcha Code"
+msgstr "Onjuiste Captcha code"
+
+#: options/class.WpdiscuzOptionsSerialized.php:647
+#: options/phrases-layouts/phrases-notification.php:204
+msgid "Some of field value is invalid"
+msgstr "Een gedeelte van de waarde in het veld is niet goed"
+
+#: options/class.WpdiscuzOptionsSerialized.php:648
+msgid "new comment"
+msgstr "nieuw commentaar"
+
+#: options/class.WpdiscuzOptionsSerialized.php:649
+msgid "new comments"
+msgstr "nieuwe commentaren"
+
+#: options/class.WpdiscuzOptionsSerialized.php:650
+msgid "Comment awaiting moderation"
+msgstr "Commentaar wacht op moderatie"
+
+#: options/class.WpdiscuzOptionsSerialized.php:651
+msgid "new reply on your comment"
+msgstr "nieuwe reactie op jouw commentaar"
+
+#: options/class.WpdiscuzOptionsSerialized.php:652
+msgid "new replies on your comments"
+msgstr "nieuwe reacties op jouw commentaren"
+
+#: options/class.WpdiscuzOptionsSerialized.php:653
+#: options/phrases-layouts/phrases-general.php:126
+msgid "New"
+msgstr "Nieuw"
+
+#: options/class.WpdiscuzOptionsSerialized.php:654
+#: options/phrases-layouts/phrases-notification.php:249
+msgid "Sorry, the comment was not updated"
+msgstr "Het spijt me, het commentaar is niet aangepast"
+
+#: options/class.WpdiscuzOptionsSerialized.php:655
+#: options/phrases-layouts/phrases-notification.php:259
+msgid "Sorry, this comment no longer possible to edit"
+msgstr "Sorry, dit commentaar kan niet meer aangepast worden"
+
+#: options/class.WpdiscuzOptionsSerialized.php:656
+msgid "You've not made any changes"
+msgstr "U heeft geen aanpassingen gemaakt"
+
+#: options/class.WpdiscuzOptionsSerialized.php:657
+#: options/phrases-layouts/phrases-comment.php:162
+msgid "Save"
+msgstr "Opslaan"
+
+#: options/class.WpdiscuzOptionsSerialized.php:658
+#: options/phrases-layouts/phrases-comment.php:172
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: options/class.WpdiscuzOptionsSerialized.php:659
+msgid "Input is too short"
+msgstr "Invoer is te kort"
+
+#: options/class.WpdiscuzOptionsSerialized.php:660
+msgid "Input is too long"
+msgstr "Invoer is te lang"
+
+#: options/class.WpdiscuzOptionsSerialized.php:661
+#: options/phrases-layouts/phrases-comment.php:182
+msgid "Read more &raquo;"
+msgstr "Lees verder &raquo;"
+
+#: options/class.WpdiscuzOptionsSerialized.php:662
+#: options/phrases-layouts/phrases-comment.php:192
+msgid "Anonymous"
+msgstr "Anoniem"
+
+#: options/class.WpdiscuzOptionsSerialized.php:663
+#: options/phrases-layouts/phrases-notification.php:275
+#: options/phrases-layouts/phrases-notification.php:279
+msgid "Please fill out required fields"
+msgstr "Vul alsjeblieft de verplichte velden in"
+
+#: options/class.WpdiscuzOptionsSerialized.php:664
+#: options/phrases-layouts/phrases-form.php:192
+#: options/phrases-layouts/phrases-form.php:196
+msgid "Connect with"
+msgstr "Maak verbinding met"
+
+#: options/class.WpdiscuzOptionsSerialized.php:665
+msgid "You're subscribed to"
+msgstr "U bent aangemeld voor"
+
+#: options/class.WpdiscuzOptionsSerialized.php:666
+msgid "Participate in this discussion via email"
+msgstr "Neem deel aan deze discussie via email"
+
+#: options/html-addons.php:11
+msgid "wpDiscuz Addons"
+msgstr "wpDiscuz Extra&#39;s"
+
+#: options/html-addons.php:54
+msgid "Installed"
+msgstr "Ge&#239;nstalleerd"
+
+#: options/html-addons.php:61
+msgid "Addon Details | Buy"
+msgstr "Extra Details | Aanschaffen"
+
+#: options/html-options.php:10
+msgid "wpDiscuz General Settings"
+msgstr "wpDiscuz Algemene Instellingen"
+
+#: options/html-options.php:55 options/options-layouts/settings-general.php:7
+msgid "General Settings"
+msgstr "Algemene Instellingen"
+
+#: options/html-options.php:56
+#: options/options-layouts/settings-live-update.php:7
+msgid "Live Update"
+msgstr "Live Update"
+
+#: options/html-options.php:57
+msgid "Show/Hide"
+msgstr "Toon/Verberg"
+
+#: options/html-options.php:58
+msgid "Subscription"
+msgstr "Email Aanmeldingen"
+
+#: options/html-options.php:58
+msgid "and Postmatic"
+msgstr "en Postmatic"
+
+#: options/html-options.php:59
+msgid "Styling"
+msgstr "Uiterlijk"
+
+#: options/html-options.php:60 options/options-layouts/settings-social.php:124
+msgid "Social Login"
+msgstr "Sociaal Inloggen"
+
+#: options/html-options.php:61
+#: options/options-layouts/settings-integrations.php:7
+msgid "Integrations"
+msgstr "Integraties"
+
+#: options/html-options.php:62 options/options-layouts/settings-addons.php:7
+msgid "Addons"
+msgstr "Extra"
+
+#: options/html-options.php:146
+msgid "Reset Options"
+msgstr "Herstel Instellingen"
+
+#: options/html-options.php:148
+msgid "Refresh comment optimization"
+msgstr "Vernieuw commentaar optimalisatie"
+
+#: options/html-options.php:150
+msgid "Remove vote data"
+msgstr "Verwijder stem data"
+
+#: options/html-options.php:151 options/html-phrases.php:71
+#: options/html-tools.php:58
+msgid "Save Changes"
+msgstr "Opslaan"
+
+#: options/html-phrases.php:10
+msgid "wpDiscuz Front-end Phrases"
+msgstr "wpDiscuz Front-end Zinnen"
+
+#: options/html-phrases.php:20
+msgid "General"
+msgstr "Algemeen"
+
+#: options/html-phrases.php:21
+msgid "Form"
+msgstr "Formulier"
+
+#: options/html-phrases.php:23
+msgid "Date/Time"
+msgstr "Datum/Tijd"
+
+#: options/html-phrases.php:25
+msgid "Notification"
+msgstr "Meldingen"
+
+#: options/html-tools.php:10
+msgid "wpDiscuz Tools"
+msgstr "wpDiscuz Gereedschappen"
+
+#: options/html-tools.php:22 options/tools-layouts/export.php:8
+msgid "Export options"
+msgstr "Export opties"
+
+#: options/html-tools.php:23 options/tools-layouts/import.php:7
+msgid "Import options"
+msgstr "Import opties"
+
+#: options/options-layouts/settings-general.php:11
+msgid "Display comment form for post types"
+msgstr "Toon commentaarformulier voor de volgende post types"
+
+#: options/options-layouts/settings-general.php:29
+msgid "Enable Quicktags"
+msgstr "Maak gebruik van Quicktags"
+
+#: options/options-layouts/settings-general.php:34
+msgid "Use guest email to detect registered account"
+msgstr "Gebruik het gasten email veld om geregistreerde gebruikers te vinden"
+
+#: options/options-layouts/settings-general.php:36
+msgid ""
+"Sometimes registered users comment as guest using the same email address. "
+"wpDiscuz can detect the account role using guest email and display commenter "
+"label correctly."
+msgstr ""
+"Soms laten geregistreerde gebruikers een commentaar achter als gast met "
+"hetzelfde emailadres. wpDiscuz kan via het gast emailadres de gebruikersrol "
+"vinden, en zo het juiste commentator label tonen."
+
+#: options/options-layouts/settings-general.php:42
+msgid "Comment author must fill out email"
+msgstr "Commentaar auteur moet het emailadres invullen"
+
+#: options/options-layouts/settings-general.php:46
+msgid "Comment author must fill out name"
+msgstr "Commentaar auteur moet het naam invullen"
+
+#: options/options-layouts/settings-general.php:51
+msgid "Comment author name min length (for guests only)"
+msgstr "Minimum lengte commentaar auteur naam (alleen voor gasten)"
+
+#: options/options-layouts/settings-general.php:55
+#: options/options-layouts/settings-general.php:78
+msgid "Min"
+msgstr "Min"
+
+#: options/options-layouts/settings-general.php:58
+#: options/options-layouts/settings-general.php:81
+msgid "Max"
+msgstr "Max"
+
+#: options/options-layouts/settings-general.php:64
+msgid "Keep guest commenter credentials in browser cookies for x days"
+msgstr "Bewaar voor x dagen de gast commentator gegevens in browser cookies"
+
+#: options/options-layouts/settings-general.php:66
+msgid "Set this option value -1 to make it unlimited."
+msgstr "Zet deze optiewaarde op -1 om het ongelimiteerd te maken."
+
+#: options/options-layouts/settings-general.php:67
+msgid "Set this option value 0 to clear those data when user closes browser."
+msgstr ""
+"Zet deze optiewaarde op 0 om de gegevens te wissen wanneer de gebruiker de "
+"browser sluit."
+
+#: options/options-layouts/settings-general.php:74
+msgid "Comment text length"
+msgstr "Commentaar tekst lengte"
+
+#: options/options-layouts/settings-general.php:87
+msgid ""
+"The number of words before breaking comment text and showing \"Read more\" "
+"link"
+msgstr ""
+"Het aantal worden dat wordt getoond voor de tekst wordt afgebroken en er een "
+"\"Lees verder\" link wordt getoond"
+
+#: options/options-layouts/settings-general.php:89
+msgid "Set this option value 0, to turn off comment text breaking function."
+msgstr ""
+"Zet deze optiewaarde op 0 om het afbreken van lange commentaren uit te zetten"
+
+#: options/options-layouts/settings-general.php:95
+msgid "Comment text size in pixels"
+msgstr "Commentaar tekstgrootte in pixels"
+
+#: options/options-layouts/settings-general.php:108
+msgid "Allow comment editing for"
+msgstr "Sta bewerken commentaar toe gedurende"
+
+#: options/options-layouts/settings-general.php:112
+msgid "Do not allow"
+msgstr "niet toestaan"
+
+#: options/options-layouts/settings-general.php:113
+#: options/options-layouts/settings-general.php:114
+#: options/options-layouts/settings-live-update.php:52
+#: options/options-layouts/settings-live-update.php:53
+#: options/options-layouts/settings-live-update.php:54
+msgid "Minutes"
+msgstr "minuten"
+
+#: options/options-layouts/settings-general.php:115
+#: options/phrases-layouts/phrases-datetime.php:72
+msgid "Hour"
+msgstr "uur"
+
+#: options/options-layouts/settings-general.php:116
+#: options/options-layouts/settings-general.php:117
+msgid "Hours"
+msgstr "uren"
+
+#: options/options-layouts/settings-general.php:118
+msgid "Unlimit"
+msgstr "ongelimiteerd"
+
+#: options/options-layouts/settings-general.php:124
+msgid "Redirect first commenter to"
+msgstr "Verwijs de eerste commentator door naar"
+
+#: options/options-layouts/settings-general.php:131
+msgid "Do not redirect"
+msgstr "Niet doorverwijzen"
+
+#: options/options-layouts/settings-general.php:138
+msgid "Allow guests to vote on comments"
+msgstr "Sta toe dat gasten op commentaren kunnen stemmen"
+
+#: options/options-layouts/settings-general.php:143
+msgid "Comments loading/pagination type"
+msgstr "Commentaren laden/paginering soort"
+
+#: options/options-layouts/settings-general.php:145
+msgid ""
+"You can manage the number of comments for [Load more] option in Settings > "
+"Discussion page, using \"Break comments into pages with [X] top level "
+"comments per page\" option. To show the default Wordpress comment pagination "
+"you should enable the checkbox on bigining of the same option."
+msgstr ""
+"U kunt het aantal commentaren voor de [Laad meer] optie instellen op de "
+"Instellingen > Reacties pagina, met behulp van \"Reacties over meerdere "
+"pagina&#39;s verdelen met [X] reacties per pagina\" optie. Om de standaard "
+"WordPress commentaarpaginering te gebruiken, moet u het selectievakje aan "
+"het begin van dezelfde optie aanvinken."
+
+#: options/options-layouts/settings-general.php:151
+#: options/options-layouts/settings-general.php:153
+msgid "[Load more] Button"
+msgstr "[Laad meer] knop"
+
+#: options/options-layouts/settings-general.php:155
+#: options/options-layouts/settings-general.php:157
+msgid "[Load rest of all comments] Button"
+msgstr "[Laad de rest van de commentaren] knop"
+
+#: options/options-layouts/settings-general.php:159
+#: options/options-layouts/settings-general.php:161
+msgid "Lazy load comments on scrolling"
+msgstr "Lazy load van commentaren bij scrollen"
+
+#: options/options-layouts/settings-general.php:168
+msgid "Use WordPress Date/Time format"
+msgstr "Gebruik het WordPress datum/tijd formaat"
+
+#: options/options-layouts/settings-general.php:169
+msgid ""
+"wpDiscuz shows Human Readable date format. If you check this option it'll "
+"show the date/time format set in WordPress General Settings."
+msgstr ""
+"wpDiscuz toont de datum op een manier die mensen kunnen lezen. Vinkt u deze "
+"optie aan, dan zal het datum/tijd formaat dat is ingesteld in de "
+"Instellingen > Algemeen van WordPress worden gebruikt."
+
+#: options/options-layouts/settings-general.php:175
+msgid "Current Wordpress date/time format"
+msgstr "Huidige WordPress datum/tijd formaat"
+
+#: options/options-layouts/settings-general.php:181
+msgid "Use Plugin .PO/.MO files"
+msgstr "Gebruik de .PO/.MO bestanden van de plug-in"
+
+#: options/options-layouts/settings-general.php:182
+msgid ""
+"wpDiscuz phrase system allows you to translate all front-end phrases. "
+"However if you have a multi-language website it'll not allow you to add more "
+"than one language translation. The only way to get it is the plugin "
+"translation files (.PO / .MO). If wpDiscuz has the languages you need you "
+"should check this option to disable phrase system and it'll automatically "
+"translate all phrases based on language files according to current language."
+msgstr ""
+"Het wpDiscuz zinnen systeem laat u alle zinnen in de front-end zinnen "
+"vertalen. Heeft u echter een website met meerdere talen, dan laat het u niet "
+"meer dan &#233;&#233;n taal gebruiken voor het vertalen van de zinnen. De "
+"enige manier om het goed te krijgen is gebruik te maken van de "
+"vertalingsbestanden (.po / .mo) van de plug-in. Wanneer wpDiscuz de talen "
+"bevat die u nodig hebt, moet u deze optie aanvinken om het zinnen systeem "
+"uit te schakelen. De plug-in zal dan automatisch alle zinnen vertalen aan de "
+"hand van de taalbestanden van de huidige taal."
+
+#: options/options-layouts/settings-general.php:189
+msgid ""
+"Help wpDiscuz to grow allowing people to recognize which comment plugin you "
+"use"
+msgstr ""
+"Help wpDiscuz te groeien door te laten zien welke commentaarplug-in u "
+"gebruikt"
+
+#: options/options-layouts/settings-general.php:191
+msgid ""
+"Please check this option on to help wpDiscuz get more popularity as your "
+"thank to the hard work we do for you totally free. This option adds a very "
+"small (16x16px) icon under the comment section which will allow your site "
+"visitors recognize the name of comment solution you use."
+msgstr ""
+"Vink deze optie aan om te helpen wpDiscuz bekender te maken als dank voor "
+"het harde werk dat we - geheel gratis - voor u doen. Deze optie voegt een "
+"zeer klein (16x16px) icoon onder de commentaar sectie toe, waaraan bezoekers "
+"aan uw site de naam van de commentaaroplossing die u gebruikt kunnen "
+"herkennen."
+
+#: options/options-layouts/settings-general.php:196
+msgid "Thank you!"
+msgstr "Dank u wel!"
+
+#: options/options-layouts/settings-integrations.php:14
+msgid "BuddyPress"
+msgstr "BuddyPress"
+
+#: options/options-layouts/settings-integrations.php:15
+msgid "Users Ultra"
+msgstr "Users Ultra"
+
+#: options/options-layouts/settings-integrations.php:16
+msgid "User Pro"
+msgstr "User Pro"
+
+#: options/options-layouts/settings-integrations.php:17
+msgid "Ultimate Member"
+msgstr "Ultimate Member"
+
+#: options/options-layouts/settings-integrations.php:18
+msgid "MyCred"
+msgstr "MyCred"
+
+#: options/options-layouts/settings-live-update.php:12
+msgid "Live update options"
+msgstr "Live update opties"
+
+#: options/options-layouts/settings-live-update.php:13
+msgid ""
+"wpDiscuz 3 live update is very smart and doesn't overload your server even "
+"if you're on Shared hosting plan and even your website is very active. "
+"However we recommend to monitor your server resources if you're on a Shared "
+"hosting plan. There are some very weak hosting plans which may not be able "
+"to perform very frequently live update requests. If you found some issue you "
+"can set the option below 30 seconds or more."
+msgstr ""
+"wpDiscuz 3 Live Update is erg slim, en overbelast uw server niet, zelfs "
+"wanneer je gebruik maakt van een shared hosting plan, en zelfs wanneer uw "
+"website erg actief is. Toch raden wij u aan uw server resources te "
+"controleren wanneer u een shared hosting plan gebruikt. Er zijn een aantal "
+"zeer zwakke hosting plannen die niet in staat zijn heel vaak Live Update "
+"verzoeken uit te voeren. Heeft u een probleem gevonden, dan kunt u deze "
+"optie op een lagere verversingfrequentie instellen (boven de 30 seconden)."
+
+#: options/options-layouts/settings-live-update.php:18
+msgid "Never update"
+msgstr "Nooit verversen"
+
+#: options/options-layouts/settings-live-update.php:20
+msgid "Turn off \"Live Update\" function"
+msgstr "Zet de \"Live Update\" functie uit"
+
+#: options/options-layouts/settings-live-update.php:22
+#: options/options-layouts/settings-subscription.php:36
+msgid "Show new comment/reply buttons to update manualy"
+msgstr "Toon nieuw commentaar/reageer knoppen om handmatig te verversen"
+
+#: options/options-layouts/settings-live-update.php:24
+msgid "Always check for new comments and show update buttons"
+msgstr "Controleer altijd op nieuwe commentaren en toon verversknoppen"
+
+#: options/options-layouts/settings-live-update.php:26
+#: options/options-layouts/settings-subscription.php:40
+msgid "Always update"
+msgstr "Altijd verversen"
+
+#: options/options-layouts/settings-live-update.php:28
+msgid "Always check for new comments and update automatically"
+msgstr "Controleer altijd op nieuwe commentaren en ververs automatisch"
+
+#: options/options-layouts/settings-live-update.php:35
+msgid "Disable live update for guests"
+msgstr "Zet live update uit voor gasten"
+
+#: options/options-layouts/settings-live-update.php:43
+msgid "Update comment list every"
+msgstr "Ververs de commentarenlijst iedere"
+
+#: options/options-layouts/settings-live-update.php:48
+#: options/options-layouts/settings-live-update.php:49
+#: options/options-layouts/settings-live-update.php:50
+msgid "Seconds"
+msgstr "seconden"
+
+#: options/options-layouts/settings-live-update.php:51
+#: options/phrases-layouts/phrases-datetime.php:92
+msgid "Minute"
+msgstr "minuut"
+
+#: options/options-layouts/settings-show-hide.php:7
+msgid "Show/Hide Components"
+msgstr "Toon/Verberg Componenten"
+
+#: options/options-layouts/settings-show-hide.php:11
+msgid "Show logged-in user name and logout link on top of main form"
+msgstr ""
+"Toon ingelogde gebruikersnaam en uitloglink bovenaan het hoofdformulier"
+
+#: options/options-layouts/settings-show-hide.php:15
+msgid "Hide Reply button for Guests"
+msgstr "Verberg Reageer knop voor gasten"
+
+#: options/options-layouts/settings-show-hide.php:19
+msgid "Hide Reply button for Members"
+msgstr "Verberg Reageer knop voor leden"
+
+#: options/options-layouts/settings-show-hide.php:23
+msgid "Hide Commenter Labels"
+msgstr "Verberg commentator labels onder avatar"
+
+#: options/options-layouts/settings-show-hide.php:27
+msgid "Hide Voting buttons"
+msgstr "Verberg stem knoppen"
+
+#: options/options-layouts/settings-show-hide.php:31
+msgid "Comment voting statistic mode"
+msgstr "Commentaar stemming statistiek modus"
+
+#: options/options-layouts/settings-show-hide.php:36
+msgid "total count"
+msgstr "totale telling"
+
+#: options/options-layouts/settings-show-hide.php:40
+msgid "separate count"
+msgstr "aparte telling"
+
+#: options/options-layouts/settings-show-hide.php:46
+msgid "Show Share Buttons"
+msgstr "Toon sociale deel knoppen"
+
+#: options/options-layouts/settings-show-hide.php:69
+msgid ""
+"The plugin captcha directory is not writable! Please set writable "
+"permissions on \"wpdiscuz/utils/temp\" directory in order to use the first "
+"type of captcha generation"
+msgstr ""
+"In de captcha folder van de plug-in kan niet worden geschreven! Zet "
+"schrijfrechten aan voor de \"wpdiscuz/utils/temp\" folder om het eerste type "
+"captcha generatie te kunnen gebruiken."
+
+#: options/options-layouts/settings-show-hide.php:73
+msgid "Captcha generation type"
+msgstr "Captcha genereer type"
+
+#: options/options-layouts/settings-show-hide.php:79
+msgid "use file system"
+msgstr "gebruik bestandssysteem"
+
+#: options/options-layouts/settings-show-hide.php:84
+msgid "use wordpress session"
+msgstr "gebruik WordPress sessie"
+
+#: options/options-layouts/settings-show-hide.php:90
+msgid "Hide the CAPTCHA field for guests"
+msgstr "Verberg het CAPTCHA veld voor gasten"
+
+#: options/options-layouts/settings-show-hide.php:94
+msgid "Show the CAPTCHA field for logged in users"
+msgstr "Toon het CAPTCHA veld voor ingelogde gebruikers"
+
+#: options/options-layouts/settings-show-hide.php:98
+msgid "Show the Website URL field"
+msgstr "Toon het website URL veld"
+
+#: options/options-layouts/settings-show-hide.php:102
+msgid "Hide header text"
+msgstr "Verberg koptekst"
+
+#: options/options-layouts/settings-show-hide.php:106
+msgid "Show sorting buttons"
+msgstr "Toon sorteerknoppen"
+
+#: options/options-layouts/settings-show-hide.php:110
+msgid "Set comments ordering to \"Most voted\" by default "
+msgstr "Zet commentaarvolgorde standaard op \"Meest gestemd\""
+
+#: options/options-layouts/settings-show-hide.php:114
+msgid "Hide comment link"
+msgstr "Verberg reageer link"
+
+#: options/options-layouts/settings-show-hide.php:118
+msgid "Enable automatic image URL to image HTML conversion"
+msgstr "Zet automatische afbeelding URL naar afbeelding HTML omzetting aan"
+
+#: options/options-layouts/settings-social.php:50
+#: options/options-layouts/settings-social.php:61
+#: options/options-layouts/settings-social.php:72
+#: options/options-layouts/settings-social.php:83
+msgid "Activate"
+msgstr "Activeer"
+
+#: options/options-layouts/settings-social.php:54
+#: options/options-layouts/settings-social.php:65
+#: options/options-layouts/settings-social.php:76
+#: options/options-layouts/settings-social.php:87
+msgid "View details/Install"
+msgstr "Bekijk details / installeer"
+
+#: options/options-layouts/settings-social.php:125
+msgid ""
+"You can use one of these most popular Social Login Plugins to allow your "
+"visitors login and comment with Facebook, Twitter, Google+, Wordpress, VK, "
+"OK and lots of other social network service accounts. All social login "
+"buttons will be fully integrated with wpDiscuz comment forms."
+msgstr ""
+"U kunt &#233;&#233;n van deze meest populaire Sociale Inlog Plug-ins "
+"gebruiken om uw bezoekers in te laten loggen en reacties achter te laten met "
+"Facebook, Twitter, Google+, WordPress, VKontakte, Odnoklassniki, en tal van "
+"andere sociale netwerk accounts. Alle sociale login knoppen zullen volledig "
+"ge&#239;ntegreerd worden met de wpDiscuz commentaarformulieren."
+
+#: options/options-layouts/settings-style.php:7
+msgid "Background and Colors"
+msgstr "Achtergrond en kleuren"
+
+#: options/options-layouts/settings-style.php:12
+msgid "Comment Form Background Color"
+msgstr "Commentaarformulier achtergrondkleur"
+
+#: options/options-layouts/settings-style.php:16
+#: options/options-layouts/settings-style.php:25
+#: options/options-layouts/settings-style.php:34
+#: options/options-layouts/settings-style.php:43
+#: options/options-layouts/settings-style.php:52
+#: options/options-layouts/settings-style.php:61
+#: options/options-layouts/settings-style.php:70
+#: options/options-layouts/settings-style.php:79
+#: options/options-layouts/settings-style.php:92
+msgid "Example: #00FF00"
+msgstr "Voorbeeld: #00FF00"
+
+#: options/options-layouts/settings-style.php:21
+msgid "Comment Background Color"
+msgstr "Commentaar achtergrondkleur"
+
+#: options/options-layouts/settings-style.php:30
+msgid "Reply Background Color"
+msgstr "Reactie achtergrondkleur"
+
+#: options/options-layouts/settings-style.php:39
+msgid "Comment Text Color"
+msgstr "Commentaar tekstkleur"
+
+#: options/options-layouts/settings-style.php:48
+msgid "Vote, Reply, Share, Edit links text colors"
+msgstr "Stem, Reageer, Delen, Bewerken link tekstkleuren"
+
+#: options/options-layouts/settings-style.php:57
+msgid "Comment form fields border color"
+msgstr "Commentaarformulier veld randkleur"
+
+#: options/options-layouts/settings-style.php:66
+msgid "New loaded comments' background color"
+msgstr "Nieuw geladen commentaren achtergrondkleur"
+
+#: options/options-layouts/settings-style.php:75
+msgid "Primary Color"
+msgstr "Primaire kleur"
+
+#: options/options-layouts/settings-style.php:89
+msgid "label color"
+msgstr "label kleur"
+
+#: options/options-layouts/settings-style.php:100
+msgid "Disable font awesome css loading"
+msgstr "Laden Font Awesome CSS uitzetten"
+
+#: options/options-layouts/settings-style.php:108
+msgid "Custom CSS Code"
+msgstr "Aangepaste CSS code"
+
+#: options/options-layouts/settings-subscription.php:7
+msgid "Email Subscription Settings"
+msgstr "Email Aanmelding Instellingen"
+
+#: options/options-layouts/settings-subscription.php:12
+msgid "Show comment subscription bar"
+msgstr "Toon commentaar aanmeldingsbalk"
+
+#: options/options-layouts/settings-subscription.php:14
+msgid ""
+"This bar provides two subscription options: notify of \"new follow-up "
+"comments\" and \"new replies to my comments\""
+msgstr ""
+"Deze balk heeft twee aanmeldingsopties: doorgeven van \"nieuwe opvolg-"
+"commentaren\" en \"nieuwe reacties op mijn commentaren\""
+
+#: options/options-layouts/settings-subscription.php:20
+msgid "Disable subscription confirmation for registered users"
+msgstr "Zet aanmeldingsbevestiging uit voor geregistreerde gebruikers"
+
+#: options/options-layouts/settings-subscription.php:24
+msgid "Disable subscription confirmation for guests"
+msgstr "Zet aanmeldingsbevestiging uit voor gasten"
+
+#: options/options-layouts/settings-subscription.php:28
+msgid "Show subscription types in dropdown"
+msgstr "Toon aanmeldingstypen in dropdown"
+
+#: options/options-layouts/settings-subscription.php:32
+msgid "Both"
+msgstr "Beide"
+
+#: options/options-layouts/settings-subscription.php:34
+msgid "Both post and all comments subscription"
+msgstr "Aanmelding voor het bericht en alle commentaren"
+
+#: options/options-layouts/settings-subscription.php:38
+msgid "Post subscription"
+msgstr "Aanmelding voor bericht"
+
+#: options/options-layouts/settings-subscription.php:42
+msgid "All comments subscription"
+msgstr "Aanmelding voor alle commentaren"
+
+#: options/options-layouts/settings-subscription.php:49
+msgid "Show \"Notify of new replies to this comment\""
+msgstr "Toon \"Doorgeven van nieuwe reacties op dit commentaar\""
+
+#: options/options-layouts/settings-subscription.php:51
+msgid ""
+"wpDiscuz is the only comment plugin which allows you to subscribe to certain "
+"comment replies. This option is located above [Post Comment] button in "
+"comment form. You can disable this subscription way by unchecking this "
+"option."
+msgstr ""
+"wpDiscuz is de enige commentaarplug-in waarmee u zich kunt aanmelden op "
+"reacties op specifieke commentaren. Deze optie bevindt zich boven de [Plaats "
+"Commentaar] knop in het commentaarformulier. U kunt deze aanmeldmethode "
+"uitschakelen door deze optie uit te vinken."
+
+#: options/options-layouts/settings-subscription.php:58
+msgid "\"Notify of new replies to this comment\" checked by default"
+msgstr ""
+"\"Laten weten wanneer er nieuwe reacties zijn op dit commentaar\" standaard "
+"geselecteerd"
+
+#: options/options-layouts/settings-subscription.php:65
+msgid "Use Postmatic for subscriptions and commenting by email"
+msgstr "Gebruik Postmatic voor aanmeldingen en commentaar leveren via email"
+
+#: options/options-layouts/settings-subscription.php:66
+msgid ""
+"Postmatic allows your users subscribe to comments. Instead of just being "
+"notified, they add a reply right from their inbox."
+msgstr ""
+"Postmatic laat uw gebruikers zich aanmelden op commentaren. In plaats van "
+"dat ze alleen een melding krijgen, ontvangen ze een reactie direct in hun "
+"inbox.,"
+
+#: options/phrases-layouts/phrases-comment.php:7
+msgid "Comment Template Phrases"
+msgstr "Commentaar Sjabloon Zinnen"
+
+#: options/phrases-layouts/phrases-comment.php:158
+msgid "Save edited comment button text"
+msgstr "Opslaan bewerkt commentaar knop tekst"
+
+#: options/phrases-layouts/phrases-comment.php:168
+msgid "Cancel comment editing button text"
+msgstr "Annuleer commentaar bewerken knop tekst"
+
+#: options/phrases-layouts/phrases-comment.php:178
+msgid "Comment read more link text"
+msgstr "Commentaar lees verder link tekst"
+
+#: options/phrases-layouts/phrases-comment.php:188
+msgid "Anonymous commenter name"
+msgstr "Anonieme commentator naam"
+
+#: options/phrases-layouts/phrases-datetime.php:7
+msgid "Date/Time Phrases"
+msgstr "Datum/tijd zinnen"
+
+#: options/phrases-layouts/phrases-datetime.php:12
+msgid "Year"
+msgstr "Jaar"
+
+#: options/phrases-layouts/phrases-datetime.php:22
+msgid "Years (Plural Form)"
+msgstr "Jaren (meervoudsvorm)"
+
+#: options/phrases-layouts/phrases-datetime.php:26
+msgid "Years"
+msgstr "Jaren"
+
+#: options/phrases-layouts/phrases-datetime.php:32
+msgid "Month"
+msgstr "Maand"
+
+#: options/phrases-layouts/phrases-datetime.php:42
+msgid "Months (Plural Form)"
+msgstr "Maanden (meervoudsvorm)"
+
+#: options/phrases-layouts/phrases-datetime.php:52
+msgid "Day"
+msgstr "Dag"
+
+#: options/phrases-layouts/phrases-datetime.php:62
+msgid "Days (Plural Form)"
+msgstr "Dagen (meervoudsvorm)"
+
+#: options/phrases-layouts/phrases-datetime.php:82
+msgid "Hours (Plural Form)"
+msgstr "Uren (meervoudsvorm)"
+
+#: options/phrases-layouts/phrases-datetime.php:102
+msgid "Minutes (Plural Form)"
+msgstr "Minuten (meervoudsvorm)"
+
+#: options/phrases-layouts/phrases-datetime.php:112
+msgid "Second"
+msgstr "Seconde"
+
+#: options/phrases-layouts/phrases-datetime.php:122
+msgid "Seconds (Plural Form)"
+msgstr "Seconden (meervoudsvorm)"
+
+#: options/phrases-layouts/phrases-datetime.php:132
+msgid "Commented \"right now\" text"
+msgstr "Commentaar \"op dit moment\" tekst"
+
+#: options/phrases-layouts/phrases-datetime.php:142
+msgid "Ago text"
+msgstr "Geleden tekst"
+
+#: options/phrases-layouts/phrases-datetime.php:152
+msgid "\"Today\" text"
+msgstr "\"Vandaag\" tekst"
+
+#: options/phrases-layouts/phrases-email.php:7
+msgid "Email Template Phrases"
+msgstr "Email Sjabloon Zinnen"
+
+#: options/phrases-layouts/phrases-email.php:12
+msgid "Email Subject"
+msgstr "Email onderwerp"
+
+#: options/phrases-layouts/phrases-email.php:22
+msgid "Email Message"
+msgstr "Email bericht"
+
+#: options/phrases-layouts/phrases-email.php:32
+msgid "New Reply Subject"
+msgstr "Nieuwe reactie onderwerp"
+
+#: options/phrases-layouts/phrases-email.php:42
+msgid "New Reply Message"
+msgstr "Nieuwe reactie bericht"
+
+#: options/phrases-layouts/phrases-email.php:62
+#: options/phrases-layouts/phrases-email.php:66
+msgid "Ignore Subscription"
+msgstr "Vergeet Aanmelding"
+
+#: options/phrases-layouts/phrases-email.php:92
+msgid "Subscribe Confirmation Email Subject"
+msgstr "Aanmelding bevestigingsmail onderwerp"
+
+#: options/phrases-layouts/phrases-email.php:102
+msgid "Subscribe Confirmation Email Content"
+msgstr "Aanmelding bevestigingsmail inhoud"
+
+#: options/phrases-layouts/phrases-form.php:7
+msgid "Form Template Phrases"
+msgstr "Formulier Sjabloon Zinnen"
+
+#: options/phrases-layouts/phrases-form.php:12
+msgid "Comment Field Start"
+msgstr "Commentaarveld Begin"
+
+#: options/phrases-layouts/phrases-form.php:22
+msgid "Comment Field Join"
+msgstr "Commentaarveld Meedoen"
+
+#: options/phrases-layouts/phrases-form.php:32
+msgid "Email Field"
+msgstr "Email veld"
+
+#: options/phrases-layouts/phrases-form.php:42
+msgid "Name Field"
+msgstr "Naam veld"
+
+#: options/phrases-layouts/phrases-form.php:52
+msgid "WebSite URL Field"
+msgstr "Website URL veld"
+
+#: options/phrases-layouts/phrases-form.php:62
+msgid "CAPTCHA Field"
+msgstr "CAPTCHA veld"
+
+#: options/phrases-layouts/phrases-form.php:72
+msgid "Submit Button"
+msgstr "Verzendknop"
+
+#: options/phrases-layouts/phrases-form.php:92
+msgid "Notify on new comments"
+msgstr "Laten weten wanneer er nieuwe commentaren zijn"
+
+#: options/phrases-layouts/phrases-form.php:102
+msgid "Notify on all new replies"
+msgstr "Laten weten wanneer er nieuwe reacties zijn"
+
+#: options/phrases-layouts/phrases-form.php:106
+msgid "new replies to all my comments"
+msgstr "nieuwe reacties op al mijn commentaren"
+
+#: options/phrases-layouts/phrases-form.php:112
+msgid "Notify on new replies (checkbox)"
+msgstr "Laten weten wanneer er nieuwe reacties zijn (checkbox)"
+
+#: options/phrases-layouts/phrases-form.php:162
+msgid "Subscribed on this comment replies"
+msgstr "Aangemeld voor alle reacties op dit commentaar"
+
+#: options/phrases-layouts/phrases-form.php:172
+msgid "Subscribed on all your comments replies"
+msgstr "Aangemeld voor alle reacties op jouw commentaar"
+
+#: options/phrases-layouts/phrases-form.php:182
+msgid "Subscribed on this post"
+msgstr "Aangemeld voor dit bericht"
+
+#: options/phrases-layouts/phrases-general.php:7
+msgid "General Phrases"
+msgstr "Algemene Zinnen"
+
+#: options/phrases-layouts/phrases-general.php:22
+msgid "Be the first to comment"
+msgstr "Wees de eerste die commentaar geeft"
+
+#: options/phrases-layouts/phrases-general.php:42
+msgid "Comment (Plural Form)"
+msgstr "Commentaren (meervoudsvorm)"
+
+#: options/phrases-layouts/phrases-general.php:52
+msgid "On"
+msgstr "Op"
+
+#: options/phrases-layouts/phrases-general.php:62
+msgid "Load More Button"
+msgstr "Laad meer knop"
+
+#: options/phrases-layouts/phrases-general.php:82
+msgid "Button text if has new comment"
+msgstr "Knoptekst wanneer er een nieuw commentaar is"
+
+#: options/phrases-layouts/phrases-general.php:92
+msgid "Button text if has new comments (Plural Form)"
+msgstr "Knoptekst wanneer er een nieuw commentaren zijn (meervoudsvorm)"
+
+#: options/phrases-layouts/phrases-general.php:96
+msgid "New Comments"
+msgstr "Nieuwe Commentaren"
+
+#: options/phrases-layouts/phrases-general.php:102
+msgid "Button text if has new reply"
+msgstr "Knoptekst wanneer er een nieuwe reactie is"
+
+#: options/phrases-layouts/phrases-general.php:112
+msgid "Button text if has new replies (Plural Form)"
+msgstr "Knoptekst wanneer er een nieuwe reacties zijn (meervoudsvorm)"
+
+#: options/phrases-layouts/phrases-general.php:116
+msgid "New Replies"
+msgstr "Nieuwe reacties"
+
+#: options/phrases-layouts/phrases-general.php:122
+msgid "Text on load more button if has new comment(s)"
+msgstr "Tekst op laad meer knop wanneer er nieuwe commentaren zijn"
+
+#: options/phrases-layouts/phrases-notification.php:7
+msgid "Notification Phrases"
+msgstr "Meldingszinnen"
+
+#: options/phrases-layouts/phrases-notification.php:12
+msgid "You\\'re subscribed to"
+msgstr "U bent aangemeld voor"
+
+#: options/phrases-layouts/phrases-notification.php:43
+msgid "Postmatic subscription label"
+msgstr "Postmatic aanmeldingslabel"
+
+#: options/phrases-layouts/phrases-notification.php:54
+msgid "Error message for empty field"
+msgstr "Foutbericht bij leeg veld"
+
+#: options/phrases-layouts/phrases-notification.php:64
+msgid "Error message for invalid email field"
+msgstr "Foutbericht bij ongeldig email veld"
+
+#: options/phrases-layouts/phrases-notification.php:74
+msgid "Error message for invalid website url field"
+msgstr "Foutbericht bij ongeldig website url veld"
+
+#: options/phrases-layouts/phrases-notification.php:94
+msgid "Logged in as"
+msgstr "Ingelogd als"
+
+#: options/phrases-layouts/phrases-notification.php:114
+msgid "Logged In"
+msgstr "Ingelogd"
+
+#: options/phrases-layouts/phrases-notification.php:124
+msgid "To post a comment"
+msgstr "Om een commentaar te geven"
+
+#: options/phrases-layouts/phrases-notification.php:144
+msgid "You can vote only 1 time"
+msgstr "U kunt maar 1 keer stemmen"
+
+#: options/phrases-layouts/phrases-notification.php:164
+msgid "Login To Vote"
+msgstr "Meld u aan om te kunnen stemmen"
+
+#: options/phrases-layouts/phrases-notification.php:174
+msgid "You Cannot Vote On Your Comment"
+msgstr "U kunt niet stemmen op uw eigen commentaar"
+
+#: options/phrases-layouts/phrases-notification.php:184
+msgid "You are not allowed to vote for this comment (Voting from same IP)"
+msgstr ""
+"U mag niet stemmen op dit commentaar (stemming vanaf hetzelfde IP adres)"
+
+#: options/phrases-layouts/phrases-notification.php:214
+msgid "Comment waiting moderation"
+msgstr "Commentaar wacht op "
+
+#: options/phrases-layouts/phrases-notification.php:224
+msgid "Message if input text length is too short"
+msgstr "Bericht wanneer de lengte van de ingevoerde tekst te kort is"
+
+#: options/phrases-layouts/phrases-notification.php:234
+msgid "Message if input text length is too long"
+msgstr "Bericht wanneer de lengte van de ingevoerde tekst te lang is"
+
+#: options/phrases-layouts/phrases-notification.php:245
+msgid "Message if comment was not updated"
+msgstr "Bericht wanneer het commentaar niet is aangepast"
+
+#: options/phrases-layouts/phrases-notification.php:255
+msgid "Message if comment no longer possible to edit"
+msgstr "Bericht wanneer het commentaar niet meer kan worden aangepast"
+
+#: options/phrases-layouts/phrases-notification.php:265
+msgid "Message if comment text not changed"
+msgstr "Bericht wanneer de commentaartekst niet is veranderd"
+
+#: options/phrases-layouts/phrases-notification.php:269
+msgid "TYou've not made any changes"
+msgstr "U heeft niets veranderd"
+
+#: templates/comment/comment-form.php:56
+msgid "Unable to send an email"
+msgstr "Kan geen email versturen"
+
+#: templates/comment/comment-form.php:58
+msgid "Subscription not successed"
+msgstr "Aanmelding niet gelukt"
+
+#: templates/comment/comment-form.php:257
+#: templates/comment/comment-form.php:265
+msgid "wpDiscuz"
+msgstr "wpDiscuz"
+
+#: utils/class.WpdiscuzHelper.php:57
+msgid "Cannot create image file"
+msgstr "Kan geen afbeeldingsbestand maken"
+
+#: utils/class.WpdiscuzHelper.php:58
+msgid "Permission denied for file creation"
+msgstr "Geen toestemming voor maken van bestand"
+
+#: utils/class.WpdiscuzHelper.php:59
+msgid "PHP GD2 library is disabled"
+msgstr "PHP GD2 library is uitgezet"
+
+#: utils/class.WpdiscuzHelper.php:60
+msgid "PNG image creation disabled"
+msgstr "PNG afbeelding maken is uitgezet"
+
+#. Plugin Name of the plugin/theme
+msgid "wpDiscuz - supercharged native comments"
+msgstr "wpDiscuz - website commentaren op stero&#239;den"
+
+#. Plugin URI of the plugin/theme
+msgid "http://wpdiscuz.com/"
+msgstr "http://wpdiscuz.com/"
+
+#. Description of the plugin/theme
+msgid ""
+"Better comment system. Wordpress post comments and discussion plugin. Allows "
+"your visitors discuss, vote for comments and share."
+msgstr ""
+"Beter commentaarsysteem. WordPress berichten commentaren en discussie plug-"
+"in. Laat jouw bezoekers discussiëren, stemmen op commentaren, en delen."
+
+#. Author of the plugin/theme
+msgid "gVectors Team (A. Chakhoyan, G. Zakaryan, H. Martirosyan)"
+msgstr "gVectors Team (A. Chakhoyan, G. Zakaryan, H. Martirosyan)"
+
+#. Author URI of the plugin/theme
+msgid "http://gvectors.com/"
+msgstr "http://gvectors.com/"

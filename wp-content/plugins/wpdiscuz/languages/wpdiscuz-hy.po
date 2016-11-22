@@ -1,0 +1,1604 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wpDiscuz - Wordpress Comments\n"
+"POT-Creation-Date: 2016-02-20 22:47+0400\n"
+"PO-Revision-Date: 2016-04-11 23:50+0400\n"
+"Last-Translator: advancedcoding <advancedcoding@mail.ru>\n"
+"Language-Team: advancedcoding <advancedcoding@mail.ru>\n"
+"Language: hy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: class.WpdiscuzCore.php:271 templates/comment/class.WpdiscuzWalker.php:88
+msgid "Anonymous"
+msgstr "Անանուն"
+
+#: class.WpdiscuzCore.php:837 options/options-layouts/settings-social.php:12
+#: options/options-layouts/settings-social.php:14
+#: options/options-layouts/settings-social.php:16
+#: options/options-layouts/settings-social.php:18
+msgid "Settings"
+msgstr "Կարգավորումներ"
+
+#: class.WpdiscuzCore.php:839
+msgid "Phrases"
+msgstr "Արտահայտություններ"
+
+#: class.WpdiscuzCore.php:879 options/phrases-layouts/phrases-comment.php:116
+msgid "Admin"
+msgstr "Կայքի վարիչ"
+
+#: class.WpdiscuzCore.php:881 class.WpdiscuzCore.php:890
+#: options/phrases-layouts/phrases-comment.php:118
+msgid "Author"
+msgstr "Հեղինակ"
+
+#: class.WpdiscuzCore.php:885 options/phrases-layouts/phrases-comment.php:124
+msgid "Member"
+msgstr "Օգտատեր"
+
+#: class.WpdiscuzCore.php:891 options/phrases-layouts/phrases-comment.php:122
+msgid "Guest"
+msgstr "Հյուր"
+
+#: options/class.WpdiscuzOptions.php:30 options/class.WpdiscuzOptions.php:98
+msgid "Hacker?"
+msgstr "Հաքեր?"
+
+#: options/class.WpdiscuzOptions.php:228
+msgid ""
+"Brings an ocean of emotions to your comments. It comes with an awesome smile "
+"package."
+msgstr ""
+
+#: options/class.WpdiscuzOptions.php:229
+msgid ""
+"Extended comment attachment system. Allows to upload images, videos, audios "
+"and other file types."
+msgstr ""
+
+#: options/class.WpdiscuzOptions.php:230
+msgid ""
+"Adds No CAPTCHA on all comment forms. Stops spam and bot comments with "
+"Google reCAPTCHA"
+msgstr ""
+
+#: options/class.WpdiscuzOptions.php:231
+msgid ""
+"Integrates myCRED Badges and Ranks. Converts wpDiscuz comment votes/likes to "
+"myCRED points. "
+msgstr ""
+
+#: options/class.WpdiscuzOptions.php:232
+msgid ""
+"Allows censoring comment words. Filters comments and replaces those phrases "
+"with custom words."
+msgstr ""
+
+#: options/class.WpdiscuzOptions.php:244
+msgid "New Addons are available for wpDiscuz Comments Plugin"
+msgstr ""
+
+#: options/class.WpdiscuzOptions.php:250 options/class.WpdiscuzOptions.php:256
+msgid "Go to wpDiscuz Addons subMenu"
+msgstr "Գնալ wpDiscuz-ի հավելվածների ենթամենյու"
+
+#: options/class.WpdiscuzOptionsSerialized.php:519
+#: options/phrases-layouts/phrases-general.php:12
+msgid "Leave a Reply"
+msgstr "Պատասխանել"
+
+#: options/class.WpdiscuzOptionsSerialized.php:520
+msgid "Be the First to Comment!"
+msgstr "Եղեք առաջին մեկնաբանողը"
+
+#: options/class.WpdiscuzOptionsSerialized.php:521 options/html-phrases.php:17
+#: options/phrases-layouts/phrases-general.php:32
+msgid "Comment"
+msgstr "Մեկնաբանություն"
+
+#: options/class.WpdiscuzOptionsSerialized.php:522
+msgid "Comments"
+msgstr "Մեկնաբանություններ"
+
+#: options/class.WpdiscuzOptionsSerialized.php:523
+msgid "on"
+msgstr ":"
+
+#: options/class.WpdiscuzOptionsSerialized.php:524
+msgid "Start the discussion"
+msgstr "Սկսել քննարկում"
+
+#: options/class.WpdiscuzOptionsSerialized.php:525
+msgid "Join the discussion"
+msgstr "Միանալ քննարկմանը"
+
+#: options/class.WpdiscuzOptionsSerialized.php:526 options/html-phrases.php:19
+msgid "Email"
+msgstr "ԷԼ. փոստ"
+
+#: options/class.WpdiscuzOptionsSerialized.php:527
+msgid "Name"
+msgstr "Անուն"
+
+#: options/class.WpdiscuzOptionsSerialized.php:528
+msgid "WebSite URL"
+msgstr "Վեբ-կայքի հղում"
+
+#: options/class.WpdiscuzOptionsSerialized.php:529
+msgid "Please insert the code above to comment"
+msgstr "Խնդրում ենք գրեք վերևում բերված կոդը որպեսզի մեկնաբանություն կատարեք"
+
+#: options/class.WpdiscuzOptionsSerialized.php:530
+msgid "Post Comment"
+msgstr "Գրառել մեկնաբանություն"
+
+#: options/class.WpdiscuzOptionsSerialized.php:531
+#: options/phrases-layouts/phrases-form.php:82
+#: options/phrases-layouts/phrases-form.php:86
+msgid "Notify of"
+msgstr "Ծանուցել"
+
+#: options/class.WpdiscuzOptionsSerialized.php:532
+#: options/phrases-layouts/phrases-form.php:96
+msgid "new follow-up comments"
+msgstr "նոր մեկնաբանությունների մասին"
+
+#: options/class.WpdiscuzOptionsSerialized.php:533
+msgid "new replies to my comments"
+msgstr "իմ մեկնաբանությունների նոր պատասխանների մասին"
+
+#: options/class.WpdiscuzOptionsSerialized.php:534
+#: options/phrases-layouts/phrases-form.php:116
+msgid "Notify of new replies to this comment"
+msgstr "Ծանուցել այս մեկնաբանության նոր պատասխանների մասին"
+
+#: options/class.WpdiscuzOptionsSerialized.php:535
+#: options/phrases-layouts/phrases-form.php:122
+#: options/phrases-layouts/phrases-form.php:126
+msgid "Sort by"
+msgstr "Տեսակավորել ըստ"
+
+#: options/class.WpdiscuzOptionsSerialized.php:536
+#: options/phrases-layouts/phrases-form.php:132
+#: options/phrases-layouts/phrases-form.php:136
+msgid "newest"
+msgstr "նորերի"
+
+#: options/class.WpdiscuzOptionsSerialized.php:537
+#: options/phrases-layouts/phrases-form.php:142
+#: options/phrases-layouts/phrases-form.php:146
+msgid "oldest"
+msgstr "հների"
+
+#: options/class.WpdiscuzOptionsSerialized.php:538
+#: options/phrases-layouts/phrases-form.php:152
+#: options/phrases-layouts/phrases-form.php:156
+msgid "most voted"
+msgstr "շատ քվեարկվածների"
+
+#: options/class.WpdiscuzOptionsSerialized.php:539
+msgid "Load More Comments"
+msgstr "Բեռնել ավելի շատ մեկնաբանություններ"
+
+#: options/class.WpdiscuzOptionsSerialized.php:540
+#: options/phrases-layouts/phrases-general.php:72
+msgid "Load Rest of Comments"
+msgstr "Բեռնել մնացած մեկնաբանությունները"
+
+#: options/class.WpdiscuzOptionsSerialized.php:541
+#: options/phrases-layouts/phrases-comment.php:12
+msgid "Reply"
+msgstr "Պատասխանել"
+
+#: options/class.WpdiscuzOptionsSerialized.php:542
+#: options/phrases-layouts/phrases-comment.php:22
+msgid "Share"
+msgstr "Կիսվել"
+
+#: options/class.WpdiscuzOptionsSerialized.php:543
+#: options/phrases-layouts/phrases-comment.php:32
+msgid "Edit"
+msgstr "Խմբագրել"
+
+#: options/class.WpdiscuzOptionsSerialized.php:544
+#: options/phrases-layouts/phrases-comment.php:42
+msgid "Share On Facebook"
+msgstr "Կիսվել Facebook-ում"
+
+#: options/class.WpdiscuzOptionsSerialized.php:545
+#: options/phrases-layouts/phrases-comment.php:52
+msgid "Share On Twitter"
+msgstr "Կիսվել Twitter-ում"
+
+#: options/class.WpdiscuzOptionsSerialized.php:546
+#: options/phrases-layouts/phrases-comment.php:62
+msgid "Share On Google"
+msgstr "Կիսվել Google-ում"
+
+#: options/class.WpdiscuzOptionsSerialized.php:547
+#: options/phrases-layouts/phrases-comment.php:72
+msgid "Share On VKontakte"
+msgstr "Կիսվել VKontakte-ում"
+
+#: options/class.WpdiscuzOptionsSerialized.php:548
+#: options/phrases-layouts/phrases-comment.php:82
+msgid "Share On Odnoklassniki"
+msgstr "Կիսվել Odnoklassniki-ում"
+
+#: options/class.WpdiscuzOptionsSerialized.php:549
+#: options/phrases-layouts/phrases-comment.php:92
+msgid "Hide Replies"
+msgstr "Թաքցնել պատասխանները"
+
+#: options/class.WpdiscuzOptionsSerialized.php:550
+#: options/phrases-layouts/phrases-comment.php:102
+msgid "Show Replies"
+msgstr "Ցուցադրել պատասխանները"
+
+#: options/class.WpdiscuzOptionsSerialized.php:551
+#: options/phrases-layouts/phrases-general.php:86
+msgid "New Comment"
+msgstr "Նոր մեկնաբանություն"
+
+#: options/class.WpdiscuzOptionsSerialized.php:552
+msgid "New comment on the discussion section you've been interested in"
+msgstr "Նոր հաղորդագրություն քննարկման այն մասում, որում Դուք հետաքրքրված եք"
+
+#: options/class.WpdiscuzOptionsSerialized.php:553
+#: options/phrases-layouts/phrases-email.php:36
+#: options/phrases-layouts/phrases-general.php:106
+#: utils/class.WpdiscuzEmailHelper.php:152
+msgid "New Reply"
+msgstr "Նոր պատասխան"
+
+#: options/class.WpdiscuzOptionsSerialized.php:554
+#: utils/class.WpdiscuzEmailHelper.php:153
+msgid "New reply on the discussion section you've been interested in"
+msgstr "Նոր պատասխան քննարկման այն մասում, որում Դուք հետաքրքրված եք"
+
+#: options/class.WpdiscuzOptionsSerialized.php:555
+msgid "You're subscribed for new replies on this comment"
+msgstr "Դուք բաժանորդագրվել եք այս մեկնաբանության նոր պատասխանների համար"
+
+#: options/class.WpdiscuzOptionsSerialized.php:556
+msgid "You're subscribed for new replies on all your comments"
+msgstr "Դուք բաժանորդագրված եք Ձեր մեկնաբանությունների բոլոր նոր պատասխաններին"
+
+#: options/class.WpdiscuzOptionsSerialized.php:557
+msgid "You're subscribed for new follow-up comments on this post"
+msgstr "Դուք բաժանորդագրված եք այս գրառման նոր մեկնաբանություններին"
+
+#: options/class.WpdiscuzOptionsSerialized.php:558
+#: options/phrases-layouts/phrases-email.php:52
+#: options/phrases-layouts/phrases-email.php:56
+msgid "Unsubscribe"
+msgstr "Հրաժարվել բաժանորդագրությունից"
+
+#: options/class.WpdiscuzOptionsSerialized.php:559
+#: options/phrases-layouts/phrases-email.php:66
+msgid "Cancel subscription"
+msgstr "Անջատել բաժանորդագրությունը"
+
+#: options/class.WpdiscuzOptionsSerialized.php:560
+#: options/phrases-layouts/phrases-notification.php:32
+msgid "You've successfully unsubscribed."
+msgstr "Դուք հաջողությամբ ապաբաժանորդագրվել եք"
+
+#: options/class.WpdiscuzOptionsSerialized.php:561
+#: options/phrases-layouts/phrases-notification.php:22
+msgid "You've successfully subscribed."
+msgstr "Դուք հաջողությամբ բաժանորդագրվել եք"
+
+#: options/class.WpdiscuzOptionsSerialized.php:562
+#: options/phrases-layouts/phrases-email.php:72
+#: options/phrases-layouts/phrases-email.php:76
+msgid "Confirm your subscription"
+msgstr "Հաստատել Ձեր բաժանորդագրությունը"
+
+#: options/class.WpdiscuzOptionsSerialized.php:563
+#: options/phrases-layouts/phrases-email.php:82
+#: options/phrases-layouts/phrases-email.php:86
+msgid "You've successfully confirmed your subscription."
+msgstr "Դուք հաջողությամբ հաստատել եք Ձեր բաժանորդագրությունը"
+
+#: options/class.WpdiscuzOptionsSerialized.php:564
+#: options/phrases-layouts/phrases-email.php:96
+#: utils/class.WpdiscuzEmailHelper.php:45
+msgid "Subscribe Confirmation"
+msgstr "Բաժանորդագրման հաստատում"
+
+#: options/class.WpdiscuzOptionsSerialized.php:565
+#: options/phrases-layouts/phrases-email.php:106
+#: utils/class.WpdiscuzEmailHelper.php:46
+msgid ""
+"Hi, <br/> You just subscribed for new comments on our website. This means "
+"you will receive an email when new comments are posted according to "
+"subscription option you've chosen. <br/> To activate, click confirm below. "
+"If you believe this is an error, ignore this message and we'll never bother "
+"you again."
+msgstr ""
+"Ողջույն, <br /> Դուք բաժանորդագրված եք Ձեր վեբ-կայքի նոր "
+"մեկնաբանություններին։ Դա նշանակում է, որ կստանաք էլ․ նամակ, երբ նոր "
+"մեկնաբանություններ գրառվեն, համապատասխան այն բաժանորդագրման ընտրանքի, որը "
+"Դուք ընտրել եք։<br /> Ակտիվացնելու համար սեղմեք ներքևում։ Եթե Դուք կարծում "
+"եք, որ սա սխալ է արհամարեք այս հաղորդագրությունը և մենք երբեք չենք "
+"անհանգստացնի Ձեզ նորից։"
+
+#: options/class.WpdiscuzOptionsSerialized.php:566
+msgid "please fill out this field to comment"
+msgstr "խնդրում ենք լրացրեք այս դաշտը մեկնաբանություն կատարելու համար"
+
+#: options/class.WpdiscuzOptionsSerialized.php:567
+msgid "email address is invalid"
+msgstr "անվավեր էլ. փոստի հասցե"
+
+#: options/class.WpdiscuzOptionsSerialized.php:568
+msgid "url is invalid"
+msgstr "անվավեր հղում"
+
+#: options/class.WpdiscuzOptionsSerialized.php:569
+msgid "year"
+msgstr "տարի"
+
+#: options/class.WpdiscuzOptionsSerialized.php:570
+msgid "years"
+msgstr "տարի"
+
+#: options/class.WpdiscuzOptionsSerialized.php:571
+msgid "month"
+msgstr "ամիս"
+
+#: options/class.WpdiscuzOptionsSerialized.php:572
+msgid "months"
+msgstr "ամիս"
+
+#: options/class.WpdiscuzOptionsSerialized.php:573
+msgid "day"
+msgstr "օր"
+
+#: options/class.WpdiscuzOptionsSerialized.php:574
+msgid "days"
+msgstr "օր"
+
+#: options/class.WpdiscuzOptionsSerialized.php:575
+msgid "hour"
+msgstr "ժամ"
+
+#: options/class.WpdiscuzOptionsSerialized.php:576
+msgid "hours"
+msgstr "ժամ"
+
+#: options/class.WpdiscuzOptionsSerialized.php:577
+msgid "minute"
+msgstr "րոպե"
+
+#: options/class.WpdiscuzOptionsSerialized.php:578
+msgid "minutes"
+msgstr "րոպե"
+
+#: options/class.WpdiscuzOptionsSerialized.php:579
+msgid "second"
+msgstr "վայրկյան"
+
+#: options/class.WpdiscuzOptionsSerialized.php:580
+msgid "seconds"
+msgstr "վայրկյան"
+
+#: options/class.WpdiscuzOptionsSerialized.php:581
+msgid "right now"
+msgstr "հենց նոր"
+
+#: options/class.WpdiscuzOptionsSerialized.php:582
+msgid "ago"
+msgstr "առաջ"
+
+#: options/class.WpdiscuzOptionsSerialized.php:583
+#: options/phrases-layouts/phrases-datetime.php:156
+msgid "Today"
+msgstr "Այսօր"
+
+#: options/class.WpdiscuzOptionsSerialized.php:584
+#: options/phrases-layouts/phrases-notification.php:84
+msgid "You must be"
+msgstr "Դուք պետք է"
+
+#: options/class.WpdiscuzOptionsSerialized.php:585
+msgid "You are logged in as"
+msgstr "Դուք մուտք եք գործել որպես"
+
+#: options/class.WpdiscuzOptionsSerialized.php:586
+#: options/phrases-layouts/phrases-notification.php:104
+msgid "Log out"
+msgstr "դուրս գալ"
+
+#: options/class.WpdiscuzOptionsSerialized.php:587
+msgid "logged in"
+msgstr "մուտք գործած"
+
+#: options/class.WpdiscuzOptionsSerialized.php:588
+msgid "to post a comment."
+msgstr "մեկնաբանություն գրառելու"
+
+#: options/class.WpdiscuzOptionsSerialized.php:589
+#: options/phrases-layouts/phrases-comment.php:138
+msgid "Vote Up"
+msgstr "Հավանել"
+
+#: options/class.WpdiscuzOptionsSerialized.php:590
+#: options/phrases-layouts/phrases-comment.php:148
+msgid "Vote Down"
+msgstr "Չհավանել"
+
+#: options/class.WpdiscuzOptionsSerialized.php:591
+#: options/phrases-layouts/phrases-notification.php:134
+msgid "Vote Counted"
+msgstr ""
+
+#: options/class.WpdiscuzOptionsSerialized.php:592
+msgid "You've already voted for this comment"
+msgstr "Դուք արդեն քվեարկել եք այս մենաբանության օգտին"
+
+#: options/class.WpdiscuzOptionsSerialized.php:593
+#: options/phrases-layouts/phrases-notification.php:154
+msgid "Voting Error"
+msgstr "Սխալ քվեարկման ժամանակ"
+
+#: options/class.WpdiscuzOptionsSerialized.php:594
+msgid "You Must Be Logged In To Vote"
+msgstr "Դուք պետք է մուտք գործեք քվեարկելու համար"
+
+#: options/class.WpdiscuzOptionsSerialized.php:595
+msgid "You cannot vote for your comment"
+msgstr "Դուք չեք կարող քվեարկել Ձեր մեկնաբանության օգտին"
+
+#: options/class.WpdiscuzOptionsSerialized.php:596
+msgid "You are not allowed to vote for this comment"
+msgstr "Դուք չեք կարող քվեարկել այս մեկնաբանության համար"
+
+#: options/class.WpdiscuzOptionsSerialized.php:597
+#: options/phrases-layouts/phrases-notification.php:194
+msgid "Invalid Captcha Code"
+msgstr "Captcha-ի կոդը սխալ է"
+
+#: options/class.WpdiscuzOptionsSerialized.php:598
+#: options/phrases-layouts/phrases-notification.php:204
+msgid "Some of field value is invalid"
+msgstr "Դաշտերից ինչ-որ մեկի արժեքը սխալ է"
+
+#: options/class.WpdiscuzOptionsSerialized.php:599
+msgid "new comment"
+msgstr "նոր մեկնաբանություն"
+
+#: options/class.WpdiscuzOptionsSerialized.php:600
+msgid "new comments"
+msgstr "նոր մեկնաբանություններ"
+
+#: options/class.WpdiscuzOptionsSerialized.php:601
+msgid "Comment awaiting moderation"
+msgstr "Մեկնաբանությունը սպասում է խմբագրման"
+
+#: options/class.WpdiscuzOptionsSerialized.php:602
+msgid "new reply on your comment"
+msgstr "նոր պատասխան Ձեր մեկնաբանությանը"
+
+#: options/class.WpdiscuzOptionsSerialized.php:603
+msgid "new replies on your comments"
+msgstr "նոր պատասխան Ձեր մեկնաբանություններին"
+
+#: options/class.WpdiscuzOptionsSerialized.php:604
+#: options/phrases-layouts/phrases-general.php:126
+msgid "New"
+msgstr "Նոր"
+
+#: options/class.WpdiscuzOptionsSerialized.php:605
+#: options/phrases-layouts/phrases-notification.php:249
+msgid "Sorry, the comment was not updated"
+msgstr "Ներողություն, մեկնաբանությունը չի թարմացվել "
+
+#: options/class.WpdiscuzOptionsSerialized.php:606
+#: options/phrases-layouts/phrases-notification.php:259
+msgid "Sorry, this comment no longer possible to edit"
+msgstr "Ցավոք այս մեկնաբանությունը այլևս հնարավոր չէ խմբագրել"
+
+#: options/class.WpdiscuzOptionsSerialized.php:607
+msgid "You've not made any changes"
+msgstr "Դուք չեք կատարել որևէ փոփոխություն"
+
+#: options/class.WpdiscuzOptionsSerialized.php:608
+#: options/phrases-layouts/phrases-comment.php:162
+msgid "Save"
+msgstr "Պահպանել"
+
+#: options/class.WpdiscuzOptionsSerialized.php:609
+#: options/phrases-layouts/phrases-comment.php:172
+msgid "Cancel"
+msgstr "Չեղարկել"
+
+#: options/class.WpdiscuzOptionsSerialized.php:610
+msgid "Input is too short"
+msgstr "Ներմուծվածը շատ կարճ է"
+
+#: options/class.WpdiscuzOptionsSerialized.php:611
+msgid "Input is too long"
+msgstr "Ներմուծվածը շատ երկար է"
+
+#: options/class.WpdiscuzOptionsSerialized.php:612
+#: options/phrases-layouts/phrases-comment.php:182
+msgid "Read more &raquo;"
+msgstr "Կարդալ ավելին &raquo;"
+
+#: options/class.WpdiscuzOptionsSerialized.php:613
+#: options/phrases-layouts/phrases-notification.php:275
+#: options/phrases-layouts/phrases-notification.php:279
+msgid "Please fill out required fields"
+msgstr "Խնդրում ենք լրացրեք պահանջվող դաշտերը"
+
+#: options/class.WpdiscuzOptionsSerialized.php:614
+#: options/phrases-layouts/phrases-form.php:192
+#: options/phrases-layouts/phrases-form.php:196
+msgid "Connect with"
+msgstr "Մուտք գործել"
+
+#: options/class.WpdiscuzOptionsSerialized.php:615
+msgid "You're subscribed to"
+msgstr "Դուք բաժանորդագրվել եք"
+
+#: options/class.WpdiscuzOptionsSerialized.php:616
+msgid "Participate in this discussion via email"
+msgstr "Մասնակցել այս քննարկմանը էլ-փոստով"
+
+#: options/html-addons.php:6
+msgid "wpDiscuz Addons"
+msgstr "wpDiscuz-ի Հավելվածներ"
+
+#: options/html-addons.php:48
+msgid "Installed"
+msgstr "Տեղադրված է"
+
+#: options/html-addons.php:55
+msgid "Addon Details | Buy"
+msgstr "Հավելվածի մանրամասներ | Գնել"
+
+#: options/html-options.php:5
+msgid "wpDiscuz General Settings"
+msgstr "wpDiscuz-ի Գլխավոր Կարգավորումներ"
+
+#: options/html-options.php:58 options/options-layouts/settings-general.php:7
+msgid "General Settings"
+msgstr "Գլխավոր կարգավորումներ"
+
+#: options/html-options.php:59
+#: options/options-layouts/settings-live-update.php:7
+msgid "Live Update"
+msgstr "Մեկնաբանությունների ընթացիկ թարմացում"
+
+#: options/html-options.php:60
+msgid "Show/Hide"
+msgstr "Ցուցադրել/Թաքցնել"
+
+#: options/html-options.php:61
+msgid "Subscription"
+msgstr "Բաժանորդագրություն"
+
+#: options/html-options.php:61
+msgid "and Postmatic"
+msgstr "և Postmatic"
+
+#: options/html-options.php:62
+msgid "Styling"
+msgstr "Ոճավորում"
+
+#: options/html-options.php:63 options/options-layouts/settings-social.php:91
+msgid "Social Login"
+msgstr "Սոց. մուտք"
+
+#: options/html-options.php:64
+#: options/options-layouts/settings-integrations.php:7
+msgid "Integrations"
+msgstr "Ինտեգրացիա"
+
+#: options/html-options.php:65 options/options-layouts/settings-addons.php:7
+msgid "Addons"
+msgstr "Հավելվածներ"
+
+#: options/html-options.php:149
+msgid "Reset Options"
+msgstr "Զրոյացնել ընտրանքները"
+
+#: options/html-options.php:151
+msgid "Refresh comment optimization"
+msgstr "Թարմացնել մեկնաբանությունների օպտիմալացումը"
+
+#: options/html-options.php:153
+msgid "Remove vote data"
+msgstr "Ջնջել քվեարկության տվյալները"
+
+#: options/html-options.php:154 options/html-phrases.php:66
+msgid "Save Changes"
+msgstr "Պահպանել փոփոխությունները"
+
+#: options/html-phrases.php:5
+msgid "wpDiscuz Front-end Phrases"
+msgstr "wpDiscuz-ի դիմամասի արտահայտություններ"
+
+#: options/html-phrases.php:15
+msgid "General"
+msgstr "Գլխավոր"
+
+#: options/html-phrases.php:16
+msgid "Form"
+msgstr "Ձևաչափ"
+
+#: options/html-phrases.php:18
+msgid "Date/Time"
+msgstr "Ամսաթիվ/Ժամանակ"
+
+#: options/html-phrases.php:20
+msgid "Notification"
+msgstr "Ծանուցում"
+
+#: options/options-layouts/settings-general.php:12
+msgid "Display comment form for post types"
+msgstr "Ցուցադրել մեկնաբանությունների ձևաչափը գրառումների տեսակների համար"
+
+#: options/options-layouts/settings-general.php:32
+msgid "Use guest email to detect registered account"
+msgstr "Օգտատգործել հյուրի էլ․ փոստը գրանցված հաշիվ գտնելու համար"
+
+#: options/options-layouts/settings-general.php:34
+msgid ""
+"Sometimes registered users comment as guest using the same email address. "
+"wpDiscuz can detect the account role using guest email and display commenter "
+"label correctly."
+msgstr ""
+
+#: options/options-layouts/settings-general.php:45
+msgid "Comment author must fill out email"
+msgstr "Մեկնաբանության հեղինակը պետք է պարտադիր լրացնի էլ-փոստը"
+
+#: options/options-layouts/settings-general.php:55
+msgid "Comment author must fill out name"
+msgstr "Մեկնաբանության հեղինակը պետք է պարտադիր լրացնի անունը"
+
+#: options/options-layouts/settings-general.php:65
+msgid "Comment author name min length (for guests only)"
+msgstr ""
+"Մեկնաբանության հեղինակի անվան երկարության մինիմում չափը (միայն հյուրերի "
+"համար)"
+
+#: options/options-layouts/settings-general.php:69
+#: options/options-layouts/settings-general.php:96
+msgid "Min"
+msgstr "Մինիմում"
+
+#: options/options-layouts/settings-general.php:72
+#: options/options-layouts/settings-general.php:99
+msgid "Max"
+msgstr "Մաքսիմում"
+
+#: options/options-layouts/settings-general.php:78
+msgid "Keep guest commenter credentials in browser cookies for x days"
+msgstr ""
+
+#: options/options-layouts/settings-general.php:80
+msgid "Set this option value -1 to make it unlimited."
+msgstr "Դարձրեք այս ընտրանքի արժեքը -1 այն անսահմանափակ դարձնելու համար"
+
+#: options/options-layouts/settings-general.php:81
+msgid "Set this option value 0 to clear those data when user closes browser."
+msgstr ""
+"Դարձրեք այս ընտրանքի արժեքը 0, որպեսզի տվյալները ջնջվեն, երբ օգտատերը փակում "
+"է դիտարկիչը"
+
+#: options/options-layouts/settings-general.php:92
+msgid "Comment text length"
+msgstr "Մեկնաբանության տեքստի երկարությունը"
+
+#: options/options-layouts/settings-general.php:105
+msgid ""
+"The number of words before breaking comment text and showing \"Read more\" "
+"link"
+msgstr ""
+
+#: options/options-layouts/settings-general.php:107
+msgid "Set this option value 0, to turn off comment text breaking function."
+msgstr ""
+
+#: options/options-layouts/settings-general.php:118
+msgid "Comment text size in pixels"
+msgstr "Մեկնաբանության տեքստի չափը "
+
+#: options/options-layouts/settings-general.php:133
+msgid "Allow comment editing for"
+msgstr "Թույլատրել մեկնաբանությունների խմբագրումը"
+
+#: options/options-layouts/settings-general.php:138
+msgid "Do not allow"
+msgstr "Թույլ չտալ"
+
+#: options/options-layouts/settings-general.php:139
+#: options/options-layouts/settings-general.php:140
+#: options/options-layouts/settings-live-update.php:52
+#: options/options-layouts/settings-live-update.php:53
+#: options/options-layouts/settings-live-update.php:54
+msgid "Minutes"
+msgstr "Րոպե"
+
+#: options/options-layouts/settings-general.php:141
+#: options/phrases-layouts/phrases-datetime.php:72
+msgid "Hour"
+msgstr "Ժամ"
+
+#: options/options-layouts/settings-general.php:142
+#: options/options-layouts/settings-general.php:143
+msgid "Hours"
+msgstr "Ժամ"
+
+#: options/options-layouts/settings-general.php:144
+msgid "Unlimit"
+msgstr "Անսահման"
+
+#: options/options-layouts/settings-general.php:150
+msgid "Redirect first commenter to"
+msgstr "Վերահղել առաջին մեկնաբանություն անողին դեպի"
+
+#: options/options-layouts/settings-general.php:157
+msgid "Do not redirect"
+msgstr "Չվերահղել"
+
+#: options/options-layouts/settings-general.php:165
+msgid "Allow guests to vote on comments"
+msgstr "Թույլատրել \"հյուրերին\" քվեարկել մեկնաբանություններին"
+
+#: options/options-layouts/settings-general.php:175
+msgid "Comments loading/pagination type"
+msgstr "Մեկնաբանությունների բեռնում/էջերի արժեքավորման տեսակ"
+
+#: options/options-layouts/settings-general.php:177
+msgid ""
+"You can manage the number of comments for [Load more] option in Settings > "
+"Discussion page, using \"Break comments into pages with [X] top level "
+"comments per page\" option. To show the default Wordpress comment pagination "
+"you should enable the checkbox on bigining of the same option."
+msgstr ""
+
+#: options/options-layouts/settings-general.php:183
+#: options/options-layouts/settings-general.php:185
+msgid "[Load more] Button"
+msgstr "[Բեռնել ավելին] կոճակ"
+
+#: options/options-layouts/settings-general.php:187
+#: options/options-layouts/settings-general.php:189
+msgid "[Load rest of all comments] Button"
+msgstr "[Բեռնել մնացած բոլոր մեկնաբանությունները] կոճակ"
+
+#: options/options-layouts/settings-general.php:191
+#: options/options-layouts/settings-general.php:193
+msgid "Lazy load comments on scrolling"
+msgstr ""
+
+#: options/options-layouts/settings-general.php:200
+msgid "Use WordPress Date/Time format"
+msgstr "Օգտվել WordPress-ի ամսաթվային ֆորմատից"
+
+#: options/options-layouts/settings-general.php:201
+msgid ""
+"wpDiscuz shows Human Readable date format. If you check this option it'll "
+"show the date/time format set in WordPress General Settings."
+msgstr ""
+"wpDiscuz-ը ցույց է տալիս ամսաթիվը ընթռնելի ֆորմատով: Եթե Դուք միացնեք այս "
+"ընտրանքը այն ցույց կտա ամսաթիվ/ժամ ձևաչափը, որը ընտրված է WordPress-ի "
+"Գլխավոր Կարգավորումներից"
+
+#: options/options-layouts/settings-general.php:208
+msgid "Current Wordpress date/time format"
+msgstr "Wordpress-ի Ընթացիկ ամսաթվային ֆորմատ"
+
+#: options/options-layouts/settings-general.php:214
+msgid "Use Plugin .PO/.MO files"
+msgstr "Օգտագործել խրվակի .PO/.MO ֆայլերը"
+
+#: options/options-layouts/settings-general.php:215
+msgid ""
+"wpDiscuz phrase system allows you to translate all front-end phrases. "
+"However if you have a multi-language website it'll not allow you to add more "
+"than one language translation. The only way to get it is the plugin "
+"translation files (.PO / .MO). If wpDiscuz has the languages you need you "
+"should check this option to disable phrase system and it'll automatically "
+"translate all phrases based on language files according to current language."
+msgstr ""
+
+#: options/options-layouts/settings-general.php:226
+msgid ""
+"Help wpDiscuz to grow allowing people to recognize which comment plugin you "
+"use"
+msgstr ""
+"Օգնեք wpDiscuz-ին զարգանալու համար, թույլ տալով մարդկանց տեսնելու թե ինչ "
+"խրվակ եք դուք օգտագործում"
+
+#: options/options-layouts/settings-general.php:228
+msgid ""
+"Please check this option on to help wpDiscuz get more popularity as your "
+"thank to the hard work we do for you totally free. This option adds a very "
+"small (16x16px) icon under the comment section which will allow your site "
+"visitors recognize the name of comment solution you use."
+msgstr ""
+"Խնդրում ենք միացրեք այս ընտրանքը որպեսզի օգնեք wpDiscuz-ին ավելի ճանաչելի "
+"դառնալու ճանապարհին"
+
+#: options/options-layouts/settings-general.php:233
+msgid "Thank you!"
+msgstr "Շնորհակալություն"
+
+#: options/options-layouts/settings-integrations.php:14
+msgid "BuddyPress"
+msgstr "BuddyPress"
+
+#: options/options-layouts/settings-integrations.php:15
+msgid "Users Ultra"
+msgstr "Users Ultra"
+
+#: options/options-layouts/settings-integrations.php:16
+msgid "User Pro"
+msgstr "User Pro"
+
+#: options/options-layouts/settings-integrations.php:17
+msgid "Ultimate Member"
+msgstr "Ultimate Member"
+
+#: options/options-layouts/settings-integrations.php:18
+msgid "MyCred"
+msgstr "MyCred"
+
+#: options/options-layouts/settings-live-update.php:12
+msgid "Live update options"
+msgstr "Ընթացիկ թարմացման ընտրանքներ"
+
+#: options/options-layouts/settings-live-update.php:13
+msgid ""
+"wpDiscuz 3 live update is very smart and doesn't overload your server even "
+"if you're on Shared hosting plan and even your website is very active. "
+"However we recommend to monitor your server resources if you're on a Shared "
+"hosting plan. There are some very weak hosting plans which may not be able "
+"to perform very frequently live update requests. If you found some issue you "
+"can set the option below 30 seconds or more."
+msgstr ""
+
+#: options/options-layouts/settings-live-update.php:18
+msgid "Never update"
+msgstr "Չթարմացնել"
+
+#: options/options-layouts/settings-live-update.php:20
+msgid "Turn off \"Live Update\" function"
+msgstr "Անջատել ընթացիկ թարմացումը"
+
+#: options/options-layouts/settings-live-update.php:22
+#: options/options-layouts/settings-subscription.php:34
+msgid "Show new comment/reply buttons to update manualy"
+msgstr ""
+"Ցույց տալ նոր մեկնաբանություն / պատասխան կոճակները ձեռքով թարմացնելու համար"
+
+#: options/options-layouts/settings-live-update.php:24
+msgid "Always check for new comments and show update buttons"
+msgstr "Միշտ ստուգել նոր մեկնաբանությունները եւ ցույց տալ թարմացման կոճակները"
+
+#: options/options-layouts/settings-live-update.php:26
+#: options/options-layouts/settings-subscription.php:38
+msgid "Always update"
+msgstr "Միշտ թարմացնել"
+
+#: options/options-layouts/settings-live-update.php:28
+msgid "Always check for new comments and update automatically"
+msgstr "Միշտ ստուգել նոր մեկնաբանությունները եւ թարմացնել ավտոմատ կերպով"
+
+#: options/options-layouts/settings-live-update.php:35
+msgid "Disable live update for guests"
+msgstr "Անջատել ընթացիկ թարմացումը հյուրերի համար"
+
+#: options/options-layouts/settings-live-update.php:43
+msgid "Update comment list every"
+msgstr "Թարմացնել մեկնաբանությունները ամեն"
+
+#: options/options-layouts/settings-live-update.php:48
+#: options/options-layouts/settings-live-update.php:49
+#: options/options-layouts/settings-live-update.php:50
+msgid "Seconds"
+msgstr "Վայրկյան"
+
+#: options/options-layouts/settings-live-update.php:51
+#: options/phrases-layouts/phrases-datetime.php:92
+msgid "Minute"
+msgstr "Րոպե"
+
+#: options/options-layouts/settings-show-hide.php:7
+msgid "Show/Hide Components"
+msgstr "Ցույց տալ / չտալ բաղադրիչներ"
+
+#: options/options-layouts/settings-show-hide.php:12
+msgid "Show logged-in user name and logout link on top of main form"
+msgstr ""
+"Ցույց տալ մուտք գործած օգտագործողների անունը և լոգաուտ լինկը ֆորմի վերևում"
+
+#: options/options-layouts/settings-show-hide.php:22
+msgid "Hide Reply button for Guests"
+msgstr "Թաքցնել պատասխանել կոճակը հյուրերի համար"
+
+#: options/options-layouts/settings-show-hide.php:32
+msgid "Hide Reply button for Members"
+msgstr "Թաքցնել պատասխանել կոճակը օգտատերերի համար"
+
+#: options/options-layouts/settings-show-hide.php:42
+msgid "Hide Commenter Labels"
+msgstr "Թաքցնել մեկնաբանողի պիտակները"
+
+#: options/options-layouts/settings-show-hide.php:52
+msgid "Hide Voting buttons"
+msgstr "Թաքցնել քվեարկելու կոճակները"
+
+#: options/options-layouts/settings-show-hide.php:62
+msgid "Show Share Buttons"
+msgstr "Ցուցադրել Կիսվելու կոճակները"
+
+#: options/options-layouts/settings-show-hide.php:86
+msgid ""
+"The plugin captcha directory is not writable! Please set writable "
+"permissions on \"wpdiscuz/utils/temp\" directory in order to use the first "
+"type of captcha generation"
+msgstr ""
+
+#: options/options-layouts/settings-show-hide.php:91
+msgid "Captcha generation type"
+msgstr "Captcha-ի գեներացման տեսակը"
+
+#: options/options-layouts/settings-show-hide.php:98
+msgid "use file system"
+msgstr "օգտագործել ֆայլային համակարգը"
+
+#: options/options-layouts/settings-show-hide.php:103
+msgid "use wordpress session"
+msgstr "օգտագործել Wordpress-ի  սեսիան (php session)"
+
+#: options/options-layouts/settings-show-hide.php:110
+msgid "Hide the CAPTCHA field for guests"
+msgstr "Թաքցնել CAPTCHA-ի դաշտը հյուրերի համար"
+
+#: options/options-layouts/settings-show-hide.php:120
+msgid "Show the CAPTCHA field for logged in users"
+msgstr "Ցուցադրել CAPTCHA-ի դաշտը մուտք գործած օգտատերերի համար"
+
+#: options/options-layouts/settings-show-hide.php:130
+msgid "Show the Website URL field"
+msgstr "Ցուցադրել վեբ-կայքի հղման դաշտը"
+
+#: options/options-layouts/settings-show-hide.php:140
+msgid "Hide header text"
+msgstr "Թաքցնել գլխագիր տեքստը"
+
+#: options/options-layouts/settings-show-hide.php:150
+msgid "Show sorting buttons"
+msgstr "Ցուցադրել տեսակավորման կոճակները"
+
+#: options/options-layouts/settings-show-hide.php:160
+msgid "Set comments ordering to \"Most voted\" by default "
+msgstr ""
+"Մեկնաբանությունների տեսակավորումը կատարել ըստ շատ քվեարկվածների լռելյայն"
+
+#: options/options-layouts/settings-show-hide.php:170
+msgid "Hide comment link"
+msgstr "Թաքցնել մեկնաբանության հղումը"
+
+#: options/options-layouts/settings-social.php:23
+#: options/options-layouts/settings-social.php:33
+#: options/options-layouts/settings-social.php:43
+#: options/options-layouts/settings-social.php:54
+msgid "Activate"
+msgstr "Գործունացնել"
+
+#: options/options-layouts/settings-social.php:27
+#: options/options-layouts/settings-social.php:37
+#: options/options-layouts/settings-social.php:47
+#: options/options-layouts/settings-social.php:58
+msgid "View details/Install"
+msgstr "Ցույց տալ մանրամասները/Տեղադրել"
+
+#: options/options-layouts/settings-social.php:92
+msgid ""
+"You can use one of these most popular Social Login Plugins to allow your "
+"visitors login and comment with Facebook, Twitter, Google+, Wordpress, VK, "
+"OK and lots of other social network service accounts. All social login "
+"buttons will be fully integrated with wpDiscuz comment forms."
+msgstr ""
+"Դուք կարող եք ընտրել այս սոց. ցանցի խրվակներից որևէ մեկը, որպեսզի Ձեր "
+"այցելուները կարողանան մուտք գործել և թողնել մեկնաբանություններ Facebook-ի, "
+"Twitter-ի, Google+-ի, Wordpress-ի, VK-ի, OK-ի և շատ այլ սոց. ցանցերի "
+"հաշիվներից: Բոլոր սոց. ցանցերի կոճակները ամբողջովին կինտեգրվեն wpDiscuz-ի "
+"մեկնաբանությունների ձևաչափի մեջ: "
+
+#: options/options-layouts/settings-style.php:7
+msgid "Background and Colors"
+msgstr "Ետին պլան և գույներ"
+
+#: options/options-layouts/settings-style.php:12
+msgid "Comment Form Background Color"
+msgstr "Մեկնաբանությունների ձևաչափի ետին պլանի գույնը"
+
+#: options/options-layouts/settings-style.php:16
+#: options/options-layouts/settings-style.php:25
+#: options/options-layouts/settings-style.php:34
+#: options/options-layouts/settings-style.php:43
+#: options/options-layouts/settings-style.php:52
+#: options/options-layouts/settings-style.php:61
+#: options/options-layouts/settings-style.php:70
+#: options/options-layouts/settings-style.php:79
+#: options/options-layouts/settings-style.php:92
+msgid "Example: #00FF00"
+msgstr "Օրինակ՝ #00FF00"
+
+#: options/options-layouts/settings-style.php:21
+msgid "Comment Background Color"
+msgstr "Մեկնաբանության ետին պլանի գույն"
+
+#: options/options-layouts/settings-style.php:30
+msgid "Reply Background Color"
+msgstr "Պատասխանի ետին պլանի գույն"
+
+#: options/options-layouts/settings-style.php:39
+msgid "Comment Text Color"
+msgstr "Մեկնաբանության տեքստի գույն"
+
+#: options/options-layouts/settings-style.php:48
+msgid "Vote, Reply, Share, Edit links text colors"
+msgstr "Քվեարկել, Պատասխանել, Կիսվել, Խմբագրել հղումների տեքստի գույնը"
+
+#: options/options-layouts/settings-style.php:57
+msgid "Comment form fields border color"
+msgstr "Մեկնաբանությունների ձևաչափի դաշտերի եզրագծի գույնը"
+
+#: options/options-layouts/settings-style.php:66
+msgid "New loaded comments' background color"
+msgstr "Նոր բեռնված մեկնաբանությունների ետին պլանի գույնը"
+
+#: options/options-layouts/settings-style.php:75
+msgid "Primary Color"
+msgstr "Առաջնային գույն"
+
+#: options/options-layouts/settings-style.php:89
+msgid "label color"
+msgstr "պիտակի գույն"
+
+#: options/options-layouts/settings-style.php:100
+msgid "Custom CSS Code"
+msgstr "Օգտատիրոջ CSS կոդ"
+
+#: options/options-layouts/settings-subscription.php:7
+msgid "Email Subscription Settings"
+msgstr "Էլ. փոստի բաժանորդագրման կարգավորումներ"
+
+#: options/options-layouts/settings-subscription.php:12
+msgid "Show comment subscription bar"
+msgstr "Ցուցադրել մեկնաբանության բաժանորդագրության դաշտը"
+
+#: options/options-layouts/settings-subscription.php:14
+msgid ""
+"This bar provides two subscription options: notify of \"new follow-up "
+"comments\" and \"new replies to my comments\""
+msgstr ""
+
+#: options/options-layouts/settings-subscription.php:21
+msgid "Disable subscription confirmation for registered users"
+msgstr "Անջատել բաժանորդագրության հաստատումը գրանցված օգտատերերի համար"
+
+#: options/options-layouts/settings-subscription.php:26
+msgid "Show subscription types in dropdown"
+msgstr "Ցուցադրել բաժանորդագրության տեսակները ընտրացուցակով"
+
+#: options/options-layouts/settings-subscription.php:30
+msgid "Both"
+msgstr "Երկուսն"
+
+#: options/options-layouts/settings-subscription.php:32
+msgid "Both post and all comments subscription"
+msgstr ""
+
+#: options/options-layouts/settings-subscription.php:36
+msgid "Post subscription"
+msgstr "Բաժանորդագրություն գրառմանը"
+
+#: options/options-layouts/settings-subscription.php:40
+msgid "All comments subscription"
+msgstr "Բաժանորդագրություն բոլոր մեկնաբանություններին"
+
+#: options/options-layouts/settings-subscription.php:47
+msgid "Show \"Notify of new replies to this comment\""
+msgstr "Ցուցադրել <<Ծանուցել այս մեկնաբանության նոր պատասխանների մասին>>"
+
+#: options/options-layouts/settings-subscription.php:49
+msgid ""
+"wpDiscuz is the only comment plugin which allows you to subscribe to certain "
+"comment replies. This option is located above [Post Comment] button in "
+"comment form. You can disable this subscription way by unchecking this "
+"option."
+msgstr ""
+
+#: options/options-layouts/settings-subscription.php:56
+msgid "\"Notify of new replies to this comment\" checked by default"
+msgstr "<<Ծանուցել այս մեկնաբանության նոր պատասխաններին>> ընտրված է լռելյայն"
+
+#: options/options-layouts/settings-subscription.php:63
+msgid "Use Postmatic for subscriptions and commenting by email"
+msgstr "Օգտագօրծեք Postmatic-ը բաժանորդագրման և էլ․փոստով մեկնաբանելու համար"
+
+#: options/options-layouts/settings-subscription.php:64
+msgid ""
+"Postmatic allows your users subscribe to comments. Instead of just being "
+"notified, they add a reply right from their inbox."
+msgstr ""
+"Postmatic-ը հնարավորություն է տալիս Ձեր օգտատերերին բաժանորդագրվել "
+"մեկնաբանություններին։ Ծանուցվելուց հետո նրանք կարող են պատասխանել դրանց հենց "
+"իրենց հաշիվներից"
+
+#: options/phrases-layouts/phrases-comment.php:7
+msgid "Comment Template Phrases"
+msgstr "Մեկնաբանության կաղապարի արտահայտություններ"
+
+#: options/phrases-layouts/phrases-comment.php:158
+msgid "Save edited comment button text"
+msgstr "Պահպանել կոճակի տեքստը(խմբագրման ժամանակ)"
+
+#: options/phrases-layouts/phrases-comment.php:168
+msgid "Cancel comment editing button text"
+msgstr "Չեղարկել կոճակի տեքստը(խմբագրման ժամանակ)"
+
+#: options/phrases-layouts/phrases-comment.php:178
+msgid "Comment read more link text"
+msgstr "Մեկնաբանության կարդալ ավելին հղման տեքստ"
+
+#: options/phrases-layouts/phrases-datetime.php:7
+msgid "Date/Time Phrases"
+msgstr "Ամսաթիվ/Ժամանակ Արտահայտություններ"
+
+#: options/phrases-layouts/phrases-datetime.php:12
+msgid "Year"
+msgstr "Տարի"
+
+#: options/phrases-layouts/phrases-datetime.php:22
+msgid "Years (Plural Form)"
+msgstr "Տարի(հոգնակի ձևաչափ)"
+
+#: options/phrases-layouts/phrases-datetime.php:26
+msgid "Years"
+msgstr "Տարի"
+
+#: options/phrases-layouts/phrases-datetime.php:32
+msgid "Month"
+msgstr "Ամիս"
+
+#: options/phrases-layouts/phrases-datetime.php:42
+msgid "Months (Plural Form)"
+msgstr "Ամիս(հոգնակի ձևաչափ)"
+
+#: options/phrases-layouts/phrases-datetime.php:52
+msgid "Day"
+msgstr "Օր"
+
+#: options/phrases-layouts/phrases-datetime.php:62
+msgid "Days (Plural Form)"
+msgstr "Օր(հոգնակի ձևաչափ)"
+
+#: options/phrases-layouts/phrases-datetime.php:82
+msgid "Hours (Plural Form)"
+msgstr "Ժամ(հոգնակի ձևաչափ)"
+
+#: options/phrases-layouts/phrases-datetime.php:102
+msgid "Minutes (Plural Form)"
+msgstr "Րոպե(հոգնակի ձևաչափ)"
+
+#: options/phrases-layouts/phrases-datetime.php:112
+msgid "Second"
+msgstr "Վայրկյան"
+
+#: options/phrases-layouts/phrases-datetime.php:122
+msgid "Seconds (Plural Form)"
+msgstr "Վայրկյան(հոգնակի ձևաչափ)"
+
+#: options/phrases-layouts/phrases-datetime.php:132
+msgid "Commented \"right now\" text"
+msgstr "Մեկնաբանաբանության <<հենց նոր>> տեքստը"
+
+#: options/phrases-layouts/phrases-datetime.php:142
+msgid "Ago text"
+msgstr "<<Առաջ>> տեքստը"
+
+#: options/phrases-layouts/phrases-datetime.php:152
+msgid "\"Today\" text"
+msgstr "<<Այսօր>> տեքստը"
+
+#: options/phrases-layouts/phrases-email.php:7
+msgid "Email Template Phrases"
+msgstr "Էլ․ փոստի տեսաձևի արտահայտություններ"
+
+#: options/phrases-layouts/phrases-email.php:12
+msgid "Email Subject"
+msgstr "Էլ․հաղորդագրության թեման"
+
+#: options/phrases-layouts/phrases-email.php:22
+msgid "Email Message"
+msgstr "Հաղորդագրություն էլ․փոստին"
+
+#: options/phrases-layouts/phrases-email.php:32
+msgid "New Reply Subject"
+msgstr "Նոր պատասխանի թեմա"
+
+#: options/phrases-layouts/phrases-email.php:42
+msgid "New Reply Message"
+msgstr "Նոր պատասխանի տեքստ"
+
+#: options/phrases-layouts/phrases-email.php:62
+#: options/phrases-layouts/phrases-email.php:66
+msgid "Ignore Subscription"
+msgstr "Անտեսել բաժանորդագրությունները"
+
+#: options/phrases-layouts/phrases-email.php:92
+msgid "Subscribe Confirmation Email Subject"
+msgstr "Բաժանորդագրման հաստատման էլ․հաղորդագրության թեման"
+
+#: options/phrases-layouts/phrases-email.php:102
+msgid "Subscribe Confirmation Email Content"
+msgstr "Բաժանորդագրման հաստատման հաղորդագրություն էլ․փոստին"
+
+#: options/phrases-layouts/phrases-form.php:7
+msgid "Form Template Phrases"
+msgstr "Ձևաչափի տեսաձևի արտահայտություններ"
+
+#: options/phrases-layouts/phrases-form.php:12
+msgid "Comment Field Start"
+msgstr "Քննարկում սկսելու դաշտ"
+
+#: options/phrases-layouts/phrases-form.php:22
+msgid "Comment Field Join"
+msgstr "Քննարկմանը միանալու դաշտ"
+
+#: options/phrases-layouts/phrases-form.php:32
+msgid "Email Field"
+msgstr "Էլ. փոստի դաշտ"
+
+#: options/phrases-layouts/phrases-form.php:42
+msgid "Name Field"
+msgstr "Անվան դաշտ"
+
+#: options/phrases-layouts/phrases-form.php:52
+msgid "WebSite URL Field"
+msgstr "Վեբ-կայքի հղման դաշտ"
+
+#: options/phrases-layouts/phrases-form.php:62
+msgid "CAPTCHA Field"
+msgstr "CAPTCHA-ի դաշտ"
+
+#: options/phrases-layouts/phrases-form.php:72
+msgid "Submit Button"
+msgstr "Հաստատման կոճակ"
+
+#: options/phrases-layouts/phrases-form.php:92
+msgid "Notify on new comments"
+msgstr "Ծանուցել նոր մեկնաբանությունների մասին"
+
+#: options/phrases-layouts/phrases-form.php:102
+msgid "Notify on all new replies"
+msgstr "Ծանուցել բոլոր նոր պատասխանների մասին"
+
+#: options/phrases-layouts/phrases-form.php:106
+msgid "new replies to all my comments"
+msgstr "իմ բոլոր մեկնաբանությունների պատասխանների մասին"
+
+#: options/phrases-layouts/phrases-form.php:112
+msgid "Notify on new replies (checkbox)"
+msgstr "Ծանուցել նոր պատասխանների մասին  (checkbox)"
+
+#: options/phrases-layouts/phrases-form.php:162
+msgid "Subscribed on this comment replies"
+msgstr "Բաժանորդագրված եք այս մեկնաբանության նոր պատասխաններին"
+
+#: options/phrases-layouts/phrases-form.php:172
+msgid "Subscribed on all your comments replies"
+msgstr "Բաժանորդագրված եք Ձեր բոլոր մեկնաբանությունների նոր պատասխաններին"
+
+#: options/phrases-layouts/phrases-form.php:182
+msgid "Subscribed on this post"
+msgstr "Բաժանորդագրված եք այս գրառմանը"
+
+#: options/phrases-layouts/phrases-general.php:7
+msgid "General Phrases"
+msgstr "Գլխավոր արտահայտություններ"
+
+#: options/phrases-layouts/phrases-general.php:22
+msgid "Be the first to comment"
+msgstr "Եղեք առաջին մեկնաբանողը"
+
+#: options/phrases-layouts/phrases-general.php:42
+msgid "Comment (Plural Form)"
+msgstr "Մեկնաբանություն(հոգնակի ձևաչափ)"
+
+#: options/phrases-layouts/phrases-general.php:52
+msgid "On"
+msgstr ""
+
+#: options/phrases-layouts/phrases-general.php:62
+msgid "Load More Button"
+msgstr "Բեռնել ավելին կոճակ"
+
+#: options/phrases-layouts/phrases-general.php:82
+msgid "Button text if has new comment"
+msgstr "Կոճակի տեքստը, եթե կան նոր մեկնաբանություններ"
+
+#: options/phrases-layouts/phrases-general.php:92
+msgid "Button text if has new comments (Plural Form)"
+msgstr "Կոճակի տեքստը, եթե կան նոր մեկնաբանություններ(հոգնակի ձևաչափ)"
+
+#: options/phrases-layouts/phrases-general.php:96
+msgid "New Comments"
+msgstr "Նոր մեկնաբանություններ"
+
+#: options/phrases-layouts/phrases-general.php:102
+msgid "Button text if has new reply"
+msgstr "Կոճակի տեքստը, եթե կան նոր պատասխաններ"
+
+#: options/phrases-layouts/phrases-general.php:112
+msgid "Button text if has new replies (Plural Form)"
+msgstr "Կոճակի տեքստը, եթե կան նոր պատասխաններ(հոգնակի ձևաչափ)"
+
+#: options/phrases-layouts/phrases-general.php:116
+msgid "New Replies"
+msgstr "Նոր պատասխաններ"
+
+#: options/phrases-layouts/phrases-general.php:122
+msgid "Text on load more button if has new comment(s)"
+msgstr "Ցուցադրել ավելին կոճակի տեքստը, եթե կան նոր մեկնաբանություններ"
+
+#: options/phrases-layouts/phrases-notification.php:7
+msgid "Notification Phrases"
+msgstr "Ծանուցման արտահայտւթյուններ"
+
+#: options/phrases-layouts/phrases-notification.php:12
+msgid "You\\'re subscribed to"
+msgstr "Դուք բաժանորդագրված եք"
+
+#: options/phrases-layouts/phrases-notification.php:43
+msgid "Postmatic subscription label"
+msgstr "Postmatic բաժանորդագրության պիտակ"
+
+#: options/phrases-layouts/phrases-notification.php:54
+msgid "Error message for empty field"
+msgstr "Դատարկ դաշտի սխալի հաղորդագրություն"
+
+#: options/phrases-layouts/phrases-notification.php:64
+msgid "Error message for invalid email field"
+msgstr "Անվավեր էլ․փոստի դաշտի սխալի հաղորդագրություն"
+
+#: options/phrases-layouts/phrases-notification.php:74
+msgid "Error message for invalid website url field"
+msgstr "Անվավեր վեբ-կայքի հղման դաշտի սխալի հաղորդագրություն"
+
+#: options/phrases-layouts/phrases-notification.php:94
+msgid "Logged in as"
+msgstr "Մուտք գործած որպես"
+
+#: options/phrases-layouts/phrases-notification.php:114
+msgid "Logged In"
+msgstr "Մուտք գործած"
+
+#: options/phrases-layouts/phrases-notification.php:124
+msgid "To post a comment"
+msgstr "Մեկնաբանություն գրառելու"
+
+#: options/phrases-layouts/phrases-notification.php:144
+msgid "You can vote only 1 time"
+msgstr "Դուք կարող եք քվեարկել միայն մեկ անգամ"
+
+#: options/phrases-layouts/phrases-notification.php:164
+msgid "Login To Vote"
+msgstr "Մուտք գործեք քվեարկելու համար"
+
+#: options/phrases-layouts/phrases-notification.php:174
+msgid "You Cannot Vote On Your Comment"
+msgstr "Դուք չեք կարող քվեարկել Ձեր մեկնաբանության օգտին"
+
+#: options/phrases-layouts/phrases-notification.php:184
+msgid "You are not allowed to vote for this comment (Voting from same IP)"
+msgstr ""
+"Դուք չեք կարող քվեարկել այս մեկնաբանության համար(քվեարվել է նույն IP-ից)"
+
+#: options/phrases-layouts/phrases-notification.php:214
+msgid "Comment waiting moderation"
+msgstr "Մեկնաբանությունը սպասում է խմբագրման"
+
+#: options/phrases-layouts/phrases-notification.php:224
+msgid "Message if input text length is too short"
+msgstr "Հաղորդագրություն, եթե ներմուծված տեքստի երկարությունը շատ կարճ է"
+
+#: options/phrases-layouts/phrases-notification.php:234
+msgid "Message if input text length is too long"
+msgstr "Հաղորդագրություն, եթե ներմուծված տեքստի երկարությունը շատ երկար է"
+
+#: options/phrases-layouts/phrases-notification.php:245
+msgid "Message if comment was not updated"
+msgstr "Հաղորդագրություն, եթե մեկնաբանությունը չի թարմացվել"
+
+#: options/phrases-layouts/phrases-notification.php:255
+msgid "Message if comment no longer possible to edit"
+msgstr "Հաղորդագրություն, եթե մեկնաբանությունը հնարավոր չէ խմբագրել"
+
+#: options/phrases-layouts/phrases-notification.php:265
+msgid "Message if comment text not changed"
+msgstr "Հաղորդագրություն, եթե մեկնաբանությունը չի փոփոխվել"
+
+#: options/phrases-layouts/phrases-notification.php:269
+msgid "TYou've not made any changes"
+msgstr "Դուք չեք կատարել փոփոխություններ"
+
+#: templates/comment/comment-form.php:56
+msgid "Unable to send an email"
+msgstr "Անհնար է ուղարկել նամակ"
+
+#: templates/comment/comment-form.php:58
+msgid "Subscription not successed"
+msgstr "Բաժանորդագրությունը չի հաջողվել"
+
+#: templates/comment/comment-form.php:253
+#: templates/comment/comment-form.php:261
+msgid "wpDiscuz"
+msgstr "wpDiscuz"
+
+#: utils/class.WpdiscuzHelper.php:56
+msgid "Cannot create image file"
+msgstr "Հնարավոր չէ ստեղծել պատկերի ֆայլ"
+
+#: utils/class.WpdiscuzHelper.php:57
+msgid "Permission denied for file creation"
+msgstr "Ֆայլի ստեղծման թույլտվությունը մերժված է"
+
+#: utils/class.WpdiscuzHelper.php:58
+msgid "PHP GD2 library is disabled"
+msgstr "PHP GD2 գրադարանը անջատված է"
+
+#: utils/class.WpdiscuzHelper.php:59
+msgid "PNG image creation disabled"
+msgstr "PNG պատկերի ստեղծումը արգելված է"
+
+#~ msgid "Display comment form for post types:"
+#~ msgstr "Միացնել մեկնաբանությունները այս տիպերի համար"
+
+#~ msgid "User Must be registered to comment"
+#~ msgstr "Մեկնաբանություն թողնելու համար գրանցվելը պարտադիր է"
+
+#~ msgid "Yes"
+#~ msgstr "Այո"
+
+#~ msgid "No"
+#~ msgstr "Ոչ"
+
+#~ msgid "Show the latest comments on"
+#~ msgstr "Ցույց տալ վերջին մեկնաբանությունները"
+
+#~ msgid "the top of the list"
+#~ msgstr "վերևում"
+
+#~ msgid "top of the threads"
+#~ msgstr "վերևում"
+
+#~ msgid "bottom of the threads"
+#~ msgstr "ներքևում"
+
+#~ msgid "the bottom of the list"
+#~ msgstr "ներքևում"
+
+#~ msgid "Comment Threads Per Page"
+#~ msgstr "Գլխավոր մեկնաբանությունների քանակը "
+
+#~ msgid "Comments max depth"
+#~ msgstr "Մեկնաբանությունների խորությունը"
+
+#~ msgid "Level"
+#~ msgstr "Մակարդակ"
+
+#~ msgid "Levels"
+#~ msgstr "Մակարդակներ"
+
+#~ msgid "Not Allow"
+#~ msgstr "Չթույլատրել"
+
+#~ msgid ""
+#~ "Load rest of all comments on clicking the [Load More Comments] button"
+#~ msgstr "Ցույց տալ բոլոր մեկնաբանությունները"
+
+#~ msgid ""
+#~ "If you use Shared Web Hosting you should make sure the \"Live Update\" "
+#~ "function doesn't overload your server resources. This function is good "
+#~ "for VPS and Dedicated Hosting Plans."
+#~ msgstr ""
+#~ "Եթե դուք օգտագործում եք Shared Վեբ Հոսթինգ դուք պետք է համոզվեք, որ  "
+#~ "\"Live Update \" օպցիան չի ծանրաբեռնել ձեր սերվերի ռեսուրսները. Այս "
+#~ "օպցաին լավ է VPS սերվերների համար."
+
+#~ msgid "Hide Author Titles"
+#~ msgstr "Թաքցնել օգտատիրոջ խմբի անունը"
+
+#~ msgid "Hide Share Buttons"
+#~ msgstr "Թաքցնել կիսվելու կոճակները"
+
+#~ msgid "Hide the  CAPTCHA field"
+#~ msgstr "Թաքցնել CAPTCHA-ի դաշտը"
+
+#~ msgid "Hide the Website URL field"
+#~ msgstr "Թաքցնել վեբ-կայքի հղման դաշտը"
+
+#~ msgid "Example: #00ff00"
+#~ msgstr "Օրինակ՝ #00FF00"
+
+#~ msgid "Author title color"
+#~ msgstr "Օգտատիրոջ խմբի անվան գույնը"
+
+#~ msgid "Show \"Notify of all new follow-up comments\""
+#~ msgstr "Ցուցադրել <<Ծանուցել բոլոր մեկնաբանությունների մասին(գրառման տակ)>>"
+
+#~ msgid "Show \"Notify of new replies to all my comments\""
+#~ msgstr ""
+#~ "Ցուցադրել <<Ծանուցել իմ մեկնաբանությունների նոր պատասխանների մասին>>"
+
+#~ msgid ""
+#~ "Please keep all three or at least one of those options ON, otherwise "
+#~ "users will not have any option for email notifications and they'll not "
+#~ "get any messages."
+#~ msgstr ""
+#~ "Խմդրում ենք ընտրեք բոլոր երեք ընտրանքները կամ դրանցից մեկը, այլապես "
+#~ "օգտատերերը չեն ունենա որևէ ընտրանք էլ․ փոստի ծանուցումների համար և չեն "
+#~ "ստանա ոչ մի հաղորդագրություն"
+
+#~ msgid ""
+#~ "Keep selected the email notification of all new follow-up comments by "
+#~ "default"
+#~ msgstr ""
+#~ "Լռելյայն միացնել էլ․ փոստի ծանուցումները նոր մեկնաբանությունների համար"
+
+#~ msgid ""
+#~ "If this option is checked-on, in Manage Subscriptions section of comment "
+#~ "forms will only be displayed the \"Notify of all new follow-up comments\" "
+#~ "option and this option will always be selected by default."
+#~ msgstr ""
+#~ "Եթե այս ընտրանքը ընտրված է, ապա մեկնաբանությունների ձևաչափի Կառավարել "
+#~ "բաժանորդագրությունները բաժնում ցույց կտրվի միայն <<Ծանուցել բոլոր նոր "
+#~ "մեկնաբանությունների ժամանակ>> ընտրանքը և այս ընտրանքը միշտ կլինի ըտրված"
+
+#~ msgid "Manage Subscriptions"
+#~ msgstr "Կառավարել բաժանորդագրությունները"
+
+#~ msgid "Notify \"None\""
+#~ msgstr "Ծանուցել <<Ոչինչ>>"
+
+#~ msgid "None"
+#~ msgstr "Ոչինչ"
+
+#~ msgid "Notify of all new follow-up comments"
+#~ msgstr "Ծանուցել բոլոր նոր մեկնաբանությունների ժամանակ"
+
+#~ msgid "Notify of new replies to all my comments"
+#~ msgstr "Ծանուցել իմ բոլոր մեկնաբանությունների նոր պատասխանների մասին"
+
+#~ msgid "General settings"
+#~ msgstr "Գլխավոր կարգավորումներ"
+
+#~ msgid "Email Subscription"
+#~ msgstr "Էլ. փոստի բաժանորդագրություն"
+
+#~ msgid "WpDiscuz Front-end Phrases"
+#~ msgstr "WpDiscuz-ի դիմամասի արտահայտություններ"

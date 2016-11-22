@@ -1,0 +1,1608 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n"
+"%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"Project-Id-Version: wpDiscuz - supercharged native comments\n"
+"POT-Creation-Date: 2016-09-25 15:15-0500\n"
+"PO-Revision-Date: 2016-10-17 14:19-0500\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: class.WpdiscuzCore.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: ar\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: class.WpdiscuzCore.php:889 options/options-layouts/settings-social.php:40
+#: options/options-layouts/settings-social.php:42
+#: options/options-layouts/settings-social.php:44
+#: options/options-layouts/settings-social.php:46
+msgid "Settings"
+msgstr "إعدادات"
+
+#: class.WpdiscuzCore.php:891
+msgid "Phrases"
+msgstr "الجمل"
+
+#: class.WpdiscuzCore.php:932 options/phrases-layouts/phrases-comment.php:116
+msgid "Admin"
+msgstr "المدير"
+
+#: class.WpdiscuzCore.php:934 class.WpdiscuzCore.php:943
+#: options/phrases-layouts/phrases-comment.php:118
+msgid "Author"
+msgstr "الكاتب"
+
+#: class.WpdiscuzCore.php:938 options/phrases-layouts/phrases-comment.php:124
+msgid "Member"
+msgstr "عضو"
+
+#: class.WpdiscuzCore.php:944 options/phrases-layouts/phrases-comment.php:122
+msgid "Guest"
+msgstr "ضيف"
+
+#: options/class.WpdiscuzOptions.php:30 options/class.WpdiscuzOptions.php:103
+#: options/class.WpdiscuzOptions.php:223
+msgid "Hacker?"
+msgstr "متسلل؟"
+
+#: options/class.WpdiscuzOptions.php:258
+msgid ""
+"Brings an ocean of emotions to your comments. It comes with an awesome smile "
+"package."
+msgstr ""
+"أحضر أنواع الرموز التعبيرية إلى تعليقاتك, تأتي مع حزمة كاملة من الرموز التعبيرية "
+"المميزة."
+
+#: options/class.WpdiscuzOptions.php:259
+msgid ""
+"Comment reporting tools. Auto-moderates comments based on number of flags and "
+"dislikes."
+msgstr ""
+"أداة التبيلغ عن التعليقات. أداة تلقائية لإدارة التعليقات بناء على عدد التبيلغات "
+"والتصويات."
+
+#: options/class.WpdiscuzOptions.php:260
+msgid ""
+"Adds a smart and intuitive AJAX \"Translate\" button with 60 language options. "
+"Uses free translation API."
+msgstr ""
+"إضافة ذكية باستخدام AJAX لزر “ترجمة” للتعليقات لـ ٦٠ لغة بإمكانك الاختيار منها. "
+"تستخدم هذه الإضافة الترجمات المجانية عبر الـ API."
+
+#: options/class.WpdiscuzOptions.php:261
+msgid ""
+"AJAX powered front-end comment search. It starts searching while you type search "
+"words. "
+msgstr ""
+"بحث متطور باستخدام الـ AJAX, يقوم بالبدء بالبحث في التعليقات أثناء كتابتك لكلمة "
+"البحث."
+
+#: options/class.WpdiscuzOptions.php:262
+msgid ""
+"Most voted comments, Active comment threads, Most commented posts, Active "
+"comment authors"
+msgstr ""
+"أكثر التعليقات تصويتاً, المواضيع ذات التعليقات النشطة, أكثر المواضيع تعليقاً, "
+"المعلّقين النشطين"
+
+#: options/class.WpdiscuzOptions.php:263
+msgid ""
+"All in one powerful yet simple admin toolkit to moderate comments on front-end."
+msgstr ""
+"مجموعة أدوات متطورة وبسيطة في نفس الوقت للمسؤول للإشراف على التعليقات واعتمادها "
+"من خلال التدوينة نفسها."
+
+#: options/class.WpdiscuzOptions.php:264
+msgid ""
+"Extended comment attachment system. Allows to upload images, videos, audios and "
+"other file types."
+msgstr ""
+"النظام الموسّع الخاصة بمرفقات التعليقات. قم بالسماح بإرفاق الصور والفيديو والصوت "
+"وأنواع أخرى من الملفات."
+
+#: options/class.WpdiscuzOptions.php:265
+msgid ""
+"Adds No CAPTCHA on all comment forms. Stops spam and bot comments with Google "
+"reCAPTCHA"
+msgstr ""
+"لا تقم بإضافة رمز التحقق على جميع استمارات التعليق. قم بإيقاف التعليقات المزعجة "
+"والتعليقات التلقائية من خلال reCAPTCHA الخاص بجوجل"
+
+#: options/class.WpdiscuzOptions.php:266
+msgid ""
+"Integrates myCRED Badges and Ranks. Converts wpDiscuz comment votes/likes to "
+"myCRED points. "
+msgstr ""
+"دمج الشارات والمرتبات الخاصة بـ myCRED. قم بتحويل التعليقات الخاصة بـ wpDiscuz "
+"من نظام التصويت والإعجاب إلى نظام النقاط الخاص بـ‫ myCRED."
+
+#: options/class.WpdiscuzOptions.php:267
+msgid ""
+"Allows censoring comment words. Filters comments and replaces those phrases with "
+"custom words."
+msgstr ""
+"السماح بفرض رقابة على كلمات التعليقات. قم بفلترة التعليقات, واستبدال هذه "
+"العبارات بكلمات أخرى من اختيارك."
+
+#: options/class.WpdiscuzOptions.php:279
+msgid "New Addons are available for wpDiscuz Comments Plugin"
+msgstr "إضافات مساندة جديدة متوفرة لإضافة wpDiscuz الخاصة بالتعليقات"
+
+#: options/class.WpdiscuzOptions.php:286 options/class.WpdiscuzOptions.php:292
+msgid "Go to wpDiscuz Addons subMenu"
+msgstr "قم بالتوجه إلى القائمة الفرعية للإضافات المساندة لـ wpDiscuz"
+
+#: options/class.WpdiscuzOptionsSerialized.php:568
+#: options/phrases-layouts/phrases-general.php:12
+msgid "Leave a Reply"
+msgstr "اترك تعليق"
+
+#: options/class.WpdiscuzOptionsSerialized.php:569
+msgid "Be the First to Comment!"
+msgstr "كن أوّل من يعلّق"
+
+#: options/class.WpdiscuzOptionsSerialized.php:570 options/html-phrases.php:22
+#: options/phrases-layouts/phrases-general.php:32
+msgid "Comment"
+msgstr "تعليق"
+
+#: options/class.WpdiscuzOptionsSerialized.php:571
+msgid "Comments"
+msgstr "تعليقات"
+
+#: options/class.WpdiscuzOptionsSerialized.php:572
+msgid "on"
+msgstr "على"
+
+#: options/class.WpdiscuzOptionsSerialized.php:573
+msgid "Start the discussion"
+msgstr "كن أول من يعلّق على هذا الموضوع"
+
+#: options/class.WpdiscuzOptionsSerialized.php:574
+msgid "Join the discussion"
+msgstr "ضع تعليقك هنا"
+
+#: options/class.WpdiscuzOptionsSerialized.php:575 options/html-phrases.php:24
+msgid "Email"
+msgstr "البريد الالكتروني"
+
+#: options/class.WpdiscuzOptionsSerialized.php:576
+msgid "Name"
+msgstr "الاسم"
+
+#: options/class.WpdiscuzOptionsSerialized.php:577
+msgid "WebSite URL"
+msgstr "رابط الموقع"
+
+#: options/class.WpdiscuzOptionsSerialized.php:578
+msgid "Please insert the code above to comment"
+msgstr "قم بكتابة الكود في أعلى التعليق"
+
+#: options/class.WpdiscuzOptionsSerialized.php:579
+msgid "Post Comment"
+msgstr "أرسل ‫‫التعليق"
+
+#: options/class.WpdiscuzOptionsSerialized.php:580
+#: options/phrases-layouts/phrases-form.php:82
+#: options/phrases-layouts/phrases-form.php:86
+msgid "Notify of"
+msgstr "نبّهني عن"
+
+#: options/class.WpdiscuzOptionsSerialized.php:581
+#: options/phrases-layouts/phrases-form.php:96
+msgid "new follow-up comments"
+msgstr "التعليقات الجديدة"
+
+#: options/class.WpdiscuzOptionsSerialized.php:582
+msgid "new replies to my comments"
+msgstr "الردود على تعليقاتي"
+
+#: options/class.WpdiscuzOptionsSerialized.php:583
+#: options/phrases-layouts/phrases-form.php:116
+msgid "Notify of new replies to this comment"
+msgstr "نبهني عن الردود على هذا التعليق"
+
+#: options/class.WpdiscuzOptionsSerialized.php:584
+#: options/phrases-layouts/phrases-form.php:122
+#: options/phrases-layouts/phrases-form.php:126
+msgid "Sort by"
+msgstr "فرز بواسطة"
+
+#: options/class.WpdiscuzOptionsSerialized.php:585
+#: options/phrases-layouts/phrases-form.php:132
+#: options/phrases-layouts/phrases-form.php:136
+msgid "newest"
+msgstr "الأحدث"
+
+#: options/class.WpdiscuzOptionsSerialized.php:586
+#: options/phrases-layouts/phrases-form.php:142
+#: options/phrases-layouts/phrases-form.php:146
+msgid "oldest"
+msgstr "الأقدم"
+
+#: options/class.WpdiscuzOptionsSerialized.php:587
+#: options/phrases-layouts/phrases-form.php:152
+#: options/phrases-layouts/phrases-form.php:156
+msgid "most voted"
+msgstr "الأكثر تصويتاً"
+
+#: options/class.WpdiscuzOptionsSerialized.php:588
+msgid "Load More Comments"
+msgstr "حمّل المزيد من التعليقات"
+
+#: options/class.WpdiscuzOptionsSerialized.php:589
+#: options/phrases-layouts/phrases-general.php:72
+msgid "Load Rest of Comments"
+msgstr "حمّل بقيّة التعليقات"
+
+#: options/class.WpdiscuzOptionsSerialized.php:590
+#: options/phrases-layouts/phrases-comment.php:12
+msgid "Reply"
+msgstr "رد"
+
+#: options/class.WpdiscuzOptionsSerialized.php:591
+#: options/phrases-layouts/phrases-comment.php:22
+msgid "Share"
+msgstr "نشر"
+
+#: options/class.WpdiscuzOptionsSerialized.php:592
+#: options/phrases-layouts/phrases-comment.php:32
+msgid "Edit"
+msgstr "تعديل"
+
+#: options/class.WpdiscuzOptionsSerialized.php:593
+#: options/phrases-layouts/phrases-comment.php:42
+msgid "Share On Facebook"
+msgstr "نشر على الفيسبوك"
+
+#: options/class.WpdiscuzOptionsSerialized.php:594
+#: options/phrases-layouts/phrases-comment.php:52
+msgid "Share On Twitter"
+msgstr "نشر على التويتر"
+
+#: options/class.WpdiscuzOptionsSerialized.php:595
+#: options/phrases-layouts/phrases-comment.php:62
+msgid "Share On Google"
+msgstr "نشر على جوجل"
+
+#: options/class.WpdiscuzOptionsSerialized.php:596
+#: options/phrases-layouts/phrases-comment.php:72
+msgid "Share On VKontakte"
+msgstr "المشاركة على VKontakte"
+
+#: options/class.WpdiscuzOptionsSerialized.php:597
+#: options/phrases-layouts/phrases-comment.php:82
+msgid "Share On Odnoklassniki"
+msgstr "المشاركة على Odnoklassniki"
+
+#: options/class.WpdiscuzOptionsSerialized.php:598
+#: options/phrases-layouts/phrases-comment.php:92
+msgid "Hide Replies"
+msgstr "إخفاء الردود"
+
+#: options/class.WpdiscuzOptionsSerialized.php:599
+#: options/phrases-layouts/phrases-comment.php:102
+msgid "Show Replies"
+msgstr "عرض الردود"
+
+#: options/class.WpdiscuzOptionsSerialized.php:600
+#: options/phrases-layouts/phrases-general.php:86
+msgid "New Comment"
+msgstr "تعليق جديد"
+
+#: options/class.WpdiscuzOptionsSerialized.php:601
+msgid "New comment on the discussion section you've been interested in"
+msgstr "يوجد تعليق جديد على الموضوع الذي اشتركت فيه"
+
+#: options/class.WpdiscuzOptionsSerialized.php:602
+#: options/phrases-layouts/phrases-email.php:36
+#: options/phrases-layouts/phrases-general.php:106
+#: utils/class.WpdiscuzEmailHelper.php:154
+msgid "New Reply"
+msgstr "رد جديد"
+
+#: options/class.WpdiscuzOptionsSerialized.php:603
+#: utils/class.WpdiscuzEmailHelper.php:155
+msgid "New reply on the discussion section you've been interested in"
+msgstr "يوجد رد جديد على الموضوع الذي اشتركت فيه"
+
+#: options/class.WpdiscuzOptionsSerialized.php:604
+msgid "You're subscribed for new replies on this comment"
+msgstr "تم الاشتراك في التنبيهات للردود الجديدة على هذا التعليق"
+
+#: options/class.WpdiscuzOptionsSerialized.php:605
+msgid "You're subscribed for new replies on all your comments"
+msgstr "تم الاشتراك في التنبيهات للردود الجديدة على جميع تعليقاتك"
+
+#: options/class.WpdiscuzOptionsSerialized.php:606
+msgid "You're subscribed for new follow-up comments on this post"
+msgstr "تم الاشتراك في التنبيهات للتعليقات الجديدة على هذا الموضوع"
+
+#: options/class.WpdiscuzOptionsSerialized.php:607
+#: options/phrases-layouts/phrases-email.php:52
+#: options/phrases-layouts/phrases-email.php:56
+msgid "Unsubscribe"
+msgstr "إلغاء الاشتراك"
+
+#: options/class.WpdiscuzOptionsSerialized.php:608
+#: options/phrases-layouts/phrases-email.php:66
+msgid "Cancel subscription"
+msgstr "إلغاء التنبيهات"
+
+#: options/class.WpdiscuzOptionsSerialized.php:609
+#: options/phrases-layouts/phrases-notification.php:32
+msgid "You've successfully unsubscribed."
+msgstr "تم بنجاح إلغاء الاشتراك في التنبيهات"
+
+#: options/class.WpdiscuzOptionsSerialized.php:610
+#: options/phrases-layouts/phrases-notification.php:22
+msgid "You've successfully subscribed."
+msgstr "تم بنجاح الاشتراك في التنبيهات"
+
+#: options/class.WpdiscuzOptionsSerialized.php:611
+#: options/phrases-layouts/phrases-email.php:72
+#: options/phrases-layouts/phrases-email.php:76
+msgid "Confirm your subscription"
+msgstr "تأكيد الاشتراك"
+
+#: options/class.WpdiscuzOptionsSerialized.php:612
+#: options/phrases-layouts/phrases-email.php:82
+#: options/phrases-layouts/phrases-email.php:86
+msgid "You've successfully confirmed your subscription."
+msgstr "تم بنجاح تأكيد الاشتراك في التنبيهات"
+
+#: options/class.WpdiscuzOptionsSerialized.php:613
+#: options/phrases-layouts/phrases-email.php:96
+#: utils/class.WpdiscuzEmailHelper.php:47
+msgid "Subscribe Confirmation"
+msgstr "تأكيد الاشتراك"
+
+#: options/class.WpdiscuzOptionsSerialized.php:614
+#: options/phrases-layouts/phrases-email.php:106
+#: utils/class.WpdiscuzEmailHelper.php:48
+msgid ""
+"Hi, <br/> You just subscribed for new comments on our website. This means you "
+"will receive an email when new comments are posted according to subscription "
+"option you've chosen. <br/> To activate, click confirm below. If you believe "
+"this is an error, ignore this message and we'll never bother you again."
+msgstr ""
+"مرحباً بك,<br />‬\n"
+"‫شكراً لاشتراكك في خدمة التنبيهات, سيتم إرسال رسالة لتنبيهك عند وصول تعليق جديد "
+"حسب الاختيار الذي قمتَ بتحديده.‬\n"
+"‫لتأكيد الاشتراك, فضلاً قم بالضغط على هذا الرابط."
+
+#: options/class.WpdiscuzOptionsSerialized.php:615
+msgid "please fill out this field to comment"
+msgstr "قم بتعبئة الفراغات التالية للتعليق"
+
+#: options/class.WpdiscuzOptionsSerialized.php:616
+msgid "email address is invalid"
+msgstr "البريد الالكتروني غير صحيح"
+
+#: options/class.WpdiscuzOptionsSerialized.php:617
+msgid "url is invalid"
+msgstr "رابط الموقع غير صحيح"
+
+#: options/class.WpdiscuzOptionsSerialized.php:618
+msgid "year"
+msgstr "سنة"
+
+#: options/class.WpdiscuzOptionsSerialized.php:619
+msgid "years"
+msgstr "سنوات"
+
+#: options/class.WpdiscuzOptionsSerialized.php:620
+msgid "month"
+msgstr "شهر"
+
+#: options/class.WpdiscuzOptionsSerialized.php:621
+msgid "months"
+msgstr "شهور"
+
+#: options/class.WpdiscuzOptionsSerialized.php:622
+msgid "day"
+msgstr "يوم"
+
+#: options/class.WpdiscuzOptionsSerialized.php:623
+msgid "days"
+msgstr "أيام"
+
+#: options/class.WpdiscuzOptionsSerialized.php:624
+msgid "hour"
+msgstr "ساعة"
+
+#: options/class.WpdiscuzOptionsSerialized.php:625
+msgid "hours"
+msgstr "ساعة"
+
+#: options/class.WpdiscuzOptionsSerialized.php:626
+msgid "minute"
+msgstr "دقيقة"
+
+#: options/class.WpdiscuzOptionsSerialized.php:627
+msgid "minutes"
+msgstr "دقيقة"
+
+#: options/class.WpdiscuzOptionsSerialized.php:628
+msgid "second"
+msgstr "ثانية"
+
+#: options/class.WpdiscuzOptionsSerialized.php:629
+msgid "seconds"
+msgstr "ثانية"
+
+#: options/class.WpdiscuzOptionsSerialized.php:630
+msgid "right now"
+msgstr "الآن"
+
+#: options/class.WpdiscuzOptionsSerialized.php:631
+msgid "ago"
+msgstr " "
+
+#: options/class.WpdiscuzOptionsSerialized.php:632
+#: options/phrases-layouts/phrases-datetime.php:156
+msgid "Today"
+msgstr "اليوم"
+
+#: options/class.WpdiscuzOptionsSerialized.php:633
+#: options/phrases-layouts/phrases-notification.php:84
+msgid "You must be"
+msgstr "يجب أن تكون"
+
+#: options/class.WpdiscuzOptionsSerialized.php:634
+msgid "You are logged in as"
+msgstr "تم تسجيل دخولك باسم"
+
+#: options/class.WpdiscuzOptionsSerialized.php:635
+#: options/phrases-layouts/phrases-notification.php:104
+msgid "Log out"
+msgstr "تسجيل الخروج"
+
+#: options/class.WpdiscuzOptionsSerialized.php:636
+msgid "logged in"
+msgstr "مسجل دخول"
+
+#: options/class.WpdiscuzOptionsSerialized.php:637
+msgid "to post a comment."
+msgstr "لإضافة تعليق"
+
+#: options/class.WpdiscuzOptionsSerialized.php:638
+#: options/phrases-layouts/phrases-comment.php:138
+msgid "Vote Up"
+msgstr "أعجبني"
+
+#: options/class.WpdiscuzOptionsSerialized.php:639
+#: options/phrases-layouts/phrases-comment.php:148
+msgid "Vote Down"
+msgstr "لم يعجبني"
+
+#: options/class.WpdiscuzOptionsSerialized.php:640
+#: options/phrases-layouts/phrases-notification.php:134
+msgid "Vote Counted"
+msgstr "عدد الأصوات"
+
+#: options/class.WpdiscuzOptionsSerialized.php:641
+msgid "You've already voted for this comment"
+msgstr "تم التصويت على هذا التعليق سابقاً"
+
+#: options/class.WpdiscuzOptionsSerialized.php:642
+#: options/phrases-layouts/phrases-notification.php:154
+msgid "Voting Error"
+msgstr "حصل خطأ أثناء التصويت"
+
+#: options/class.WpdiscuzOptionsSerialized.php:643
+msgid "You Must Be Logged In To Vote"
+msgstr "يجب أن تقوم بتسجيل الدخول للتصويت"
+
+#: options/class.WpdiscuzOptionsSerialized.php:644
+msgid "You cannot vote for your comment"
+msgstr "لا يمكنك التصويت على التعليق الخاص بك"
+
+#: options/class.WpdiscuzOptionsSerialized.php:645
+msgid "You are not allowed to vote for this comment"
+msgstr "التصويت غير مسموح على هذا التعليق"
+
+#: options/class.WpdiscuzOptionsSerialized.php:646
+#: options/phrases-layouts/phrases-notification.php:194
+msgid "Invalid Captcha Code"
+msgstr "حصل خطأ أثناء كتابة الكود"
+
+#: options/class.WpdiscuzOptionsSerialized.php:647
+#: options/phrases-layouts/phrases-notification.php:204
+msgid "Some of field value is invalid"
+msgstr "بعض الخانات تم تعبئتها بشكل خاطئ"
+
+#: options/class.WpdiscuzOptionsSerialized.php:648
+msgid "new comment"
+msgstr "تعليق جديد"
+
+#: options/class.WpdiscuzOptionsSerialized.php:649
+msgid "new comments"
+msgstr "تعليقات جديدة"
+
+#: options/class.WpdiscuzOptionsSerialized.php:650
+msgid "Comment awaiting moderation"
+msgstr "التعليق بانتظار الموافقة"
+
+#: options/class.WpdiscuzOptionsSerialized.php:651
+msgid "new reply on your comment"
+msgstr "رد جديد على التعليق الخاص بك"
+
+#: options/class.WpdiscuzOptionsSerialized.php:652
+msgid "new replies on your comments"
+msgstr "ردود جديدة على التعليقات الخاصة بك"
+
+#: options/class.WpdiscuzOptionsSerialized.php:653
+#: options/phrases-layouts/phrases-general.php:126
+msgid "New"
+msgstr "جديد"
+
+#: options/class.WpdiscuzOptionsSerialized.php:654
+#: options/phrases-layouts/phrases-notification.php:249
+msgid "Sorry, the comment was not updated"
+msgstr "المعذرة, التعليق لم يتم تحديثه"
+
+#: options/class.WpdiscuzOptionsSerialized.php:655
+#: options/phrases-layouts/phrases-notification.php:259
+msgid "Sorry, this comment no longer possible to edit"
+msgstr "المعذرة, لم يعد من الممكن تعديل هذا التعليق"
+
+#: options/class.WpdiscuzOptionsSerialized.php:656
+msgid "You've not made any changes"
+msgstr "لم تقم بإحداث أي تغييرات"
+
+#: options/class.WpdiscuzOptionsSerialized.php:657
+#: options/phrases-layouts/phrases-comment.php:162
+msgid "Save"
+msgstr "حفظ"
+
+#: options/class.WpdiscuzOptionsSerialized.php:658
+#: options/phrases-layouts/phrases-comment.php:172
+msgid "Cancel"
+msgstr "إلغاء"
+
+#: options/class.WpdiscuzOptionsSerialized.php:659
+msgid "Input is too short"
+msgstr "النص قصير جداً"
+
+#: options/class.WpdiscuzOptionsSerialized.php:660
+msgid "Input is too long"
+msgstr "النص طويل جداً"
+
+#: options/class.WpdiscuzOptionsSerialized.php:661
+#: options/phrases-layouts/phrases-comment.php:182
+msgid "Read more &raquo;"
+msgstr "قراءة المزيد .."
+
+#: options/class.WpdiscuzOptionsSerialized.php:662
+#: options/phrases-layouts/phrases-comment.php:192
+msgid "Anonymous"
+msgstr "ضيف"
+
+#: options/class.WpdiscuzOptionsSerialized.php:663
+#: options/phrases-layouts/phrases-notification.php:275
+#: options/phrases-layouts/phrases-notification.php:279
+msgid "Please fill out required fields"
+msgstr "فضلاً قم بملء الفراغات المطلوبة"
+
+#: options/class.WpdiscuzOptionsSerialized.php:664
+#: options/phrases-layouts/phrases-form.php:192
+#: options/phrases-layouts/phrases-form.php:196
+msgid "Connect with"
+msgstr "الاتصال عبر"
+
+#: options/class.WpdiscuzOptionsSerialized.php:665
+msgid "You're subscribed to"
+msgstr "أنت مشتراك مع"
+
+#: options/class.WpdiscuzOptionsSerialized.php:666
+msgid "Participate in this discussion via email"
+msgstr "قم بالاشتراك في هذه التعليقات عبر الايميل"
+
+#: options/html-addons.php:11
+msgid "wpDiscuz Addons"
+msgstr "‫wpDiscuz إضافات"
+
+#: options/html-addons.php:54
+msgid "Installed"
+msgstr "تم التثبيت"
+
+#: options/html-addons.php:61
+msgid "Addon Details | Buy"
+msgstr "تفاصيل الإضافات | شراء"
+
+#: options/html-options.php:10
+msgid "wpDiscuz General Settings"
+msgstr "إعدادات wpDiscuz الرئيسية"
+
+#: options/html-options.php:55 options/options-layouts/settings-general.php:7
+msgid "General Settings"
+msgstr "الإعدادات الرئيسية"
+
+#: options/html-options.php:56 options/options-layouts/settings-live-update.php:7
+msgid "Live Update"
+msgstr "تحديث مباشر"
+
+#: options/html-options.php:57
+msgid "Show/Hide"
+msgstr "عرض/إخفاء"
+
+#: options/html-options.php:58
+msgid "Subscription"
+msgstr "الاشتراك"
+
+#: options/html-options.php:58
+msgid "and Postmatic"
+msgstr "و Postmatic"
+
+#: options/html-options.php:59
+msgid "Styling"
+msgstr "التنسيق"
+
+#: options/html-options.php:60 options/options-layouts/settings-social.php:124
+msgid "Social Login"
+msgstr "الدخول عبر الشبكات الاجتماعية"
+
+#: options/html-options.php:61 options/options-layouts/settings-integrations.php:7
+msgid "Integrations"
+msgstr "الاندماجات"
+
+#: options/html-options.php:62 options/options-layouts/settings-addons.php:7
+msgid "Addons"
+msgstr "الإضافات"
+
+#: options/html-options.php:146
+msgid "Reset Options"
+msgstr "إعادة تعيين الخيارات"
+
+#: options/html-options.php:148
+msgid "Refresh comment optimization"
+msgstr "تحديث الوضعية الأمثل للتعليقات"
+
+#: options/html-options.php:150
+msgid "Remove vote data"
+msgstr "حذف بيانات التصويتات"
+
+#: options/html-options.php:151 options/html-phrases.php:71
+#: options/html-tools.php:58
+msgid "Save Changes"
+msgstr "حفظ التغييرات"
+
+#: options/html-phrases.php:10
+msgid "wpDiscuz Front-end Phrases"
+msgstr "‫wpDiscuz Front-end عبارات"
+
+#: options/html-phrases.php:20
+msgid "General"
+msgstr "عام"
+
+#: options/html-phrases.php:21
+msgid "Form"
+msgstr "من"
+
+#: options/html-phrases.php:23
+msgid "Date/Time"
+msgstr "التاريخ/الوقت"
+
+#: options/html-phrases.php:25
+msgid "Notification"
+msgstr "التنبيهات"
+
+#: options/html-tools.php:10
+msgid "wpDiscuz Tools"
+msgstr "‫wpDiscuz أدوات"
+
+#: options/html-tools.php:22 options/tools-layouts/export.php:8
+msgid "Export options"
+msgstr "تصدير الخيارات"
+
+#: options/html-tools.php:23 options/tools-layouts/import.php:7
+msgid "Import options"
+msgstr "استيراد الخيارات"
+
+#: options/options-layouts/settings-general.php:11
+msgid "Display comment form for post types"
+msgstr "عرض نموذج التعليق لأنواع التدوينات"
+
+#: options/options-layouts/settings-general.php:29
+msgid "Enable Quicktags"
+msgstr "تفعيل الأوسمة السريعة"
+
+#: options/options-layouts/settings-general.php:34
+msgid "Use guest email to detect registered account"
+msgstr "استخدم البريد الالكتروني الخاص بالضيف لكشف الأعضاء المسجّلين"
+
+#: options/options-layouts/settings-general.php:36
+msgid ""
+"Sometimes registered users comment as guest using the same email address. "
+"wpDiscuz can detect the account role using guest email and display commenter "
+"label correctly."
+msgstr ""
+"في بعض الأحيان يقوم الأعضاء المسجلين بالتعليق كضيف في المدونة بدون تسجيل الدخول, "
+"ويقومون باستخدام البريد الالكتروني ذاته, wpDiscuz بإمكانها كشف الحساب باستخدام "
+"البريد الالكتروني الخاص بالضيف وتقوم بعرض وسم العضو بشكل صحيح."
+
+#: options/options-layouts/settings-general.php:42
+msgid "Comment author must fill out email"
+msgstr "كاتب التعليق لابد أن يملأ الخانة الخاصة بالبريد الالكتروني"
+
+#: options/options-layouts/settings-general.php:46
+msgid "Comment author must fill out name"
+msgstr "كاتب التعليق لابد أن يملأ الخانة الخاصة بالاسم"
+
+#: options/options-layouts/settings-general.php:51
+msgid "Comment author name min length (for guests only)"
+msgstr "الحد الأدنى لعدد أحرف اسم كاتب التعليق (للضيوف فقط)"
+
+#: options/options-layouts/settings-general.php:55
+#: options/options-layouts/settings-general.php:78
+msgid "Min"
+msgstr "الحد الأدنى"
+
+#: options/options-layouts/settings-general.php:58
+#: options/options-layouts/settings-general.php:81
+msgid "Max"
+msgstr "الحد الأعلى"
+
+#: options/options-layouts/settings-general.php:64
+msgid "Keep guest commenter credentials in browser cookies for x days"
+msgstr "قم بالاحتفاظ بمعلومات كاتب التعليق من الضيوف في المتصفح لـ x يوم"
+
+#: options/options-layouts/settings-general.php:66
+msgid "Set this option value -1 to make it unlimited."
+msgstr "ضع القيمة هنا -1 لجعله غير محدود."
+
+#: options/options-layouts/settings-general.php:67
+msgid "Set this option value 0 to clear those data when user closes browser."
+msgstr "ضع القيمة هنا 0 لمسح هذه المعلومات عندما يقوم المستخدم بإغلاق المتصفّح."
+
+#: options/options-layouts/settings-general.php:74
+msgid "Comment text length"
+msgstr "طول نص التعليق"
+
+#: options/options-layouts/settings-general.php:87
+msgid ""
+"The number of words before breaking comment text and showing \"Read more\" link"
+msgstr "عدد كلمات التعليق المسموح بها قبل إخفاء البقية وإظهار “اقرأ المزيد”"
+
+#: options/options-layouts/settings-general.php:89
+msgid "Set this option value 0, to turn off comment text breaking function."
+msgstr "قم بوضع القيمة 0 في هذه الخانة لإلغاء ميزة إخفاء بقية التعليق."
+
+#: options/options-layouts/settings-general.php:95
+msgid "Comment text size in pixels"
+msgstr "حجم نص التعليق بالبكسل"
+
+#: options/options-layouts/settings-general.php:108
+msgid "Allow comment editing for"
+msgstr "السماح بتحرير التعليق لـ"
+
+#: options/options-layouts/settings-general.php:112
+msgid "Do not allow"
+msgstr "غير مسموح"
+
+#: options/options-layouts/settings-general.php:113
+#: options/options-layouts/settings-general.php:114
+#: options/options-layouts/settings-live-update.php:52
+#: options/options-layouts/settings-live-update.php:53
+#: options/options-layouts/settings-live-update.php:54
+msgid "Minutes"
+msgstr "دقيقة"
+
+#: options/options-layouts/settings-general.php:115
+#: options/phrases-layouts/phrases-datetime.php:72
+msgid "Hour"
+msgstr "ساعة"
+
+#: options/options-layouts/settings-general.php:116
+#: options/options-layouts/settings-general.php:117
+msgid "Hours"
+msgstr "ساعات"
+
+#: options/options-layouts/settings-general.php:118
+msgid "Unlimit"
+msgstr "غير محدود"
+
+#: options/options-layouts/settings-general.php:124
+msgid "Redirect first commenter to"
+msgstr "إعادة توجيه الملعلق الأول إلى"
+
+#: options/options-layouts/settings-general.php:131
+msgid "Do not redirect"
+msgstr "لا تقم بإعادة التوجيه"
+
+#: options/options-layouts/settings-general.php:138
+msgid "Allow guests to vote on comments"
+msgstr "السماح بالضيوف التصويت على التعليقات"
+
+#: options/options-layouts/settings-general.php:143
+msgid "Comments loading/pagination type"
+msgstr "تحميل التعليقات/نوع ترقيم الصفحات"
+
+#: options/options-layouts/settings-general.php:145
+msgid ""
+"You can manage the number of comments for [Load more] option in Settings > "
+"Discussion page, using \"Break comments into pages with [X] top level comments "
+"per page\" option. To show the default Wordpress comment pagination you should "
+"enable the checkbox on bigining of the same option."
+msgstr ""
+"بإمكانك التحكم بعدد التعليقات الخاصة بـ [تحميل المزيد] من خلال الإعدادات > "
+"مناقشة, باستخدام خيار \"حدّد عدد التعليقات في كل صفحة, ويجب أن تظهر التعليقات [x] "
+"في أعلى الصفحة.\". لعرض صفحات التعليقات الافتراضية الخاصة بووردبريس, يجب أن تقوم "
+"بتفعيل مربع الاختيار الموجود في البداية في نفس مكان الخيارات."
+
+#: options/options-layouts/settings-general.php:151
+#: options/options-layouts/settings-general.php:153
+msgid "[Load more] Button"
+msgstr "زر [تحميل المزيد]"
+
+#: options/options-layouts/settings-general.php:155
+#: options/options-layouts/settings-general.php:157
+msgid "[Load rest of all comments] Button"
+msgstr "زر [تحميل جميع التعليقات المتبقية]"
+
+#: options/options-layouts/settings-general.php:159
+#: options/options-layouts/settings-general.php:161
+msgid "Lazy load comments on scrolling"
+msgstr "تحميل التعليقات عند التمرير"
+
+#: options/options-layouts/settings-general.php:168
+msgid "Use WordPress Date/Time format"
+msgstr "قم باستخدام تنسيق الوقت والتاريخ الخاص بووردبريس"
+
+#: options/options-layouts/settings-general.php:169
+msgid ""
+"wpDiscuz shows Human Readable date format. If you check this option it'll show "
+"the date/time format set in WordPress General Settings."
+msgstr ""
+"يقوم wpDiscuz بتنسيق البيانات بشكل مقروء. إذا قمت بتحديد هذا الاختيار, سيقوم "
+"بعرض بيانات الوقت والتاريخ بالشكل الذي قمت بتحديده في إعدادات الووردبريس."
+
+#: options/options-layouts/settings-general.php:175
+msgid "Current Wordpress date/time format"
+msgstr "إعدادات الوقت والتاريخ الحالية في ووردبريس"
+
+#: options/options-layouts/settings-general.php:181
+msgid "Use Plugin .PO/.MO files"
+msgstr "قم باستخدام ملفات الترجمة .PO/.MO"
+
+#: options/options-layouts/settings-general.php:182
+msgid ""
+"wpDiscuz phrase system allows you to translate all front-end phrases. However if "
+"you have a multi-language website it'll not allow you to add more than one "
+"language translation. The only way to get it is the plugin translation files (."
+"PO / .MO). If wpDiscuz has the languages you need you should check this option "
+"to disable phrase system and it'll automatically translate all phrases based on "
+"language files according to current language."
+msgstr ""
+"نظام العبارات الخاص بـ wpDiscuz يسمح لك بترجمة جميع العبارات الظاهرة. لكن, إذا "
+"كان لديك موقع يحتوي على عدة لغات, لن يقوم بالسماح لك بإضافة أكثر من لغة. الطريقة "
+"الوحيدة  للحصول عليه هو عبر ملفات الترجمة الخاصة بالإضافة (.PO / .MO). إذا كان "
+"wpDiscuz يحتوي على اللغة التي تريد, قم بتحديد هذا الخيار لتعطيل نظام العبارات, "
+"وسيقوم بشكل تلقائي بترجمة جميع العبارات بناء على ملفات اللغة وفقاً للغة الحالية."
+
+#: options/options-layouts/settings-general.php:189
+msgid ""
+"Help wpDiscuz to grow allowing people to recognize which comment plugin you use"
+msgstr "ساعد wpDiscuz على النمو عبر السماح لزوارك بمعرفة اسم الإضافة التي تستخدمها"
+
+#: options/options-layouts/settings-general.php:191
+msgid ""
+"Please check this option on to help wpDiscuz get more popularity as your thank "
+"to the hard work we do for you totally free. This option adds a very small "
+"(16x16px) icon under the comment section which will allow your site visitors "
+"recognize the name of comment solution you use."
+msgstr ""
+"من فضلك قم بتحديد هذا الاختيار لمساعدة wpDiscuz على الحصول على شهرة أكثر كشكر "
+"منك على العمل الدؤوب الذي قمنا به لك مجاناً. هذا الخيار سيقوم بعرض أيقونة صغيرة "
+"جداً (١٦x١٦بيكسل) تحت قسم التعليقات, والتي بدورها ستسمح لزوار موقعك بالتعرف على "
+"اسم الإضافة الخاصة بالتعليقات التي تستخدمها."
+
+#: options/options-layouts/settings-general.php:196
+msgid "Thank you!"
+msgstr "شكراً لك"
+
+#: options/options-layouts/settings-integrations.php:14
+msgid "BuddyPress"
+msgstr "‫BuddyPress"
+
+#: options/options-layouts/settings-integrations.php:15
+msgid "Users Ultra"
+msgstr "‫Users Ultra"
+
+#: options/options-layouts/settings-integrations.php:16
+msgid "User Pro"
+msgstr "‫User Pro"
+
+#: options/options-layouts/settings-integrations.php:17
+msgid "Ultimate Member"
+msgstr "‫Ultimate Member"
+
+#: options/options-layouts/settings-integrations.php:18
+msgid "MyCred"
+msgstr "‫MyCred"
+
+#: options/options-layouts/settings-live-update.php:12
+msgid "Live update options"
+msgstr "خيار التحديث التلقائي"
+
+#: options/options-layouts/settings-live-update.php:13
+msgid ""
+"wpDiscuz 3 live update is very smart and doesn't overload your server even if "
+"you're on Shared hosting plan and even your website is very active. However we "
+"recommend to monitor your server resources if you're on a Shared hosting plan. "
+"There are some very weak hosting plans which may not be able to perform very "
+"frequently live update requests. If you found some issue you can set the option "
+"below 30 seconds or more."
+msgstr ""
+"التحديث التلقائي لـ wpDiscuz ذكي للغاية, ولا يتسبب في زيادة الأحمال على السيرفر "
+"الخاص بك حتى في خطة استضافة مشتركة, وحتى لو كان الموقع الخاص بك نشط جداً. لكن رغم "
+"ذلك, نحن ننصح بمراقبة إحصائيات أداء السيرفر إذا كنت على استضافة مشتركة. هناك "
+"استضافات مشتركة ضعيفة جداً قد لا تستطيع تحمّل طلبات التحديث التلقائي الكثيرة. إذا "
+"صادفتك بعض المشاكل, بإمكانك وضع هذا الخيار على ٣٠ ثانية أو أكثر."
+
+#: options/options-layouts/settings-live-update.php:18
+msgid "Never update"
+msgstr "لا تقم بالتحديث مطلقاً"
+
+#: options/options-layouts/settings-live-update.php:20
+msgid "Turn off \"Live Update\" function"
+msgstr "تعطيل الخيار الخاص بـ “التحديث التلقائي”"
+
+#: options/options-layouts/settings-live-update.php:22
+#: options/options-layouts/settings-subscription.php:36
+msgid "Show new comment/reply buttons to update manualy"
+msgstr ""
+"إظهار التعليقات والردود الجديدة بطريقة يدوية عبر الضغط على أزرار التحديث الخاصة "
+"بها."
+
+#: options/options-layouts/settings-live-update.php:24
+msgid "Always check for new comments and show update buttons"
+msgstr "دائماً قم بفحص وجود التعليقات الجديدة, وعرض أزرار التحديث الخاصة بها."
+
+#: options/options-layouts/settings-live-update.php:26
+#: options/options-layouts/settings-subscription.php:40
+msgid "Always update"
+msgstr "دائماً قم بالتحديث"
+
+#: options/options-layouts/settings-live-update.php:28
+msgid "Always check for new comments and update automatically"
+msgstr "دائماً قم بفحص وجود التعليقات الجديدة, وتحديثها بشكل تلقائي."
+
+#: options/options-layouts/settings-live-update.php:35
+msgid "Disable live update for guests"
+msgstr "تعطيل التحديث التلقائي للضيوف"
+
+#: options/options-layouts/settings-live-update.php:43
+msgid "Update comment list every"
+msgstr "تحديث قائمة التعليقات كل"
+
+#: options/options-layouts/settings-live-update.php:48
+#: options/options-layouts/settings-live-update.php:49
+#: options/options-layouts/settings-live-update.php:50
+msgid "Seconds"
+msgstr "ثانية"
+
+#: options/options-layouts/settings-live-update.php:51
+#: options/phrases-layouts/phrases-datetime.php:92
+msgid "Minute"
+msgstr "دقيقة"
+
+#: options/options-layouts/settings-show-hide.php:7
+msgid "Show/Hide Components"
+msgstr "عرض/إخفاء المكونات"
+
+#: options/options-layouts/settings-show-hide.php:11
+msgid "Show logged-in user name and logout link on top of main form"
+msgstr "عرض اسم العضو المسجل والرابط الخاص بتسجيل الخروج في أعلى التعليقات"
+
+#: options/options-layouts/settings-show-hide.php:15
+msgid "Hide Reply button for Guests"
+msgstr "إخفاء زر الرد على التعليقات عن الضيوف"
+
+#: options/options-layouts/settings-show-hide.php:19
+msgid "Hide Reply button for Members"
+msgstr "إخفاء زر الرد على التعليقات عن الأعضاء"
+
+#: options/options-layouts/settings-show-hide.php:23
+msgid "Hide Commenter Labels"
+msgstr "إخفاء البطاقة الخاصة بالمعلقين"
+
+#: options/options-layouts/settings-show-hide.php:27
+msgid "Hide Voting buttons"
+msgstr "إخفاء أزرار التصويت"
+
+#: options/options-layouts/settings-show-hide.php:31
+msgid "Comment voting statistic mode"
+msgstr "الوضع الخاص بإحصائيات التصويت على التعليقات"
+
+#: options/options-layouts/settings-show-hide.php:36
+msgid "total count"
+msgstr "العدد الكلي"
+
+#: options/options-layouts/settings-show-hide.php:40
+msgid "separate count"
+msgstr "عداد مستقل"
+
+#: options/options-layouts/settings-show-hide.php:46
+msgid "Show Share Buttons"
+msgstr "عرض أزرار المشاركة"
+
+#: options/options-layouts/settings-show-hide.php:69
+msgid ""
+"The plugin captcha directory is not writable! Please set writable permissions on "
+"\"wpdiscuz/utils/temp\" directory in order to use the first type of captcha "
+"generation"
+msgstr ""
+"مجلد “توليد كلمات التحقق” الخاص بالإضافة لا يمكن الكتابة عليه! من فضلك قم بوضع "
+"الصلاحيات اللازمة على هذا المجلد “wpdiscuz/utils/temp” لتستطيع استخدام النوع "
+"الأول من توليد كلمات التحقق."
+
+#: options/options-layouts/settings-show-hide.php:73
+msgid "Captcha generation type"
+msgstr "نوع توليد كلمات التحقق"
+
+#: options/options-layouts/settings-show-hide.php:79
+msgid "use file system"
+msgstr "استخدم ملفات النظام"
+
+#: options/options-layouts/settings-show-hide.php:84
+msgid "use wordpress session"
+msgstr "استخدم جلسة وورد بريس"
+
+#: options/options-layouts/settings-show-hide.php:90
+msgid "Hide the CAPTCHA field for guests"
+msgstr "إخفاء الخانة الخاصة بتوليد كلمات التحقق عن الضيوف"
+
+#: options/options-layouts/settings-show-hide.php:94
+msgid "Show the CAPTCHA field for logged in users"
+msgstr "عرض الخانة الخاصة بتوليد كلمات التحقق للأعضاء المسجلين"
+
+#: options/options-layouts/settings-show-hide.php:98
+msgid "Show the Website URL field"
+msgstr "عرض الخانة الخاصة باسم الموقع"
+
+#: options/options-layouts/settings-show-hide.php:102
+msgid "Hide header text"
+msgstr "إخفاء النص العلوي والذي يحتوي على عدد التعليقات على التدوينة"
+
+#: options/options-layouts/settings-show-hide.php:106
+msgid "Show sorting buttons"
+msgstr "عرض زر فرز التعليقات"
+
+#: options/options-layouts/settings-show-hide.php:110
+msgid "Set comments ordering to \"Most voted\" by default "
+msgstr "قم بترتيب التعليقات بناء على الأكثر تصويتاً"
+
+#: options/options-layouts/settings-show-hide.php:114
+msgid "Hide comment link"
+msgstr "إخفاء رابط التعليقات"
+
+#: options/options-layouts/settings-show-hide.php:118
+msgid "Enable automatic image URL to image HTML conversion"
+msgstr ""
+"تمكين بشكل تلقائي تحويل رابط أي صورة في التعليقات إلى صورة تظهر في التعليقات"
+
+#: options/options-layouts/settings-social.php:50
+#: options/options-layouts/settings-social.php:61
+#: options/options-layouts/settings-social.php:72
+#: options/options-layouts/settings-social.php:83
+msgid "Activate"
+msgstr "تنشيط"
+
+#: options/options-layouts/settings-social.php:54
+#: options/options-layouts/settings-social.php:65
+#: options/options-layouts/settings-social.php:76
+#: options/options-layouts/settings-social.php:87
+msgid "View details/Install"
+msgstr "عرض التفاصيل/تثبيت"
+
+#: options/options-layouts/settings-social.php:125
+msgid ""
+"You can use one of these most popular Social Login Plugins to allow your "
+"visitors login and comment with Facebook, Twitter, Google+, Wordpress, VK, OK "
+"and lots of other social network service accounts. All social login buttons will "
+"be fully integrated with wpDiscuz comment forms."
+msgstr ""
+"بإمكانك أن تقوم باستخدام أشهر الإضافات الخاصة بتسجيل الدخول عبر الشبكات "
+"الاجتماعية للسماح بزوارك بتسجيل الدخول والتعليق عبر فيسبوك, تويتر, جوجل بلس, "
+"ووردبريس, وغيرها الكثير من حسابات الشبكات الاجتماعية. جميع الأزرار الخاصة بتسجيل "
+"الدخول في الشبكات الاجتماعية ستكون متكاملة تماماً مع استمارات التعليق الخاصة بـ "
+"wpDiscuz."
+
+#: options/options-layouts/settings-style.php:7
+msgid "Background and Colors"
+msgstr "الخلفية والألوان"
+
+#: options/options-layouts/settings-style.php:12
+msgid "Comment Form Background Color"
+msgstr "لون الخلفية الخاصة باستمارة التعليق"
+
+#: options/options-layouts/settings-style.php:16
+#: options/options-layouts/settings-style.php:25
+#: options/options-layouts/settings-style.php:34
+#: options/options-layouts/settings-style.php:43
+#: options/options-layouts/settings-style.php:52
+#: options/options-layouts/settings-style.php:61
+#: options/options-layouts/settings-style.php:70
+#: options/options-layouts/settings-style.php:79
+#: options/options-layouts/settings-style.php:92
+msgid "Example: #00FF00"
+msgstr "مثال: #00FF00"
+
+#: options/options-layouts/settings-style.php:21
+msgid "Comment Background Color"
+msgstr "لون خلفية التعليقات"
+
+#: options/options-layouts/settings-style.php:30
+msgid "Reply Background Color"
+msgstr "لون خلفية الردود"
+
+#: options/options-layouts/settings-style.php:39
+msgid "Comment Text Color"
+msgstr "لون نصوص التعليقات"
+
+#: options/options-layouts/settings-style.php:48
+msgid "Vote, Reply, Share, Edit links text colors"
+msgstr "ألوان روابط التصويت, الرد, المشاركة, التعديل"
+
+#: options/options-layouts/settings-style.php:57
+msgid "Comment form fields border color"
+msgstr "ألوان حدود الخانات الخاصة باستمارة التعليق"
+
+#: options/options-layouts/settings-style.php:66
+msgid "New loaded comments' background color"
+msgstr "لون خلفية التعليق الذي تم تحميله حديثاً"
+
+#: options/options-layouts/settings-style.php:75
+msgid "Primary Color"
+msgstr "اللون الأساسي"
+
+#: options/options-layouts/settings-style.php:89
+msgid "label color"
+msgstr "لون بطاقة"
+
+#: options/options-layouts/settings-style.php:100
+msgid "Disable font awesome css loading"
+msgstr "تعطيل تحميل خطوط awesome في الـ CSS"
+
+#: options/options-layouts/settings-style.php:108
+msgid "Custom CSS Code"
+msgstr "أكواد CSS مخصصة"
+
+#: options/options-layouts/settings-subscription.php:7
+msgid "Email Subscription Settings"
+msgstr "إعدادات الاشتراك في الايميل"
+
+#: options/options-layouts/settings-subscription.php:12
+msgid "Show comment subscription bar"
+msgstr "عرض الشريط الخاص بالاشتراك في التعليقات"
+
+#: options/options-layouts/settings-subscription.php:14
+msgid ""
+"This bar provides two subscription options: notify of \"new follow-up comments\" "
+"and \"new replies to my comments\""
+msgstr ""
+"هذا الشريط يوفر خيارين للاشتراك: التنبيه على التعليقات الجديدة, والتنبيه على "
+"الردود على تعليقاتي."
+
+#: options/options-layouts/settings-subscription.php:20
+msgid "Disable subscription confirmation for registered users"
+msgstr "تعطيل رسالة تأكيد الاشتراك للأعضاء المسجلين"
+
+#: options/options-layouts/settings-subscription.php:24
+msgid "Disable subscription confirmation for guests"
+msgstr "تعطيل رسالة تأكيد الاشتراك للضيوف"
+
+#: options/options-layouts/settings-subscription.php:28
+msgid "Show subscription types in dropdown"
+msgstr "عرض خيارات الاشتراك في قائمة منسدلة"
+
+#: options/options-layouts/settings-subscription.php:32
+msgid "Both"
+msgstr "كلاهما"
+
+#: options/options-layouts/settings-subscription.php:34
+msgid "Both post and all comments subscription"
+msgstr "كلاهما “الردود على تعليقاتي” و “التعليقات الجديدة على المدونة”"
+
+#: options/options-layouts/settings-subscription.php:38
+msgid "Post subscription"
+msgstr "الاشتراك في التعليقات الجديدة على المدونة"
+
+#: options/options-layouts/settings-subscription.php:42
+msgid "All comments subscription"
+msgstr "الاشتراك في الردود على تعليقاتي"
+
+#: options/options-layouts/settings-subscription.php:49
+msgid "Show \"Notify of new replies to this comment\""
+msgstr "عرض “التنبيه عن الردود الجديدة على هذا التعليق”"
+
+#: options/options-layouts/settings-subscription.php:51
+msgid ""
+"wpDiscuz is the only comment plugin which allows you to subscribe to certain "
+"comment replies. This option is located above [Post Comment] button in comment "
+"form. You can disable this subscription way by unchecking this option."
+msgstr ""
+"‫wpDiscuz هي الإضافة الوحيدة التي تمكنك من الاشتراك لاستلام تنبيهات عن الردود على "
+"تعليقات محددة. هذا الخيار موجود أعلى زر [Post Comment] في استمارة التعليق. "
+"بإمكانك تعطيل الاشتراك بهذه الطريقة عبر إلغاء تفعيل هذا الخيار."
+
+#: options/options-layouts/settings-subscription.php:58
+msgid "\"Notify of new replies to this comment\" checked by default"
+msgstr ""
+"الخيار الخاص بـ “التنبيه عن الردود الجديدة على هذا التعليق” مفعّل بشكل افتراضي"
+
+#: options/options-layouts/settings-subscription.php:65
+msgid "Use Postmatic for subscriptions and commenting by email"
+msgstr "قم باستخدام Postmatic للاشتراك والتعليق عبر الايميل"
+
+#: options/options-layouts/settings-subscription.php:66
+msgid ""
+"Postmatic allows your users subscribe to comments. Instead of just being "
+"notified, they add a reply right from their inbox."
+msgstr ""
+"يقوم Postmatic بالسماح للأعضاء بالاشتراك لاستلام التنبيهات, وبدلاً من فقط استلام "
+"التنبيه, سيكون بإمكانهم الرد على التعليق عبر الرد عليه من خلال الايميل نفسه."
+
+#: options/phrases-layouts/phrases-comment.php:7
+msgid "Comment Template Phrases"
+msgstr "العبارات الخاصة بقالب التعليقات"
+
+#: options/phrases-layouts/phrases-comment.php:158
+msgid "Save edited comment button text"
+msgstr "النص الخاص بزر حفظ التعديل على التعليق"
+
+#: options/phrases-layouts/phrases-comment.php:168
+msgid "Cancel comment editing button text"
+msgstr "النص الخاص بزر إلغاء التعديل على التعليق"
+
+#: options/phrases-layouts/phrases-comment.php:178
+msgid "Comment read more link text"
+msgstr "النص الخاص بقراءة المزيد من التعليقات"
+
+#: options/phrases-layouts/phrases-comment.php:188
+msgid "Anonymous commenter name"
+msgstr "اسم المعلّق مجهول الاسم"
+
+#: options/phrases-layouts/phrases-datetime.php:7
+msgid "Date/Time Phrases"
+msgstr "عبارات التاريخ/الوقت"
+
+#: options/phrases-layouts/phrases-datetime.php:12
+msgid "Year"
+msgstr "السنة"
+
+#: options/phrases-layouts/phrases-datetime.php:22
+msgid "Years (Plural Form)"
+msgstr "السنوات (صيغة الجمع)"
+
+#: options/phrases-layouts/phrases-datetime.php:26
+msgid "Years"
+msgstr "سنوات"
+
+#: options/phrases-layouts/phrases-datetime.php:32
+msgid "Month"
+msgstr "شهر"
+
+#: options/phrases-layouts/phrases-datetime.php:42
+msgid "Months (Plural Form)"
+msgstr "أشهر (صيغة الجمع)"
+
+#: options/phrases-layouts/phrases-datetime.php:52
+msgid "Day"
+msgstr "يوم"
+
+#: options/phrases-layouts/phrases-datetime.php:62
+msgid "Days (Plural Form)"
+msgstr "أيام (صيغة الجمع)"
+
+#: options/phrases-layouts/phrases-datetime.php:82
+msgid "Hours (Plural Form)"
+msgstr "ساعات (صيغة الجمع)"
+
+#: options/phrases-layouts/phrases-datetime.php:102
+msgid "Minutes (Plural Form)"
+msgstr "دقائق (صيغة الجمع)"
+
+#: options/phrases-layouts/phrases-datetime.php:112
+msgid "Second"
+msgstr "ثانية"
+
+#: options/phrases-layouts/phrases-datetime.php:122
+msgid "Seconds (Plural Form)"
+msgstr "ثواني (صيغة الجمع)"
+
+#: options/phrases-layouts/phrases-datetime.php:132
+msgid "Commented \"right now\" text"
+msgstr "النص الخاص بالتعليق الذي حدث “الآن”"
+
+#: options/phrases-layouts/phrases-datetime.php:142
+msgid "Ago text"
+msgstr "النص الخاص بـ “سابقاً”"
+
+#: options/phrases-layouts/phrases-datetime.php:152
+msgid "\"Today\" text"
+msgstr "نص “اليوم”"
+
+#: options/phrases-layouts/phrases-email.php:7
+msgid "Email Template Phrases"
+msgstr "عبارات قالب البريد الالكتروني"
+
+#: options/phrases-layouts/phrases-email.php:12
+msgid "Email Subject"
+msgstr "عنوان البريد الالكتروني"
+
+#: options/phrases-layouts/phrases-email.php:22
+msgid "Email Message"
+msgstr "رسالة البريد الالكتروني"
+
+#: options/phrases-layouts/phrases-email.php:32
+msgid "New Reply Subject"
+msgstr "عنوان رسالة “رد جديد”"
+
+#: options/phrases-layouts/phrases-email.php:42
+msgid "New Reply Message"
+msgstr "نص رسالة “رد جديد”"
+
+#: options/phrases-layouts/phrases-email.php:62
+#: options/phrases-layouts/phrases-email.php:66
+msgid "Ignore Subscription"
+msgstr "تجاهل الاشتراك"
+
+#: options/phrases-layouts/phrases-email.php:92
+msgid "Subscribe Confirmation Email Subject"
+msgstr "عنوان البريد الالكتروني الخاص برسالة “تأكيد الاشتراك”"
+
+#: options/phrases-layouts/phrases-email.php:102
+msgid "Subscribe Confirmation Email Content"
+msgstr "محتوى رسالة البريد الالكتروني الخاصة بـ “تأكيد الاشتراك”"
+
+#: options/phrases-layouts/phrases-form.php:7
+msgid "Form Template Phrases"
+msgstr "عبارات قالب الاستمارة"
+
+#: options/phrases-layouts/phrases-form.php:12
+msgid "Comment Field Start"
+msgstr "المكتوب في خانة التعليق عند عدم وجود تعليقات"
+
+#: options/phrases-layouts/phrases-form.php:22
+msgid "Comment Field Join"
+msgstr "المكتوب في خانة التعليق للانضمام للمناقشة"
+
+#: options/phrases-layouts/phrases-form.php:32
+msgid "Email Field"
+msgstr "خانة البريد الالكتروني"
+
+#: options/phrases-layouts/phrases-form.php:42
+msgid "Name Field"
+msgstr "خانة الاسم"
+
+#: options/phrases-layouts/phrases-form.php:52
+msgid "WebSite URL Field"
+msgstr "خانة رابط الموقع"
+
+#: options/phrases-layouts/phrases-form.php:62
+msgid "CAPTCHA Field"
+msgstr "خانة رمز التحقق"
+
+#: options/phrases-layouts/phrases-form.php:72
+msgid "Submit Button"
+msgstr "زر الإرسال"
+
+#: options/phrases-layouts/phrases-form.php:92
+msgid "Notify on new comments"
+msgstr "التنبيه عن التعليقات الجديدة على هذا الموضوع"
+
+#: options/phrases-layouts/phrases-form.php:102
+msgid "Notify on all new replies"
+msgstr "التنبيه عن جميع الردود الجديدة"
+
+#: options/phrases-layouts/phrases-form.php:106
+msgid "new replies to all my comments"
+msgstr "الردود الجديدة على جميع تعليقاتي"
+
+#: options/phrases-layouts/phrases-form.php:112
+msgid "Notify on new replies (checkbox)"
+msgstr "التنبيه عن جميع الردود (مربع خانة الاختيار)"
+
+#: options/phrases-layouts/phrases-form.php:162
+msgid "Subscribed on this comment replies"
+msgstr "الاشتراك في التنبيهات للردود الجديدة على هذا التعليق"
+
+#: options/phrases-layouts/phrases-form.php:172
+msgid "Subscribed on all your comments replies"
+msgstr "الاشتراك في التنبيهات للردود الجديدة على جميع تعليقاتك"
+
+#: options/phrases-layouts/phrases-form.php:182
+msgid "Subscribed on this post"
+msgstr "الاشتراك في التنبيهات لهذا الموضوع"
+
+#: options/phrases-layouts/phrases-general.php:7
+msgid "General Phrases"
+msgstr "إعدادات الجمل والصياغة"
+
+#: options/phrases-layouts/phrases-general.php:22
+msgid "Be the first to comment"
+msgstr "كن أول من يعلّق هنا"
+
+#: options/phrases-layouts/phrases-general.php:42
+msgid "Comment (Plural Form)"
+msgstr "التعليق (صيغة جمع)"
+
+#: options/phrases-layouts/phrases-general.php:52
+msgid "On"
+msgstr "على"
+
+#: options/phrases-layouts/phrases-general.php:62
+msgid "Load More Button"
+msgstr "زر تحميل المزيد"
+
+#: options/phrases-layouts/phrases-general.php:82
+msgid "Button text if has new comment"
+msgstr "النص الخاص بالزر إذا كان يحتوي على تعليق جديد"
+
+#: options/phrases-layouts/phrases-general.php:92
+msgid "Button text if has new comments (Plural Form)"
+msgstr "النص الخاص بالزر إذا كان يحتوي على عدة تعليقات (صيغة جمع)"
+
+#: options/phrases-layouts/phrases-general.php:96
+msgid "New Comments"
+msgstr "تعليقات جديدة"
+
+#: options/phrases-layouts/phrases-general.php:102
+msgid "Button text if has new reply"
+msgstr "النص الخاص بالزر إذا كان يحتوي على رد جديد"
+
+#: options/phrases-layouts/phrases-general.php:112
+msgid "Button text if has new replies (Plural Form)"
+msgstr "النص الخاص بالزر إذا كان يحتوي على عدة ردود (صيغة جمع)"
+
+#: options/phrases-layouts/phrases-general.php:116
+msgid "New Replies"
+msgstr "ردود جديدة"
+
+#: options/phrases-layouts/phrases-general.php:122
+msgid "Text on load more button if has new comment(s)"
+msgstr "النص الخاص بزر \"تحميل المزيد\" إذا كان هناك تعليق/تعليقات جديدة"
+
+#: options/phrases-layouts/phrases-notification.php:7
+msgid "Notification Phrases"
+msgstr "عبارات التنبيهات"
+
+#: options/phrases-layouts/phrases-notification.php:12
+msgid "You\\'re subscribed to"
+msgstr "أنت مشتراك مع"
+
+#: options/phrases-layouts/phrases-notification.php:43
+msgid "Postmatic subscription label"
+msgstr "بطاقة الاشتراك في Postmatic"
+
+#: options/phrases-layouts/phrases-notification.php:54
+msgid "Error message for empty field"
+msgstr "رسالة الخطأ عند ترك أحد الفراغات"
+
+#: options/phrases-layouts/phrases-notification.php:64
+msgid "Error message for invalid email field"
+msgstr "رسالة الخطأ عند كتابة بريد الكتروني خاطئ"
+
+#: options/phrases-layouts/phrases-notification.php:74
+msgid "Error message for invalid website url field"
+msgstr "رسالة الخطأ عند كتابة رابط موقع خاطئ"
+
+#: options/phrases-layouts/phrases-notification.php:94
+msgid "Logged in as"
+msgstr "تم تسجيل الدخول كـ"
+
+#: options/phrases-layouts/phrases-notification.php:114
+msgid "Logged In"
+msgstr "مسجل دخول"
+
+#: options/phrases-layouts/phrases-notification.php:124
+msgid "To post a comment"
+msgstr "لإضافة تعليق"
+
+#: options/phrases-layouts/phrases-notification.php:144
+msgid "You can vote only 1 time"
+msgstr "بإمكانك التصويت مرة واحدة فقط"
+
+#: options/phrases-layouts/phrases-notification.php:164
+msgid "Login To Vote"
+msgstr "قم بتسجيل الدخول للتصويت"
+
+#: options/phrases-layouts/phrases-notification.php:174
+msgid "You Cannot Vote On Your Comment"
+msgstr "لا تستطيع التصويت على التعليق الخاص بك"
+
+#: options/phrases-layouts/phrases-notification.php:184
+msgid "You are not allowed to vote for this comment (Voting from same IP)"
+msgstr "التصويت على هذا التعليق غير مسموح (التصويت من نفس الـ IP)"
+
+#: options/phrases-layouts/phrases-notification.php:214
+msgid "Comment waiting moderation"
+msgstr "التعليق بانتظار الموافقة"
+
+#: options/phrases-layouts/phrases-notification.php:224
+msgid "Message if input text length is too short"
+msgstr "الرسالة التي تظهر إذا كان نص الخانة قصير جداً"
+
+#: options/phrases-layouts/phrases-notification.php:234
+msgid "Message if input text length is too long"
+msgstr "الرسالة التي تظهر إذا كان نص الخانة طويل جداً"
+
+#: options/phrases-layouts/phrases-notification.php:245
+msgid "Message if comment was not updated"
+msgstr "الرسالة التي تظهر إذا كان التعليق لم يتم تحديثه"
+
+#: options/phrases-layouts/phrases-notification.php:255
+msgid "Message if comment no longer possible to edit"
+msgstr "الرسالة التي تظهر إذا لم يعد من الممكن تعديل التعليق"
+
+#: options/phrases-layouts/phrases-notification.php:265
+msgid "Message if comment text not changed"
+msgstr "الرسالة التي تظهر إذا كان نص التعليق لم يتم تغييره"
+
+#: options/phrases-layouts/phrases-notification.php:269
+msgid "TYou've not made any changes"
+msgstr "لم تقم بإحداث أي تغييرات"
+
+#: templates/comment/comment-form.php:56
+msgid "Unable to send an email"
+msgstr "غير قادر على إرسال بريد الكتروني"
+
+#: templates/comment/comment-form.php:58
+msgid "Subscription not successed"
+msgstr "الاشتراك لم يتم بنجاح"
+
+#: templates/comment/comment-form.php:257 templates/comment/comment-form.php:265
+msgid "wpDiscuz"
+msgstr "‫wpDiscuz"
+
+#: utils/class.WpdiscuzHelper.php:57
+msgid "Cannot create image file"
+msgstr "ملف الصور لم يتم إنشائه"
+
+#: utils/class.WpdiscuzHelper.php:58
+msgid "Permission denied for file creation"
+msgstr "تم رفض الصلاحيات لإنشاء الملف"
+
+#: utils/class.WpdiscuzHelper.php:59
+msgid "PHP GD2 library is disabled"
+msgstr "مكتبة GD2 الخاصة بالـ PHP معطلة"
+
+#: utils/class.WpdiscuzHelper.php:60
+msgid "PNG image creation disabled"
+msgstr "إنشاء صور بصيغة PNG معطّل"
+
+#. Plugin Name of the plugin/theme
+msgid "wpDiscuz - supercharged native comments"
+msgstr "‫wpDiscuz - ملائم جداً للتعليقات الأصلية"
+
+#. Plugin URI of the plugin/theme
+msgid "http://wpdiscuz.com/"
+msgstr "‫http://wpdiscuz.com/"
+
+#. Description of the plugin/theme
+msgid ""
+"Better comment system. Wordpress post comments and discussion plugin. Allows "
+"your visitors discuss, vote for comments and share."
+msgstr ""
+"نظام أفضل للتعليقات. الإضافة الخاصة بووردبريس لإرسال التعليقات والردود حيث تسمح "
+"للزوار بالردود والتصويت على التعليقات ومشاركتها."
+
+#. Author of the plugin/theme
+msgid "gVectors Team (A. Chakhoyan, G. Zakaryan, H. Martirosyan)"
+msgstr "فريق جي فيكتور (A. Chakhoyan, G. Zakaryan, H. Martirosyan)"
+
+#. Author URI of the plugin/theme
+msgid "http://gvectors.com/"
+msgstr "‫http://gvectors.com/"

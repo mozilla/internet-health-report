@@ -1,0 +1,1489 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Project-Id-Version: wpDiscuz - supercharged native comments\n"
+"POT-Creation-Date: 2016-04-11 23:52+0400\n"
+"PO-Revision-Date: 2016-07-14 16:31+0800\n"
+"Last-Translator: fau <service@fau.org.cn>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: class.WpdiscuzCore.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: class.WpdiscuzCore.php:889
+#: options/options-layouts/settings-social.php:40
+#: options/options-layouts/settings-social.php:42
+#: options/options-layouts/settings-social.php:44
+#: options/options-layouts/settings-social.php:46
+msgid "Settings"
+msgstr "设置"
+
+#: class.WpdiscuzCore.php:891
+msgid "Phrases"
+msgstr "短语"
+
+#: class.WpdiscuzCore.php:932
+#: options/phrases-layouts/phrases-comment.php:116
+msgid "Admin"
+msgstr "管理员"
+
+#: class.WpdiscuzCore.php:934
+#: class.WpdiscuzCore.php:943
+#: options/phrases-layouts/phrases-comment.php:118
+msgid "Author"
+msgstr "作者"
+
+#: class.WpdiscuzCore.php:938
+#: options/phrases-layouts/phrases-comment.php:124
+msgid "Member"
+msgstr "成员"
+
+#: class.WpdiscuzCore.php:944
+#: options/phrases-layouts/phrases-comment.php:122
+msgid "Guest"
+msgstr "游客"
+
+#: options/class.WpdiscuzOptions.php:30
+#: options/class.WpdiscuzOptions.php:103
+#: options/class.WpdiscuzOptions.php:223
+msgid "Hacker?"
+msgstr "黑客 ?"
+
+#: options/class.WpdiscuzOptions.php:258
+msgid "Brings an ocean of emotions to your comments. It comes with an awesome smile package."
+msgstr "为您的评论添加表情包。有酷酷的微笑包哦"
+
+#: options/class.WpdiscuzOptions.php:259
+msgid "Comment reporting tools. Auto-moderates comments based on number of flags and dislikes."
+msgstr "评论报表工具。基于赞和踩数量，自动审核评论"
+
+#: options/class.WpdiscuzOptions.php:260
+msgid "Adds a smart and intuitive AJAX \"Translate\" button with 60 language options. Uses free translation API."
+msgstr "添加一个智能的AJAX\"翻译\"按钮，可以翻译60种语言，使用免费翻译API"
+
+#: options/class.WpdiscuzOptions.php:261
+msgid "AJAX powered front-end comment search. It starts searching while you type search words. "
+msgstr "AJAX驱动的前端评论搜索。当您输入搜索词时启动搜索"
+
+#: options/class.WpdiscuzOptions.php:262
+msgid "Most voted comments, Active comment threads, Most commented posts, Active comment authors"
+msgstr "得票最多的评论，活跃的评论区，评论最多的文章，活跃的评论人"
+
+#: options/class.WpdiscuzOptions.php:263
+msgid "All in one powerful yet simple admin toolkit to moderate comments on front-end."
+msgstr "用于前端审核评论的简单且强大的管理工具"
+
+#: options/class.WpdiscuzOptions.php:264
+msgid "Extended comment attachment system. Allows to upload images, videos, audios and other file types."
+msgstr "扩展的评论附件模块，允许上传图片、视频、音频和其他文件类型。"
+
+#: options/class.WpdiscuzOptions.php:265
+msgid "Adds No CAPTCHA on all comment forms. Stops spam and bot comments with Google reCAPTCHA"
+msgstr "评论表单上不添加CAPCHA。用Google reCAPTCHA停止垃圾评论。"
+
+#: options/class.WpdiscuzOptions.php:266
+msgid "Integrates myCRED Badges and Ranks. Converts wpDiscuz comment votes/likes to myCRED points. "
+msgstr "集成myCRED标签和级别。转化wpDiscuz评论投票/赞为myCRED积分。"
+
+#: options/class.WpdiscuzOptions.php:267
+msgid "Allows censoring comment words. Filters comments and replaces those phrases with custom words."
+msgstr "允许审查评论字段。过滤评论中的短语且替换为自定义字段"
+
+#: options/class.WpdiscuzOptions.php:279
+msgid "New Addons are available for wpDiscuz Comments Plugin"
+msgstr "wpDiscuz评论插件有新Addons"
+
+#: options/class.WpdiscuzOptions.php:286
+#: options/class.WpdiscuzOptions.php:292
+msgid "Go to wpDiscuz Addons subMenu"
+msgstr "前往wpDiscuz Addons子菜单"
+
+#: options/class.WpdiscuzOptionsSerialized.php:568
+#: options/phrases-layouts/phrases-general.php:12
+msgid "Leave a Reply"
+msgstr "说点什么"
+
+#: options/class.WpdiscuzOptionsSerialized.php:569
+msgid "Be the First to Comment!"
+msgstr "您将是第一位评论人！"
+
+#: options/class.WpdiscuzOptionsSerialized.php:570
+#: options/html-phrases.php:22
+#: options/phrases-layouts/phrases-general.php:32
+msgid "Comment"
+msgstr "评论"
+
+#: options/class.WpdiscuzOptionsSerialized.php:571
+msgid "Comments"
+msgstr "评论"
+
+#: options/class.WpdiscuzOptionsSerialized.php:572
+msgid "on"
+msgstr "在"
+
+#: options/class.WpdiscuzOptionsSerialized.php:573
+msgid "Start the discussion"
+msgstr "开始讨论"
+
+#: options/class.WpdiscuzOptionsSerialized.php:574
+msgid "Join the discussion"
+msgstr "加入讨论"
+
+#: options/class.WpdiscuzOptionsSerialized.php:575
+#: options/html-phrases.php:24
+msgid "Email"
+msgstr "Email"
+
+#: options/class.WpdiscuzOptionsSerialized.php:576
+msgid "Name"
+msgstr "名字"
+
+#: options/class.WpdiscuzOptionsSerialized.php:577
+msgid "WebSite URL"
+msgstr "站点URL"
+
+#: options/class.WpdiscuzOptionsSerialized.php:578
+msgid "Please insert the code above to comment"
+msgstr "请输入验证码提交评论"
+
+#: options/class.WpdiscuzOptionsSerialized.php:579
+msgid "Post Comment"
+msgstr "发表评论"
+
+#: options/class.WpdiscuzOptionsSerialized.php:580
+#: options/phrases-layouts/phrases-form.php:82
+#: options/phrases-layouts/phrases-form.php:86
+msgid "Notify of"
+msgstr "提醒"
+
+#: options/class.WpdiscuzOptionsSerialized.php:581
+#: options/phrases-layouts/phrases-form.php:96
+msgid "new follow-up comments"
+msgstr "新跟进评论"
+
+#: options/class.WpdiscuzOptionsSerialized.php:582
+msgid "new replies to my comments"
+msgstr "我评论的新回复"
+
+#: options/class.WpdiscuzOptionsSerialized.php:583
+#: options/phrases-layouts/phrases-form.php:116
+msgid "Notify of new replies to this comment"
+msgstr "有此评论的新回复则提醒我"
+
+#: options/class.WpdiscuzOptionsSerialized.php:584
+#: options/phrases-layouts/phrases-form.php:122
+#: options/phrases-layouts/phrases-form.php:126
+msgid "Sort by"
+msgstr "排序"
+
+#: options/class.WpdiscuzOptionsSerialized.php:585
+#: options/phrases-layouts/phrases-form.php:132
+#: options/phrases-layouts/phrases-form.php:136
+msgid "newest"
+msgstr "最新"
+
+#: options/class.WpdiscuzOptionsSerialized.php:586
+#: options/phrases-layouts/phrases-form.php:142
+#: options/phrases-layouts/phrases-form.php:146
+msgid "oldest"
+msgstr "最旧"
+
+#: options/class.WpdiscuzOptionsSerialized.php:587
+#: options/phrases-layouts/phrases-form.php:152
+#: options/phrases-layouts/phrases-form.php:156
+msgid "most voted"
+msgstr "得票最多"
+
+#: options/class.WpdiscuzOptionsSerialized.php:588
+msgid "Load More Comments"
+msgstr "加载更多评论"
+
+#: options/class.WpdiscuzOptionsSerialized.php:589
+#: options/phrases-layouts/phrases-general.php:72
+msgid "Load Rest of Comments"
+msgstr "加载剩余评论"
+
+#: options/class.WpdiscuzOptionsSerialized.php:590
+#: options/phrases-layouts/phrases-comment.php:12
+msgid "Reply"
+msgstr "回复"
+
+#: options/class.WpdiscuzOptionsSerialized.php:591
+#: options/phrases-layouts/phrases-comment.php:22
+msgid "Share"
+msgstr "分享"
+
+#: options/class.WpdiscuzOptionsSerialized.php:592
+#: options/phrases-layouts/phrases-comment.php:32
+msgid "Edit"
+msgstr "编辑"
+
+#: options/class.WpdiscuzOptionsSerialized.php:593
+#: options/phrases-layouts/phrases-comment.php:42
+msgid "Share On Facebook"
+msgstr "分享至脸书"
+
+#: options/class.WpdiscuzOptionsSerialized.php:594
+#: options/phrases-layouts/phrases-comment.php:52
+msgid "Share On Twitter"
+msgstr "分享至推特"
+
+#: options/class.WpdiscuzOptionsSerialized.php:595
+#: options/phrases-layouts/phrases-comment.php:62
+msgid "Share On Google"
+msgstr "分享至谷歌"
+
+#: options/class.WpdiscuzOptionsSerialized.php:596
+#: options/phrases-layouts/phrases-comment.php:72
+msgid "Share On VKontakte"
+msgstr "分享至VKontakte"
+
+#: options/class.WpdiscuzOptionsSerialized.php:597
+#: options/phrases-layouts/phrases-comment.php:82
+msgid "Share On Odnoklassniki"
+msgstr "分享至Odnoklassniki"
+
+#: options/class.WpdiscuzOptionsSerialized.php:598
+#: options/phrases-layouts/phrases-comment.php:92
+msgid "Hide Replies"
+msgstr "隐藏回复"
+
+#: options/class.WpdiscuzOptionsSerialized.php:599
+#: options/phrases-layouts/phrases-comment.php:102
+msgid "Show Replies"
+msgstr "显示回复"
+
+#: options/class.WpdiscuzOptionsSerialized.php:600
+#: options/phrases-layouts/phrases-general.php:86
+msgid "New Comment"
+msgstr "新评论"
+
+#: options/class.WpdiscuzOptionsSerialized.php:601
+msgid "New comment on the discussion section you've been interested in"
+msgstr "您感兴趣的讨论区中的新评论"
+
+#: options/class.WpdiscuzOptionsSerialized.php:602
+#: options/phrases-layouts/phrases-email.php:36
+#: options/phrases-layouts/phrases-general.php:106
+#: utils/class.WpdiscuzEmailHelper.php:154
+msgid "New Reply"
+msgstr "新回复"
+
+#: options/class.WpdiscuzOptionsSerialized.php:603
+#: utils/class.WpdiscuzEmailHelper.php:155
+msgid "New reply on the discussion section you've been interested in"
+msgstr "您感兴趣的讨论区中的新回复"
+
+#: options/class.WpdiscuzOptionsSerialized.php:604
+msgid "You're subscribed for new replies on this comment"
+msgstr "您已订阅此评论上的新回复"
+
+#: options/class.WpdiscuzOptionsSerialized.php:605
+msgid "You're subscribed for new replies on all your comments"
+msgstr "您已订阅您所有评论上的新回复"
+
+#: options/class.WpdiscuzOptionsSerialized.php:606
+msgid "You're subscribed for new follow-up comments on this post"
+msgstr "您已订阅此评论上的新回复"
+
+#: options/class.WpdiscuzOptionsSerialized.php:607
+#: options/phrases-layouts/phrases-email.php:52
+#: options/phrases-layouts/phrases-email.php:56
+msgid "Unsubscribe"
+msgstr "不订阅"
+
+#: options/class.WpdiscuzOptionsSerialized.php:608
+#: options/phrases-layouts/phrases-email.php:66
+msgid "Cancel subscription"
+msgstr "取消订阅"
+
+#: options/class.WpdiscuzOptionsSerialized.php:609
+#: options/phrases-layouts/phrases-notification.php:32
+msgid "You've successfully unsubscribed."
+msgstr "你已取消订阅"
+
+#: options/class.WpdiscuzOptionsSerialized.php:610
+#: options/phrases-layouts/phrases-notification.php:22
+msgid "You've successfully subscribed."
+msgstr "你已成功订阅"
+
+#: options/class.WpdiscuzOptionsSerialized.php:611
+#: options/phrases-layouts/phrases-email.php:72
+#: options/phrases-layouts/phrases-email.php:76
+msgid "Confirm your subscription"
+msgstr "确认您的订阅"
+
+#: options/class.WpdiscuzOptionsSerialized.php:612
+#: options/phrases-layouts/phrases-email.php:82
+#: options/phrases-layouts/phrases-email.php:86
+msgid "You've successfully confirmed your subscription."
+msgstr "你已成功确认订阅"
+
+#: options/class.WpdiscuzOptionsSerialized.php:613
+#: options/phrases-layouts/phrases-email.php:96
+#: utils/class.WpdiscuzEmailHelper.php:47
+msgid "Subscribe Confirmation"
+msgstr "订阅确认"
+
+#: options/class.WpdiscuzOptionsSerialized.php:614
+#: options/phrases-layouts/phrases-email.php:106
+#: utils/class.WpdiscuzEmailHelper.php:48
+msgid "Hi, <br/> You just subscribed for new comments on our website. This means you will receive an email when new comments are posted according to subscription option you've chosen. <br/> To activate, click confirm below. If you believe this is an error, ignore this message and we'll never bother you again."
+msgstr "Hi, <br/><br/> 您已经订阅了关于您评论的新回复。<br/><br/>点击下面的链接即可确认您的订阅。<br/><br/>或者，您不想被打扰，可以忽略此邮件，你将不会收到您评论的提醒。"
+
+#: options/class.WpdiscuzOptionsSerialized.php:615
+msgid "please fill out this field to comment"
+msgstr "评论前请先填写此字段"
+
+#: options/class.WpdiscuzOptionsSerialized.php:616
+msgid "email address is invalid"
+msgstr "无效的email地址"
+
+#: options/class.WpdiscuzOptionsSerialized.php:617
+msgid "url is invalid"
+msgstr "URL 无效"
+
+#: options/class.WpdiscuzOptionsSerialized.php:618
+msgid "year"
+msgstr "年"
+
+#: options/class.WpdiscuzOptionsSerialized.php:619
+msgid "years"
+msgstr "年"
+
+#: options/class.WpdiscuzOptionsSerialized.php:620
+msgid "month"
+msgstr "月"
+
+#: options/class.WpdiscuzOptionsSerialized.php:621
+msgid "months"
+msgstr "月"
+
+#: options/class.WpdiscuzOptionsSerialized.php:622
+msgid "day"
+msgstr "天"
+
+#: options/class.WpdiscuzOptionsSerialized.php:623
+msgid "days"
+msgstr "天"
+
+#: options/class.WpdiscuzOptionsSerialized.php:624
+msgid "hour"
+msgstr "小时"
+
+#: options/class.WpdiscuzOptionsSerialized.php:625
+msgid "hours"
+msgstr "小时"
+
+#: options/class.WpdiscuzOptionsSerialized.php:626
+msgid "minute"
+msgstr "分钟"
+
+#: options/class.WpdiscuzOptionsSerialized.php:627
+msgid "minutes"
+msgstr "分钟"
+
+#: options/class.WpdiscuzOptionsSerialized.php:628
+msgid "second"
+msgstr "秒"
+
+#: options/class.WpdiscuzOptionsSerialized.php:629
+msgid "seconds"
+msgstr "秒"
+
+#: options/class.WpdiscuzOptionsSerialized.php:630
+msgid "right now"
+msgstr "马上"
+
+#: options/class.WpdiscuzOptionsSerialized.php:631
+msgid "ago"
+msgstr "之前"
+
+#: options/class.WpdiscuzOptionsSerialized.php:632
+#: options/phrases-layouts/phrases-datetime.php:156
+msgid "Today"
+msgstr "今天"
+
+#: options/class.WpdiscuzOptionsSerialized.php:633
+#: options/phrases-layouts/phrases-notification.php:84
+msgid "You must be"
+msgstr "你一定是"
+
+#: options/class.WpdiscuzOptionsSerialized.php:634
+msgid "You are logged in as"
+msgstr "您是"
+
+#: options/class.WpdiscuzOptionsSerialized.php:635
+#: options/phrases-layouts/phrases-notification.php:104
+msgid "Log out"
+msgstr "登出"
+
+#: options/class.WpdiscuzOptionsSerialized.php:636
+msgid "logged in"
+msgstr "已登录"
+
+#: options/class.WpdiscuzOptionsSerialized.php:637
+msgid "to post a comment."
+msgstr "为发表评论"
+
+#: options/class.WpdiscuzOptionsSerialized.php:638
+#: options/phrases-layouts/phrases-comment.php:138
+msgid "Vote Up"
+msgstr "赞"
+
+#: options/class.WpdiscuzOptionsSerialized.php:639
+#: options/phrases-layouts/phrases-comment.php:148
+msgid "Vote Down"
+msgstr "踩"
+
+#: options/class.WpdiscuzOptionsSerialized.php:640
+#: options/phrases-layouts/phrases-notification.php:134
+msgid "Vote Counted"
+msgstr "计入的投票"
+
+#: options/class.WpdiscuzOptionsSerialized.php:641
+msgid "You've already voted for this comment"
+msgstr "您已对此评论投过票了"
+
+#: options/class.WpdiscuzOptionsSerialized.php:642
+#: options/phrases-layouts/phrases-notification.php:154
+msgid "Voting Error"
+msgstr "投票错误"
+
+#: options/class.WpdiscuzOptionsSerialized.php:643
+msgid "You Must Be Logged In To Vote"
+msgstr "您须先登录再投票"
+
+#: options/class.WpdiscuzOptionsSerialized.php:644
+msgid "You cannot vote for your comment"
+msgstr "您不能为自己的评论投票"
+
+#: options/class.WpdiscuzOptionsSerialized.php:645
+msgid "You are not allowed to vote for this comment"
+msgstr "您不能给此评论投票"
+
+#: options/class.WpdiscuzOptionsSerialized.php:646
+#: options/phrases-layouts/phrases-notification.php:194
+msgid "Invalid Captcha Code"
+msgstr "无效的验证码"
+
+#: options/class.WpdiscuzOptionsSerialized.php:647
+#: options/phrases-layouts/phrases-notification.php:204
+msgid "Some of field value is invalid"
+msgstr "一些字段值无效"
+
+#: options/class.WpdiscuzOptionsSerialized.php:648
+msgid "new comment"
+msgstr "新评论"
+
+#: options/class.WpdiscuzOptionsSerialized.php:649
+msgid "new comments"
+msgstr "新评论"
+
+#: options/class.WpdiscuzOptionsSerialized.php:650
+msgid "Comment awaiting moderation"
+msgstr "待审核的评论"
+
+#: options/class.WpdiscuzOptionsSerialized.php:651
+msgid "new reply on your comment"
+msgstr "您评论的新回复"
+
+#: options/class.WpdiscuzOptionsSerialized.php:652
+msgid "new replies on your comments"
+msgstr "您评论的新回复"
+
+#: options/class.WpdiscuzOptionsSerialized.php:653
+#: options/phrases-layouts/phrases-general.php:126
+msgid "New"
+msgstr "新的"
+
+#: options/class.WpdiscuzOptionsSerialized.php:654
+#: options/phrases-layouts/phrases-notification.php:249
+msgid "Sorry, the comment was not updated"
+msgstr "对不起，评论未更新"
+
+#: options/class.WpdiscuzOptionsSerialized.php:655
+#: options/phrases-layouts/phrases-notification.php:259
+msgid "Sorry, this comment no longer possible to edit"
+msgstr "对不起，此评论已不能编辑"
+
+#: options/class.WpdiscuzOptionsSerialized.php:656
+msgid "You've not made any changes"
+msgstr "您没有做出任何更改"
+
+#: options/class.WpdiscuzOptionsSerialized.php:657
+#: options/phrases-layouts/phrases-comment.php:162
+msgid "Save"
+msgstr "保存"
+
+#: options/class.WpdiscuzOptionsSerialized.php:658
+#: options/phrases-layouts/phrases-comment.php:172
+msgid "Cancel"
+msgstr "取消"
+
+#: options/class.WpdiscuzOptionsSerialized.php:659
+msgid "Input is too short"
+msgstr "输入太短"
+
+#: options/class.WpdiscuzOptionsSerialized.php:660
+msgid "Input is too long"
+msgstr "输入太长"
+
+#: options/class.WpdiscuzOptionsSerialized.php:661
+#: options/phrases-layouts/phrases-comment.php:182
+msgid "Read more &raquo;"
+msgstr "阅读更多 &raquo;"
+
+#: options/class.WpdiscuzOptionsSerialized.php:662
+#: options/phrases-layouts/phrases-comment.php:192
+msgid "Anonymous"
+msgstr "匿名"
+
+#: options/class.WpdiscuzOptionsSerialized.php:663
+#: options/phrases-layouts/phrases-notification.php:275
+#: options/phrases-layouts/phrases-notification.php:279
+msgid "Please fill out required fields"
+msgstr "请填写必填字段"
+
+#: options/class.WpdiscuzOptionsSerialized.php:664
+#: options/phrases-layouts/phrases-form.php:192
+#: options/phrases-layouts/phrases-form.php:196
+msgid "Connect with"
+msgstr "一键登录"
+
+#: options/class.WpdiscuzOptionsSerialized.php:665
+msgid "You're subscribed to"
+msgstr "您已订阅了"
+
+#: options/class.WpdiscuzOptionsSerialized.php:666
+msgid "Participate in this discussion via email"
+msgstr "用email参与此讨论"
+
+#: options/html-addons.php:11
+msgid "wpDiscuz Addons"
+msgstr "wpDiscuz Addons"
+
+#: options/html-addons.php:54
+msgid "Installed"
+msgstr "已安装"
+
+#: options/html-addons.php:61
+msgid "Addon Details | Buy"
+msgstr "Addon 详情 | 购买"
+
+#: options/html-options.php:10
+msgid "wpDiscuz General Settings"
+msgstr "wpDiscuz通用设置"
+
+#: options/html-options.php:55
+#: options/options-layouts/settings-general.php:7
+msgid "General Settings"
+msgstr "通用设置"
+
+#: options/html-options.php:56
+#: options/options-layouts/settings-live-update.php:7
+msgid "Live Update"
+msgstr "在线更新"
+
+#: options/html-options.php:57
+msgid "Show/Hide"
+msgstr "显示/隐藏"
+
+#: options/html-options.php:58
+msgid "Subscription"
+msgstr "订阅"
+
+#: options/html-options.php:58
+msgid "and Postmatic"
+msgstr "以及 Postmatic"
+
+#: options/html-options.php:59
+msgid "Styling"
+msgstr "风格"
+
+#: options/html-options.php:60
+#: options/options-layouts/settings-social.php:124
+msgid "Social Login"
+msgstr "社交登陆"
+
+#: options/html-options.php:61
+#: options/options-layouts/settings-integrations.php:7
+msgid "Integrations"
+msgstr "集成"
+
+#: options/html-options.php:62
+#: options/options-layouts/settings-addons.php:7
+msgid "Addons"
+msgstr "Addons"
+
+#: options/html-options.php:146
+msgid "Reset Options"
+msgstr "重置选项"
+
+#: options/html-options.php:148
+msgid "Refresh comment optimization"
+msgstr "刷新评论优化"
+
+#: options/html-options.php:150
+msgid "Remove vote data"
+msgstr "移除投票数据"
+
+#: options/html-options.php:151
+#: options/html-phrases.php:71
+#: options/html-tools.php:58
+msgid "Save Changes"
+msgstr "保存更改"
+
+#: options/html-phrases.php:10
+msgid "wpDiscuz Front-end Phrases"
+msgstr "WpDiscuz前端短语"
+
+#: options/html-phrases.php:20
+msgid "General"
+msgstr "通用"
+
+#: options/html-phrases.php:21
+msgid "Form"
+msgstr "表单"
+
+#: options/html-phrases.php:23
+msgid "Date/Time"
+msgstr "日期 / 时间"
+
+#: options/html-phrases.php:25
+msgid "Notification"
+msgstr "提醒"
+
+#: options/html-tools.php:10
+msgid "wpDiscuz Tools"
+msgstr "wpDiscuz 工具"
+
+#: options/html-tools.php:22
+#: options/tools-layouts/export.php:8
+msgid "Export options"
+msgstr "导出选项"
+
+#: options/html-tools.php:23
+#: options/tools-layouts/import.php:7
+msgid "Import options"
+msgstr "导入选项"
+
+#: options/options-layouts/settings-general.php:11
+msgid "Display comment form for post types"
+msgstr "为文章类型显示评论表单"
+
+#: options/options-layouts/settings-general.php:29
+msgid "Enable Quicktags"
+msgstr "启用 Quicktags"
+
+#: options/options-layouts/settings-general.php:34
+msgid "Use guest email to detect registered account"
+msgstr "使用游客email匹配已注册账户"
+
+#: options/options-layouts/settings-general.php:36
+msgid "Sometimes registered users comment as guest using the same email address. wpDiscuz can detect the account role using guest email and display commenter label correctly."
+msgstr "有时注册用户未登录时使用相同的email来评论。wpDiscuz可以基于游客email探测账户并正确显示评论人"
+
+#: options/options-layouts/settings-general.php:42
+msgid "Comment author must fill out email"
+msgstr "评论人须填写email"
+
+#: options/options-layouts/settings-general.php:46
+msgid "Comment author must fill out name"
+msgstr "评论人须填写名字"
+
+#: options/options-layouts/settings-general.php:51
+msgid "Comment author name min length (for guests only)"
+msgstr "评论人名字最小长度（仅用于游客）"
+
+#: options/options-layouts/settings-general.php:55
+#: options/options-layouts/settings-general.php:78
+msgid "Min"
+msgstr "最小"
+
+#: options/options-layouts/settings-general.php:58
+#: options/options-layouts/settings-general.php:81
+msgid "Max"
+msgstr "最大"
+
+#: options/options-layouts/settings-general.php:64
+msgid "Keep guest commenter credentials in browser cookies for x days"
+msgstr "为游客评论人的浏览器cookie中的密钥保留 x 天"
+
+#: options/options-layouts/settings-general.php:66
+msgid "Set this option value -1 to make it unlimited."
+msgstr "设置-1则无限制"
+
+#: options/options-layouts/settings-general.php:67
+msgid "Set this option value 0 to clear those data when user closes browser."
+msgstr "设置0则当用户关闭浏览器时清空数据"
+
+#: options/options-layouts/settings-general.php:74
+msgid "Comment text length"
+msgstr "评论文本长度"
+
+#: options/options-layouts/settings-general.php:87
+msgid "The number of words before breaking comment text and showing \"Read more\" link"
+msgstr "评论缩略文字长度。超过此字数则显示\"阅读更多\" 链接"
+
+#: options/options-layouts/settings-general.php:89
+msgid "Set this option value 0, to turn off comment text breaking function."
+msgstr "设置为0，则关闭评论文本缩略功能。"
+
+#: options/options-layouts/settings-general.php:95
+msgid "Comment text size in pixels"
+msgstr "评论文本的像素大小"
+
+#: options/options-layouts/settings-general.php:108
+msgid "Allow comment editing for"
+msgstr "允许评论编辑，为了"
+
+#: options/options-layouts/settings-general.php:112
+msgid "Do not allow"
+msgstr "不允许"
+
+#: options/options-layouts/settings-general.php:113
+#: options/options-layouts/settings-general.php:114
+#: options/options-layouts/settings-live-update.php:52
+#: options/options-layouts/settings-live-update.php:53
+#: options/options-layouts/settings-live-update.php:54
+msgid "Minutes"
+msgstr "分钟"
+
+#: options/options-layouts/settings-general.php:115
+#: options/phrases-layouts/phrases-datetime.php:72
+msgid "Hour"
+msgstr "小时"
+
+#: options/options-layouts/settings-general.php:116
+#: options/options-layouts/settings-general.php:117
+msgid "Hours"
+msgstr "小时"
+
+#: options/options-layouts/settings-general.php:118
+msgid "Unlimit"
+msgstr "无限"
+
+#: options/options-layouts/settings-general.php:124
+msgid "Redirect first commenter to"
+msgstr "将第一个评论人重定向至"
+
+#: options/options-layouts/settings-general.php:131
+msgid "Do not redirect"
+msgstr "不重定向"
+
+#: options/options-layouts/settings-general.php:138
+msgid "Allow guests to vote on comments"
+msgstr "允许游客为评论投票"
+
+#: options/options-layouts/settings-general.php:143
+msgid "Comments loading/pagination type"
+msgstr "评论加载/分页类型"
+
+#: options/options-layouts/settings-general.php:145
+msgid "You can manage the number of comments for [Load more] option in Settings > Discussion page, using \"Break comments into pages with [X] top level comments per page\" option. To show the default Wordpress comment pagination you should enable the checkbox on bigining of the same option."
+msgstr "您可以在设置 -> 讨论 页面，为[加载更多]管理评论数量，使用\"每页一级评论数量达到 [X] 时分页\" 的选项。若要显示wordpress默认的评论分页，您需要启用相同的选项。"
+
+#: options/options-layouts/settings-general.php:151
+#: options/options-layouts/settings-general.php:153
+msgid "[Load more] Button"
+msgstr "[加载更多] 按钮"
+
+#: options/options-layouts/settings-general.php:155
+#: options/options-layouts/settings-general.php:157
+msgid "[Load rest of all comments] Button"
+msgstr "[加载剩余评论] 按钮"
+
+#: options/options-layouts/settings-general.php:159
+#: options/options-layouts/settings-general.php:161
+msgid "Lazy load comments on scrolling"
+msgstr "滚动式延迟加载评论"
+
+#: options/options-layouts/settings-general.php:168
+msgid "Use WordPress Date/Time format"
+msgstr "使用WordPress 日期/时间 格式"
+
+#: options/options-layouts/settings-general.php:169
+msgid "wpDiscuz shows Human Readable date format. If you check this option it'll show the date/time format set in WordPress General Settings."
+msgstr "wpDiscuz 显示人机友好的日期格式。如果你勾选此项，将按WordPress通用设置来显示。"
+
+#: options/options-layouts/settings-general.php:175
+msgid "Current Wordpress date/time format"
+msgstr "WordPress当前 日期/时间 格式"
+
+#: options/options-layouts/settings-general.php:181
+msgid "Use Plugin .PO/.MO files"
+msgstr "使用插件的 .PO/.MO 文件"
+
+#: options/options-layouts/settings-general.php:182
+msgid "wpDiscuz phrase system allows you to translate all front-end phrases. However if you have a multi-language website it'll not allow you to add more than one language translation. The only way to get it is the plugin translation files (.PO / .MO). If wpDiscuz has the languages you need you should check this option to disable phrase system and it'll automatically translate all phrases based on language files according to current language."
+msgstr "wpDiscuz 短语设置允许你翻译所有前端字段。但是，如果你有多语言站点那么你需要使用 (.PO / .MO)翻译文件。wpDiscuz将根据当前语言显示前端字段。"
+
+#: options/options-layouts/settings-general.php:189
+msgid "Help wpDiscuz to grow allowing people to recognize which comment plugin you use"
+msgstr "显示wpDiscuz插件标识，帮助wpDiscuz成长"
+
+#: options/options-layouts/settings-general.php:191
+msgid "Please check this option on to help wpDiscuz get more popularity as your thank to the hard work we do for you totally free. This option adds a very small (16x16px) icon under the comment section which will allow your site visitors recognize the name of comment solution you use."
+msgstr "Please check this option on to help wpDiscuz get more popularity as your thank to the hard work we do for you totally free. This option adds a very small (16x16px) icon under the comment section which will allow your site visitors recognize the name of comment solution you use."
+
+#: options/options-layouts/settings-general.php:196
+msgid "Thank you!"
+msgstr "谢谢！"
+
+#: options/options-layouts/settings-integrations.php:14
+msgid "BuddyPress"
+msgstr "BuddyPress"
+
+#: options/options-layouts/settings-integrations.php:15
+msgid "Users Ultra"
+msgstr "Users Ultra"
+
+#: options/options-layouts/settings-integrations.php:16
+msgid "User Pro"
+msgstr "User Pro"
+
+#: options/options-layouts/settings-integrations.php:17
+msgid "Ultimate Member"
+msgstr "Ultimate Member"
+
+#: options/options-layouts/settings-integrations.php:18
+msgid "MyCred"
+msgstr "MyCred"
+
+#: options/options-layouts/settings-live-update.php:12
+msgid "Live update options"
+msgstr "在线更新选项"
+
+#: options/options-layouts/settings-live-update.php:13
+msgid "wpDiscuz 3 live update is very smart and doesn't overload your server even if you're on Shared hosting plan and even your website is very active. However we recommend to monitor your server resources if you're on a Shared hosting plan. There are some very weak hosting plans which may not be able to perform very frequently live update requests. If you found some issue you can set the option below 30 seconds or more."
+msgstr "wpDiscuz 3 live update is very smart and doesn't overload your server even if you're on Shared hosting plan and even your website is very active. However we recommend to monitor your server resources if you're on a Shared hosting plan. There are some very weak hosting plans which may not be able to perform very frequently live update requests. If you found some issue you can set the option below 30 seconds or more."
+
+#: options/options-layouts/settings-live-update.php:18
+msgid "Never update"
+msgstr "永不更新"
+
+#: options/options-layouts/settings-live-update.php:20
+msgid "Turn off \"Live Update\" function"
+msgstr "关闭 \"在线更新\" 功能"
+
+#: options/options-layouts/settings-live-update.php:22
+#: options/options-layouts/settings-subscription.php:36
+msgid "Show new comment/reply buttons to update manualy"
+msgstr "为手动更新显示新评论/回复按钮"
+
+#: options/options-layouts/settings-live-update.php:24
+msgid "Always check for new comments and show update buttons"
+msgstr "总是检查新评论并显示更新按钮"
+
+#: options/options-layouts/settings-live-update.php:26
+#: options/options-layouts/settings-subscription.php:40
+msgid "Always update"
+msgstr "总是更新"
+
+#: options/options-layouts/settings-live-update.php:28
+msgid "Always check for new comments and update automatically"
+msgstr "总是检查新评论并自动更新"
+
+#: options/options-layouts/settings-live-update.php:35
+msgid "Disable live update for guests"
+msgstr "为游客禁用在线更新"
+
+#: options/options-layouts/settings-live-update.php:43
+msgid "Update comment list every"
+msgstr "更新评论列表，每"
+
+#: options/options-layouts/settings-live-update.php:48
+#: options/options-layouts/settings-live-update.php:49
+#: options/options-layouts/settings-live-update.php:50
+msgid "Seconds"
+msgstr "秒"
+
+#: options/options-layouts/settings-live-update.php:51
+#: options/phrases-layouts/phrases-datetime.php:92
+msgid "Minute"
+msgstr "分钟"
+
+#: options/options-layouts/settings-show-hide.php:7
+msgid "Show/Hide Components"
+msgstr "显示/隐藏 部件"
+
+#: options/options-layouts/settings-show-hide.php:11
+msgid "Show logged-in user name and logout link on top of main form"
+msgstr "在主表上显示登入的用户名以及登出链接"
+
+#: options/options-layouts/settings-show-hide.php:15
+msgid "Hide Reply button for Guests"
+msgstr "为游客隐藏回复按钮"
+
+#: options/options-layouts/settings-show-hide.php:19
+msgid "Hide Reply button for Members"
+msgstr "为成员隐藏回复按钮"
+
+#: options/options-layouts/settings-show-hide.php:23
+msgid "Hide Commenter Labels"
+msgstr "隐藏评论人标签"
+
+#: options/options-layouts/settings-show-hide.php:27
+msgid "Hide Voting buttons"
+msgstr "隐藏投票按钮"
+
+#: options/options-layouts/settings-show-hide.php:31
+msgid "Comment voting statistic mode"
+msgstr "评论投票统计模式"
+
+#: options/options-layouts/settings-show-hide.php:36
+msgid "total count"
+msgstr "合计数"
+
+#: options/options-layouts/settings-show-hide.php:40
+msgid "separate count"
+msgstr "区分计数"
+
+#: options/options-layouts/settings-show-hide.php:46
+msgid "Show Share Buttons"
+msgstr "显示分享按钮"
+
+#: options/options-layouts/settings-show-hide.php:69
+msgid "The plugin captcha directory is not writable! Please set writable permissions on \"wpdiscuz/utils/temp\" directory in order to use the first type of captcha generation"
+msgstr "插件的验证码目录不可写！请为\"wpdiscuz/utils/temp\" 目录设置可写权限，您方可使用验证码自动生成功能"
+
+#: options/options-layouts/settings-show-hide.php:73
+msgid "Captcha generation type"
+msgstr "验证码生成类型"
+
+#: options/options-layouts/settings-show-hide.php:79
+msgid "use file system"
+msgstr "使用文件系统"
+
+#: options/options-layouts/settings-show-hide.php:84
+msgid "use wordpress session"
+msgstr "使用wordpress会话"
+
+#: options/options-layouts/settings-show-hide.php:90
+msgid "Hide the CAPTCHA field for guests"
+msgstr "为游客隐藏验证码"
+
+#: options/options-layouts/settings-show-hide.php:94
+msgid "Show the CAPTCHA field for logged in users"
+msgstr "为已登录用户显示验证码"
+
+#: options/options-layouts/settings-show-hide.php:98
+msgid "Show the Website URL field"
+msgstr "显示网站URL字段"
+
+#: options/options-layouts/settings-show-hide.php:102
+msgid "Hide header text"
+msgstr "隐藏头部文本"
+
+#: options/options-layouts/settings-show-hide.php:106
+msgid "Show sorting buttons"
+msgstr "显示排序按钮"
+
+#: options/options-layouts/settings-show-hide.php:110
+msgid "Set comments ordering to \"Most voted\" by default "
+msgstr "设置默认评论顺序为\"投票最多\""
+
+#: options/options-layouts/settings-show-hide.php:114
+msgid "Hide comment link"
+msgstr "隐藏评论链接"
+
+#: options/options-layouts/settings-show-hide.php:118
+msgid "Enable automatic image URL to image HTML conversion"
+msgstr "启用自动的图片URL到图片HTML的转换"
+
+#: options/options-layouts/settings-social.php:50
+#: options/options-layouts/settings-social.php:61
+#: options/options-layouts/settings-social.php:72
+#: options/options-layouts/settings-social.php:83
+msgid "Activate"
+msgstr "激活"
+
+#: options/options-layouts/settings-social.php:54
+#: options/options-layouts/settings-social.php:65
+#: options/options-layouts/settings-social.php:76
+#: options/options-layouts/settings-social.php:87
+msgid "View details/Install"
+msgstr "显示细节/安装"
+
+#: options/options-layouts/settings-social.php:125
+msgid "You can use one of these most popular Social Login Plugins to allow your visitors login and comment with Facebook, Twitter, Google+, Wordpress, VK, OK and lots of other social network service accounts. All social login buttons will be fully integrated with wpDiscuz comment forms."
+msgstr "您可以启用社交登陆功能，支持 Facebook, Twitter, Google+, Wordpress, VK, 等等。所有社交登录按钮都可无缝集成至wpDiscuz评论表单。"
+
+#: options/options-layouts/settings-style.php:7
+msgid "Background and Colors"
+msgstr "背景与颜色"
+
+#: options/options-layouts/settings-style.php:12
+msgid "Comment Form Background Color"
+msgstr "评论表单背景色"
+
+#: options/options-layouts/settings-style.php:16
+#: options/options-layouts/settings-style.php:25
+#: options/options-layouts/settings-style.php:34
+#: options/options-layouts/settings-style.php:43
+#: options/options-layouts/settings-style.php:52
+#: options/options-layouts/settings-style.php:61
+#: options/options-layouts/settings-style.php:70
+#: options/options-layouts/settings-style.php:79
+#: options/options-layouts/settings-style.php:92
+msgid "Example: #00FF00"
+msgstr "比如: #00FF00"
+
+#: options/options-layouts/settings-style.php:21
+msgid "Comment Background Color"
+msgstr "评论背景色"
+
+#: options/options-layouts/settings-style.php:30
+msgid "Reply Background Color"
+msgstr "回复背景色"
+
+#: options/options-layouts/settings-style.php:39
+msgid "Comment Text Color"
+msgstr "评论文本色"
+
+#: options/options-layouts/settings-style.php:48
+msgid "Vote, Reply, Share, Edit links text colors"
+msgstr "投票，回复，分享，编辑链接文本色"
+
+#: options/options-layouts/settings-style.php:57
+msgid "Comment form fields border color"
+msgstr "评论表字段边框色"
+
+#: options/options-layouts/settings-style.php:66
+msgid "New loaded comments' background color"
+msgstr "新加载的评论背景色"
+
+#: options/options-layouts/settings-style.php:75
+msgid "Primary Color"
+msgstr "主色"
+
+#: options/options-layouts/settings-style.php:89
+msgid "label color"
+msgstr "标签色"
+
+#: options/options-layouts/settings-style.php:100
+msgid "Disable font awesome css loading"
+msgstr "禁用font awesome css加载"
+
+#: options/options-layouts/settings-style.php:108
+msgid "Custom CSS Code"
+msgstr "自定义CSS代码"
+
+#: options/options-layouts/settings-subscription.php:7
+msgid "Email Subscription Settings"
+msgstr "Email订阅设置"
+
+#: options/options-layouts/settings-subscription.php:12
+msgid "Show comment subscription bar"
+msgstr "显示评论订阅条"
+
+#: options/options-layouts/settings-subscription.php:14
+msgid "This bar provides two subscription options: notify of \"new follow-up comments\" and \"new replies to my comments\""
+msgstr "此横条支持两个订阅选项：提醒 \"新跟进的评论\" 和\"我评论的新回复\""
+
+#: options/options-layouts/settings-subscription.php:20
+msgid "Disable subscription confirmation for registered users"
+msgstr "对已注册用户禁用订阅确认"
+
+#: options/options-layouts/settings-subscription.php:24
+msgid "Disable subscription confirmation for guests"
+msgstr "对游客禁用订阅确认"
+
+#: options/options-layouts/settings-subscription.php:28
+msgid "Show subscription types in dropdown"
+msgstr "在下拉表中显示订阅类型"
+
+#: options/options-layouts/settings-subscription.php:32
+msgid "Both"
+msgstr "两者"
+
+#: options/options-layouts/settings-subscription.php:34
+msgid "Both post and all comments subscription"
+msgstr "文章以及所有评论订阅"
+
+#: options/options-layouts/settings-subscription.php:38
+msgid "Post subscription"
+msgstr "文章订阅"
+
+#: options/options-layouts/settings-subscription.php:42
+msgid "All comments subscription"
+msgstr "所有评论订阅"
+
+#: options/options-layouts/settings-subscription.php:49
+msgid "Show \"Notify of new replies to this comment\""
+msgstr "显示\"关于此评论新回复的提醒\""
+
+#: options/options-layouts/settings-subscription.php:51
+msgid "wpDiscuz is the only comment plugin which allows you to subscribe to certain comment replies. This option is located above [Post Comment] button in comment form. You can disable this subscription way by unchecking this option."
+msgstr "wpDiscuz是唯一允许您针对特定的评论订阅的评论插件。此选项在[发表评论]按钮前显示，您可以取消勾选、禁用此功能。"
+
+#: options/options-layouts/settings-subscription.php:58
+msgid "\"Notify of new replies to this comment\" checked by default"
+msgstr "默认勾选 \"提醒我此评论的新回复\" "
+
+#: options/options-layouts/settings-subscription.php:65
+msgid "Use Postmatic for subscriptions and commenting by email"
+msgstr "为订阅和邮件评论 使用 Postmatic "
+
+#: options/options-layouts/settings-subscription.php:66
+msgid "Postmatic allows your users subscribe to comments. Instead of just being notified, they add a reply right from their inbox."
+msgstr "Postmatic允许您的用户订阅评论。比之仅仅收到提醒，他们可以在收件箱中直接回复评论。"
+
+#: options/phrases-layouts/phrases-comment.php:7
+msgid "Comment Template Phrases"
+msgstr "评论模板短语"
+
+#: options/phrases-layouts/phrases-comment.php:158
+msgid "Save edited comment button text"
+msgstr "保存编辑的评论按钮文本"
+
+#: options/phrases-layouts/phrases-comment.php:168
+msgid "Cancel comment editing button text"
+msgstr "取消评论编辑按钮文本"
+
+#: options/phrases-layouts/phrases-comment.php:178
+msgid "Comment read more link text"
+msgstr "评论阅读更多的链接文本"
+
+#: options/phrases-layouts/phrases-comment.php:188
+msgid "Anonymous commenter name"
+msgstr "匿名评论人名字"
+
+#: options/phrases-layouts/phrases-datetime.php:7
+msgid "Date/Time Phrases"
+msgstr "日期/时间 短语"
+
+#: options/phrases-layouts/phrases-datetime.php:12
+msgid "Year"
+msgstr "年"
+
+#: options/phrases-layouts/phrases-datetime.php:22
+msgid "Years (Plural Form)"
+msgstr "年"
+
+#: options/phrases-layouts/phrases-datetime.php:26
+msgid "Years"
+msgstr "年"
+
+#: options/phrases-layouts/phrases-datetime.php:32
+msgid "Month"
+msgstr "月"
+
+#: options/phrases-layouts/phrases-datetime.php:42
+msgid "Months (Plural Form)"
+msgstr "月"
+
+#: options/phrases-layouts/phrases-datetime.php:52
+msgid "Day"
+msgstr "天"
+
+#: options/phrases-layouts/phrases-datetime.php:62
+msgid "Days (Plural Form)"
+msgstr "天"
+
+#: options/phrases-layouts/phrases-datetime.php:82
+msgid "Hours (Plural Form)"
+msgstr "小时"
+
+#: options/phrases-layouts/phrases-datetime.php:102
+msgid "Minutes (Plural Form)"
+msgstr "分钟"
+
+#: options/phrases-layouts/phrases-datetime.php:112
+msgid "Second"
+msgstr "秒"
+
+#: options/phrases-layouts/phrases-datetime.php:122
+msgid "Seconds (Plural Form)"
+msgstr "秒"
+
+#: options/phrases-layouts/phrases-datetime.php:132
+msgid "Commented \"right now\" text"
+msgstr "已评论的 \"马上\" 文本"
+
+#: options/phrases-layouts/phrases-datetime.php:142
+msgid "Ago text"
+msgstr "之前文本"
+
+#: options/phrases-layouts/phrases-datetime.php:152
+msgid "\"Today\" text"
+msgstr "\"今天\" 文本"
+
+#: options/phrases-layouts/phrases-email.php:7
+msgid "Email Template Phrases"
+msgstr "邮件模板短语"
+
+#: options/phrases-layouts/phrases-email.php:12
+msgid "Email Subject"
+msgstr "邮件标题"
+
+#: options/phrases-layouts/phrases-email.php:22
+msgid "Email Message"
+msgstr "邮件消息"
+
+#: options/phrases-layouts/phrases-email.php:32
+msgid "New Reply Subject"
+msgstr "新回复标题"
+
+#: options/phrases-layouts/phrases-email.php:42
+msgid "New Reply Message"
+msgstr "新回复消息"
+
+#: options/phrases-layouts/phrases-email.php:62
+#: options/phrases-layouts/phrases-email.php:66
+msgid "Ignore Subscription"
+msgstr "忽略订阅"
+
+#: options/phrases-layouts/phrases-email.php:92
+msgid "Subscribe Confirmation Email Subject"
+msgstr "订阅确认的邮件标题"
+
+#: options/phrases-layouts/phrases-email.php:102
+msgid "Subscribe Confirmation Email Content"
+msgstr "订阅确认邮件内容"
+
+#: options/phrases-layouts/phrases-form.php:7
+msgid "Form Template Phrases"
+msgstr "表单模板短语"
+
+#: options/phrases-layouts/phrases-form.php:12
+msgid "Comment Field Start"
+msgstr "评论字段开始"
+
+#: options/phrases-layouts/phrases-form.php:22
+msgid "Comment Field Join"
+msgstr "评论字段连接"
+
+#: options/phrases-layouts/phrases-form.php:32
+msgid "Email Field"
+msgstr "邮件字段"
+
+#: options/phrases-layouts/phrases-form.php:42
+msgid "Name Field"
+msgstr "名字字段"
+
+#: options/phrases-layouts/phrases-form.php:52
+msgid "WebSite URL Field"
+msgstr "站点URL字段"
+
+#: options/phrases-layouts/phrases-form.php:62
+msgid "CAPTCHA Field"
+msgstr "验证码字段"
+
+#: options/phrases-layouts/phrases-form.php:72
+msgid "Submit Button"
+msgstr "提交按钮"
+
+#: options/phrases-layouts/phrases-form.php:92
+msgid "Notify on new comments"
+msgstr "新评论的提醒"
+
+#: options/phrases-layouts/phrases-form.php:102
+msgid "Notify on all new replies"
+msgstr "新回复的提醒"
+
+#: options/phrases-layouts/phrases-form.php:106
+msgid "new replies to all my comments"
+msgstr "我所有评论的新回复"
+
+#: options/phrases-layouts/phrases-form.php:112
+msgid "Notify on new replies (checkbox)"
+msgstr "新回复的提醒（勾选）"
+
+#: options/phrases-layouts/phrases-form.php:162
+msgid "Subscribed on this comment replies"
+msgstr "订阅此评论的回复"
+
+#: options/phrases-layouts/phrases-form.php:172
+msgid "Subscribed on all your comments replies"
+msgstr "有你评论的回复则提醒"
+
+#: options/phrases-layouts/phrases-form.php:182
+msgid "Subscribed on this post"
+msgstr "已订阅此文章的评论"
+
+#: options/phrases-layouts/phrases-general.php:7
+msgid "General Phrases"
+msgstr "通用短语"
+
+#: options/phrases-layouts/phrases-general.php:22
+msgid "Be the first to comment"
+msgstr "您将是第一位评论人"
+
+#: options/phrases-layouts/phrases-general.php:42
+msgid "Comment (Plural Form)"
+msgstr "评论"
+
+#: options/phrases-layouts/phrases-general.php:52
+msgid "On"
+msgstr "开启"
+
+#: options/phrases-layouts/phrases-general.php:62
+msgid "Load More Button"
+msgstr "加载更多按钮"
+
+#: options/phrases-layouts/phrases-general.php:82
+msgid "Button text if has new comment"
+msgstr "若有新评论的按钮文本"
+
+#: options/phrases-layouts/phrases-general.php:92
+msgid "Button text if has new comments (Plural Form)"
+msgstr "若有多个新评论的按钮文本"
+
+#: options/phrases-layouts/phrases-general.php:96
+msgid "New Comments"
+msgstr "新评论"
+
+#: options/phrases-layouts/phrases-general.php:102
+msgid "Button text if has new reply"
+msgstr "若有新回复的按钮文本"
+
+#: options/phrases-layouts/phrases-general.php:112
+msgid "Button text if has new replies (Plural Form)"
+msgstr "若有多个新回复的按钮文本"
+
+#: options/phrases-layouts/phrases-general.php:116
+msgid "New Replies"
+msgstr "新回复"
+
+#: options/phrases-layouts/phrases-general.php:122
+msgid "Text on load more button if has new comment(s)"
+msgstr "若有新评论，在加载更多按钮上的文本"
+
+#: options/phrases-layouts/phrases-notification.php:7
+msgid "Notification Phrases"
+msgstr "提醒短语"
+
+#: options/phrases-layouts/phrases-notification.php:12
+msgid "You\\'re subscribed to"
+msgstr "您已订阅至"
+
+#: options/phrases-layouts/phrases-notification.php:43
+msgid "Postmatic subscription label"
+msgstr "Postmatic 订阅标签"
+
+#: options/phrases-layouts/phrases-notification.php:54
+msgid "Error message for empty field"
+msgstr "空字段的错误消息"
+
+#: options/phrases-layouts/phrases-notification.php:64
+msgid "Error message for invalid email field"
+msgstr "无效邮件字段的错误消息"
+
+#: options/phrases-layouts/phrases-notification.php:74
+msgid "Error message for invalid website url field"
+msgstr "无效url字段的错误消息"
+
+#: options/phrases-layouts/phrases-notification.php:94
+msgid "Logged in as"
+msgstr "登录为"
+
+#: options/phrases-layouts/phrases-notification.php:114
+msgid "Logged In"
+msgstr "已登录"
+
+#: options/phrases-layouts/phrases-notification.php:124
+msgid "To post a comment"
+msgstr "为发表评论"
+
+#: options/phrases-layouts/phrases-notification.php:144
+msgid "You can vote only 1 time"
+msgstr "你只能投一次"
+
+#: options/phrases-layouts/phrases-notification.php:164
+msgid "Login To Vote"
+msgstr "登录投票"
+
+#: options/phrases-layouts/phrases-notification.php:174
+msgid "You Cannot Vote On Your Comment"
+msgstr "你不能给自己的评论投票"
+
+#: options/phrases-layouts/phrases-notification.php:184
+msgid "You are not allowed to vote for this comment (Voting from same IP)"
+msgstr "你不能从同一IP对此评论投票"
+
+#: options/phrases-layouts/phrases-notification.php:214
+msgid "Comment waiting moderation"
+msgstr "待审评论"
+
+#: options/phrases-layouts/phrases-notification.php:224
+msgid "Message if input text length is too short"
+msgstr "评论内容长度过短的消息"
+
+#: options/phrases-layouts/phrases-notification.php:234
+msgid "Message if input text length is too long"
+msgstr "评论内容长度过长的消息"
+
+#: options/phrases-layouts/phrases-notification.php:245
+msgid "Message if comment was not updated"
+msgstr "评论未更新的消息"
+
+#: options/phrases-layouts/phrases-notification.php:255
+msgid "Message if comment no longer possible to edit"
+msgstr "评论不能编辑的消息"
+
+#: options/phrases-layouts/phrases-notification.php:265
+msgid "Message if comment text not changed"
+msgstr "评论内容未更改的消息"
+
+#: options/phrases-layouts/phrases-notification.php:269
+msgid "TYou've not made any changes"
+msgstr "您没有做出任何变更"
+
+#: templates/comment/comment-form.php:56
+msgid "Unable to send an email"
+msgstr "不能发送邮件"
+
+#: templates/comment/comment-form.php:58
+msgid "Subscription not successed"
+msgstr "订阅不成功"
+
+#: templates/comment/comment-form.php:257
+#: templates/comment/comment-form.php:265
+msgid "wpDiscuz"
+msgstr "wpDiscuz"
+
+#: utils/class.WpdiscuzHelper.php:57
+msgid "Cannot create image file"
+msgstr "不能创建图像文件"
+
+#: utils/class.WpdiscuzHelper.php:58
+msgid "Permission denied for file creation"
+msgstr "没有创建文件的权限"
+
+#: utils/class.WpdiscuzHelper.php:59
+msgid "PHP GD2 library is disabled"
+msgstr "PHP GD2 库已禁用"
+
+#: utils/class.WpdiscuzHelper.php:60
+msgid "PNG image creation disabled"
+msgstr "创建PNG图像已禁用"
+
+#. Plugin Name of the plugin/theme
+msgid "wpDiscuz - supercharged native comments"
+msgstr "wpDiscuz - 超能原生评论"
+
+#. Plugin URI of the plugin/theme
+msgid "http://wpdiscuz.com/"
+msgstr "http://wpdiscuz.com/"
+
+#. Description of the plugin/theme
+msgid "Better comment system. Wordpress post comments and discussion plugin. Allows your visitors discuss, vote for comments and share."
+msgstr "更好的评论系统。Wordpress 评论与讨论插件。允许访客评论、讨论、投票与分享。"
+
+#. Author of the plugin/theme
+msgid "gVectors Team (A. Chakhoyan, G. Zakaryan, H. Martirosyan)"
+msgstr "gVectors 团队(A. Chakhoyan, G. Zakaryan, H. Martirosyan)"
+
+#. Author URI of the plugin/theme
+msgid "http://gvectors.com/"
+msgstr "http://gvectors.com/"
+

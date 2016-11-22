@@ -1,0 +1,1272 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wpDiscuz - Wordpress Comments\n"
+"POT-Creation-Date: 2015-05-28 23:58+0400\n"
+"PO-Revision-Date: 2016-04-20 19:32+0200\n"
+"Language-Team: advancedcoding <advancedcoding@mail.ru>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.3\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: wc.php\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: fr_FR\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: comment-form/form.php:185 comment-form/tpl-comment.php:263
+msgid "Participate in this discussion via email"
+msgstr "Participer à cette discussion par e-mail"
+
+#: comment-form/form.php:323
+msgid "Connect with"
+msgstr "Se connecter avec :"
+
+#: comment-form/tpl-comment.php:174 options/phrases-layout/phrases-comment.php:27
+#: options/wc-options-serialize.php:439
+msgid "Edit"
+msgstr "Éditer"
+
+#: comment-form/tpl-comment.php:385 wc.php:321
+msgid "Anonymous"
+msgstr "Anonyme"
+
+#: options/options-layouts/settings-general.php:2
+msgid "General Settings"
+msgstr "Paramètres généraux"
+
+#: options/options-layouts/settings-general.php:7
+msgid "Display comment form for post types:"
+msgstr "Afficher le formulaire de commentaires pour les contenus de type :"
+
+#: options/options-layouts/settings-general.php:28
+msgid "User Must be registered to comment"
+msgstr "L'utilisateur doit être connecté pour commenter"
+
+#: options/options-layouts/settings-general.php:34
+msgid "Yes"
+msgstr "Oui"
+
+#: options/options-layouts/settings-general.php:38
+msgid "No"
+msgstr "Non"
+
+#: options/options-layouts/settings-general.php:46
+msgid "Comment author must fill out name"
+msgstr "L'auteur du commentaire doit entrer son nom"
+
+#: options/options-layouts/settings-general.php:57
+msgid "Comment author must fill out email"
+msgstr "L'auteur du commentaire doit entrer son email"
+
+#: options/options-layouts/settings-general.php:68
+msgid "Show the latest comments on"
+msgstr "Montrer les derniers commentaires sur"
+
+#: options/options-layouts/settings-general.php:72
+msgid "the top of the list"
+msgstr "le haut de la liste"
+
+#: options/options-layouts/settings-general.php:74
+msgid "top of the threads"
+msgstr "le haut des fils de discussion"
+
+#: options/options-layouts/settings-general.php:76
+msgid "bottom of the threads"
+msgstr "le bas des fils de discussion"
+
+#: options/options-layouts/settings-general.php:78
+msgid "the bottom of the list"
+msgstr "le bas de la liste"
+
+#: options/options-layouts/settings-general.php:86
+msgid "Comment Threads Per Page"
+msgstr "Fils de discussion par page"
+
+#: options/options-layouts/settings-general.php:97
+msgid "Comment text max length"
+msgstr "Longueur maxi du texte d'un commentaire"
+
+#: options/options-layouts/settings-general.php:108
+msgid "Comments max depth"
+msgstr "Profondeur maxi des commentaires"
+
+#: options/options-layouts/settings-general.php:113
+msgid "Level"
+msgstr "Niveau"
+
+#: options/options-layouts/settings-general.php:114
+#: options/options-layouts/settings-general.php:115
+#: options/options-layouts/settings-general.php:116
+#: options/options-layouts/settings-general.php:117
+msgid "Levels"
+msgstr "Niveaux"
+
+#: options/options-layouts/settings-general.php:124
+msgid "Comment text size in pixels"
+msgstr "Taille du texte des commentaires en pixel"
+
+#: options/options-layouts/settings-general.php:141
+msgid "Allow comment editing for"
+msgstr "Autoriser l'édition de commentaire pendant"
+
+#: options/options-layouts/settings-general.php:146
+msgid "Not Allow"
+msgstr "Ne pas autoriser"
+
+#: options/options-layouts/settings-general.php:147
+#: options/options-layouts/settings-general.php:148
+#: options/options-layouts/settings-live-update.php:41
+#: options/options-layouts/settings-live-update.php:42
+#: options/options-layouts/settings-live-update.php:43
+msgid "Minutes"
+msgstr "Minutes"
+
+#: options/options-layouts/settings-general.php:149
+#: options/phrases-layout/phrases-datetime.php:73
+msgid "Hour"
+msgstr "Heure"
+
+#: options/options-layouts/settings-general.php:150
+#: options/options-layouts/settings-general.php:151
+msgid "Hours"
+msgstr "Heures"
+
+#: options/options-layouts/settings-general.php:158
+msgid "Redirect first commenter to"
+msgstr "Rediriger le premier commentateur vers"
+
+#: options/options-layouts/settings-general.php:165
+msgid "Do not redirect"
+msgstr "Ne pas rediriger"
+
+#: options/options-layouts/settings-general.php:174
+msgid "Allow guests to vote on comments"
+msgstr "Autoriser les invités à voter sur les commentaires"
+
+#: options/options-layouts/settings-general.php:184
+msgid "Load rest of all comments on clicking the [Load More Comments] button"
+msgstr ""
+"Charger l'ensemble des commentaires restants au clic sur le bouton [Charger plus de "
+"Commentaires]"
+
+#: options/options-layouts/settings-general.php:195
+msgid "Use WordPress Date/Time format"
+msgstr "Utiliser le format Date/Heure WordPress"
+
+#: options/options-layouts/settings-general.php:196
+msgid ""
+"wpDiscuz shows Human Readable date format. If you check this option it'll show the "
+"date/time format set in WordPress General Settings."
+msgstr ""
+"wpDiscuz affiche en format lisible par un humain. Si vous cliquez cette option, il "
+"affichera en utilisant le format Date/Heure défini dans les Paramètres Généraux de "
+"WordPress."
+
+#: options/options-layouts/settings-general.php:203
+msgid "Current Wordpress date/time format"
+msgstr "Format Date/Heure actuel de WordPress"
+
+#: options/options-layouts/settings-general.php:209
+msgid "Use Plugin .PO/.MO files"
+msgstr "Utiliser les fichiers de plugin .PO/.MO"
+
+#: options/options-layouts/settings-general.php:210
+msgid ""
+"wpDiscuz phrase system allows you to translate all front-end phrases. However if you "
+"have a multi-language website it'll not allow you to add more than one language "
+"translation. The only way to get it is the plugin translation files (.PO / .MO). If "
+"wpDiscuz has the languages you need you should check this option to disable phrase "
+"system and it'll automatically translate all phrases based on language files "
+"according to current language."
+msgstr ""
+"wpDiscuz phrase system allows you to translate all front-end phrases. However if you "
+"have a multi-language website it'll not allow you to add more than one language "
+"translation. The only way to get it is the plugin translation files (.PO / .MO). If "
+"wpDiscuz has the languages you need you should check this option to disable phrase "
+"system and it'll automatically translate all phrases based on language files "
+"according to current language."
+
+#: options/options-layouts/settings-general.php:222
+msgid "Help wpDiscuz to grow allowing people to recognize which comment plugin you use"
+msgstr ""
+"Help wpDiscuz to grow allowing people to recognize which comment plugin you use"
+
+#: options/options-layouts/settings-general.php:224
+msgid ""
+"Please check this option on to help wpDiscuz get more popularity as your thank to "
+"the hard work we do for you totally free. This option adds a very small (16x16px) "
+"icon under the comment section which will allow your site visitors recognize the "
+"name of comment solution you use."
+msgstr ""
+"Please check this option on to help wpDiscuz get more popularity as your thank to "
+"the hard work we do for you totally free. This option adds a very small (16x16px) "
+"icon under the comment section which will allow your site visitors recognize the "
+"name of comment solution you use."
+
+#: options/options-layouts/settings-general.php:229
+msgid "Thank you!"
+msgstr "Merci !"
+
+#: options/options-layouts/settings-live-update.php:2 options/wc-options.php:180
+msgid "Live Update"
+msgstr "Mise à jour en temps réel"
+
+#: options/options-layouts/settings-live-update.php:8
+msgid "Live update options"
+msgstr "Options de mise à jour en temps réel"
+
+#: options/options-layouts/settings-live-update.php:9
+msgid ""
+"If you use Shared Web Hosting you should make sure the \"Live Update\" function "
+"doesn't overload your server resources. This function is good for VPS and Dedicated "
+"Hosting Plans."
+msgstr ""
+"If you use Shared Web Hosting you should make sure the \"Live Update\" function "
+"doesn't overload your server resources. This function is good for VPS and Dedicated "
+"Hosting Plans."
+
+#: options/options-layouts/settings-live-update.php:14
+msgid "Never update"
+msgstr "Ne jamais mettre à jour"
+
+#: options/options-layouts/settings-live-update.php:16
+msgid "Turn off \"Live Update\" function"
+msgstr "Désactiver la fonction \"Mise à jour en temps réel\""
+
+#: options/options-layouts/settings-live-update.php:18
+msgid "Show new comment/reply buttons to update manualy"
+msgstr ""
+"Afficher les boutons Nouveau commentaire / Répondre pour mettre à jour manuellement"
+
+#: options/options-layouts/settings-live-update.php:20
+msgid "Always check for new comments and show update buttons"
+msgstr ""
+"Toujours vérifier pour de nouveaux commentaires et afficher les boutons de mise à "
+"jour"
+
+#: options/options-layouts/settings-live-update.php:22
+msgid "Always update"
+msgstr "Toujours mettre à jour"
+
+#: options/options-layouts/settings-live-update.php:24
+msgid "Always check for new comments and update automatically"
+msgstr ""
+"Toujours vérifier pour de nouveaux commentaires et mettre à jour automatiquement"
+
+#: options/options-layouts/settings-live-update.php:32
+msgid "Update comment list every"
+msgstr "Mettre à jour la liste des commentaires toutes les"
+
+#: options/options-layouts/settings-live-update.php:37
+#: options/options-layouts/settings-live-update.php:38
+#: options/options-layouts/settings-live-update.php:39
+msgid "Seconds"
+msgstr "Secondes"
+
+#: options/options-layouts/settings-live-update.php:40
+#: options/phrases-layout/phrases-datetime.php:95
+msgid "Minute"
+msgstr "Minutes"
+
+#: options/options-layouts/settings-show-hide.php:2 options/wc-options.php:181
+msgid "Show/Hide Components"
+msgstr "Afficher / Masquer les Composants"
+
+#: options/options-layouts/settings-show-hide.php:7
+msgid "Show logged-in user name and logout link on top of main form"
+msgstr ""
+"Afficher le nom de l'utilisateur connecté et le lien de déconnexion en haut du "
+"formulaire principal"
+
+#: options/options-layouts/settings-show-hide.php:17
+msgid "Hide Reply button for Guests"
+msgstr "Masquer le bouton Répondre pour les Invités"
+
+#: options/options-layouts/settings-show-hide.php:27
+msgid "Hide Reply button for Members"
+msgstr "Masquer le bouton Répondre pour les Membres"
+
+#: options/options-layouts/settings-show-hide.php:37
+msgid "Hide Author Titles"
+msgstr "Masquer les titres des auteurs"
+
+#: options/options-layouts/settings-show-hide.php:47
+msgid "Hide Voting buttons"
+msgstr "Masquer les boutons de vote"
+
+#: options/options-layouts/settings-show-hide.php:57
+msgid "Hide Share Buttons"
+msgstr "Masquer les boutons de partage"
+
+#: options/options-layouts/settings-show-hide.php:67
+msgid "Hide the  CAPTCHA field"
+msgstr "Masquer le champ CAPTCHA"
+
+#: options/options-layouts/settings-show-hide.php:77
+msgid "Hide the Website URL field"
+msgstr "Masquer le champ URL du site Web"
+
+#: options/options-layouts/settings-show-hide.php:87
+msgid "Hide header text"
+msgstr "Masquer le texte d'entête"
+
+#: options/options-layouts/settings-show-hide.php:97
+msgid "Hide user avatar"
+msgstr "Masquer l'avatar utilisateur"
+
+#: options/options-layouts/settings-social.php:10
+#: options/options-layouts/settings-social.php:12
+#: options/options-layouts/settings-social.php:14 wc.php:1018
+msgid "Settings"
+msgstr "Réglages"
+
+#: options/options-layouts/settings-social.php:19
+#: options/options-layouts/settings-social.php:29
+#: options/options-layouts/settings-social.php:39
+msgid "Activate"
+msgstr "Activer"
+
+#: options/options-layouts/settings-social.php:23
+#: options/options-layouts/settings-social.php:33
+#: options/options-layouts/settings-social.php:43
+msgid "View details/Install"
+msgstr "Voir les détails / Installer"
+
+#: options/options-layouts/settings-social.php:75 options/wc-options.php:184
+msgid "Social Login"
+msgstr "Connexion sociale"
+
+#: options/options-layouts/settings-social.php:76
+msgid ""
+"You can use one of these most popular Social Login Plugins to allow your visitors "
+"login and comment with Facebook, Twitter, Google+, Wordpress, VK, OK and lots of "
+"other social network service accounts. All social login buttons will be fully "
+"integrated with wpDiscuz comment forms."
+msgstr ""
+"You can use one of these most popular Social Login Plugins to allow your visitors "
+"login and comment with Facebook, Twitter, Google+, Wordpress, VK, OK and lots of "
+"other social network service accounts. All social login buttons will be fully "
+"integrated with wpDiscuz comment forms."
+
+#: options/options-layouts/settings-style.php:2 options/wc-options.php:183
+msgid "Background and Colors"
+msgstr "Fond et couleurs"
+
+#: options/options-layouts/settings-style.php:7
+msgid "Comment Form Background Color"
+msgstr "Couleur de fond du formulaire de commentaire"
+
+#: options/options-layouts/settings-style.php:10
+#: options/options-layouts/settings-style.php:34
+#: options/options-layouts/settings-style.php:58
+#: options/options-layouts/settings-style.php:82
+#: options/options-layouts/settings-style.php:107
+#: options/options-layouts/settings-style.php:132
+#: options/options-layouts/settings-style.php:155
+#: options/options-layouts/settings-style.php:178
+msgid "Example: #00ff00"
+msgstr "Exemple: #00ff00"
+
+#: options/options-layouts/settings-style.php:31
+msgid "Comment Background Color"
+msgstr "Couleur de fond des commentaires"
+
+#: options/options-layouts/settings-style.php:55
+msgid "Reply Background Color"
+msgstr "Couleur de fond des réponses"
+
+#: options/options-layouts/settings-style.php:79
+msgid "Comment Text Color"
+msgstr "Couleur des textes des commentaires"
+
+#: options/options-layouts/settings-style.php:104
+msgid "Author title color"
+msgstr "Couleur du titre de l'auteur"
+
+#: options/options-layouts/settings-style.php:129
+msgid "Vote, Reply, Share, Edit links text colors"
+msgstr "Couleur des textes des liens Voter, Répondre, Partager, Editer"
+
+#: options/options-layouts/settings-style.php:152
+msgid "Comment form fields border color"
+msgstr "Couleur de bordure des champs du formulaire de commentaire"
+
+#: options/options-layouts/settings-style.php:175
+msgid "New loaded comments' background color"
+msgstr "Couleur de fond des nouveaux commentaires chargés"
+
+#: options/options-layouts/settings-style.php:199
+msgid "Custom CSS Code"
+msgstr "Code CSS personnalisé"
+
+#: options/options-layouts/settings-subscription.php:2
+msgid "Email Subscription Settings"
+msgstr "Réglages de souscription des emails"
+
+#: options/options-layouts/settings-subscription.php:7
+msgid "Show \"Notify of all new follow-up comments\""
+msgstr "Afficher \"Notifier de tous les nouveaux commentaires de suivi\""
+
+#: options/options-layouts/settings-subscription.php:8
+msgid "Show \"Notify of new replies to all my comments\""
+msgstr "Afficher \"Notifier des nouvelles réponses à tous mes commentaires\""
+
+#: options/options-layouts/settings-subscription.php:9
+msgid "Show \"Notify of new replies to this comment\""
+msgstr "Afficher \"Notifier de toutes les réponses à ce commentaire\""
+
+#: options/options-layouts/settings-subscription.php:11
+msgid ""
+"Please keep all three or at least one of those options ON, otherwise users will not "
+"have any option for email notifications and they'll not get any messages."
+msgstr ""
+"Please keep all three or at least one of those options ON, otherwise users will not "
+"have any option for email notifications and they'll not get any messages."
+
+#: options/options-layouts/settings-subscription.php:30
+msgid "Use Postmatic for subscriptions and commenting by email"
+msgstr "Utiliser Postmatic pour les souscriptions et commentaires par email"
+
+#: options/options-layouts/settings-subscription.php:31
+msgid ""
+"Postmatic allows your users subscribe to comments. Instead of just being notified, "
+"they add a reply right from their inbox."
+msgstr ""
+"Postmatic allows your users subscribe to comments. Instead of just being notified, "
+"they add a reply right from their inbox."
+
+#: options/options-layouts/settings-subscription.php:42
+msgid "Keep selected the email notification of all new follow-up comments by default"
+msgstr ""
+"Garder la notification par email de tous les nouveaux commentaires de suivi "
+"sélectionné par défaut"
+
+#: options/options-layouts/settings-subscription.php:43
+msgid ""
+"If this option is checked-on, in Manage Subscriptions section of comment forms will "
+"only be displayed the \"Notify of all new follow-up comments\" option and this "
+"option will always be selected by default."
+msgstr ""
+"If this option is checked-on, in Manage Subscriptions section of comment forms will "
+"only be displayed the \"Notify of all new follow-up comments\" option and this "
+"option will always be selected by default."
+
+#: options/phrases-layout/phrases-comment.php:2
+msgid "Comment Template Phrases"
+msgstr "Phrases Modèle Commentaire"
+
+#: options/phrases-layout/phrases-comment.php:7 options/wc-options-serialize.php:437
+msgid "Reply"
+msgstr "Répondre"
+
+#: options/phrases-layout/phrases-comment.php:17 options/wc-options-serialize.php:438
+msgid "Share"
+msgstr "Partager"
+
+#: options/phrases-layout/phrases-comment.php:37 options/wc-options-serialize.php:440
+msgid "Share On Facebook"
+msgstr "Partager sur Facebook"
+
+#: options/phrases-layout/phrases-comment.php:47 options/wc-options-serialize.php:441
+msgid "Share On Twitter"
+msgstr "Partager sur Twitter"
+
+#: options/phrases-layout/phrases-comment.php:57 options/wc-options-serialize.php:442
+msgid "Share On Google"
+msgstr "Partager sur Google"
+
+#: options/phrases-layout/phrases-comment.php:67 options/wc-options-serialize.php:443
+msgid "Share On VKontakte"
+msgstr "Partager sur VKontakte"
+
+#: options/phrases-layout/phrases-comment.php:77 options/wc-options-serialize.php:444
+msgid "Share On Odnoklassniki"
+msgstr "Partager sur Odnoklassniki"
+
+#: options/phrases-layout/phrases-comment.php:87 options/wc-options-serialize.php:445
+msgid "Hide Replies"
+msgstr "Masquer les réponses"
+
+#: options/phrases-layout/phrases-comment.php:97 options/wc-options-serialize.php:446
+msgid "Show Replies"
+msgstr "Afficher les réponses"
+
+#: options/phrases-layout/phrases-comment.php:107
+msgid "Title For Guests"
+msgstr "Titre pour Invités"
+
+#: options/phrases-layout/phrases-comment.php:117
+msgid "Title For Members"
+msgstr "Titre pour Membres"
+
+#: options/phrases-layout/phrases-comment.php:127
+msgid "Title For Authors"
+msgstr "Titre pour Auteurs"
+
+#: options/phrases-layout/phrases-comment.php:137
+msgid "Title For Admins"
+msgstr "Titre pour Admins"
+
+#: options/phrases-layout/phrases-comment.php:147 options/wc-options-serialize.php:488
+msgid "Vote Up"
+msgstr "Vote Pour"
+
+#: options/phrases-layout/phrases-comment.php:157 options/wc-options-serialize.php:489
+msgid "Vote Down"
+msgstr "Vote Contre"
+
+#: options/phrases-layout/phrases-comment.php:167
+msgid "Save edited comment button text"
+msgstr "Texte du bouton Enregistrer du commentaire édité"
+
+#: options/phrases-layout/phrases-comment.php:171 options/wc-options-serialize.php:507
+msgid "Save"
+msgstr "Enregistrer"
+
+#: options/phrases-layout/phrases-comment.php:177
+msgid "Cancel comment editing button text"
+msgstr "Texte du bouton Annuler du commentaire édité"
+
+#: options/phrases-layout/phrases-comment.php:181 options/wc-options-serialize.php:508
+msgid "Cancel"
+msgstr "Annuler"
+
+#: options/phrases-layout/phrases-datetime.php:2
+msgid "Date/Time Phrases"
+msgstr "Phrases Date / Heure"
+
+#: options/phrases-layout/phrases-datetime.php:7
+msgid "Year"
+msgstr "Année"
+
+#: options/phrases-layout/phrases-datetime.php:18
+msgid "Years (Plural Form)"
+msgstr "Années (au pluriel)"
+
+#: options/phrases-layout/phrases-datetime.php:22
+msgid "Years"
+msgstr "Années"
+
+#: options/phrases-layout/phrases-datetime.php:29
+msgid "Month"
+msgstr "Mois"
+
+#: options/phrases-layout/phrases-datetime.php:40
+msgid "Months (Plural Form)"
+msgstr "Mois (au pluriel)"
+
+#: options/phrases-layout/phrases-datetime.php:51
+msgid "Day"
+msgstr "Jour"
+
+#: options/phrases-layout/phrases-datetime.php:62
+msgid "Days (Plural Form)"
+msgstr "Jours (au pluriel)"
+
+#: options/phrases-layout/phrases-datetime.php:84
+msgid "Hours (Plural Form)"
+msgstr "Heures (au pluriel)"
+
+#: options/phrases-layout/phrases-datetime.php:106
+msgid "Minutes (Plural Form)"
+msgstr "Minutes (au pluriel)"
+
+#: options/phrases-layout/phrases-datetime.php:117
+msgid "Second"
+msgstr "Seconde"
+
+#: options/phrases-layout/phrases-datetime.php:128
+msgid "Seconds (Plural Form)"
+msgstr "Secondes (au pluriel)"
+
+#: options/phrases-layout/phrases-datetime.php:138
+msgid "Commented \"right now\" text"
+msgstr "Texte commenté \"A l'instant\""
+
+#: options/phrases-layout/phrases-datetime.php:149
+msgid "Ago text"
+msgstr "Texte Il y a"
+
+#: options/phrases-layout/phrases-datetime.php:160
+msgid "\"Today\" text"
+msgstr "Texte \"Aujourd'hui\""
+
+#: options/phrases-layout/phrases-datetime.php:164 options/wc-options-serialize.php:482
+msgid "Today"
+msgstr "Aujourd'hui"
+
+#: options/phrases-layout/phrases-email.php:2
+msgid "Email Template Phrases"
+msgstr "Phrases Email Modèle"
+
+#: options/phrases-layout/phrases-email.php:7
+msgid "Email Subject"
+msgstr "Sujet de l'email"
+
+#: options/phrases-layout/phrases-email.php:18
+msgid "Email Message"
+msgstr "Message de l'email"
+
+#: options/phrases-layout/phrases-email.php:29
+msgid "New Reply Subject"
+msgstr "Sujet nouvelle réponse"
+
+#: options/phrases-layout/phrases-email.php:33
+#: options/phrases-layout/phrases-general.php:101 options/wc-options-serialize.php:453
+msgid "New Reply"
+msgstr "Nouvelle réponse"
+
+#: options/phrases-layout/phrases-email.php:40
+msgid "New Reply Message"
+msgstr "Message Nouvelle Réponse"
+
+#: options/phrases-layout/phrases-email.php:50
+#: options/phrases-layout/phrases-email.php:54 options/wc-options-serialize.php:458
+msgid "Unsubscribe"
+msgstr "Désabonner"
+
+#: options/phrases-layout/phrases-email.php:61
+#: options/phrases-layout/phrases-email.php:65 options/wc-options-serialize.php:459
+msgid "Ignore Subscription"
+msgstr "Ignorer l'abonnement"
+
+#: options/phrases-layout/phrases-email.php:72
+#: options/phrases-layout/phrases-email.php:76 options/wc-options-serialize.php:461
+msgid "Confirm your subscription"
+msgstr "Confirmer votre abonnement"
+
+#: options/phrases-layout/phrases-email.php:82
+#: options/phrases-layout/phrases-email.php:86 options/wc-options-serialize.php:462
+msgid "You've successfully confirmed your subscription."
+msgstr "Vous avez confirmé votre abonnement avec succès."
+
+#: options/phrases-layout/phrases-email.php:92
+msgid "Subscribe Confirmation Email Subject"
+msgstr "Sujet email confirmation abonnement"
+
+#: options/phrases-layout/phrases-email.php:96 options/wc-options-serialize.php:463
+#: wc.php:941
+msgid "Subscribe Confirmation"
+msgstr "Confirmation d'abonnement"
+
+#: options/phrases-layout/phrases-email.php:103
+msgid "Subscribe Confirmation Email Content"
+msgstr "Contenu de l'email de confirmation d'abonnement"
+
+#: options/phrases-layout/phrases-email.php:107 options/wc-options-serialize.php:464
+#: wc.php:942
+msgid ""
+"Hi, <br/> You just subscribed for new comments on our website. This means you will "
+"receive an email when new comments are posted according to subscription option "
+"you've chosen. <br/> To activate, click confirm below. If you believe this is an "
+"error, ignore this message and we'll never bother you again."
+msgstr ""
+"Bonjour.<br/><br/> Vous venez de vous abonner au suivi des commentaires sur notre "
+"site. Cela signifie que vous recevrez un email quand de nouveaux commentaires seront "
+"postés en fonction de l'option de souscription que vous avez choisie. <br/><br/>Pour "
+"activer, cliquer le lien de confirmation ci-dessous. <br/><br/>Si vous pensez "
+"recevoir ce message par erreur, ignorer ce message et nous ne vous solliciterons "
+"plus."
+
+#: options/phrases-layout/phrases-form.php:2
+msgid "Form Template Phrases"
+msgstr "Phrases Modèle Formulaire"
+
+#: options/phrases-layout/phrases-form.php:7
+msgid "Comment Field Start"
+msgstr "Début du Champ Commentaire"
+
+#: options/phrases-layout/phrases-form.php:17
+msgid "Comment Field Join"
+msgstr "Joindre du Champ Commentaire"
+
+#: options/phrases-layout/phrases-form.php:27
+msgid "Email Field"
+msgstr "Champ Email"
+
+#: options/phrases-layout/phrases-form.php:37
+msgid "Name Field"
+msgstr "Champ Nom"
+
+#: options/phrases-layout/phrases-form.php:47
+msgid "WebSite URL Field"
+msgstr "Champ URL du site Web"
+
+#: options/phrases-layout/phrases-form.php:57
+msgid "CAPTCHA Field"
+msgstr "Champ CAPTCHA"
+
+#: options/phrases-layout/phrases-form.php:67
+msgid "Submit Button"
+msgstr "Bouton Soumettre"
+
+#: options/phrases-layout/phrases-form.php:77
+#: options/phrases-layout/phrases-form.php:81 options/wc-options-serialize.php:430
+msgid "Manage Subscriptions"
+msgstr "Gérer les Abonnements"
+
+#: options/phrases-layout/phrases-form.php:87
+msgid "Notify \"None\""
+msgstr "Notifier \"Personne\""
+
+#: options/phrases-layout/phrases-form.php:91 options/wc-options-serialize.php:431
+msgid "None"
+msgstr "Aucun"
+
+#: options/phrases-layout/phrases-form.php:97
+msgid "Notify on new comments (checkbox)"
+msgstr "Notifier sur les nouveaux commentaires (case à cocher)"
+
+#: options/phrases-layout/phrases-form.php:101 options/wc-options-serialize.php:432
+msgid "Notify of all new follow-up comments"
+msgstr "Notifier de toutes les réponses et tous les commentaires"
+
+#: options/phrases-layout/phrases-form.php:108
+msgid "Notify on all new replies (checkbox)"
+msgstr "Notifier de toutes les nouvelles réponses (case à cocher)"
+
+#: options/phrases-layout/phrases-form.php:112 options/wc-options-serialize.php:433
+msgid "Notify of new replies to all my comments"
+msgstr "Notifier des nouvelles réponses à tous mes commentaires"
+
+#: options/phrases-layout/phrases-form.php:119
+msgid "Notify on new replies (checkbox)"
+msgstr "Notifier des nouvelles réponses (case à cocher)"
+
+#: options/phrases-layout/phrases-form.php:123 options/wc-options-serialize.php:434
+msgid "Notify of new replies to this comment"
+msgstr "Notifier des nouvelles réponses à ce commentaire"
+
+#: options/phrases-layout/phrases-form.php:129
+msgid "Subscribed on this comment replies"
+msgstr "Abonné aux réponses de ce commentaire"
+
+#: options/phrases-layout/phrases-form.php:139
+msgid "Subscribed on all your comments replies"
+msgstr "Abonné aux réponses à tous vos commentaires"
+
+#: options/phrases-layout/phrases-form.php:149
+msgid "Subscribed on this post"
+msgstr "Abonné à cet article"
+
+#: options/phrases-layout/phrases-general.php:2
+msgid "General Phrases"
+msgstr "Phrases Général"
+
+#: options/phrases-layout/phrases-general.php:7 options/wc-options-serialize.php:418
+msgid "Leave a Reply"
+msgstr "Poster un Commentaire"
+
+#: options/phrases-layout/phrases-general.php:17
+msgid "Be the first to comment"
+msgstr "Soyez le premier à commenter"
+
+#: options/phrases-layout/phrases-general.php:27 options/wc-options-serialize.php:420
+#: options/wc-options.php:353
+msgid "Comment"
+msgstr "Commentaire"
+
+#: options/phrases-layout/phrases-general.php:37
+msgid "Comment (Plural Form)"
+msgstr "Commentaire (au pluriel)"
+
+#: options/phrases-layout/phrases-general.php:47
+msgid "On"
+msgstr "Marche"
+
+#: options/phrases-layout/phrases-general.php:57
+msgid "Load More Button"
+msgstr "Bouton Afficher plus"
+
+#: options/phrases-layout/phrases-general.php:67 options/wc-options-serialize.php:436
+msgid "Load Rest of Comments"
+msgstr "Afficher le reste des Commentaires"
+
+#: options/phrases-layout/phrases-general.php:77
+msgid "Button text if has new comment"
+msgstr "Bouton texte si nouveau commentaire"
+
+#: options/phrases-layout/phrases-general.php:81 options/wc-options-serialize.php:451
+msgid "New Comment"
+msgstr "Nouveau Commentaire"
+
+#: options/phrases-layout/phrases-general.php:87
+msgid "Button text if has new comments (Plural Form)"
+msgstr "Bouton texte si nouveau commentaire (au pluriel)"
+
+#: options/phrases-layout/phrases-general.php:91
+msgid "New Comments"
+msgstr "Nouveaux Commentaires"
+
+#: options/phrases-layout/phrases-general.php:97
+msgid "Button text if has new reply"
+msgstr "Bouton texte si nouvelles réponses"
+
+#: options/phrases-layout/phrases-general.php:107
+msgid "Button text if has new replies (Plural Form)"
+msgstr "Bouton texte si nouvelles réponses (au pluriel)"
+
+#: options/phrases-layout/phrases-general.php:111
+msgid "New Replies"
+msgstr "Nouvelles Réponses"
+
+#: options/phrases-layout/phrases-general.php:117
+msgid "Text on load more button if has new comment(s)"
+msgstr "Texte bouton afficher plus si nouveaux commentaires"
+
+#: options/phrases-layout/phrases-general.php:121 options/wc-options-serialize.php:503
+msgid "New"
+msgstr "Nouveau"
+
+#: options/phrases-layout/phrases-notification.php:2
+msgid "Notification Phrases"
+msgstr "Phrases Notification"
+
+#: options/phrases-layout/phrases-notification.php:7
+#: options/wc-options-serialize.php:460
+msgid "You've successfully unsubscribed."
+msgstr "Vous vous êtes désabonné avec succès."
+
+#: options/phrases-layout/phrases-notification.php:18
+msgid "Error message for empty field"
+msgstr "Message d'erreur pour champ vide"
+
+#: options/phrases-layout/phrases-notification.php:28
+msgid "Error message for invalid email field"
+msgstr "Message d'erreur pour champ email invalide"
+
+#: options/phrases-layout/phrases-notification.php:38
+msgid "Error message for invalid website url field"
+msgstr "Message d'erreur pour champ URL site Web invalide"
+
+#: options/phrases-layout/phrases-notification.php:48
+#: options/wc-options-serialize.php:483
+msgid "You must be"
+msgstr "Vous devez"
+
+#: options/phrases-layout/phrases-notification.php:58
+msgid "Logged in as"
+msgstr "Connecté en tant que"
+
+#: options/phrases-layout/phrases-notification.php:68
+#: options/wc-options-serialize.php:485
+msgid "Log out"
+msgstr "Déconnecter"
+
+#: options/phrases-layout/phrases-notification.php:78
+msgid "Logged In"
+msgstr "Connecté"
+
+#: options/phrases-layout/phrases-notification.php:88
+msgid "To post a comment"
+msgstr "Pour poster un commentaire"
+
+#: options/phrases-layout/phrases-notification.php:98
+#: options/wc-options-serialize.php:490
+msgid "Vote Counted"
+msgstr "Votes comptabilisés"
+
+#: options/phrases-layout/phrases-notification.php:108
+msgid "You can vote only 1 time"
+msgstr "Vous pouvez voter une seule fois"
+
+#: options/phrases-layout/phrases-notification.php:118
+#: options/wc-options-serialize.php:492
+msgid "Voting Error"
+msgstr "Erreur sur vote"
+
+#: options/phrases-layout/phrases-notification.php:128
+msgid "Login To Vote"
+msgstr "Se connecter pour voter"
+
+#: options/phrases-layout/phrases-notification.php:138
+msgid "You Cannot Vote On Your Comment"
+msgstr "Vous ne pouvez pas voter sur votre Commentaire"
+
+#: options/phrases-layout/phrases-notification.php:148
+msgid "You are not allowed to vote for this comment (Voting from same IP)"
+msgstr "Vous n'êtes pas autorisé à voter pour ce commentaire (Vote depuis même IP)"
+
+#: options/phrases-layout/phrases-notification.php:158
+#: options/wc-options-serialize.php:496
+msgid "Invalid Captcha Code"
+msgstr "Code Captcha invalide"
+
+#: options/phrases-layout/phrases-notification.php:168
+#: options/wc-options-serialize.php:497
+msgid "Some of field value is invalid"
+msgstr "Une partie du champ est invalide"
+
+#: options/phrases-layout/phrases-notification.php:178
+msgid "Comment waiting moderation"
+msgstr "Commentaire en attente de modération"
+
+#: options/phrases-layout/phrases-notification.php:188
+msgid "Message if comment content length is too long"
+msgstr "Message si le contenu du commentaire est trop long"
+
+#: options/phrases-layout/phrases-notification.php:198
+msgid "Message if comment was not updated"
+msgstr "Message si le commentaire n'a pas été mis à jour"
+
+#: options/phrases-layout/phrases-notification.php:202
+#: options/wc-options-serialize.php:504
+msgid "Sorry, the comment was not updated"
+msgstr "Désolé, le commentaire n'a pas été mis à jour"
+
+#: options/phrases-layout/phrases-notification.php:208
+msgid "Message if comment no longer possible to edit"
+msgstr "Message s'il n'est plus possible d'éditer le commentaire"
+
+#: options/phrases-layout/phrases-notification.php:212
+#: options/wc-options-serialize.php:505
+msgid "Sorry, this comment no longer possible to edit"
+msgstr "Désolé, il n'est plus possible d'éditer ce commentaire"
+
+#: options/phrases-layout/phrases-notification.php:219
+msgid "Message if comment text not changed"
+msgstr "Message si le texte du commentaire est inchangé"
+
+#: options/phrases-layout/phrases-notification.php:223
+msgid "TYou've not made any changes"
+msgstr "Vous n'avez fait aucune modification"
+
+#: options/wc-options-serialize.php:419
+msgid "Be the First to Comment!"
+msgstr "Soyez le premier à commenter !"
+
+#: options/wc-options-serialize.php:421
+msgid "Comments"
+msgstr "Commentaires"
+
+#: options/wc-options-serialize.php:422
+msgid "on"
+msgstr "sur"
+
+#: options/wc-options-serialize.php:423
+msgid "Start the discussion"
+msgstr "Démarrer la discussion"
+
+#: options/wc-options-serialize.php:424
+msgid "Join the discussion"
+msgstr "Rejoindre la discussion"
+
+#: options/wc-options-serialize.php:425 options/wc-options.php:355
+msgid "Email"
+msgstr "Email"
+
+#: options/wc-options-serialize.php:426
+msgid "Name"
+msgstr "Nom"
+
+#: options/wc-options-serialize.php:427
+msgid "WebSite URL"
+msgstr "URL du site Web"
+
+#: options/wc-options-serialize.php:428
+msgid "Please insert the code above to comment"
+msgstr "Merci d'insérer le code au dessus du commentaire"
+
+#: options/wc-options-serialize.php:429
+msgid "Post Comment"
+msgstr "Poster le Commentaire"
+
+#: options/wc-options-serialize.php:435
+msgid "Load More Comments"
+msgstr "Afficher plus de Commentaires"
+
+#: options/wc-options-serialize.php:447
+msgid "Guest"
+msgstr "Invité"
+
+#: options/wc-options-serialize.php:448
+msgid "Member"
+msgstr "Membre"
+
+#: options/wc-options-serialize.php:449
+msgid "Author"
+msgstr "Auteur"
+
+#: options/wc-options-serialize.php:450
+msgid "Admin"
+msgstr "Admin"
+
+#: options/wc-options-serialize.php:452
+msgid "New comment on the discussion section you've been interested in"
+msgstr ""
+"Nouveau commentaire dans une section de la discussion à laquelle vous vous êtes "
+"intéressé"
+
+#: options/wc-options-serialize.php:454
+msgid "New reply on the discussion section you've been interested in"
+msgstr ""
+"Nouvelle réponse dans une section de la discussion à laquelle vous vous êtes "
+"intéressé"
+
+#: options/wc-options-serialize.php:455
+msgid "You're subscribed for new replies on this comment"
+msgstr "Vous êtes abonné aux nouvelles réponses sur ce commentaire"
+
+#: options/wc-options-serialize.php:456
+msgid "You're subscribed for new replies on all your comments"
+msgstr "Vous êtes abonné aux nouvelles réponses à tous vos commentaires"
+
+#: options/wc-options-serialize.php:457
+msgid "You're subscribed for new follow-up comments on this post"
+msgstr "Vous êtes abonné à tous les commentaires de cet article"
+
+#: options/wc-options-serialize.php:465
+msgid "please fill out this field to comment"
+msgstr "Merci de compléter ce champ pour commenter"
+
+#: options/wc-options-serialize.php:466
+msgid "email address is invalid"
+msgstr "Adresse email invalide"
+
+#: options/wc-options-serialize.php:467
+msgid "url is invalid"
+msgstr "URL invalide"
+
+#: options/wc-options-serialize.php:468
+msgid "year"
+msgstr "année"
+
+#: options/wc-options-serialize.php:469
+msgid "years"
+msgstr "années"
+
+#: options/wc-options-serialize.php:470
+msgid "month"
+msgstr "mois"
+
+#: options/wc-options-serialize.php:471
+msgid "months"
+msgstr "mois"
+
+#: options/wc-options-serialize.php:472
+msgid "day"
+msgstr "jour"
+
+#: options/wc-options-serialize.php:473
+msgid "days"
+msgstr "jours"
+
+#: options/wc-options-serialize.php:474
+msgid "hour"
+msgstr "heure"
+
+#: options/wc-options-serialize.php:475
+msgid "hours"
+msgstr "heures"
+
+#: options/wc-options-serialize.php:476
+msgid "minute"
+msgstr "minute"
+
+#: options/wc-options-serialize.php:477
+msgid "minutes"
+msgstr "minutes"
+
+#: options/wc-options-serialize.php:478
+msgid "second"
+msgstr "seconde"
+
+#: options/wc-options-serialize.php:479
+msgid "seconds"
+msgstr "secondes"
+
+#: options/wc-options-serialize.php:480
+msgid "right now"
+msgstr "à l'instant"
+
+#: options/wc-options-serialize.php:481
+msgid "ago"
+msgstr "plus tôt"
+
+#: options/wc-options-serialize.php:484
+msgid "You are logged in as"
+msgstr "Vous êtes connecté en tant que"
+
+#: options/wc-options-serialize.php:486
+msgid "logged in"
+msgstr "vous connecter"
+
+#: options/wc-options-serialize.php:487
+msgid "to post a comment."
+msgstr "pour poster un commentaire"
+
+#: options/wc-options-serialize.php:491
+msgid "You've already voted for this comment"
+msgstr "Vous avez déjà voté pour ce commentaire"
+
+#: options/wc-options-serialize.php:493
+msgid "You Must Be Logged In To Vote"
+msgstr "Vous devez être connecté pour voter"
+
+#: options/wc-options-serialize.php:494
+msgid "You cannot vote for your comment"
+msgstr "Vous ne pouvez pas voter pour vos propres commentaires"
+
+#: options/wc-options-serialize.php:495
+msgid "You are not allowed to vote for this comment"
+msgstr "Vous n'êtes pas autorisé à voter pour ce commentaire"
+
+#: options/wc-options-serialize.php:498
+msgid "new comment"
+msgstr "nouveau commentaire"
+
+#: options/wc-options-serialize.php:499
+msgid "new comments"
+msgstr "nouveaux commentaires"
+
+#: options/wc-options-serialize.php:500
+msgid "Comment awaiting moderation"
+msgstr "Commentaire en attente de modération"
+
+#: options/wc-options-serialize.php:501
+msgid "new reply on your comment"
+msgstr "nouvelle réponse à votre commentaire"
+
+#: options/wc-options-serialize.php:502
+msgid "new replies on your comments"
+msgstr "nouvelles réponses à vos commentaires"
+
+#: options/wc-options-serialize.php:506
+msgid "You've not made any changes"
+msgstr "Vous n'avez fait aucune modification"
+
+#: options/wc-options-serialize.php:509
+#, php-format
+msgid "Comment text is too long (maximum %s characters allowed)"
+msgstr ""
+"Le texte du commentaire est trop long (un maximum de %s caractères est autorisé)"
+
+#: options/wc-options.php:28 options/wc-options.php:232
+msgid "Hacker?"
+msgstr "Hacker ?"
+
+#: options/wc-options.php:87
+msgid "wpDiscuz General Settings"
+msgstr "Paramètres Généraux wpDiscuz"
+
+#: options/wc-options.php:179
+msgid "General settings"
+msgstr "Paramètres Généraux"
+
+#: options/wc-options.php:182
+msgid "Email Subscription"
+msgstr "Abonnement Email"
+
+#: options/wc-options.php:182
+msgid "and Postmatic"
+msgstr "et Postmatic"
+
+#: options/wc-options.php:213 options/wc-options.php:383
+msgid "Save Changes"
+msgstr "Enregistrer les modifications"
+
+#: options/wc-options.php:214
+msgid "Reset Options"
+msgstr "Réinitialiser les options"
+
+#: options/wc-options.php:341
+msgid "WpDiscuz Front-end Phrases"
+msgstr "Phrases du front-end WpDiscuz"
+
+#: options/wc-options.php:351
+msgid "General"
+msgstr "Général"
+
+#: options/wc-options.php:352
+msgid "Form"
+msgstr "Formulaire"
+
+#: options/wc-options.php:354
+msgid "Date/Time"
+msgstr "Date / Heure"
+
+#: options/wc-options.php:356
+msgid "Notification"
+msgstr "Notification"
+
+#: wc.php:1020
+msgid "Phrases"
+msgstr "Phrases"
+
+#. Plugin Name of the plugin/theme
+msgid "wpDiscuz - Wordpress Comments"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.gvectors.com/wpdiscuz/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Better comment system. Wordpress post comments and discussion plugin. Allows your "
+"visitors discuss, vote for comments and share."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "gVectors Team (A. Chakhoyan, G. Zakaryan, H. Martirosyan)"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.gvectors.com/"
+msgstr ""
+
+#: options/class.WpdiscuzOptionsSerialized.php:454
+#: options/phrases-layouts/phrases-form.php:82
+#: options/phrases-layouts/phrases-form.php:86
+msgid "Notify of"
+msgstr "Me notifier des"
+
+#: options/class.WpdiscuzOptionsSerialized.php:455
+#: options/phrases-layouts/phrases-form.php:96
+msgid "new follow-up comments"
+msgstr "nouveaux commentaires de suivi"
+
+#: options/class.WpdiscuzOptionsSerialized.php:456
+msgid "new replies to my comments"
+msgstr "nouvelles réponses à mes commentaires"
+
+#: options/class.WpdiscuzOptionsSerialized.php:458
+#: options/phrases-layouts/phrases-form.php:122
+#: options/phrases-layouts/phrases-form.php:126
+msgid "Sort by"
+msgstr "Trier par"
+
+#: options/class.WpdiscuzOptionsSerialized.php:459
+#: options/phrases-layouts/phrases-form.php:132
+#: options/phrases-layouts/phrases-form.php:136
+msgid "newest"
+msgstr "plus récents"
+
+#: options/class.WpdiscuzOptionsSerialized.php:460
+#: options/phrases-layouts/phrases-form.php:142
+#: options/phrases-layouts/phrases-form.php:146
+msgid "oldest"
+msgstr "plus anciens"
+
+#: options/class.WpdiscuzOptionsSerialized.php:461
+#: options/phrases-layouts/phrases-form.php:152
+#: options/phrases-layouts/phrases-form.php:156
+msgid "most voted"
+msgstr "plus de votes"
+
+#: options/class.WpdiscuzOptionsSerialized.php:488
+#: options/phrases-layouts/phrases-notification.php:22
+msgid "You've successfully subscribed."
+msgstr "Vous vous êtes abonné avec succès."
+
+#: options/class.WpdiscuzOptionsSerialized.php:541
+msgid "You're subscribed to"
+msgstr "Vous êtes abonné aux"
+

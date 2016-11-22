@@ -1,0 +1,52 @@
+.wc-form tr:nth-child(even){background:#fff}.wc-form tr:nth-child(odd){background:#f9f9f9}.form-table.wc-form-table tr{background:transparent}.wpdiscuz_options_page .wc-phrases-settings-form input[type="text"],.wpdiscuz_options_page .wc-phrases-settings-form textarea{width:300px}.wpdiscuz_wrap {	height: 50px;width: 100%;}.wpdiscuz_progressbar {height: 50px;text-align: center;background: #f00;width: 0;}
+.wpdiscuz-share-buttons {display: inline-block; width: 18px; height: 18px;}
+.wc-form input.wc_share_button {display: none;}
+.wc-form input[type="text"].regular-text{ width:160px; }
+.wc-form .wpdiscuz-option-title {vertical-align: middle;}
+.wc-form .wc-hidden {display: none;}
+.wc-form .resp-tabs-container.integrationsChild {margin-bottom: 5px;}
+.wc-form .wpdiscuz_export_options,.wc-form .wpdiscuz_import_options{width:100%;}
+
+/*addons*/
+ #menu-comments ul > li:nth-child(3) a{ color:#25ACEA!important; text-shadow: 1px 1px 1px #000; } 
+.wpdiscuz_addons_page .wpdiscuz-addons-wrapper {box-sizing: border-box;}
+.wpdiscuz_addons_page .wpdiscuz-addon-block {width: 260px; padding-top:10px; height:auto; float: left; margin-right: 1%; margin-bottom: 20px; background: #fff; border: 2px solid #e5e5e5; box-shadow: 0 3px 3px rgba(0, 0, 0, 0.04);}
+.wpdiscuz_addons_page .wpdiscuz-addon-block .addon-thumb {float:none; width: 242px; padding:10px; margin-top:2px; height:180px;}
+.wpdiscuz_addons_page .wpdiscuz-addon-block .addon-info {display:block; margin:0px; background:#07B290; padding:10px 15px; border:3px solid #fff; border-top:none; margin-top:10px;}
+.wpdiscuz_addons_page .wpdiscuz-addon-block .addon-title { font-size:16px; font-weight:bold; color:#FFFFFF; margin:0px; line-height:18px; display:inline-block; text-decoration:none;}
+.wpdiscuz_addons_page .wpdiscuz-addon-block .addon-title:hover { color:#D8FF6D;}
+.wpdiscuz_addons_page .wpdiscuz-addon-block .addon-desc { font-size:13px; color:#FFFFFF; margin:0px; line-height:18px; margin:0px; padding:10px 0px 0px 0px; font-style:italic;}
+.wpdiscuz_addons_page .wpdiscuz-addon-block .addon-isactive {margin: 0px; padding:10px; background:#e5e5e5; text-align:center;}
+.wpdiscuz_addons_page .wpdiscuz-addon-block .addon-button{ margin-bottom:10px;}
+.wpdiscuz_addons_page .wpdiscuz-addon-block .note-installed { padding:10px 20px; background:#fff; border: 1px solid #ddd; box-shadow: 0 3px 3px rgba(0, 0, 0, 0.04); color:#07B290; font-size:14px; margin-top:20px; }
+
+    .wpdiscuz-rating { 
+        border: none;
+        float: left;
+    }
+
+    .wpdiscuz-rating > input { display: none; } 
+    .wpdiscuz-rating > label:before { 
+        margin: 5px;
+        font-size: 1.25em;
+    }
+
+    .wpdiscuz-rating > .half:before { 
+        position: absolute;
+    }
+
+    .wpdiscuz-rating > label { 
+        color: #ddd; 
+        float: right; 
+    }
+
+    /***** CSS Magic to Highlight Stars on Hover *****/
+
+    .wpdiscuz-rating > input:checked ~ label, /* show gold star when clicked */
+    .wpdiscuz-rating:not(:checked) > label:hover, /* hover current star */
+    .wpdiscuz-rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+    .wpdiscuz-rating > input:checked + label:hover, /* hover current star when changing rating */
+    .wpdiscuz-rating > input:checked ~ label:hover,
+    .wpdiscuz-rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+    .wpdiscuz-rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 

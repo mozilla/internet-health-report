@@ -1,0 +1,1257 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: wpDiscuz - Wordpress Comments\n"
+"POT-Creation-Date: 2015-05-28 23:58+0400\n"
+"PO-Revision-Date: 2015-08-18 16:14+0300\n"
+"Last-Translator: advancedcoding <advancedcoding@mail.ru>\n"
+"Language-Team: advancedcoding <advancedcoding@mail.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: wc.php\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: comment-form/form.php:185 comment-form/tpl-comment.php:263
+msgid "Participate in this discussion via email"
+msgstr "Участвовать в этой дискуссии через электронную почту"
+
+#: comment-form/form.php:323
+msgid "Connect with"
+msgstr "Соединить с"
+
+#: comment-form/tpl-comment.php:174
+#: options/phrases-layout/phrases-comment.php:27
+#: options/wc-options-serialize.php:439
+msgid "Edit"
+msgstr "Редактировать"
+
+#: comment-form/tpl-comment.php:385 wc.php:321
+msgid "Anonymous"
+msgstr "Анонимно"
+
+#: options/options-layouts/settings-general.php:2
+msgid "General Settings"
+msgstr "Основные настройки"
+
+#: options/options-layouts/settings-general.php:7
+msgid "Display comment form for post types:"
+msgstr "Отображать форму комментариев для следующих типов записей:"
+
+#: options/options-layouts/settings-general.php:28
+msgid "User Must be registered to comment"
+msgstr "Пользователь должен быть зарегистрирован, чтобы комментировать"
+
+#: options/options-layouts/settings-general.php:34
+msgid "Yes"
+msgstr "Да"
+
+#: options/options-layouts/settings-general.php:38
+msgid "No"
+msgstr "Нет"
+
+#: options/options-layouts/settings-general.php:46
+msgid "Comment author must fill out name"
+msgstr "Автору комментария необходимо указать имя"
+
+#: options/options-layouts/settings-general.php:57
+msgid "Comment author must fill out email"
+msgstr "Автору комментария необходимо указать e-mail"
+
+#: options/options-layouts/settings-general.php:68
+msgid "Show the latest comments on"
+msgstr "Показывать последние комментарии"
+
+#: options/options-layouts/settings-general.php:72
+msgid "the top of the list"
+msgstr "наверху списка"
+
+#: options/options-layouts/settings-general.php:74
+msgid "top of the threads"
+msgstr "наверху списка"
+
+#: options/options-layouts/settings-general.php:76
+msgid "bottom of the threads"
+msgstr "внизу темы"
+
+#: options/options-layouts/settings-general.php:78
+msgid "the bottom of the list"
+msgstr "внизу списка"
+
+#: options/options-layouts/settings-general.php:86
+msgid "Comment Threads Per Page"
+msgstr "Количество веток комментариев на странице"
+
+#: options/options-layouts/settings-general.php:97
+msgid "Comment text max length"
+msgstr "Максимальная длинна текста комментария"
+
+#: options/options-layouts/settings-general.php:108
+msgid "Comments max depth"
+msgstr "Максимальная глубина вложенности комментов"
+
+#: options/options-layouts/settings-general.php:113
+msgid "Level"
+msgstr "уровень"
+
+#: options/options-layouts/settings-general.php:114
+#: options/options-layouts/settings-general.php:115
+#: options/options-layouts/settings-general.php:116
+#: options/options-layouts/settings-general.php:117
+msgid "Levels"
+msgstr "уровней"
+
+#: options/options-layouts/settings-general.php:124
+msgid "Comment text size in pixels"
+msgstr "Размер шрифта комментария в пикселях"
+
+#: options/options-layouts/settings-general.php:141
+msgid "Allow comment editing for"
+msgstr "Разрешить редактирование комментария для"
+
+#: options/options-layouts/settings-general.php:146
+msgid "Not Allow"
+msgstr "Не разрешать"
+
+#: options/options-layouts/settings-general.php:147
+#: options/options-layouts/settings-general.php:148
+#: options/options-layouts/settings-live-update.php:41
+#: options/options-layouts/settings-live-update.php:42
+#: options/options-layouts/settings-live-update.php:43
+msgid "Minutes"
+msgstr "Минут"
+
+#: options/options-layouts/settings-general.php:149
+#: options/phrases-layout/phrases-datetime.php:73
+msgid "Hour"
+msgstr "Час"
+
+#: options/options-layouts/settings-general.php:150
+#: options/options-layouts/settings-general.php:151
+msgid "Hours"
+msgstr "Часов"
+
+#: options/options-layouts/settings-general.php:158
+msgid "Redirect first commenter to"
+msgstr "Перенаправить первому комментатору"
+
+#: options/options-layouts/settings-general.php:165
+msgid "Do not redirect"
+msgstr "Не перенаправлять"
+
+#: options/options-layouts/settings-general.php:174
+msgid "Allow guests to vote on comments"
+msgstr "Разрешить гостям голосовать за комментарии"
+
+#: options/options-layouts/settings-general.php:184
+msgid "Load rest of all comments on clicking the [Load More Comments] button"
+msgstr ""
+"Загрузить остальные комментарии после нажатия кнопки [Загрузить больше "
+"комментарий]"
+
+#: options/options-layouts/settings-general.php:195
+msgid "Use WordPress Date/Time format"
+msgstr "Использовать формат времени и даты WordPress"
+
+#: options/options-layouts/settings-general.php:196
+msgid ""
+"wpDiscuz shows Human Readable date format. If you check this option it'll "
+"show the date/time format set in WordPress General Settings."
+msgstr ""
+"wpDiscuz по-умолчанию показывает формат времени в своем формате, удобном для "
+"чтения. При включении этой опции, дата и время будут показаны в формате, "
+"указанном в основных настройках WordPress"
+
+#: options/options-layouts/settings-general.php:203
+msgid "Current Wordpress date/time format"
+msgstr "Текущий формат даты/времени Wordpress"
+
+#: options/options-layouts/settings-general.php:209
+msgid "Use Plugin .PO/.MO files"
+msgstr "Используйте редактор PO/.MO файлов"
+
+#: options/options-layouts/settings-general.php:210
+msgid ""
+"wpDiscuz phrase system allows you to translate all front-end phrases. "
+"However if you have a multi-language website it'll not allow you to add more "
+"than one language translation. The only way to get it is the plugin "
+"translation files (.PO / .MO). If wpDiscuz has the languages you need you "
+"should check this option to disable phrase system and it'll automatically "
+"translate all phrases based on language files according to current language."
+msgstr ""
+"Система wpDiscuz позволяет переводить все интерфейсные фразы. Однако, если у "
+"вас есть веб-сайт на разных языках плагин не будет позволять вам добавить "
+"больше чем один язык перевода. Единственный способ певевести плагин - это "
+"редактировать файлы перевода плагина (.po / .mo). Если wpDiscuz уже имеет "
+"языки, которые вам нужны, вы должны отметить эту опцию, чтобы отключить "
+"систему фраз, и он будет автоматически переводить все слова и предложения, "
+"основанные на языковых файлов в соответствии с действующим языком."
+
+#: options/options-layouts/settings-general.php:222
+msgid ""
+"Help wpDiscuz to grow allowing people to recognize which comment plugin you "
+"use"
+msgstr ""
+"Помогите wpDiscuz развиваться, указывая каким комментатором вы пользуетесь"
+
+#: options/options-layouts/settings-general.php:224
+msgid ""
+"Please check this option on to help wpDiscuz get more popularity as your "
+"thank to the hard work we do for you totally free. This option adds a very "
+"small (16x16px) icon under the comment section which will allow your site "
+"visitors recognize the name of comment solution you use."
+msgstr ""
+"Пожалуйста, отметьте эту опцию, чтобы помочь на wpDiscuz получить большую "
+"популярность в качестве благодарности к тяжелой работе, которую мы делаем "
+"для вас совершенно бесплатно. Эта опция добавляет очень небольшой (16x16px) "
+"значок под комментариями, который позволят посетителям вашего сайта увидеть "
+"название плагина, который вы используете."
+
+#: options/options-layouts/settings-general.php:229
+msgid "Thank you!"
+msgstr "Спасибо!"
+
+#: options/options-layouts/settings-live-update.php:2
+#: options/wc-options.php:180
+msgid "Live Update"
+msgstr "Настройки обновления в реальном времени"
+
+#: options/options-layouts/settings-live-update.php:8
+msgid "Live update options"
+msgstr "Настройки обновления в реальном времени"
+
+#: options/options-layouts/settings-live-update.php:9
+msgid ""
+"If you use Shared Web Hosting you should make sure the \"Live Update\" "
+"function doesn't overload your server resources. This function is good for "
+"VPS and Dedicated Hosting Plans."
+msgstr ""
+"Если вы используете виртуальный хостинг вы должны убедиться, что функция "
+"\"Автоматическое обновление\" не перегружает сервер. Эта функция хорошо "
+"подходит для VPS и выделенных хостингов."
+
+#: options/options-layouts/settings-live-update.php:14
+msgid "Never update"
+msgstr "Никогда не обновлять"
+
+#: options/options-layouts/settings-live-update.php:16
+msgid "Turn off \"Live Update\" function"
+msgstr "Выключить функцию \"Обновление в реальном времени\""
+
+#: options/options-layouts/settings-live-update.php:18
+msgid "Show new comment/reply buttons to update manualy"
+msgstr "Показывать кнопки новых комментариев/ответов для обновления вручную"
+
+#: options/options-layouts/settings-live-update.php:20
+msgid "Always check for new comments and show update buttons"
+msgstr ""
+"Всегда проверять наличие новых комментов и показывать кнопки обновления"
+
+#: options/options-layouts/settings-live-update.php:22
+msgid "Always update"
+msgstr "Всегда обновлять"
+
+#: options/options-layouts/settings-live-update.php:24
+msgid "Always check for new comments and update automatically"
+msgstr "Всегда проверять наличие новых комментов и обновлять автоматически"
+
+#: options/options-layouts/settings-live-update.php:32
+msgid "Update comment list every"
+msgstr "Всегда проверять наличие новых комментов и обновлять автоматически"
+
+#: options/options-layouts/settings-live-update.php:37
+#: options/options-layouts/settings-live-update.php:38
+#: options/options-layouts/settings-live-update.php:39
+msgid "Seconds"
+msgstr "секунд"
+
+#: options/options-layouts/settings-live-update.php:40
+#: options/phrases-layout/phrases-datetime.php:95
+msgid "Minute"
+msgstr "Минута"
+
+#: options/options-layouts/settings-show-hide.php:2 options/wc-options.php:181
+msgid "Show/Hide Components"
+msgstr "Скрыть/Показать Компоненты"
+
+#: options/options-layouts/settings-show-hide.php:7
+msgid "Show logged-in user name and logout link on top of main form"
+msgstr "Показывать имя пользователя и ссылку выхода сверху основной формы"
+
+#: options/options-layouts/settings-show-hide.php:17
+msgid "Hide Reply button for Guests"
+msgstr "Скрыть кнопку ответа от гостей"
+
+#: options/options-layouts/settings-show-hide.php:27
+msgid "Hide Reply button for Members"
+msgstr "Скрыть кнопку ответа от пользователей"
+
+#: options/options-layouts/settings-show-hide.php:37
+msgid "Hide Author Titles"
+msgstr "Скрыть подписи под никами"
+
+#: options/options-layouts/settings-show-hide.php:47
+msgid "Hide Voting buttons"
+msgstr "Скрыть кнопки голосования"
+
+#: options/options-layouts/settings-show-hide.php:57
+msgid "Hide Share Buttons"
+msgstr "Скрыть кнопки \"поделиться\""
+
+#: options/options-layouts/settings-show-hide.php:67
+msgid "Hide the  CAPTCHA field"
+msgstr "Скрыть капчу (CAPTCHA)"
+
+#: options/options-layouts/settings-show-hide.php:77
+msgid "Hide the Website URL field"
+msgstr "Скрыть URL вебсайта"
+
+#: options/options-layouts/settings-show-hide.php:87
+msgid "Hide header text"
+msgstr "Скрыть заголовок"
+
+#: options/options-layouts/settings-show-hide.php:97
+msgid "Hide user avatar"
+msgstr "Скрыть аватар"
+
+#: options/options-layouts/settings-social.php:10
+#: options/options-layouts/settings-social.php:12
+#: options/options-layouts/settings-social.php:14 wc.php:1018
+msgid "Settings"
+msgstr "Настройки"
+
+#: options/options-layouts/settings-social.php:19
+#: options/options-layouts/settings-social.php:29
+#: options/options-layouts/settings-social.php:39
+msgid "Activate"
+msgstr "Активировать"
+
+#: options/options-layouts/settings-social.php:23
+#: options/options-layouts/settings-social.php:33
+#: options/options-layouts/settings-social.php:43
+msgid "View details/Install"
+msgstr "Показать детали/установку"
+
+#: options/options-layouts/settings-social.php:75 options/wc-options.php:184
+msgid "Social Login"
+msgstr "Вход через социальные сети"
+
+#: options/options-layouts/settings-social.php:76
+msgid ""
+"You can use one of these most popular Social Login Plugins to allow your "
+"visitors login and comment with Facebook, Twitter, Google+, Wordpress, VK, "
+"OK and lots of other social network service accounts. All social login "
+"buttons will be fully integrated with wpDiscuz comment forms."
+msgstr ""
+"Вы можете использовать одну из наиболее популярных плагинов входа через "
+"социальные сети, чтобы комментировать с учетной записи Facebook, Twitter, "
+"Google+, Wordpress, Вконтакте и т.д. Все кнопки социальных сетей будут "
+"интегрированы в форму комментарий."
+
+#: options/options-layouts/settings-style.php:2 options/wc-options.php:183
+msgid "Background and Colors"
+msgstr "Фон и Цвет"
+
+#: options/options-layouts/settings-style.php:7
+msgid "Comment Form Background Color"
+msgstr "Фон формы комментарий"
+
+#: options/options-layouts/settings-style.php:10
+#: options/options-layouts/settings-style.php:34
+#: options/options-layouts/settings-style.php:58
+#: options/options-layouts/settings-style.php:82
+#: options/options-layouts/settings-style.php:107
+#: options/options-layouts/settings-style.php:132
+#: options/options-layouts/settings-style.php:155
+#: options/options-layouts/settings-style.php:178
+msgid "Example: #00ff00"
+msgstr "Пример: #00ff00"
+
+#: options/options-layouts/settings-style.php:31
+msgid "Comment Background Color"
+msgstr "Цвет фона коментария"
+
+#: options/options-layouts/settings-style.php:55
+msgid "Reply Background Color"
+msgstr "Цвет фона ответа"
+
+#: options/options-layouts/settings-style.php:79
+msgid "Comment Text Color"
+msgstr "Цвет шрифта комментария"
+
+#: options/options-layouts/settings-style.php:104
+msgid "Author title color"
+msgstr "Цвет подписи автора"
+
+#: options/options-layouts/settings-style.php:129
+msgid "Vote, Reply, Share, Edit links text colors"
+msgstr "Цвет ссылок Голосовать, Ответить, Поделиться и Редактировать"
+
+#: options/options-layouts/settings-style.php:152
+msgid "Comment form fields border color"
+msgstr "Цвет границы формы комментарий"
+
+#: options/options-layouts/settings-style.php:175
+msgid "New loaded comments' background color"
+msgstr "Цвет фона новых загруженных комментариев"
+
+#: options/options-layouts/settings-style.php:199
+msgid "Custom CSS Code"
+msgstr "Свой CSS код"
+
+#: options/options-layouts/settings-subscription.php:2
+msgid "Email Subscription Settings"
+msgstr "Подписка через электронную почту"
+
+#: options/options-layouts/settings-subscription.php:7
+msgid "Show \"Notify of all new follow-up comments\""
+msgstr "Показывать \"Подписаться на все последующие комментарии\""
+
+#: options/options-layouts/settings-subscription.php:8
+msgid "Show \"Notify of new replies to all my comments\""
+msgstr "Показывать \"Подписаться на все новые ответы на мои комментарии\""
+
+#: options/options-layouts/settings-subscription.php:9
+msgid "Show \"Notify of new replies to this comment\""
+msgstr "Показывать \"Подписаться на новые ответы на этот комментарий\""
+
+#: options/options-layouts/settings-subscription.php:11
+msgid ""
+"Please keep all three or at least one of those options ON, otherwise users "
+"will not have any option for email notifications and they'll not get any "
+"messages."
+msgstr ""
+"Пожалуйста, выберите все три, или как минимум одну опцию, иначе пользователи "
+"не смогут увидеть их на странице комментариев и не будут получать никаких "
+"уведомлений."
+
+#: options/options-layouts/settings-subscription.php:30
+msgid "Use Postmatic for subscriptions and commenting by email"
+msgstr ""
+"Используйте Postmatic, чтобы подписаться и комментировать по электронной "
+"почте"
+
+#: options/options-layouts/settings-subscription.php:31
+msgid ""
+"Postmatic allows your users subscribe to comments. Instead of just being "
+"notified, they add a reply right from their inbox."
+msgstr ""
+"Postmatic позволяет пользователям подписаться на новые комментарии. Вместо "
+"того чтобы просто получать уведомление, они добавляют ответ прямо на их "
+"почтовый ящик."
+
+#: options/options-layouts/settings-subscription.php:42
+msgid ""
+"Keep selected the email notification of all new follow-up comments by default"
+msgstr ""
+"Выделите уведомление по электронной почте  о всех новых последующих "
+"комментариях по умолчанию"
+
+#: options/options-layouts/settings-subscription.php:43
+msgid ""
+"If this option is checked-on, in Manage Subscriptions section of comment "
+"forms will only be displayed the \"Notify of all new follow-up comments\" "
+"option and this option will always be selected by default."
+msgstr ""
+"Если эта опция включена, в \"Управление Подписки\" раздела формы комментарий "
+"будут отображаться только вариант \"Уведомлять о всех новых комментариях\" и "
+"этот вариант всегда будет выбран по умолчанию."
+
+#: options/phrases-layout/phrases-comment.php:2
+msgid "Comment Template Phrases"
+msgstr "Шаблон комментарий"
+
+#: options/phrases-layout/phrases-comment.php:7
+#: options/wc-options-serialize.php:437
+msgid "Reply"
+msgstr "Ответить "
+
+#: options/phrases-layout/phrases-comment.php:17
+#: options/wc-options-serialize.php:438
+msgid "Share"
+msgstr "Поделиться"
+
+#: options/phrases-layout/phrases-comment.php:37
+#: options/wc-options-serialize.php:440
+msgid "Share On Facebook"
+msgstr "Поделиться через Facebook"
+
+#: options/phrases-layout/phrases-comment.php:47
+#: options/wc-options-serialize.php:441
+msgid "Share On Twitter"
+msgstr "Поделиться через Twitter"
+
+#: options/phrases-layout/phrases-comment.php:57
+#: options/wc-options-serialize.php:442
+msgid "Share On Google"
+msgstr "Поделиться через Google"
+
+#: options/phrases-layout/phrases-comment.php:67
+#: options/wc-options-serialize.php:443
+msgid "Share On VKontakte"
+msgstr "Поделиться через Вконтакте"
+
+#: options/phrases-layout/phrases-comment.php:77
+#: options/wc-options-serialize.php:444
+msgid "Share On Odnoklassniki"
+msgstr "Поделиться через Одноклассники"
+
+#: options/phrases-layout/phrases-comment.php:87
+#: options/wc-options-serialize.php:445
+msgid "Hide Replies"
+msgstr "Спрятать ответы"
+
+#: options/phrases-layout/phrases-comment.php:97
+#: options/wc-options-serialize.php:446
+msgid "Show Replies"
+msgstr "Показать ответы"
+
+#: options/phrases-layout/phrases-comment.php:107
+msgid "Title For Guests"
+msgstr "Подпись для Гостей"
+
+#: options/phrases-layout/phrases-comment.php:117
+msgid "Title For Members"
+msgstr "Подпись для Пользователей"
+
+#: options/phrases-layout/phrases-comment.php:127
+msgid "Title For Authors"
+msgstr "Подпись для Авторов"
+
+#: options/phrases-layout/phrases-comment.php:137
+msgid "Title For Admins"
+msgstr "Подпись для Админов"
+
+#: options/phrases-layout/phrases-comment.php:147
+#: options/wc-options-serialize.php:488
+msgid "Vote Up"
+msgstr "Голос за"
+
+#: options/phrases-layout/phrases-comment.php:157
+#: options/wc-options-serialize.php:489
+msgid "Vote Down"
+msgstr "Голос против"
+
+#: options/phrases-layout/phrases-comment.php:167
+msgid "Save edited comment button text"
+msgstr "Сохранить отредактированный текст кнопки комментария"
+
+#: options/phrases-layout/phrases-comment.php:171
+#: options/wc-options-serialize.php:507
+msgid "Save"
+msgstr "Сохранить"
+
+#: options/phrases-layout/phrases-comment.php:177
+msgid "Cancel comment editing button text"
+msgstr "Отменить текст кнопки редактирования комментария"
+
+#: options/phrases-layout/phrases-comment.php:181
+#: options/wc-options-serialize.php:508
+msgid "Cancel"
+msgstr "Отменить"
+
+#: options/phrases-layout/phrases-datetime.php:2
+msgid "Date/Time Phrases"
+msgstr "Дата/Время фразы"
+
+#: options/phrases-layout/phrases-datetime.php:7
+msgid "Year"
+msgstr "Год"
+
+#: options/phrases-layout/phrases-datetime.php:18
+msgid "Years (Plural Form)"
+msgstr "Годы (форма множественного числа)"
+
+#: options/phrases-layout/phrases-datetime.php:22
+msgid "Years"
+msgstr "Лет"
+
+#: options/phrases-layout/phrases-datetime.php:29
+msgid "Month"
+msgstr "Месяц"
+
+#: options/phrases-layout/phrases-datetime.php:40
+msgid "Months (Plural Form)"
+msgstr "Месяцв (форма множественного числа)"
+
+#: options/phrases-layout/phrases-datetime.php:51
+msgid "Day"
+msgstr "День"
+
+#: options/phrases-layout/phrases-datetime.php:62
+msgid "Days (Plural Form)"
+msgstr "Дни (форма множественного числа)"
+
+#: options/phrases-layout/phrases-datetime.php:84
+msgid "Hours (Plural Form)"
+msgstr "Часы (форма множественного числа)"
+
+#: options/phrases-layout/phrases-datetime.php:106
+msgid "Minutes (Plural Form)"
+msgstr "Минуты (форма множественного числа)"
+
+#: options/phrases-layout/phrases-datetime.php:117
+msgid "Second"
+msgstr "Секунды"
+
+#: options/phrases-layout/phrases-datetime.php:128
+msgid "Seconds (Plural Form)"
+msgstr "Секунды (форма множественного числа)"
+
+#: options/phrases-layout/phrases-datetime.php:138
+msgid "Commented \"right now\" text"
+msgstr "Текст \"только что\" прокомментировано"
+
+#: options/phrases-layout/phrases-datetime.php:149
+msgid "Ago text"
+msgstr "Тест \"тому назад\""
+
+#: options/phrases-layout/phrases-datetime.php:160
+msgid "\"Today\" text"
+msgstr "Текст \"Сегодня\""
+
+#: options/phrases-layout/phrases-datetime.php:164
+#: options/wc-options-serialize.php:482
+msgid "Today"
+msgstr "Сегодня"
+
+#: options/phrases-layout/phrases-email.php:2
+msgid "Email Template Phrases"
+msgstr "Шаблон электронного письма"
+
+#: options/phrases-layout/phrases-email.php:7
+msgid "Email Subject"
+msgstr "Тема электронного письма"
+
+#: options/phrases-layout/phrases-email.php:18
+msgid "Email Message"
+msgstr "Сообщение электроного письма"
+
+#: options/phrases-layout/phrases-email.php:29
+msgid "New Reply Subject"
+msgstr "Ответ на тему"
+
+#: options/phrases-layout/phrases-email.php:33
+#: options/phrases-layout/phrases-general.php:101
+#: options/wc-options-serialize.php:453
+msgid "New Reply"
+msgstr "Новый ответ"
+
+#: options/phrases-layout/phrases-email.php:40
+msgid "New Reply Message"
+msgstr "Новый ответ на сообщение"
+
+#: options/phrases-layout/phrases-email.php:50
+#: options/phrases-layout/phrases-email.php:54
+#: options/wc-options-serialize.php:458
+msgid "Unsubscribe"
+msgstr "Отписаться"
+
+#: options/phrases-layout/phrases-email.php:61
+#: options/phrases-layout/phrases-email.php:65
+#: options/wc-options-serialize.php:459
+msgid "Ignore Subscription"
+msgstr "Игнорировать подписку"
+
+#: options/phrases-layout/phrases-email.php:72
+#: options/phrases-layout/phrases-email.php:76
+#: options/wc-options-serialize.php:461
+msgid "Confirm your subscription"
+msgstr "Подтвердить подписку"
+
+#: options/phrases-layout/phrases-email.php:82
+#: options/phrases-layout/phrases-email.php:86
+#: options/wc-options-serialize.php:462
+msgid "You've successfully confirmed your subscription."
+msgstr "Вы успешпо подтвердили подписку"
+
+#: options/phrases-layout/phrases-email.php:92
+msgid "Subscribe Confirmation Email Subject"
+msgstr "Тема подписки по электронной почте"
+
+#: options/phrases-layout/phrases-email.php:96
+#: options/wc-options-serialize.php:463 wc.php:941
+msgid "Subscribe Confirmation"
+msgstr "Подтверждение подписки"
+
+#: options/phrases-layout/phrases-email.php:103
+msgid "Subscribe Confirmation Email Content"
+msgstr "Содержание формы подписки"
+
+#: options/phrases-layout/phrases-email.php:107
+#: options/wc-options-serialize.php:464 wc.php:942
+msgid ""
+"Hi, <br/> You just subscribed for new comments on our website. This means "
+"you will receive an email when new comments are posted according to "
+"subscription option you've chosen. <br/> To activate, click confirm below. "
+"If you believe this is an error, ignore this message and we'll never bother "
+"you again."
+msgstr ""
+"Здравствуйте, <br/> Вы подписались на новые комментарии на нашем сайте. Это "
+"означает, что вы получите по электронной почте сообщение при появлении новых "
+"комментарий в соответствии с выбранным вариантом подписки. <br/> Для "
+"активации нажмите подтверждение ниже. Если вы считаете, что это ошибка, "
+"проигнорируйте это сообщение, и мы никогда не будем беспокоить вас снова. "
+"<br/> С уважением, команда Bowandtie.ru"
+
+#: options/phrases-layout/phrases-form.php:2
+msgid "Form Template Phrases"
+msgstr "Шаблон сообщений"
+
+#: options/phrases-layout/phrases-form.php:7
+msgid "Comment Field Start"
+msgstr "Фраза \"Начать обсуждение\""
+
+#: options/phrases-layout/phrases-form.php:17
+msgid "Comment Field Join"
+msgstr "Фраза \"Присоединиться к обсуждению\""
+
+#: options/phrases-layout/phrases-form.php:27
+msgid "Email Field"
+msgstr "Email"
+
+#: options/phrases-layout/phrases-form.php:37
+msgid "Name Field"
+msgstr "Имя"
+
+#: options/phrases-layout/phrases-form.php:47
+msgid "WebSite URL Field"
+msgstr "Поле URL вебсайта"
+
+#: options/phrases-layout/phrases-form.php:57
+msgid "CAPTCHA Field"
+msgstr "CAPTCHA"
+
+#: options/phrases-layout/phrases-form.php:67
+msgid "Submit Button"
+msgstr "Кнопка подписки"
+
+#: options/phrases-layout/phrases-form.php:77
+#: options/phrases-layout/phrases-form.php:81
+#: options/wc-options-serialize.php:430
+msgid "Manage Subscriptions"
+msgstr "Управление Подпиской"
+
+#: options/phrases-layout/phrases-form.php:87
+msgid "Notify \"None\""
+msgstr "Сообщите \"Нет\""
+
+#: options/phrases-layout/phrases-form.php:91
+#: options/wc-options-serialize.php:431
+msgid "None"
+msgstr "Ничего"
+
+#: options/phrases-layout/phrases-form.php:97
+msgid "Notify on new comments (checkbox)"
+msgstr "Сообщать о новых ответах на этот коментарий (галочка)"
+
+#: options/phrases-layout/phrases-form.php:101
+#: options/wc-options-serialize.php:432
+msgid "Notify of all new follow-up comments"
+msgstr "Сообщать о всех последующих комментариях (галочка)"
+
+#: options/phrases-layout/phrases-form.php:108
+msgid "Notify on all new replies (checkbox)"
+msgstr "Сообщать об ответах на все мои коментарии (галочка)"
+
+#: options/phrases-layout/phrases-form.php:112
+#: options/wc-options-serialize.php:433
+msgid "Notify of new replies to all my comments"
+msgstr "Сообщать о всех новых ответах на мои комментарии"
+
+#: options/phrases-layout/phrases-form.php:119
+msgid "Notify on new replies (checkbox)"
+msgstr "Сообщать о новых ответах (галочка)"
+
+#: options/phrases-layout/phrases-form.php:123
+#: options/wc-options-serialize.php:434
+msgid "Notify of new replies to this comment"
+msgstr "Сообщать о новых ответах на этот комментарий"
+
+#: options/phrases-layout/phrases-form.php:129
+msgid "Subscribed on this comment replies"
+msgstr "Подписка на ответы на этот коммент"
+
+#: options/phrases-layout/phrases-form.php:139
+msgid "Subscribed on all your comments replies"
+msgstr "Подписка на ответы на все комменты пользователя"
+
+#: options/phrases-layout/phrases-form.php:149
+msgid "Subscribed on this post"
+msgstr "Подписка на все комменты к записи"
+
+#: options/phrases-layout/phrases-general.php:2
+msgid "General Phrases"
+msgstr "Общие фразы"
+
+#: options/phrases-layout/phrases-general.php:7
+#: options/wc-options-serialize.php:418
+msgid "Leave a Reply"
+msgstr "Отправить ответ"
+
+#: options/phrases-layout/phrases-general.php:17
+msgid "Be the first to comment"
+msgstr "Оставьте первый комментарий"
+
+#: options/phrases-layout/phrases-general.php:27
+#: options/wc-options-serialize.php:420 options/wc-options.php:353
+msgid "Comment"
+msgstr "Комментарий"
+
+#: options/phrases-layout/phrases-general.php:37
+msgid "Comment (Plural Form)"
+msgstr "Комментарий (форма множественного числа)"
+
+#: options/phrases-layout/phrases-general.php:47
+msgid "On"
+msgstr "Включено"
+
+#: options/phrases-layout/phrases-general.php:57
+msgid "Load More Button"
+msgstr "Кнопка \"Загрузить ещё\""
+
+#: options/phrases-layout/phrases-general.php:67
+#: options/wc-options-serialize.php:436
+msgid "Load Rest of Comments"
+msgstr "Загрузить остальные комментарии"
+
+#: options/phrases-layout/phrases-general.php:77
+msgid "Button text if has new comment"
+msgstr "Текст кнопки, если есть новый комментарий"
+
+#: options/phrases-layout/phrases-general.php:81
+#: options/wc-options-serialize.php:451
+msgid "New Comment"
+msgstr "Новый комментарий"
+
+#: options/phrases-layout/phrases-general.php:87
+msgid "Button text if has new comments (Plural Form)"
+msgstr "Текст кнопки, если есть новый комментарий (Форма множественного числа)"
+
+#: options/phrases-layout/phrases-general.php:91
+msgid "New Comments"
+msgstr "Новые комментарии"
+
+#: options/phrases-layout/phrases-general.php:97
+msgid "Button text if has new reply"
+msgstr "Текст кнопки, если есть новый ответ"
+
+#: options/phrases-layout/phrases-general.php:107
+msgid "Button text if has new replies (Plural Form)"
+msgstr "Текст кнопки, если есть новый ответ (множественная форма числа)"
+
+#: options/phrases-layout/phrases-general.php:111
+msgid "New Replies"
+msgstr "Новые ответы"
+
+#: options/phrases-layout/phrases-general.php:117
+msgid "Text on load more button if has new comment(s)"
+msgstr "Текст кнопки, если нет больше комментарий для загрузки"
+
+#: options/phrases-layout/phrases-general.php:121
+#: options/wc-options-serialize.php:503
+msgid "New"
+msgstr "Новое"
+
+#: options/phrases-layout/phrases-notification.php:2
+msgid "Notification Phrases"
+msgstr "Уведомления"
+
+#: options/phrases-layout/phrases-notification.php:7
+#: options/wc-options-serialize.php:460
+msgid "You've successfully unsubscribed."
+msgstr "Вы успешно отписались."
+
+#: options/phrases-layout/phrases-notification.php:18
+msgid "Error message for empty field"
+msgstr "Сообщение об ошибке - пустое поле"
+
+#: options/phrases-layout/phrases-notification.php:28
+msgid "Error message for invalid email field"
+msgstr "Сообщение об ошибке - неверный email адрес"
+
+#: options/phrases-layout/phrases-notification.php:38
+msgid "Error message for invalid website url field"
+msgstr "Сообщение об ошибке - неверный URL вебсайта"
+
+#: options/phrases-layout/phrases-notification.php:48
+#: options/wc-options-serialize.php:483
+msgid "You must be"
+msgstr "Вы должны быть "
+
+#: options/phrases-layout/phrases-notification.php:58
+msgid "Logged in as"
+msgstr "Вошли как"
+
+#: options/phrases-layout/phrases-notification.php:68
+#: options/wc-options-serialize.php:485
+msgid "Log out"
+msgstr "Выйти"
+
+#: options/phrases-layout/phrases-notification.php:78
+msgid "Logged In"
+msgstr "Зарегистрированы"
+
+#: options/phrases-layout/phrases-notification.php:88
+msgid "To post a comment"
+msgstr "Чтобы оставить комментарий"
+
+#: options/phrases-layout/phrases-notification.php:98
+#: options/wc-options-serialize.php:490
+msgid "Vote Counted"
+msgstr "Голос учтен"
+
+#: options/phrases-layout/phrases-notification.php:108
+msgid "You can vote only 1 time"
+msgstr "Вы можете проголосовать только один раз"
+
+#: options/phrases-layout/phrases-notification.php:118
+#: options/wc-options-serialize.php:492
+msgid "Voting Error"
+msgstr "Ошибка голосования"
+
+#: options/phrases-layout/phrases-notification.php:128
+msgid "Login To Vote"
+msgstr "Залогиньтесь, чтобы голосовать"
+
+#: options/phrases-layout/phrases-notification.php:138
+msgid "You Cannot Vote On Your Comment"
+msgstr "Вы не можете проголосовать за свой комментарий"
+
+#: options/phrases-layout/phrases-notification.php:148
+msgid "You are not allowed to vote for this comment (Voting from same IP)"
+msgstr ""
+"Вы не можете проголосовать за этот комментарий (голосование с того же IP "
+"адреса)"
+
+#: options/phrases-layout/phrases-notification.php:158
+#: options/wc-options-serialize.php:496
+msgid "Invalid Captcha Code"
+msgstr "Неверно введен код"
+
+#: options/phrases-layout/phrases-notification.php:168
+#: options/wc-options-serialize.php:497
+msgid "Some of field value is invalid"
+msgstr "Некоторые поля заполнены неверно"
+
+#: options/phrases-layout/phrases-notification.php:178
+msgid "Comment waiting moderation"
+msgstr "Комментарий ожидает модерации"
+
+#: options/phrases-layout/phrases-notification.php:188
+msgid "Message if comment content length is too long"
+msgstr "Сообщить, если длина комментария слишком большая"
+
+#: options/phrases-layout/phrases-notification.php:198
+msgid "Message if comment was not updated"
+msgstr "Сообщить, если комментарий не был обновлен"
+
+#: options/phrases-layout/phrases-notification.php:202
+#: options/wc-options-serialize.php:504
+msgid "Sorry, the comment was not updated"
+msgstr "Извините, комментарий не был обновлен"
+
+#: options/phrases-layout/phrases-notification.php:208
+msgid "Message if comment no longer possible to edit"
+msgstr "Сообщить, если комментарий уже нельзя обновить"
+
+#: options/phrases-layout/phrases-notification.php:212
+#: options/wc-options-serialize.php:505
+msgid "Sorry, this comment no longer possible to edit"
+msgstr "Извините, но комментарий уже нельзя обновить"
+
+#: options/phrases-layout/phrases-notification.php:219
+msgid "Message if comment text not changed"
+msgstr "Сообщить, если комментарий не был изменён"
+
+#: options/phrases-layout/phrases-notification.php:223
+msgid "TYou've not made any changes"
+msgstr "Вы не сделали никаких изменений"
+
+#: options/wc-options-serialize.php:419
+msgid "Be the First to Comment!"
+msgstr "Оставьте первый комментарий!"
+
+#: options/wc-options-serialize.php:421
+msgid "Comments"
+msgstr "Комментарий"
+
+#: options/wc-options-serialize.php:422
+msgid "on"
+msgstr "на"
+
+#: options/wc-options-serialize.php:423
+msgid "Start the discussion"
+msgstr "Начать обсуждение"
+
+#: options/wc-options-serialize.php:424
+msgid "Join the discussion"
+msgstr "Присоединиться к обсуждению"
+
+#: options/wc-options-serialize.php:425 options/wc-options.php:355
+msgid "Email"
+msgstr "Email"
+
+#: options/wc-options-serialize.php:426
+msgid "Name"
+msgstr "Имя"
+
+#: options/wc-options-serialize.php:427
+msgid "WebSite URL"
+msgstr "URL веб-сайта"
+
+#: options/wc-options-serialize.php:428
+msgid "Please insert the code above to comment"
+msgstr "Пожалуйста, введите код, указанный выше"
+
+#: options/wc-options-serialize.php:429
+msgid "Post Comment"
+msgstr "Оставить комментарий"
+
+#: options/wc-options-serialize.php:435
+msgid "Load More Comments"
+msgstr "Загрузить ещё комментарии"
+
+#: options/wc-options-serialize.php:447
+msgid "Guest"
+msgstr "Гость"
+
+#: options/wc-options-serialize.php:448
+msgid "Member"
+msgstr "Участник"
+
+#: options/wc-options-serialize.php:449
+msgid "Author"
+msgstr "Автор"
+
+#: options/wc-options-serialize.php:450
+msgid "Admin"
+msgstr "Администратор"
+
+#: options/wc-options-serialize.php:452
+msgid "New comment on the discussion section you've been interested in"
+msgstr "Новый комментарий в обсуждении, в котором вы были заинтересованы"
+
+#: options/wc-options-serialize.php:454
+msgid "New reply on the discussion section you've been interested in"
+msgstr "Новый ответ в обсуждении, в котором вы были заинтересованы"
+
+#: options/wc-options-serialize.php:455
+msgid "You're subscribed for new replies on this comment"
+msgstr "Вы подписались на новые ответы на этот комментарий"
+
+#: options/wc-options-serialize.php:456
+msgid "You're subscribed for new replies on all your comments"
+msgstr "Вы подписались на все новые комментарии"
+
+#: options/wc-options-serialize.php:457
+msgid "You're subscribed for new follow-up comments on this post"
+msgstr "Вы подписались на новые комментарии в этой статье"
+
+#: options/wc-options-serialize.php:465
+msgid "please fill out this field to comment"
+msgstr "пожалуйста, заполните это поле, чтобы комментировать"
+
+#: options/wc-options-serialize.php:466
+msgid "email address is invalid"
+msgstr "Адрес электронной почты недействителен"
+
+#: options/wc-options-serialize.php:467
+msgid "url is invalid"
+msgstr "Ссылка недействительна"
+
+#: options/wc-options-serialize.php:468
+msgid "year"
+msgstr "год"
+
+#: options/wc-options-serialize.php:469
+msgid "years"
+msgstr "лет"
+
+#: options/wc-options-serialize.php:470
+msgid "month"
+msgstr "месяц"
+
+#: options/wc-options-serialize.php:471
+msgid "months"
+msgstr "месяцев"
+
+#: options/wc-options-serialize.php:472
+msgid "day"
+msgstr "день"
+
+#: options/wc-options-serialize.php:473
+msgid "days"
+msgstr "дней"
+
+#: options/wc-options-serialize.php:474
+msgid "hour"
+msgstr "час"
+
+#: options/wc-options-serialize.php:475
+msgid "hours"
+msgstr "часов"
+
+#: options/wc-options-serialize.php:476
+msgid "minute"
+msgstr "минута"
+
+#: options/wc-options-serialize.php:477
+msgid "minutes"
+msgstr "минут"
+
+#: options/wc-options-serialize.php:478
+msgid "second"
+msgstr "секунда"
+
+#: options/wc-options-serialize.php:479
+msgid "seconds"
+msgstr "секунд"
+
+#: options/wc-options-serialize.php:480
+msgid "right now"
+msgstr "прямо сейчас"
+
+#: options/wc-options-serialize.php:481
+msgid "ago"
+msgstr "назад"
+
+#: options/wc-options-serialize.php:484
+msgid "You are logged in as"
+msgstr "Вы вошли как"
+
+#: options/wc-options-serialize.php:486
+msgid "logged in"
+msgstr "зарегистрированы"
+
+#: options/wc-options-serialize.php:487
+msgid "to post a comment."
+msgstr "чтобы оставить комментарий"
+
+#: options/wc-options-serialize.php:491
+msgid "You've already voted for this comment"
+msgstr "Вы уже голосовали за этот комментарий"
+
+#: options/wc-options-serialize.php:493
+msgid "You Must Be Logged In To Vote"
+msgstr "Вы должны войти , чтобы проголосовать"
+
+#: options/wc-options-serialize.php:494
+msgid "You cannot vote for your comment"
+msgstr "Вы не можете голосовать за свой комментарий"
+
+#: options/wc-options-serialize.php:495
+msgid "You are not allowed to vote for this comment"
+msgstr "Вы не можете голосовать за этот комментарий"
+
+#: options/wc-options-serialize.php:498
+msgid "new comment"
+msgstr "новый комментарий"
+
+#: options/wc-options-serialize.php:499
+msgid "new comments"
+msgstr "новые комментарии"
+
+#: options/wc-options-serialize.php:500
+msgid "Comment awaiting moderation"
+msgstr "Комментарий ожидает модерации"
+
+#: options/wc-options-serialize.php:501
+msgid "new reply on your comment"
+msgstr "новый ответ на ваш комментарий"
+
+#: options/wc-options-serialize.php:502
+msgid "new replies on your comments"
+msgstr "новые ответы на ваши комментарии"
+
+#: options/wc-options-serialize.php:506
+msgid "You've not made any changes"
+msgstr "Вы не сделали никаких изменений"
+
+#: options/wc-options-serialize.php:509
+#, php-format
+msgid "Comment text is too long (maximum %s characters allowed)"
+msgstr "Комментарий слишком длинный (доступно максимум %s символов)"
+
+#: options/wc-options.php:28 options/wc-options.php:232
+msgid "Hacker?"
+msgstr "Хакер?"
+
+#: options/wc-options.php:87
+msgid "wpDiscuz General Settings"
+msgstr "Основные настройки wpDiscuz"
+
+#: options/wc-options.php:179
+msgid "General settings"
+msgstr "Основные настройки"
+
+#: options/wc-options.php:182
+msgid "Email Subscription"
+msgstr "E-mail подписка"
+
+#: options/wc-options.php:182
+msgid "and Postmatic"
+msgstr "и Postmatic?"
+
+#: options/wc-options.php:213 options/wc-options.php:383
+msgid "Save Changes"
+msgstr "Сохранить изменения"
+
+#: options/wc-options.php:214
+msgid "Reset Options"
+msgstr "Сбросить настройки"
+
+#: options/wc-options.php:341
+msgid "WpDiscuz Front-end Phrases"
+msgstr "Фронт-энд фразы WpDiscuz"
+
+#: options/wc-options.php:351
+msgid "General"
+msgstr "Основные"
+
+#: options/wc-options.php:352
+msgid "Form"
+msgstr "Форма"
+
+#: options/wc-options.php:354
+msgid "Date/Time"
+msgstr "Дата/Время"
+
+#: options/wc-options.php:356
+msgid "Notification"
+msgstr "Уведомление"
+
+#: wc.php:1020
+msgid "Phrases"
+msgstr "Фразы"
+
+#. Plugin Name of the plugin/theme
+msgid "wpDiscuz - Wordpress Comments"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.gvectors.com/wpdiscuz/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Better comment system. Wordpress post comments and discussion plugin. Allows "
+"your visitors discuss, vote for comments and share."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "gVectors Team (A. Chakhoyan, G. Zakaryan, H. Martirosyan)"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://www.gvectors.com/"
+msgstr ""

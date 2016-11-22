@@ -91,6 +91,10 @@ function theme_scripts() {
   wp_enqueue_style( 'theme-fonts', 'https://fonts.googleapis.com/css?family=Arvo|Fira+Sans:300,400,400i,500,700');
   wp_enqueue_style( 'theme-styles', get_template_directory_uri() . '/css/app.css');
   wp_enqueue_script( 'theme-script', get_template_directory_uri() . '/js/app.js', array('jquery'), '', true);
+
+  if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+    wp_enqueue_script( 'comment-reply' );
+  }
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts');
 
