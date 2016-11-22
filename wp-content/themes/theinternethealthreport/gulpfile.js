@@ -15,6 +15,9 @@ var babelify = require('babelify');
 var sourcemaps = require('gulp-sourcemaps');
 var uglify = require('gulp-uglify');
 
+// Lint
+var eslint = require('gulp-eslint');
+
 // Server
 var browserSync = require('browser-sync');
 
@@ -129,6 +132,18 @@ gulp.task('imagemin', function() {
 });
 
 /*
+/ Javascript Lint
+*/
+gulp.task('jslint', function() {
+  var src = [paths.js.app.modules, paths.js.app.src];
+
+  return gulp.src(src)
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
+});
+
+/*
 / Local server
 */
 
@@ -148,6 +163,7 @@ gulp.task('browser-sync', function() {
 gulp.task('watch', function() {
   gulp.watch(paths.css.src, ['sass']);
   gulp.watch([paths.js.app.src, paths.js.app.modules], ['js']);
+  gulp.watch([paths.js.app.src, paths.js.app.modules], ['jslint']);
   // gulp.watch(paths.img.src, ['imagemin']);
 });
 

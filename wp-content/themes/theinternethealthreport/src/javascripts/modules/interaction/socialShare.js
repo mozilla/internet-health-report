@@ -8,16 +8,17 @@ const windowPopup = (url, width, height) => {
 
   window.open(
     url,
-    "",
-    "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=" + width + ",height=" + height + ",top=" + top + ",left=" + left
+    ``,
+    `menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=${width},height=${height},top=${top},left=${left}`
   );
-}
+};
 
 const socialShare = () => {
   const $shareLinks = $(`.js-social-share`);
 
   $shareLinks.on(`click`, (e) => {
-    const shareUrl = $(e.currentTarget).attr("href");
+    const shareUrl = $(e.currentTarget).attr(`href`);
+
     e.preventDefault();
 
     windowPopup(shareUrl, 500, 300);

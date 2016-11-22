@@ -19,11 +19,9 @@ const fixShare = (scrollTop) => {
         top: `${articleBottom - $share.outerHeight()}px`,
       });
     }
-  } else {
-    if (!constants.isShareFixed) {
-      constants.isShareFixed = true;
-      $share.attr(`style`, ``);
-    }
+  } else if (!constants.isShareFixed) {
+    constants.isShareFixed = true;
+    $share.attr(`style`, ``);
   }
 };
 

@@ -53707,20 +53707,14 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.embedInit = undefined;
 
-var _constants = require('../constants');
-
-var constants = _interopRequireWildcard(_constants);
-
 var _jquery = require('jquery');
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+window.$ = _jquery2.default; /* global TweenLite Power2 */
 
-/* global TweenLite Power2 */
-window.$ = _jquery2.default;
 
 var showEmbedModal = function showEmbedModal(e) {
   var $this = (0, _jquery2.default)(e.currentTarget);
@@ -53752,7 +53746,7 @@ var embedInit = function embedInit() {
 
 exports.embedInit = embedInit;
 
-},{"../constants":9,"jquery":5}],11:[function(require,module,exports){
+},{"jquery":5}],11:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -53827,11 +53821,9 @@ var fixShare = function fixShare(scrollTop) {
         top: articleBottom - $share.outerHeight() + 'px'
       });
     }
-  } else {
-    if (!constants.isShareFixed) {
-      constants.isShareFixed = true;
-      $share.attr('style', '');
-    }
+  } else if (!constants.isShareFixed) {
+    constants.isShareFixed = true;
+    $share.attr('style', '');
   }
 };
 
@@ -53892,19 +53884,14 @@ var _jquery = require('jquery');
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _lodash = require('lodash');
-
-var _ = _interopRequireWildcard(_lodash);
-
 var _fixNav = require('./fixNav');
 
 var _fixShare = require('./fixShare');
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 window.$ = _jquery2.default;
+// import * as _ from 'lodash';
 
 
 var scrollEvents = function scrollEvents() {
@@ -53924,7 +53911,7 @@ var scrollHandler = function scrollHandler() {
 
 exports.scrollHandler = scrollHandler;
 
-},{"./fixNav":11,"./fixShare":12,"jquery":5,"lodash":6}],15:[function(require,module,exports){
+},{"./fixNav":11,"./fixShare":12,"jquery":5}],15:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -53968,14 +53955,14 @@ var smoothScrollInit = function smoothScrollInit() {
 exports.smoothScrollInit = smoothScrollInit;
 
 },{"gsap/src/uncompressed/plugins/ScrollToPlugin":4,"jquery":5}],16:[function(require,module,exports){
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.socialShare = undefined;
 
-var _jquery = require("jquery");
+var _jquery = require('jquery');
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
@@ -53988,14 +53975,15 @@ var windowPopup = function windowPopup(url, width, height) {
   var left = screen.width / 2 - width / 2;
   var top = screen.height / 2 - height / 2;
 
-  window.open(url, "", "menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=" + width + ",height=" + height + ",top=" + top + ",left=" + left);
+  window.open(url, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=' + width + ',height=' + height + ',top=' + top + ',left=' + left);
 };
 
 var socialShare = function socialShare() {
-  var $shareLinks = (0, _jquery2.default)(".js-social-share");
+  var $shareLinks = (0, _jquery2.default)('.js-social-share');
 
-  $shareLinks.on("click", function (e) {
-    var shareUrl = (0, _jquery2.default)(e.currentTarget).attr("href");
+  $shareLinks.on('click', function (e) {
+    var shareUrl = (0, _jquery2.default)(e.currentTarget).attr('href');
+
     e.preventDefault();
 
     windowPopup(shareUrl, 500, 300);

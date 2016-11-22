@@ -1,5 +1,4 @@
 /* global TweenLite Power2 */
-import * as constants from '../constants';
 import $ from 'jquery';
 window.$ = $;
 
