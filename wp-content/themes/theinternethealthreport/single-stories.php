@@ -2,7 +2,6 @@
 <?php get_header(); ?>
 <?php
   $title = get_the_title();
-  $subtitle = get_field('subtitle');
   $permalink = get_permalink();
 ?>
 

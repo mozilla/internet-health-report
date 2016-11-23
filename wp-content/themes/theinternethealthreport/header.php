@@ -16,10 +16,10 @@
 
           <h1 class="header__title"><?php the_field('page_subtitle'); ?></h1>
 
-        <?php elseif (is_singular('stories')) : ?>
+        <?php elseif (is_page_template('single-stories.php') || is_singular('stories')) : ?>
 
           <h1 class="header__title"><?php the_title(); ?></h1>
-          <p class="header__subtitle"><?php the_field('subtitle'); ?></p>
+          <p class="header__subtitle"><?php the_field('page_subtitle'); ?></p>
 
         <?php endif; ?>
 
