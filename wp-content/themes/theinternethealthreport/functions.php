@@ -114,6 +114,11 @@ function theme_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts');
 
+function add_custom_font() {
+  wp_enqueue_style( 'custom-fonts', 'https://fonts.googleapis.com/css?family=Arvo|Fira+Sans:300,400,400i,500,700' );
+}
+add_action( 'admin_enqueue_scripts', 'add_custom_font' );
+
 
 /**
  * Handles JavaScript detection.
@@ -126,6 +131,11 @@ function javascript_detection() {
   echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
 }
 add_action( 'wp_head', 'javascript_detection', 0 );
+
+function add_my_editor_style() {
+  add_editor_style();
+}
+add_action( 'admin_init', 'add_my_editor_style' );
 
 // Get social links
 function get_facebook_share_url($page_url) {
