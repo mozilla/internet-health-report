@@ -10,6 +10,7 @@ Thumbs.db
 .sass-cache
 node_modules
 npm-debug.log
+wp-content/ai1wm-backups
 
 # wordpress specific
 wp-config.php
