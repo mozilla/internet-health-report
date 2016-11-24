@@ -1,32 +1,38 @@
 .menu {
   margin: 0;
-  padding: 0;
+  padding: 0 em($space);
   list-style: none;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 
   &-item {
-    @include media($large-screen-up) {
-      display: inline-block;
-      vertical-align: middle;
-    }
+    display: inline-block;
+    vertical-align: middle;
 
     + #{&} {
-      @include media($large-screen-up) {
-        margin-left: em(70);
+      margin-left: em(24);
+
+      @include media($xlarge-screen-up) {
+        margin-left: em($space * 1.5);
       }
     }
   }
 
   a {
     display: block;
-    @include rem(font-size, 15);
+    padding: em(17, 12) 0;
+    @include rem(font-size, 12);
     font-weight: $fw-light;
     line-height: 1.2;
     letter-spacing: 0.025em;
     text-decoration: none;
     color: $dark-grey;
 
-    @include media($large-screen-up) {
+    @include media($medium-screen-up) {
       padding: em(34, 15) 0;
+      @include rem(font-size, 15);
     }
   }
 }
@@ -34,52 +40,5 @@
 .current-menu-item {
   a {
     font-weight: $fw-bold;
-  }
-}
-
-.submenu-wrapper {
-  @include media($medium-screen-up) {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: $white;
-  }
-}
-
-.submenu {
-  display: none;
-  margin: 0 -0.5em;
-
-  @include media($medium-screen-up) {
-    margin: 0 auto;
-  }
-
-  .menu__item--active & {
-    display: block;
-  }
-
-  &__item {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0.5em;
-
-    @include media($medium-screen-up) {
-      margin: 0;
-
-      + #{&} {
-        margin-left: 1em;
-      }
-    }
-  }
-
-  &__link {
-    display: block;
-    padding: 0;
-    text-decoration: none;
-
-    @include media($medium-screen-up) {
-      padding: 1em 0;
-    }
   }
 }

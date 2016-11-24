@@ -14,6 +14,12 @@
     padding-top: em(24);
   }
 
+  &__wrapper {
+    @include media($large-screen-up) {
+      @include wrapper();
+    }
+  }
+
   &__main {
     padding: em($space * 1.5) 0;
     text-align: center;
@@ -30,7 +36,7 @@
 
   &__title {
     display: inline;
-    padding: em(6, 48) em(12, 22);
+    padding: em(6, 48) 0;
     font-family: $ff-secondary;
     @include rem(font-size, 22);
     font-weight: $fw-medium;
@@ -40,7 +46,7 @@
 
     @include media($medium-screen-up) {
       @include rem(font-size, 48);
-      padding: em(6, 48) em(12, 48);
+      padding: em(6, 48) 0;
     }
   }
 
@@ -65,7 +71,7 @@
   }
 
   &__nav {
-    @include media($large-screen-up) {
+    @include media($medium-screen-up) {
       position: absolute;
       right: 0;
       bottom: 0;
@@ -83,19 +89,25 @@
   }
 
   &__menu {
-    margin-top: 1em;
+    position: relative;
+    width: 100%;
+    background-color: $off-white;
+    overflow: hidden;
 
-    @include media($large-screen-up) {
-      float: left;
-      width: 100%;
-      margin-top: 0;
-      background-color: $off-white;
-    }
-  }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+      width: em($space);
+      background: linear-gradient(to left, $black, $white);
+      opacity: 0.2;
 
-  &__language-select {
-    @include media($large-screen-up) {
-      float: right;
+      @include media(min-width em(950)) {
+        display: none;
+      }
     }
   }
 }
