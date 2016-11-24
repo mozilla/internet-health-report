@@ -4,7 +4,7 @@
 
 .header {
   position: relative;
-  background-color: $yellow;
+  background-color: $secondary-colour;
 
   @include media($medium-screen-up) {
     height: em($header-height);
@@ -15,30 +15,47 @@
   }
 
   &__main {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
+    padding: em($space * 1.5) 0;
     text-align: center;
+
+    @include media($medium-screen-up) {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      padding: 0;
+    }
   }
 
   &__title {
+    display: inline;
+    padding: em(6, 48) em(12, 22);
     font-family: $ff-secondary;
-    @include rem(font-size, 48);
+    @include rem(font-size, 22);
     font-weight: $fw-medium;
     line-height: 1.2;
     letter-spacing: 0.04em;
+    background-color: $primary-colour;
+
+    @include media($medium-screen-up) {
+      @include rem(font-size, 48);
+      padding: em(6, 48) em(12, 48);
+    }
   }
 
   &__subtitle {
-    max-width: em(680, 21);
     margin-top: 1em;
     margin-left: auto;
     margin-right: auto;
-    @include rem(font-size, 21);
+    @include rem(font-size, 14);
     line-height: 1.62;
     letter-spacing: 0.01em;
+
+    @include media($medium-screen-up) {
+      max-width: em(680, 21);
+      @include rem(font-size, 21);
+    }
   }
 
   &__link {

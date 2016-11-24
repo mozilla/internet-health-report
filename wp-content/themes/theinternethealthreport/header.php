@@ -4,6 +4,17 @@
       <a class="header__link" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php get_template_part('assets/images/mozilla', 'logo.svg'); ?></a>
     </div>
 
+    <nav class="header__nav js-header-nav">
+      <div class="wrapper">
+        <div class="header__menu">
+          <?php wp_nav_menu( array(
+            'theme_location' => 'main',
+            'container' => false
+          )); ?>
+        </div>
+      </div>
+    </nav>
+
     <div class="header__main">
       <div class="wrapper">
 
@@ -25,15 +36,4 @@
 
       </div>
     </div>
-
-    <nav class="header__nav js-header-nav">
-      <div class="wrapper">
-        <div class="header__menu">
-          <?php wp_nav_menu( array(
-            'theme_location' => 'main',
-            'container' => false
-          )); ?>
-        </div>
-      </div>
-    </nav>
   </header>
