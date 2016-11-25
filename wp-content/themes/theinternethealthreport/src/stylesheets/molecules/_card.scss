@@ -1,49 +1,89 @@
 .card-wrapper {
-  padding-top: em($space * 2);
-  padding-bottom: em($space * 2);
+  padding-top: em($space);
+  padding-bottom: em($space);
+
+  @include media($medium-screen-up) {
+    padding-top: em($space * 2);
+    padding-bottom: em($space * 2);
+  }
+
+  &--dark {
+    background-color: $light-grey2;
+  }
 }
 
 .card {
-  padding: em(30);
+  background-color: $white;
   box-shadow: em(0) em(0) em(10) em(5) rgba($black, 0.04);
 
-  @include media($medium-screen-up) {
-    @include table();
+  &--table {
+    padding: em(30);
+
+    @include media($medium-screen-up) {
+      @include table();
+    }
+
+    + #{&} {
+      margin-top: em(30);
+    }
   }
 
-  + #{&} {
-    margin-top: em(30);
+  &--block {
+    @include media($medium-screen-up) {
+      @include span-columns(6 of 12);
+    }
   }
 
   &__cell {
-    @include media($medium-screen-up) {
-      @include display-context(table) {
-        @include span-columns(6);
-      }
-      vertical-align: top;
-      @include pad(#{em(12)} default #{em(12)} 0);
+    &--feature {
+      @include flow();
     }
 
-    @include media($large-screen-up) {
-      @include display-context(table) {
-        @include span-columns(7);
-      }
-    }
-
-    &--last {
-      margin-top: em(30);
-
+    .card--table & {
       @include media($medium-screen-up) {
-        margin-top: 0;
-        @include pad(#{em(12)} 0 #{em(12)} default);
-        border-left: em(1) solid $light-grey;
+        @include display-context(table) {
+          @include span-columns(6);
+        }
+        vertical-align: top;
+        @include pad(#{em(12)} default #{em(12)} 0);
       }
 
       @include media($large-screen-up) {
         @include display-context(table) {
-          @include span-columns(5);
+          @include span-columns(7);
         }
       }
+
+      &--last {
+        margin-top: em(30);
+
+        @include media($medium-screen-up) {
+          margin-top: 0;
+          @include pad(#{em(12)} 0 #{em(12)} default);
+          border-left: em(1) solid $light-grey;
+        }
+
+        @include media($large-screen-up) {
+          @include display-context(table) {
+            @include span-columns(5);
+          }
+        }
+      }
+    }
+
+    .card--block & {
+      padding: em($space);
+    }
+  }
+
+  &__thumb {
+    width: 100%;
+    height: 0;
+    padding-bottom: 52%;
+    background: {
+      repeat: no-repeat;
+      position: center;
+      size: cover;
     }
   }
 
@@ -72,16 +112,39 @@
   }
 
   &__subtitle {
+    display: inline-block;
     @include rem(font-size, 19);
     line-height: 1.16;
     font-weight: $fw-medium;
     letter-spacing: 0.025em;
+    color: $black;
+    text-decoration: none;
+    background-color: $primary-colour;
 
-    &:before {
-      counter-increment: card-index;
-      content: '0' counter(card-index);
-      font-weight: $fw-light;
-      margin-right: 1em;
+    .card--block & {
+      @include rem(font-size, 21);
+      line-height: (34/21);
+      letter-spacing: 0.01em;
+    }
+  }
+
+  &__excerpt {
+    @include rem(font-size, 21);
+    line-height: (34/21);
+    letter-spacing: 0.01em;
+  }
+
+  &__cta {
+    display: block;
+    @include rem(font-size, 15);
+    font-weight: $fw-medium;
+    line-height: (23/15);
+    letter-spacing: 0.01em;
+    color: $black;
+    text-decoration: none;
+
+    svg {
+      margin-left: 0.5em;
     }
   }
 

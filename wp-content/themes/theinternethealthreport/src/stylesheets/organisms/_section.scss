@@ -57,7 +57,20 @@
     }
   }
 
+  &__divider {
+    padding: em(32) 0;
+    background-color: $black;
+  }
+
   &__title {
+    @include rem(font-size, 26);
+    font-weight: $fw-medium;
+    line-height: (36/26);
+    letter-spacing: 0.01em;
+    color: $white;
+  }
+
+  &__subtitle {
     @include rem(font-size, 26);
     font-weight: $fw-medium;
     line-height: (36/26);

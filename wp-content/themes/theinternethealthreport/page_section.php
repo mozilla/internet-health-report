@@ -22,19 +22,60 @@
           <a class="btn js-scroll-to" href="#<?php echo stringToId(get_field('data_title')); ?>"><?php the_field('skip_to_data_button_text'); ?></a>
         </div>
         <div id="<?php echo stringToId(get_field('healthy_title')); ?>" class="section__block">
-          <h2 class="section__title"><?php the_field('healthy_title'); ?></h2>
+          <h3 class="section__subtitle"><?php the_field('healthy_title'); ?></h3>
           <?php the_field('section_healthy'); ?>
         </div>
         <div id="<?php echo stringToId(get_field('unhealthy_title')); ?>" class="section__block">
-          <h2 class="section__title"><?php the_field('unhealthy_title'); ?></h2>
+          <h3 class="section__subtitle"><?php the_field('unhealthy_title'); ?></h3>
           <?php the_field('section_unhealthy'); ?>
         </div>
         <div id="<?php echo stringToId(get_field('prognosis_title')); ?>" class="section__block">
-          <h2 class="section__title"><?php the_field('prognosis_title'); ?></h2>
+          <h3 class="section__subtitle"><?php the_field('prognosis_title'); ?></h3>
           <?php the_field('section_prognosis'); ?>
         </div>
       </div>
 
+    </div>
+  </div>
+
+  <?php
+    $featured_stories = get_field('related_stories');
+
+    if ($featured_stories) :
+  ?>
+  <div id="<?php echo stringToId(get_field('stories_title')); ?>">
+    <div class="section__divider">
+      <div class="wrapper">
+        <h2 class="section__title"><?php the_field('stories_title'); ?></h2>
+      </div>
+    </div>
+
+    <div class="card-wrapper card-wrapper--dark">
+      <div class="wrapper">
+        <?php foreach($featured_stories as $post) : ?>
+          <?php
+            setup_postdata($post);
+            $thumbnail = get_the_post_thumbnail_url($post, 'large');
+          ?>
+          <div class="card card--block">
+            <?php if ($thumbnail) : ?>
+              <div class="card__thumb" style="background-image: url(<?php echo $thumbnail; ?>)"></div>
+            <?php endif; ?>
+            <div class="card__cell card__cell--feature card__cell--last">
+              <a class="card__subtitle" href="<?php echo get_permalink(); ?>"><?php echo the_title(); ?></a>
+              <p class="card__excerpt"><?php the_field('page_subtitle'); ?></p>
+              <a class="card__cta" href="<?php echo get_permalink(); ?>"><?php the_field('story_cta'); ?> <?php get_template_part('assets/icons/icon', 'arrow-right.svg'); ?></a>
+            </div>
+          </div>
+        <?php endforeach; ?>
+        <?php wp_reset_postdata(); ?></div>
+    </div>
+  </div>
+  <?php endif; ?>
+
+  <div id="<?php echo stringToId(get_field('data_title')); ?>" class="section__divider">
+    <div class="wrapper">
+      <h2 class="section__title"><?php the_field('data_title'); ?></h2>
     </div>
   </div>
 

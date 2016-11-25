@@ -23,7 +23,7 @@
     $stories_objects = get_field('related_stories');
   ?>
 
-  <div class="card">
+  <div class="card card--table">
     <div class="card__cell">
       <a href="<?php echo get_permalink(); ?>" class="card__link-wrapper">
         <h4 class="card__subtitle"><?php the_title(); ?></h4>

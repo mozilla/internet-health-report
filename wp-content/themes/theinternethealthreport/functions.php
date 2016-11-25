@@ -60,6 +60,7 @@ function register_custom_posts() {
       'public' => true,
       'has_archive' => true,
       'rewrite' => array('slug' => 'stories'),
+      'supports' => array('title', 'excerpt', 'thumbnail'),
     )
   );
 

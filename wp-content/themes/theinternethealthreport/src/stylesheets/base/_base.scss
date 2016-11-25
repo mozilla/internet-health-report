@@ -14,7 +14,6 @@ html {
 }
 
 body {
-  counter-reset: card-index;
   @include rem(font-size,16);
   line-height: 1.5;
   font-family: $ff-primary;
