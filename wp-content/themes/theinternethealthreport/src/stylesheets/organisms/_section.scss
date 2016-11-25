@@ -1,4 +1,66 @@
 .section {
   padding-top: em($space);
   padding-bottom: em($space);
+
+  @include media($medium-screen-up) {
+    padding-top: em($space * 2);
+    padding-bottom: em($space * 2);
+  }
+
+  &__menu {
+    @include media($medium-screen-up) {
+      @include span-columns(3 of 12);
+    }
+
+    @include media($large-screen-up) {
+      @include span-columns(2 of 12);
+    }
+  }
+
+  &__header {
+    @include media($medium-screen-up) {
+      @include span-columns(9 of 12);
+    }
+
+    @include media($large-screen-up) {
+      @include span-columns(8 of 12);
+    }
+  }
+
+  &__block {
+    @include flow();
+
+    + #{&} {
+      margin-top: em($space);
+      padding-top: em($space);
+      border-top: em(1) solid $light-grey;
+    }
+
+    p {
+      @include media($medium-screen-up) {
+        @include rem(font-size, 21);
+        line-height: (34/21);
+        letter-spacing: 0.01em;
+      }
+    }
+
+    a {
+      font-weight: $fw-medium;
+      color: $black;
+      text-decoration: none;
+      border-bottom: 3px solid $primary-colour;
+    }
+
+    .btn {
+      margin-top: 2em;
+      margin-bottom: 1em;
+    }
+  }
+
+  &__title {
+    @include rem(font-size, 26);
+    font-weight: $fw-medium;
+    line-height: (36/26);
+    letter-spacing: 0.01em;
+  }
 }

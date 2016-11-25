@@ -4,24 +4,15 @@
 
 .btn {
   display: inline-block;
-  padding: 0.5em 2em;
-  font-weight: $fw-bold;
+  width: 100%;
+  max-width: em(440, 21);
+  padding: em(16, 21);
+  @include rem(font-size, 21);
+  line-height: (36/21);
+  font-weight: $fw-medium;
+  text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
-  color: $white;
-  background-color: $black;
-  border-radius: 0.4em;
-
-  &--outline {
-    color: $black;
-    background-color: transparent;
-    border: 2px solid;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: $white;
-      background-color: $black;
-    }
-  }
+  color: $black;
+  letter-spacing: 0.01em;
+  background-color: $primary-colour;
 }

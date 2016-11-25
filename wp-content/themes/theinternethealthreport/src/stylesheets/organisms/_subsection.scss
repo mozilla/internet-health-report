@@ -2,13 +2,6 @@
   @include clearfix();
   padding-bottom: em($space * 1.5);
 
-  &__wrapper {
-    @include media($large-screen-up) {
-      @include span-columns(10 of 12);
-      @include shift(1);
-    }
-  }
-
   &__header {
     padding-top: 1em;
     @include rem(font-size, 21);

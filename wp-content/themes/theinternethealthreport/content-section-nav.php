@@ -1,6 +1,7 @@
 <?php
   $section_args = array(
     'post_type' => 'page',
+    'orderby' => 'menu_order',
     'order' => ASC,
     'meta_query' => array(
       array(

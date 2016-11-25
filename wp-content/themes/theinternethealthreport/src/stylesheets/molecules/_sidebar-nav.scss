@@ -1,0 +1,51 @@
+.sidebar-nav {
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    position: relative;
+    padding-left: em($space);
+  }
+
+  &__link {
+    display: inline-block;
+    padding: em(7, 15) em(2, 15);
+    @include rem(font-size, 15);
+    font-weight: $fw-light;
+    line-height: (18/15);
+    color: $black;
+    text-decoration: none;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: em($space);
+      @include rem(font-size, 16);
+      background: {
+        image: url('../assets/icons/icon-arrow-right.svg');
+        repeat: no-repeat;
+        position: left em(10);
+      }
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    &.is-active,
+    &:active {
+      font-weight: $fw-medium;
+      background-color: $primary-colour;
+
+      &:before {
+        opacity: 1;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      font-weight: $fw-medium;
+    }
+  }
+}

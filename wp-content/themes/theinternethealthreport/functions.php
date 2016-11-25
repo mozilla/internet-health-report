@@ -153,4 +153,10 @@ function get_twitter_share_url($page_url, $text) {
   return $share_url;
 }
 
+function stringToId($str) {
+  $strLower = strtolower($str);
+  $id = preg_replace("/[\s_]/", "-", $strLower);
+  return $id;
+}
+
 ?>

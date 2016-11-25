@@ -30,12 +30,13 @@ loadMultiLineCharts();
 import { loadBubbleCharts } from './modules/visualizations/Bubble';
 loadBubbleCharts();
 
-// UI
-
 // Interaction
 
 import { smoothScrollInit } from './modules/interaction/smoothScroll';
 smoothScrollInit();
+
+import { sidebarNavInit } from './modules/interaction/sidebarNav';
+sidebarNavInit();
 
 import { embedInit } from './modules/interaction/embed';
 embedInit();

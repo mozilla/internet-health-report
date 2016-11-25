@@ -6,7 +6,7 @@ window.$ = $;
 const scrollToEl = (e) => {
   const $this = $(e.currentTarget);
   const id = $this.attr(`href`);
-  const offsetY = $(`.header__menu`).height() + $(`.menu__item--active .submenu-wrapper`).height();
+  const offsetY = $(`.header__menu`).height();
 
   if ($(id).length) {
     TweenLite.to(window, 0.75, { scrollTo:{y:id, offsetY:offsetY}, ease:Power3.easeInOut });

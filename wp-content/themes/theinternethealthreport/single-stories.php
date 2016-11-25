@@ -36,8 +36,6 @@
     <a href="<?php echo get_facebook_share_url($permalink); ?>" target="_blank" class="share__btn js-social-share"><span class="share__text">Share</span><span class="share__icon"><?php get_template_part('assets/icons/icon', 'facebook.svg'); ?></span></a><!--
 
     --><a href="<?php echo get_twitter_share_url($permalink, $title); ?>" target="_blank" class="share__btn js-social-share"><span class="share__text">Tweet</span><span class="share__icon"><?php get_template_part('assets/icons/icon', 'twitter.svg'); ?></span></a>
-
-    <!-- <a href="mailto:?subject=<?php echo esc_url($title); ?>&body=<?php echo esc_url($permalink); ?>" class="share__btn btn btn--outline">Email</a> -->
   </div>
 </article>
 
