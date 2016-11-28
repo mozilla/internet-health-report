@@ -55,7 +55,7 @@
       }
 
       &--last {
-        margin-top: em(30);
+        margin-top: em(20);
 
         @include media($medium-screen-up) {
           margin-top: 0;
@@ -94,32 +94,53 @@
 
   &__link {
     display: block;
-    @include rem(margin-top, 16);
-    @include rem(font-size, 16);
-    line-height: 1.1875;
-    font-weight: $fw-light;
-    letter-spacing: 0.01em;
-    color: $primary-colour;
+    @include rem(margin-top, 14);
+    text-decoration: none;
+
+    &-text {
+      display: inline;
+      padding: 0.1em 0.1em;
+      @include rem(font-size, 14);
+      line-height: 1.1875;
+      letter-spacing: 0.01em;
+      color: $white;
+      background-color: $black;
+
+      @include media($medium-screen-up) {
+        @include rem(font-size, 16);
+      }
+    }
   }
 
   &__title {
-    @include rem(margin-top, 20);
-    @include rem(font-size, 38);
+    margin-top: 1em;
+    @include rem(font-size, 19);
+    font-family: $ff-secondary;
     font-weight: $fw-regular;
     line-height: 1.21;
     letter-spacing: 0.025em;
     color: $black;
+
+    @include media($medium-screen-up) {
+      @include rem(font-size, 38);
+      margin-top: 0.6em;
+    }
   }
 
   &__subtitle {
     display: inline-block;
-    @include rem(font-size, 19);
+    padding: 0.2em 0.1em;
+    @include rem(font-size, 14);
     line-height: 1.16;
     font-weight: $fw-medium;
     letter-spacing: 0.025em;
     color: $black;
     text-decoration: none;
     background-color: $primary-colour;
+
+    @include media($medium-screen-up) {
+      @include rem(font-size, 19);
+    }
 
     .card--block & {
       @include rem(font-size, 21);
@@ -149,11 +170,15 @@
   }
 
   &__featured {
-    @include rem(font-size, 16);
+    @include rem(font-size, 12);
     line-height: 1.2;
     font-weight: $fw-light;
     letter-spacing: 0.135em;
     text-transform: uppercase;
     color: $dark-grey;
+
+    @include media($medium-screen-up) {
+      @include rem(font-size, 16);
+    }
   }
 }

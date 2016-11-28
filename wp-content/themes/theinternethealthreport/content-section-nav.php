@@ -37,7 +37,7 @@
 
         <?php foreach($stories_objects as $post) : ?>
           <?php setup_postdata($post); ?>
-          <a class="card__link" href="<?php echo get_permalink(); ?>"><?php echo the_title(); ?></a>
+          <a class="card__link" href="<?php echo get_permalink(); ?>"><span class="card__link-text"><?php echo the_title(); ?></span></a>
         <?php endforeach; ?>
         <?php wp_reset_postdata(); ?>
       </div>
