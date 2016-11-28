@@ -10,6 +10,10 @@
   &--dark {
     background-color: $off-white;
   }
+
+  .article + & {
+    margin-top: em($space);
+  }
 }
 
 .card {

@@ -1,5 +1,6 @@
 .share {
   margin-top: 2em;
+  margin-bottom: 2em;
   text-align: center;
   transition: opacity 0.2s ease;
 
@@ -13,14 +14,15 @@
     left: em($space);
     width: em($share-width);
     margin-top: 0;
+    margin-bottom: 0;
   }
 
   @include media($large-screen-up) {
-    left: 12%;
+    left: 7%;
   }
 
   @include media($max-width-screen-up) {
-    left: calc(50% - #{em(500)});
+    left: calc(50% - #{em(550)});
   }
 
   &__btn {
@@ -44,16 +46,11 @@
 
   &__text,
   &__icon {
-    display: inline-block;
-    vertical-align: middle;
-
-    @include media($medium-screen-up) {
-      display: block;
-    }
+    display: block;
   }
 
   &__text {
-    margin-right: 0.5em;
+    margin-bottom: 0.5em;
     @include rem(font-size, 18);
     font-weight: $fw-light;
     line-height: 1.2;
@@ -61,8 +58,6 @@
 
     @include media($medium-screen-up) {
       @include rem(font-size, 14);
-      margin-right: 0;
-      margin-bottom: 0.5em;
     }
   }
 
@@ -73,6 +68,7 @@
 
     svg {
       display: block;
+      margin: 0 auto;
     }
   }
 }

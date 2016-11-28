@@ -17,19 +17,19 @@
       </ul>
 
       <div class="section__header">
-        <div id="<?php echo stringToId(get_field('overview_title')); ?>" class="section__block">
+        <div id="<?php echo stringToId(get_field('overview_title')); ?>" class="section__block wysiwyg">
           <?php the_field('section_overview'); ?>
           <a class="btn js-scroll-to" href="#<?php echo stringToId(get_field('data_title')); ?>"><?php the_field('skip_to_data_button_text'); ?></a>
         </div>
-        <div id="<?php echo stringToId(get_field('healthy_title')); ?>" class="section__block">
+        <div id="<?php echo stringToId(get_field('healthy_title')); ?>" class="section__block wysiwyg">
           <h3 class="section__subtitle"><?php the_field('healthy_title'); ?></h3>
           <?php the_field('section_healthy'); ?>
         </div>
-        <div id="<?php echo stringToId(get_field('unhealthy_title')); ?>" class="section__block">
+        <div id="<?php echo stringToId(get_field('unhealthy_title')); ?>" class="section__block wysiwyg">
           <h3 class="section__subtitle"><?php the_field('unhealthy_title'); ?></h3>
           <?php the_field('section_unhealthy'); ?>
         </div>
-        <div id="<?php echo stringToId(get_field('prognosis_title')); ?>" class="section__block">
+        <div id="<?php echo stringToId(get_field('prognosis_title')); ?>" class="section__block wysiwyg">
           <h3 class="section__subtitle"><?php the_field('prognosis_title'); ?></h3>
           <?php the_field('section_prognosis'); ?>
         </div>

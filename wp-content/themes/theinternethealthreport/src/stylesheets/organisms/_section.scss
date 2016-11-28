@@ -35,36 +35,6 @@
       padding-top: em($space);
       border-top: em(1) solid $grey;
     }
-
-    .large-text {
-      @include rem(font-size, 16);
-      font-weight: $fw-medium;
-      line-height: (36/26);
-
-      @include media($medium-screen-up) {
-        @include rem(font-size, 26);
-      }
-    }
-
-    p {
-      @include media($medium-screen-up) {
-        @include rem(font-size, 21);
-        line-height: (34/21);
-        letter-spacing: 0.01em;
-      }
-    }
-
-    a {
-      font-weight: $fw-medium;
-      color: $black;
-      text-decoration: none;
-      border-bottom: 3px solid $primary-colour;
-    }
-
-    .btn {
-      margin-top: 2em;
-      margin-bottom: 1em;
-    }
   }
 
   &__divider {

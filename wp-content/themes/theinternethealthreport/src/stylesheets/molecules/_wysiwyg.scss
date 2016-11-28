@@ -1,0 +1,58 @@
+.wysiwyg {
+  .large-text {
+    @include rem(font-size, 16);
+    font-weight: $fw-medium;
+    line-height: (36/26);
+
+    @include media($medium-screen-up) {
+      @include rem(font-size, 26);
+    }
+  }
+
+  p {
+    @include media($medium-screen-up) {
+      @include rem(font-size, 21);
+      line-height: (34/21);
+      letter-spacing: 0.01em;
+    }
+  }
+
+  a {
+    font-weight: $fw-medium;
+    color: $black;
+    text-decoration: none;
+    border-bottom: 3px solid $primary-colour;
+  }
+
+  .btn {
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+
+  blockquote {
+    max-width: em(530);
+    margin: 3em 0;
+    padding: em(38) em(12) em(12);
+    background-color: $primary-colour;
+
+    &:before {
+      content: '“';
+      position: absolute;
+      top: em(12, 48);
+      left: em(12, 48);
+      display: block;
+      @include rem(font-size, 48);
+      font-weight: $fw-medium;
+      line-height: 1;
+    }
+
+    p {
+      @include media($medium-screen-up) {
+        @include rem(font-size, 28);
+        font-weight: $fw-medium;
+        color: $black;
+        line-height: (38/28);
+      }
+    }
+  }
+}
