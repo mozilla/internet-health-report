@@ -3,6 +3,8 @@
 //------------------------------------------------------------------------
 
 .footer {
+  color: $white;
+  background-color: $black;
   border-top: em(1) solid $grey;
 
   &__grid {
@@ -13,9 +15,11 @@
 
   &__col {
     @include flow();
-    padding: em($space);
+    padding: em($space) 0;
 
     @include media($medium-screen-up) {
+      padding: em($space);
+
       @include display-context(table) {
         @include span-columns(6)
       }
@@ -23,7 +27,7 @@
 
     &--first {
       @include media($medium-screen-up) {
-        border-right: em(1) solid $grey;
+        border-right: em(1) solid rgba($white, 0.4);
       }
 
       @include media($large-screen-up) {
@@ -34,6 +38,12 @@
     }
 
     &--last {
+      border-top: 1px solid rgba($white, 0.4);
+
+      @include media($medium-screen-up) {
+        border-top: none;
+      }
+
       @include media($large-screen-up) {
         @include display-context(table) {
           @include span-columns(7);
@@ -43,10 +53,14 @@
   }
 
   &__title {
-    @include rem(font-size, 19);
+    @include rem(font-size, 14);
     font-weight: $fw-medium;
     line-height: 1.37;
     letter-spacing: 0.01em;
+
+    @include media($medium-screen-up) {
+      @include rem(font-size, 19);
+    }
   }
 
   &__text {
@@ -58,7 +72,7 @@
     &--2 {
       margin-top: 1.5em;
       padding-top: 1.5em;
-      border-top: 1px solid $grey;
+      border-top: 1px solid rgba($white, 0.4);
     }
   }
 
@@ -71,7 +85,7 @@
     display: block;
     margin: 0 0.25em;
     font-weight: $fw-medium;
-    color: $black;
+    color: $white;
     text-decoration: none;
 
     @include media($small-screen-up) {
@@ -81,6 +95,10 @@
 
     svg {
       margin-left: 0.5em;
+    }
+
+    path {
+      fill: $white;
     }
   }
 }
