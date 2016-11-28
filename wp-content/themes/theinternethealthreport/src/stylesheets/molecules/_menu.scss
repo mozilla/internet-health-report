@@ -31,7 +31,7 @@
     color: $dark-grey;
 
     @include media($medium-screen-up) {
-      padding: em(34, 15) 0;
+      padding: em(17, 15) 0;
       @include rem(font-size, 15);
     }
   }
