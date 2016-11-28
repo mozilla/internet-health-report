@@ -1,7 +1,10 @@
 <?php get_template_part('content', 'head'); ?>
   <header class="header">
     <div class="header__top wrapper">
-      <a class="header__link" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php get_template_part('assets/images/mozilla', 'logo.svg'); ?></a>
+      <a class="header__link" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+        <span class="mozilla-logo"><?php get_template_part('assets/images/mozilla', 'logo.svg'); ?></span>
+        <span class="site-logo"><?php get_template_part('assets/images/site', 'logo.svg'); ?></span>
+      </a>
     </div>
 
     <nav class="header__nav js-header-nav">
