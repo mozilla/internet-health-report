@@ -4,6 +4,11 @@
   text-align: center;
   border-bottom: em(1) solid $grey;
 
+  @include media($medium-screen-up) {
+    padding-top: em($space * 1.5);
+    padding-bottom: em($space * 1.5);
+  }
+
   &__text {
     max-width: em(830,19);
     margin-left: auto;
