@@ -2,3 +2,9 @@ body {
   font-family: 'Fira Sans', sans-serif;
   line-height: 1.5;
 }
+
+body .large-text {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.38;
+}

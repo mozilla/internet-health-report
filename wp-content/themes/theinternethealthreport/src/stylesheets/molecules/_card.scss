@@ -16,21 +16,22 @@
   background-color: $white;
   box-shadow: em(0) em(0) em(10) em(5) rgba($black, 0.04);
 
+  + #{&} {
+    margin-top: em(30);
+  }
+
   &--table {
     padding: em(30);
 
     @include media($medium-screen-up) {
       @include table();
     }
-
-    + #{&} {
-      margin-top: em(30);
-    }
   }
 
   &--block {
     @include media($medium-screen-up) {
       @include span-columns(6 of 12);
+      margin-top: 0;
     }
   }
 
@@ -143,26 +144,38 @@
     }
 
     .card--block & {
-      @include rem(font-size, 21);
+      @include rem(font-size, 14);
       line-height: (34/21);
       letter-spacing: 0.01em;
+
+      @include media($medium-screen-up) {
+        @include rem(font-size, 21);
+      }
     }
   }
 
   &__excerpt {
-    @include rem(font-size, 21);
+    @include rem(font-size, 14);
     line-height: (34/21);
     letter-spacing: 0.01em;
+
+    @include media($medium-screen-up) {
+      @include rem(font-size, 21);
+    }
   }
 
   &__cta {
     display: block;
-    @include rem(font-size, 15);
+    @include rem(font-size, 14);
     font-weight: $fw-medium;
     line-height: (23/15);
     letter-spacing: 0.01em;
     color: $black;
     text-decoration: none;
+
+    @include media($medium-screen-up) {
+      @include rem(font-size, 15);
+    }
 
     svg {
       margin-left: 0.5em;

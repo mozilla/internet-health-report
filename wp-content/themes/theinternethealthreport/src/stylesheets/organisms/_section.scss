@@ -36,6 +36,16 @@
       border-top: em(1) solid $grey;
     }
 
+    .large-text {
+      @include rem(font-size, 16);
+      font-weight: $fw-medium;
+      line-height: (36/26);
+
+      @include media($medium-screen-up) {
+        @include rem(font-size, 26);
+      }
+    }
+
     p {
       @include media($medium-screen-up) {
         @include rem(font-size, 21);
@@ -58,22 +68,34 @@
   }
 
   &__divider {
-    padding: em(32) 0;
+    padding: em(16) 0;
     background-color: $black;
+
+    @include media($medium-screen-up) {
+      padding: em(32) 0;
+    }
   }
 
   &__title {
-    @include rem(font-size, 26);
+    @include rem(font-size, 18);
     font-weight: $fw-medium;
     line-height: (36/26);
     letter-spacing: 0.01em;
     color: $white;
+
+    @include media($medium-screen-up) {
+      @include rem(font-size, 26);
+    }
   }
 
   &__subtitle {
-    @include rem(font-size, 26);
+    @include rem(font-size, 18);
     font-weight: $fw-medium;
     line-height: (36/26);
     letter-spacing: 0.01em;
+
+    @include media($medium-screen-up) {
+      @include rem(font-size, 26);
+    }
   }
 }

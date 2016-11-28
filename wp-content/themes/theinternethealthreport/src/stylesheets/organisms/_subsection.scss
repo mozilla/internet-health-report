@@ -1,30 +1,43 @@
 .subsection {
   @include clearfix();
-  padding-bottom: em($space * 1.5);
+  padding-top: em($space * 1);
+  padding-bottom: em($space * 1);
+
+  @include media($medium-screen-up) {
+    @include wrapper();
+    padding-top: em($space * 1.5);
+    padding-bottom: em($space * 1.5);
+  }
 
   &__header {
-    padding-top: 1em;
-    @include rem(font-size, 21);
+    @include rem(margin-left, 15);
+    @include rem(font-size, 18);
     font-weight: $fw-medium;
     line-height: 1.62;
     letter-spacing: 0.025em;
-    border-top: 1px solid $grey;
+
+    @include media($medium-screen-up) {
+      margin-left: 0;
+    }
 
     .subsection__row ~ & {
       margin-top: em($space * 1.5, 21);
+      padding-top: 1em;
+      border-top: 1px solid $grey;
     }
   }
 
   &__chart-title {
-    margin-top: 1.75em;
-    padding: em($space * 0.5, 21) em($space * 0.5, 21);
-    @include rem(font-size, 21);
+    margin-top: 1em;
+    padding: em($space * 0.5, 18) em($space * 0.5, 18);
+    @include rem(font-size, 18);
     line-height: 1.62;
     font-weight: $fw-medium;
     letter-spacing: 0.025em;
     background-color: $primary-colour;
 
     @include media($medium-screen-up) {
+      margin-top: 1.75em;
       padding: em($space * 0.6, 21) em($space * 1.5, 21);
     }
   }
@@ -40,13 +53,14 @@
   }
 
   &__subtitle {
-    @include rem(font-size, 26);
+    @include rem(font-size, 15);
     font-weight: $fw-medium;
     line-height: 1.38;
     letter-spacing: 0.01em;
 
     @include media($medium-screen-up) {
       @include span-columns(5);
+      @include rem(font-size, 26);
     }
   }
 
@@ -59,6 +73,18 @@
     @include media($medium-screen-up) {
       margin-top: 0;
       @include span-columns(7);
+      @include rem(font-size, 21);
+    }
+
+    @include media($large-screen-up) {
+      @include span-columns(6);
+    }
+
+    a {
+      font-weight: $fw-medium;
+      text-decoration: none;
+      color: $black;
+      border-bottom: 3px solid $primary-colour;
     }
   }
 

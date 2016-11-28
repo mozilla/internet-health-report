@@ -8,7 +8,7 @@
     <div class="wrapper">
 
       <ul class="section__menu sidebar-nav">
-        <li class="sidebar-nav__item"><a href="#<?php echo stringToId(get_field('introduction_title')); ?>" class="sidebar-nav__link js-sidebar-link js-scroll-to is-active"><?php the_field('introduction_title'); ?></a></li>
+        <li class="sidebar-nav__item"><a href="#<?php echo stringToId(get_field('overview_title')); ?>" class="sidebar-nav__link js-sidebar-link js-scroll-to is-active"><?php the_field('overview_title'); ?></a></li>
         <li class="sidebar-nav__item"><a href="#<?php echo stringToId(get_field('healthy_title')); ?>" class="sidebar-nav__link js-sidebar-link js-scroll-to"><?php the_field('healthy_title'); ?></a></li>
         <li class="sidebar-nav__item"><a href="#<?php echo stringToId(get_field('unhealthy_title')); ?>" class="sidebar-nav__link js-sidebar-link js-scroll-to"><?php the_field('unhealthy_title'); ?></a></li>
         <li class="sidebar-nav__item"><a href="#<?php echo stringToId(get_field('prognosis_title')); ?>" class="sidebar-nav__link js-sidebar-link js-scroll-to"><?php the_field('prognosis_title'); ?></a></li>
@@ -17,8 +17,8 @@
       </ul>
 
       <div class="section__header">
-        <div id="<?php echo stringToId(get_field('introduction_title')); ?>" class="section__block">
-          <?php the_field('section_introduction'); ?>
+        <div id="<?php echo stringToId(get_field('overview_title')); ?>" class="section__block">
+          <?php the_field('section_overview'); ?>
           <a class="btn js-scroll-to" href="#<?php echo stringToId(get_field('data_title')); ?>"><?php the_field('skip_to_data_button_text'); ?></a>
         </div>
         <div id="<?php echo stringToId(get_field('healthy_title')); ?>" class="section__block">
@@ -79,7 +79,7 @@
     </div>
   </div>
 
-  <div class="subsection wrapper">
+  <div class="subsection">
 
   <?php
     $subsection_index = 0;

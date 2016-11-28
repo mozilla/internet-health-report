@@ -5,9 +5,9 @@
 .btn {
   display: inline-block;
   width: 100%;
-  max-width: em(440, 21);
+  max-width: em(360, 14);
   padding: em(16, 21);
-  @include rem(font-size, 21);
+  @include rem(font-size, 14);
   line-height: (36/21);
   font-weight: $fw-medium;
   text-align: center;
@@ -15,4 +15,9 @@
   color: $black;
   letter-spacing: 0.01em;
   background-color: $primary-colour;
+
+  @include media($medium-screen-up) {
+    @include rem(font-size, 21);
+    max-width: em(360, 21);
+  }
 }
