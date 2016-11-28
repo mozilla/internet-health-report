@@ -8,7 +8,7 @@
     font-weight: $fw-medium;
     line-height: 1.62;
     letter-spacing: 0.025em;
-    border-top: 1px solid $light-grey;
+    border-top: 1px solid $grey;
 
     .subsection__row ~ & {
       margin-top: em($space * 1.5, 21);
@@ -32,7 +32,7 @@
   &__row {
     @include clearfix;
     padding: em($space) em($space * 0.5);
-    background-color: $light-grey2;
+    background-color: $off-white;
 
     @include media($medium-screen-up) {
       padding: em($space * 1.5) em($space * 1.5);

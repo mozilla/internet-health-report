@@ -3,7 +3,7 @@
 //------------------------------------------------------------------------
 
 .footer {
-  border-top: em(1) solid $light-grey;
+  border-top: em(1) solid $grey;
 
   &__grid {
     @include media($medium-screen-up) {
@@ -23,7 +23,7 @@
 
     &--first {
       @include media($medium-screen-up) {
-        border-right: em(1) solid $light-grey;
+        border-right: em(1) solid $grey;
       }
 
       @include media($large-screen-up) {
@@ -58,7 +58,7 @@
     &--2 {
       margin-top: 1.5em;
       padding-top: 1.5em;
-      border-top: 1px solid $light-grey;
+      border-top: 1px solid $grey;
     }
   }
 

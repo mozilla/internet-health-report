@@ -8,7 +8,7 @@
   }
 
   &--dark {
-    background-color: $light-grey2;
+    background-color: $off-white;
   }
 }
 
@@ -60,7 +60,7 @@
         @include media($medium-screen-up) {
           margin-top: 0;
           @include pad(#{em(12)} 0 #{em(12)} default);
-          border-left: em(1) solid $light-grey;
+          border-left: em(1) solid $grey;
         }
 
         @include media($large-screen-up) {
@@ -99,7 +99,7 @@
     line-height: 1.1875;
     font-weight: $fw-light;
     letter-spacing: 0.01em;
-    color: $navy;
+    color: $primary-colour;
   }
 
   &__title {

@@ -2,7 +2,7 @@
   display: block;
   padding: em($space);
   text-decoration: none;
-  background-color: $light-grey;
+  background-color: $grey;
 
   + #{&} {
     margin-top: 1em;
