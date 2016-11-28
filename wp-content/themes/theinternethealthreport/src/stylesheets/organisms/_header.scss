@@ -44,6 +44,7 @@
   }
 
   &__main {
+    position: relative;
     padding: em($space * 1.5) 0;
     text-align: center;
 

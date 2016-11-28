@@ -1,32 +1,41 @@
 .intro {
-  padding-top: em($space * 2);
-  padding-bottom: em($space * 2);
+  padding-top: em($space);
+  padding-bottom: em($space);
   text-align: center;
-  border-bottom: em(1) solid $grey;
+  border-bottom: em(1) solid $off-white;
 
   @include media($medium-screen-up) {
     padding-top: em($space * 1.5);
     padding-bottom: em($space * 1.5);
+    border-color: $grey;
   }
 
   &__text {
     max-width: em(830,19);
     margin-left: auto;
     margin-right: auto;
-    @include rem(font-size, 19);
+    @include rem(font-size, 14);
     font-weight: $fw-light;
     line-height: 1.47;
     letter-spacing: 0.01em;
+
+    @include media($medium-screen-up) {
+      @include rem(font-size, 19);
+    }
   }
 
   &__link {
     display: inline-block;
     margin-top: 1.5em;
-    @include rem(font-size, 19);
+    @include rem(font-size, 14);
     font-weight: $fw-medium;
     line-height: 1.37;
     letter-spacing: 0.01em;
     text-decoration: none;
     color: $black;
+
+    @include media($medium-screen-up) {
+      @include rem(font-size, 19);
+    }
   }
 }
