@@ -48,6 +48,12 @@ function theme_setup() {
 }
 add_action( 'init', 'theme_setup' );
 
+// Remove default posts edit from admin
+function post_remove() {
+  remove_menu_page('edit.php');
+}
+add_action('admin_menu', 'post_remove');
+
 
 // Create Custom Post Types
 function register_custom_posts() {
