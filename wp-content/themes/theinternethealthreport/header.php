@@ -1,6 +1,6 @@
 <?php get_template_part('content', 'head'); ?>
-  <header class="header">
-    <div class="header__top wrapper">
+  <header class="header js-header">
+    <div class="header__top wrapper js-header-top">
       <a class="header__link" href="<?php echo esc_url( home_url( '/' ) ); ?>">
         <span class="mozilla-logo"><?php get_template_part('assets/images/mozilla', 'logo.svg'); ?></span>
         <span class="site-logo"><?php get_template_part('assets/images/site', 'logo.svg'); ?></span>
@@ -8,7 +8,7 @@
     </div>
 
     <nav class="header__nav js-header-nav">
-      <div class="header__wrapper">
+      <div class="header__nav-wrapper js-header-nav-wrapper">
         <div class="header__menu">
           <?php wp_nav_menu( array(
             'theme_location' => 'main',

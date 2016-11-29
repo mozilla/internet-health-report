@@ -44,8 +44,11 @@ embedInit();
 import { socialShare } from './modules/interaction/socialShare';
 socialShare();
 
-import { scrollHandler } from './modules/interaction/scrollHandler';
-scrollHandler();
+import { fixNavInit } from './modules/interaction/fixNav';
+fixNavInit();
 
-import { resizeHandler } from './modules/interaction/resizeHandler';
-resizeHandler();
+// import { scrollHandler } from './modules/interaction/scrollHandler';
+// scrollHandler();
+
+// import { resizeHandler } from './modules/interaction/resizeHandler';
+// resizeHandler();

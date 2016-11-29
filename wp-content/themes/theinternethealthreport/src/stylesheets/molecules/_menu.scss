@@ -22,16 +22,15 @@
 
   a {
     display: block;
-    padding: em(17, 12) 0;
+    @include rem(height, $nav-height);
     @include rem(font-size, 12);
     font-weight: $fw-light;
-    line-height: 1.2;
+    @include rem(line-height, $nav-height);
     letter-spacing: 0.025em;
     text-decoration: none;
     color: $dark-grey;
 
     @include media($medium-screen-up) {
-      padding: em(17, 15) 0;
       @include rem(font-size, 15);
     }
   }
