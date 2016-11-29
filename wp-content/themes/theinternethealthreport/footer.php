@@ -31,9 +31,9 @@
       <h4 class="footer__title"><?php the_field('more_title', 5); ?></h4>
       <p class="footer__text"><?php the_field('more_text_1', 5); ?></p>
 
-      <?php if (have_rows('more_links_1')) : ?>
+      <?php if (have_rows('more_links_1', 5)) : ?>
       <div class="footer__links">
-        <?php while(have_rows('more_links_1')) : the_row(); ?>
+        <?php while(have_rows('more_links_1', 5)) : the_row(); ?>
           <a class="footer__link" href="<?php the_sub_field('link_url'); ?>"><?php the_sub_field('link_text'); ?> <?php get_template_part('assets/icons/icon', 'link.svg'); ?></a>
         <?php endwhile; ?>
       </div>
@@ -41,9 +41,9 @@
 
       <p class="footer__text footer__text--2"><?php the_field('more_text_2', 5); ?></p>
 
-      <?php if (have_rows('more_links_2')) : ?>
+      <?php if (have_rows('more_links_2', 5)) : ?>
       <div class="footer__links">
-        <?php while(have_rows('more_links_2')) : the_row(); ?>
+        <?php while(have_rows('more_links_2', 5)) : the_row(); ?>
           <a class="footer__link" href="<?php the_sub_field('link_url'); ?>"><?php the_sub_field('link_text'); ?> <?php get_template_part('assets/icons/icon', 'link.svg'); ?></a>
         <?php endwhile; ?>
       </div>
