@@ -95,6 +95,10 @@ const fixNav = (scrollTop) => {
 };
 
 const sidebarNavInit = () => {
+  if (!$sidebar.length) {
+    return false;
+  }
+
   fixNavUpdate();
   sidebarWaypointsInit();
   sidebarClickHandler();
