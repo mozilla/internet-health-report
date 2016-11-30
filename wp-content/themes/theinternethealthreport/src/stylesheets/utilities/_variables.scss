@@ -59,4 +59,4 @@ $medium-screen-down  : new-breakpoint(max-width $medium - em(1));
 $medium-screen-up    : new-breakpoint(min-width $medium);
 $large-screen-up     : new-breakpoint(min-width $large);
 $xlarge-screen-up    : new-breakpoint(min-width $xlarge);
-$max-width-screen-up : new-breakpoint(min-width em($max-width));
+$max-width-screen-up : new-breakpoint(min-width em($max-width + ($space * 2)));

@@ -44,11 +44,8 @@ embedInit();
 import { socialShare } from './modules/interaction/socialShare';
 socialShare();
 
-import { fixNavInit } from './modules/interaction/fixNav';
+import { fixNavInit } from './modules/interaction/headerNav';
 fixNavInit();
 
-// import { scrollHandler } from './modules/interaction/scrollHandler';
-// scrollHandler();
-
-// import { resizeHandler } from './modules/interaction/resizeHandler';
-// resizeHandler();
+import { shareNavInit } from './modules/interaction/shareNav';
+shareNavInit();

@@ -1,8 +1,11 @@
 .article {
-  // padding-top: em($space * 2);
-
   @include media($medium-screen-up) {
     padding-top: em($space * 2);
+  }
+
+  &__main {
+    @include clearfix();
+    position: relative;
   }
 
   &__metadata,
