@@ -21,12 +21,26 @@
 
   &-wrapper {
     &.is-fixed {
+      position: fixed;
+      top: em($nav-height);
+      z-index: 1;
+
       @include media($medium-screen-down) {
-        position: fixed;
-        top: em($nav-height);
         left: 0;
         right: 0;
-        z-index: 1;
+      }
+
+      @include media($medium-screen-up) {
+        top: em($nav-height + 30);
+        z-index: 0;
+      }
+    }
+
+    &.is-fixed-bottom {
+      @include media($medium-screen-up) {
+        position: absolute;
+        top: auto;
+        bottom: 0;
       }
     }
   }
@@ -39,6 +53,11 @@
     @include media($medium-screen-up) {
       padding-left: em($space);
       padding-right: 0;
+
+      &:nth-child(5),
+      &:nth-child(6) {
+        display: none;
+      }
     }
 
     + #{&} {
@@ -152,6 +171,10 @@
     border: none;
     outline: none;
     transition: transform 0.2s ease;
+
+    @include media($medium-screen-up) {
+      display: none;
+    }
 
     .sidebar.is-open + & {
       transform: rotate(0deg);

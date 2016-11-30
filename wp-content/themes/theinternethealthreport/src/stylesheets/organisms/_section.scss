@@ -6,6 +6,12 @@
     padding-bottom: em($space * 2);
   }
 
+  &__wrapper {
+    @include media($medium-screen-up) {
+      @include table();
+    }
+  }
+
   &__menu {
     position: relative;
     margin-left: em(-$space / 2);
@@ -16,13 +22,24 @@
     }
 
     @include media($medium-screen-up) {
-      @include span-columns(3 of 12);
+      @include display-context(table) {
+        @include span-columns(3);
+      }
       margin-left: 0;
       margin-right: 0;
+
+      &:after {
+        content: 'Fill';
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+      }
     }
 
     @include media($large-screen-up) {
-      @include span-columns(2 of 12);
+      @include display-context(table) {
+        @include span-columns(2);
+      }
     }
   }
 
@@ -30,12 +47,16 @@
     padding-top: em($space);
 
     @include media($medium-screen-up) {
-      @include span-columns(9 of 12);
+      @include display-context(table) {
+        @include span-columns(9);
+      }
       padding-top: 0;
     }
 
     @include media($large-screen-up) {
-      @include span-columns(8 of 12);
+      @include display-context(table) {
+        @include span-columns(8);
+      }
     }
   }
 

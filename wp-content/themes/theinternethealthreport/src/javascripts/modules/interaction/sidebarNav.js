@@ -4,15 +4,28 @@ import '../../plugins/noframework.waypoints';
 import $ from 'jquery';
 window.$ = $;
 
+const $sectionWrapper = $(`.js-section-wrapper`);
 const $nav = $(`.js-sidebar-nav`);
 const $sidebar = $(`.js-sidebar`);
 const $sidebarWrapper = $(`.js-sidebar-wrapper`);
 const $sidebarLinks = $(`.js-sidebar-link`);
+const $navWrapper = $(`.js-header-nav-wrapper`);
 const fixedClass = `is-fixed`;
+const fixedBottomClass = `is-fixed-bottom`;
 let sidebarOffsetTop;
+let sidebarOffsetBottom;
 
 const fixNavUpdate = () => {
-  sidebarOffsetTop = $sidebar.offset().top - $(`.js-header-nav-wrapper`).outerHeight();
+  // set scrollTop value for fixing sidebar nav to top
+  if (constants.getWindowWidth() >= constants.breakpointM) {
+    sidebarOffsetTop = $sidebar.offset().top - $navWrapper.outerHeight() - 30;
+  } else {
+    sidebarOffsetTop = $sidebar.offset().top - $navWrapper.outerHeight();
+    $sidebarWrapper.removeClass(fixedBottomClass);
+  }
+
+  // set scrollTop value for fixing sidebar to bottom
+  sidebarOffsetBottom = $sectionWrapper.offset().top + $sectionWrapper.outerHeight() - $navWrapper.outerHeight() - 30 - $nav.outerHeight();
 };
 
 const sidebarWaypointsInit = () => {
@@ -40,7 +53,7 @@ const sidebarWaypointsInit = () => {
           $sidebarLinks.eq(prevIndex).addClass(`is-active`);
         }
       },
-      offset: `50%`,
+      offset: `25%`,
     });
   });
 };
@@ -64,10 +77,20 @@ const sidebarToggleHandler = () => {
 };
 
 const fixNav = (scrollTop) => {
+  // fix below main navigation
   if (scrollTop > sidebarOffsetTop && !$sidebarWrapper.hasClass(fixedClass)) {
     $sidebarWrapper.addClass(fixedClass);
   } else if (scrollTop <= sidebarOffsetTop && $sidebarWrapper.hasClass(fixedClass)) {
     $sidebarWrapper.removeClass(fixedClass);
+  }
+
+  // fix to bottom of intro section
+  if (constants.getWindowWidth() >= constants.breakpointM) {
+    if (scrollTop > sidebarOffsetBottom && !$sidebarWrapper.hasClass(fixedBottomClass)) {
+      $sidebarWrapper.addClass(fixedBottomClass);
+    } else if (scrollTop <= sidebarOffsetBottom && $sidebarWrapper.hasClass(fixedBottomClass)) {
+      $sidebarWrapper.removeClass(fixedBottomClass);
+    }
   }
 };
 

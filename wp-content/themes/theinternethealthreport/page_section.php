@@ -11,7 +11,7 @@
     $data_title = get_field('data_title');
 ?>
   <div class="section">
-    <div class="wrapper">
+    <div class="section__wrapper wrapper js-section-wrapper">
 
       <div class="section__menu js-sidebar">
         <div class="sidebar-wrapper js-sidebar-wrapper">
