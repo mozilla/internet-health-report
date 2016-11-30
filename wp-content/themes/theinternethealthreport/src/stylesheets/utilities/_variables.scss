@@ -19,6 +19,8 @@ $white: #fff;
 $off-white: #f7f7f7;
 $grey: #e6e6e6;
 $grey2: #cccccc;
+$grey3: #595959;
+$grey4: #4d4d4d;
 $dark-grey: #404040;
 
 $primary-colour: #f0c72f;
@@ -36,11 +38,12 @@ $theme7: #391550;
 //  $Layout
 //------------------------------------------------------------------------
 
-$max-width     : 1280;
-$space         : 30;
-$header-height : 440;
-$nav-height    : 50;
-$share-width   : 40;
+$max-width      : 1280;
+$space          : 30;
+$header-height  : 440;
+$nav-height     : 50;
+$sidebar-height : 42;
+$share-width    : 40;
 
 //------------------------------------------------------------------------
 //  $Media Queries
@@ -52,6 +55,7 @@ $large  : em(1024);
 $xlarge : em(1280);
 
 $small-screen-up     : new-breakpoint(min-width $small);
+$medium-screen-down  : new-breakpoint(max-width $medium - em(1));
 $medium-screen-up    : new-breakpoint(min-width $medium);
 $large-screen-up     : new-breakpoint(min-width $large);
 $xlarge-screen-up    : new-breakpoint(min-width $xlarge);

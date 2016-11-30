@@ -6,7 +6,6 @@ const d = document;
 const e = d.documentElement;
 const g = d.getElementsByTagName(`body`)[0];
 
-export let headerNavOffsetTop = $(`.js-header-nav`).length ? $(`.js-header-nav`).offset().top : 0;
 export let isShareFixed = true;
 export const $window = $(w);
 export const colorRangeBlack = [`#333333`, `#9a9a9a`];

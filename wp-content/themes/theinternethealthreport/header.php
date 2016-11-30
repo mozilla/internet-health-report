@@ -9,7 +9,7 @@
 
     <nav class="header__nav js-header-nav">
       <div class="header__nav-wrapper js-header-nav-wrapper">
-        <div class="header__menu">
+        <div class="header__menu js-header-menu">
           <?php wp_nav_menu( array(
             'theme_location' => 'main',
             'container' => false

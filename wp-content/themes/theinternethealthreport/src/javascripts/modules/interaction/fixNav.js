@@ -23,7 +23,7 @@ const fixNavInit = () => {
   fixNavUpdate();
 
   constants.$window.on(`scroll`, () => {
-    const scrollTop = $(window).scrollTop();
+    const scrollTop = constants.$window.scrollTop();
 
     fixNav(scrollTop);
   });

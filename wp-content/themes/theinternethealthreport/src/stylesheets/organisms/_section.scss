@@ -1,5 +1,4 @@
 .section {
-  padding-top: em($space);
   padding-bottom: em($space);
 
   @include media($medium-screen-up) {
@@ -8,8 +7,18 @@
   }
 
   &__menu {
+    position: relative;
+    margin-left: em(-$space / 2);
+    margin-right: em(-$space / 2);
+
+    @include media($medium-screen-down) {
+      height: em($sidebar-height);
+    }
+
     @include media($medium-screen-up) {
       @include span-columns(3 of 12);
+      margin-left: 0;
+      margin-right: 0;
     }
 
     @include media($large-screen-up) {
@@ -18,8 +27,11 @@
   }
 
   &__header {
+    padding-top: em($space);
+
     @include media($medium-screen-up) {
       @include span-columns(9 of 12);
+      padding-top: 0;
     }
 
     @include media($large-screen-up) {

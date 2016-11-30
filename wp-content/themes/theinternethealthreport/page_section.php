@@ -3,34 +3,48 @@
 
 <?php
   if (have_rows('subsections')) :
+    $overview_title = get_field('overview_title');
+    $healthy_title = get_field('healthy_title');
+    $unhealthy_title = get_field('unhealthy_title');
+    $prognosis_title = get_field('prognosis_title');
+    $stories_title = get_field('stories_title');
+    $data_title = get_field('data_title');
 ?>
   <div class="section">
     <div class="wrapper">
 
-      <ul class="section__menu sidebar-nav">
-        <li class="sidebar-nav__item"><a href="#<?php echo stringToId(get_field('overview_title')); ?>" class="sidebar-nav__link js-sidebar-link js-scroll-to is-active"><?php the_field('overview_title'); ?></a></li>
-        <li class="sidebar-nav__item"><a href="#<?php echo stringToId(get_field('healthy_title')); ?>" class="sidebar-nav__link js-sidebar-link js-scroll-to"><?php the_field('healthy_title'); ?></a></li>
-        <li class="sidebar-nav__item"><a href="#<?php echo stringToId(get_field('unhealthy_title')); ?>" class="sidebar-nav__link js-sidebar-link js-scroll-to"><?php the_field('unhealthy_title'); ?></a></li>
-        <li class="sidebar-nav__item"><a href="#<?php echo stringToId(get_field('prognosis_title')); ?>" class="sidebar-nav__link js-sidebar-link js-scroll-to"><?php the_field('prognosis_title'); ?></a></li>
-        <li class="sidebar-nav__item"><a href="#<?php echo stringToId(get_field('stories_title')); ?>" class="sidebar-nav__link js-sidebar-link js-scroll-to"><?php the_field('stories_title'); ?></a></li>
-        <li class="sidebar-nav__item"><a href="#<?php echo stringToId(get_field('data_title')); ?>" class="sidebar-nav__link js-sidebar-link js-scroll-to"><?php the_field('data_title'); ?></a></li>
-      </ul>
+      <div class="section__menu js-sidebar">
+        <div class="sidebar-wrapper js-sidebar-wrapper">
+          <button class="sidebar__active js-sidebar-active"><?php the_field('overview_title'); ?></button>
+
+          <ul class="sidebar js-sidebar-nav">
+            <li class="sidebar__item"><a href="#<?php echo stringToId(get_field('overview_title')); ?>" class="sidebar__link js-sidebar-link js-scroll-to is-active"><?php the_field('overview_title'); ?></a></li>
+            <li class="sidebar__item"><a href="#<?php echo stringToId(get_field('healthy_title')); ?>" class="sidebar__link js-sidebar-link js-scroll-to"><?php the_field('healthy_title'); ?></a></li>
+            <li class="sidebar__item"><a href="#<?php echo stringToId(get_field('unhealthy_title')); ?>" class="sidebar__link js-sidebar-link js-scroll-to"><?php the_field('unhealthy_title'); ?></a></li>
+            <li class="sidebar__item"><a href="#<?php echo stringToId(get_field('prognosis_title')); ?>" class="sidebar__link js-sidebar-link js-scroll-to"><?php the_field('prognosis_title'); ?></a></li>
+            <li class="sidebar__item"><a href="#<?php echo stringToId(get_field('stories_title')); ?>" class="sidebar__link js-sidebar-link js-scroll-to"><?php the_field('stories_title'); ?></a></li>
+            <li class="sidebar__item"><a href="#<?php echo stringToId(get_field('data_title')); ?>" class="sidebar__link js-sidebar-link js-scroll-to"><?php the_field('data_title'); ?></a></li>
+          </ul>
+
+          <button class="sidebar__toggle js-sidebar-toggle">Toggle navigation</button>
+        </div>
+      </div>
 
       <div class="section__header">
-        <div id="<?php echo stringToId(get_field('overview_title')); ?>" class="section__block wysiwyg">
+        <div id="<?php echo stringToId($overview_title); ?>" class="section__block wysiwyg js-sidebar-block" data-title="<?php echo $overview_title; ?>">
           <?php the_field('section_overview'); ?>
           <a class="btn js-scroll-to" href="#<?php echo stringToId(get_field('data_title')); ?>"><?php the_field('skip_to_data_button_text'); ?></a>
         </div>
-        <div id="<?php echo stringToId(get_field('healthy_title')); ?>" class="section__block wysiwyg">
-          <h3 class="section__subtitle"><?php the_field('healthy_title'); ?></h3>
+        <div id="<?php echo stringToId($healthy_title); ?>" class="section__block wysiwyg js-sidebar-block" data-title="<?php echo $healthy_title;; ?>">
+          <h3 class="section__subtitle"><?php echo $healthy_title; ?></h3>
           <?php the_field('section_healthy'); ?>
         </div>
-        <div id="<?php echo stringToId(get_field('unhealthy_title')); ?>" class="section__block wysiwyg">
-          <h3 class="section__subtitle"><?php the_field('unhealthy_title'); ?></h3>
+        <div id="<?php echo stringToId($unhealthy_title); ?>" class="section__block wysiwyg js-sidebar-block" data-title="<?php echo $unhealthy_title;; ?>">
+          <h3 class="section__subtitle"><?php echo $unhealthy_title; ?></h3>
           <?php the_field('section_unhealthy'); ?>
         </div>
-        <div id="<?php echo stringToId(get_field('prognosis_title')); ?>" class="section__block wysiwyg">
-          <h3 class="section__subtitle"><?php the_field('prognosis_title'); ?></h3>
+        <div id="<?php echo stringToId($prognosis_title); ?>" class="section__block wysiwyg js-sidebar-block" data-title="<?php echo $prognosis_title;; ?>">
+          <h3 class="section__subtitle"><?php echo $prognosis_title; ?></h3>
           <?php the_field('section_prognosis'); ?>
         </div>
       </div>
@@ -43,10 +57,10 @@
 
     if ($featured_stories) :
   ?>
-  <div id="<?php echo stringToId(get_field('stories_title')); ?>">
+  <div id="<?php echo stringToId($stories_title); ?>" class="js-sidebar-block" data-title="<?php echo $stories_title; ?>">
     <div class="section__divider">
       <div class="wrapper">
-        <h2 class="section__title"><?php the_field('stories_title'); ?></h2>
+        <h2 class="section__title"><?php echo $stories_title; ?></h2>
       </div>
     </div>
 
@@ -73,9 +87,9 @@
   </div>
   <?php endif; ?>
 
-  <div id="<?php echo stringToId(get_field('data_title')); ?>" class="section__divider">
+  <div id="<?php echo stringToId($data_title); ?>" class="section__divider js-sidebar-block" data-title="<?php echo $data_title; ?>">
     <div class="wrapper">
-      <h2 class="section__title"><?php the_field('data_title'); ?></h2>
+      <h2 class="section__title"><?php echo $data_title; ?></h2>
     </div>
   </div>
 

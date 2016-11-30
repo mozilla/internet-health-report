@@ -1,0 +1,5 @@
+.annotator-frame {
+  @include media($medium-screen-down) {
+    display: none;
+  }
+}
