@@ -108,8 +108,7 @@
       }
     }
 
-    &.is-active,
-    &:active {
+    &.is-active {
       color: $primary-colour;
 
       @include media($medium-screen-up) {
@@ -121,6 +120,10 @@
           opacity: 1;
         }
       }
+    }
+
+    &:focus {
+      outline: none;
     }
 
     &:hover,

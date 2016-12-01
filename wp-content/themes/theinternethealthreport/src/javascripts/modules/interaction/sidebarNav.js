@@ -62,8 +62,6 @@ const sidebarClickHandler = () => {
   $sidebarLinks.on(`click`, (e) => {
     e.preventDefault();
 
-    $sidebarLinks.removeClass(`is-active`);
-    $(e.currentTarget).addClass(`is-active`);
     $nav.removeClass(`is-open`);
   });
 };
