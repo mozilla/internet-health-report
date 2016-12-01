@@ -22,11 +22,14 @@
     color: $black;
     text-decoration: none;
     border-bottom: 3px solid $primary-colour;
-  }
+    transition: all 0.1s ease;
 
-  .btn {
-    margin-top: 2em;
-    margin-bottom: 1em;
+    &:hover,
+    &:active,
+    &:focus {
+      outline: none;
+      background-color: $primary-colour;
+    }
   }
 
   blockquote {

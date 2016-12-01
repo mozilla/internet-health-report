@@ -33,9 +33,24 @@
     letter-spacing: 0.01em;
     text-decoration: none;
     color: $black;
+    transition: all 0.1s ease;
+
+    &:hover,
+    &:active,
+    &:focus {
+      outline: none;
+
+      svg {
+        transform: translateX(0.25em);
+      }
+    }
 
     @include media($medium-screen-up) {
       @include rem(font-size, 19);
+    }
+
+    svg {
+      transition: transform 0.1s ease;
     }
   }
 }

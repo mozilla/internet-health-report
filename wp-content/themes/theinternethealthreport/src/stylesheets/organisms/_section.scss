@@ -68,6 +68,11 @@
       padding-top: em($space);
       border-top: em(1) solid $grey;
     }
+
+    .btn {
+      margin-top: 2em;
+      margin-bottom: 1em;
+    }
   }
 
   &__divider {

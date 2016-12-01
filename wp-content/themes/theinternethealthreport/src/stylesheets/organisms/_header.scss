@@ -101,6 +101,15 @@
     padding-top: em(12);
     padding-bottom: em(12);
     text-decoration: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    @include media($medium-screen-up) {
+      display: inline-block;
+      padding: 0;
+    }
   }
 
   &__nav {
@@ -184,6 +193,13 @@
   &__chars {
     * {
       fill: $primary-colour;
+      transition: fill 0.1s ease;
+
+      .header__link:hover &,
+      .header__link:active &,
+      .header__link:focus & {
+        fill: $secondary-colour;
+      }
     }
   }
 }
@@ -203,6 +219,13 @@
 
   &__bg {
     fill: $primary-colour;
+    transition: fill 0.1s ease;
+
+    .header__link:hover &,
+    .header__link:active &,
+    .header__link:focus & {
+      fill: $secondary-colour;
+    }
   }
 
   &__chars {

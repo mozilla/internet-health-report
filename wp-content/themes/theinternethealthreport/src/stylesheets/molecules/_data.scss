@@ -32,6 +32,14 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
+    transition: opacity 0.1s ease;
+
+    &:hover,
+    &:active,
+    &:focus {
+      outline: none;
+      opacity: 0.6;
+    }
 
     + #{&} {
       @include rem(margin-left, 20);

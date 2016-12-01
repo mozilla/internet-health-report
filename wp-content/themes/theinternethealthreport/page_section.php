@@ -31,8 +31,10 @@
       </div>
 
       <div class="section__header">
-        <div id="<?php echo stringToId($overview_title); ?>" class="section__block wysiwyg js-sidebar-block" data-title="<?php echo $overview_title; ?>">
-          <?php the_field('section_overview'); ?>
+        <div id="<?php echo stringToId($overview_title); ?>" class="section__block js-sidebar-block" data-title="<?php echo $overview_title; ?>">
+          <div class="wysiwyg">
+            <?php the_field('section_overview'); ?>
+          </div>
           <a class="btn js-scroll-to" href="#<?php echo stringToId(get_field('data_title')); ?>"><?php the_field('skip_to_data_button_text'); ?></a>
         </div>
         <div id="<?php echo stringToId($healthy_title); ?>" class="section__block wysiwyg js-sidebar-block" data-title="<?php echo $healthy_title;; ?>">

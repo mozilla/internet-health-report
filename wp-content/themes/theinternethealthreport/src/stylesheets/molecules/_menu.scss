@@ -8,6 +8,7 @@
   -ms-overflow-style: -ms-autohiding-scrollbar;
 
   &-item {
+    position: relative;
     display: inline-block;
     vertical-align: middle;
 
@@ -21,8 +22,10 @@
   }
 
   a {
+    position: relative;
     display: block;
     @include rem(height, $nav-height);
+    z-index: 1;
     @include rem(font-size, 12);
     font-weight: $fw-light;
     @include rem(line-height, $nav-height);
@@ -30,14 +33,41 @@
     text-decoration: none;
     color: $dark-grey;
 
+    &:hover,
+    &:active,
+    &:focus {
+      outline: none;
+
+      &:before {
+        opacity: 1;
+      }
+    }
+
     @include media($medium-screen-up) {
       @include rem(font-size, 15);
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0.8em;
+      right: 0;
+      bottom: 0.8em;
+      left: 0;
+      z-index: -1;
+      background: $primary-colour;
+      opacity: 0;
+      transition: opacity 0.1s ease;
     }
   }
 }
 
 .current-menu-item {
   a {
-    font-weight: $fw-bold;
+    font-weight: $fw-medium;
+
+    &:before {
+      opacity: 1;
+    }
   }
 }

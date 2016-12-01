@@ -97,12 +97,30 @@
   &__link-wrapper {
     display: block;
     text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      outline: none;
+
+      .card__subtitle {
+        transform: translateX(0.5em);
+      }
+    }
   }
 
   &__link {
     display: block;
     @include rem(margin-top, 14);
     text-decoration: none;
+    transition: transform 0.2s ease;
+
+    &:hover,
+    &:active,
+    &:focus {
+      outline: none;
+      transform: translateX(0.5em);
+    }
 
     &-text {
       display: inline;
@@ -144,6 +162,14 @@
     color: $black;
     text-decoration: none;
     background-color: $primary-colour;
+    transition: all 0.2s ease;
+
+    &:hover,
+    &:active,
+    &:focus {
+      outline: none;
+      background-color: darken($primary-colour, 10%);
+    }
 
     @include media($medium-screen-up) {
       @include rem(font-size, 19);
@@ -178,6 +204,17 @@
     letter-spacing: 0.01em;
     color: $black;
     text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover,
+    &:active,
+    &:focus {
+      outline: none;
+
+      svg {
+        transform: translateX(0.25em);
+      }
+    }
 
     @include media($medium-screen-up) {
       @include rem(font-size, 15);
@@ -185,6 +222,7 @@
 
     svg {
       margin-left: 0.5em;
+      transition: transform 0.2s ease;
     }
   }
 

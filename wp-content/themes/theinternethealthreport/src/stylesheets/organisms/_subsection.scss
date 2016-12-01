@@ -85,6 +85,14 @@
       text-decoration: none;
       color: $black;
       border-bottom: 3px solid $primary-colour;
+      transition: all 0.1s ease;
+
+      &:hover,
+      &:active,
+      &:focus {
+        outline: none;
+        background-color: $primary-colour;
+      }
     }
   }
 
