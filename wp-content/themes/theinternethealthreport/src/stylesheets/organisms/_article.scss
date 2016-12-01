@@ -45,7 +45,7 @@
     color: $dark-grey;
 
     .article__metadata + & {
-      margin-top: em($space);
+      margin-top: em($space * 0.75);
     }
   }
 
@@ -66,8 +66,8 @@
     }
 
     @include media($large-screen-up) {
-      padding-top: em($space * 2);
-      padding-bottom: em($space * 0.5);
+      padding-top: em($space * 1.5);
+      padding-bottom: em($space * 1.5);
     }
 
     img {
