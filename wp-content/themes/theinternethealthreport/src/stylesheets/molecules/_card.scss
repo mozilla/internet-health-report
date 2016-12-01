@@ -21,7 +21,9 @@
   box-shadow: em(0) em(0) em(10) em(5) rgba($black, 0.04);
 
   + #{&} {
-    margin-top: em(30);
+    @include media($medium-screen-down) {
+      margin-top: em(30);
+    }
   }
 
   &--table {
