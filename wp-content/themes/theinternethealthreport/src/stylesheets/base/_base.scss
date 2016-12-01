@@ -28,3 +28,11 @@ a {
 img {
   max-width: 100%;
 }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: $ff-primary;
+}

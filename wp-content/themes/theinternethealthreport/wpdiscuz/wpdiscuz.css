@@ -2,13 +2,13 @@
 #wpcomm *{box-sizing:border-box}
 #wpcomm span{display:inline}
 #wpcomm .clearfix{clear:both;}
-#wpcomm{padding:1px 0 10px 0;border-top:#ddd solid 1px;max-width:950px;margin:15px auto}
-#wc-comment-header{padding:20px 5px 1px 5px;display:block;float:none;clear:both;font-size:18px;max-width:950px;margin:0 auto}
+#wpcomm{padding:1px 0 10px 0;border-top:#ddd solid 1px;margin:15px auto}
+#wc-comment-header{padding:20px 5px 1px 5px;display:block;float:none;clear:both;font-size:18px;margin:0 auto}
 #wpcomm form{margin:0!important;padding:0!important;background:0;border:0;width:auto!important}
 #wpcomm form  div{margin:0;}
 #wpcomm form .wpdiscuz-item{display:block;height:auto;border-radius:0;box-shadow:none;}
 
-#wc_show_hide_loggedin_username{padding:10px 5px 5px 5px;font-size:13px;margin:0 auto;max-width:950px}
+#wc_show_hide_loggedin_username{padding:10px 5px 5px 5px;font-size:13px;margin:0 auto;}
 #wpcomm .wc_new_comment_and_replies{margin:0;padding:0;width:100%;height:auto;background:transparent}
 #wpcomm .wc_new_comment_and_replies .wc_new_comment{float:right;display:none;padding:3px 10px;font-size:12px;margin:1px 0 1px 3px;cursor:pointer;color:#fff;line-height:15px}
 #wpcomm .wc_new_comment_and_replies .wc_new_reply{float:right;display:none;padding:3px 10px;font-size:12px;margin:1px 0 1px 1px;cursor:pointer;color:#fff;line-height:15px}

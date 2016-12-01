@@ -158,7 +158,7 @@
 ?>
 
 <?php if ( comments_open() || get_comments_number() ) : ?>
-  <div class="wrapper">
+  <div class="comments-wrapper wrapper">
     <?php comments_template(); ?>
   </div>
 <?php endif; ?>

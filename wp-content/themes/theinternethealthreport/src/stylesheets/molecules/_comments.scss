@@ -1,3 +1,72 @@
-.wc-comment {
-  overflow: hidden;
+.comments-wrapper {
+  .wc-comment {
+    overflow: hidden;
+  }
+
+  #wpcomm .wc-blog-post_author > .wc-comment-right .wc-comment-author,
+  #wpcomm .wc-blog-post_author > .wc-comment-right .wc-comment-author a,
+  #wpcomm .wc-blog-guest > .wc-comment-right .wc-comment-author,
+  #wpcomm .wc-blog-guest > .wc-comment-right .wc-comment-author a,
+  .wpdiscuz-sort-button-active {
+    font-weight: $fw-medium;
+    color: $black !important;
+  }
+
+  #wpcomm .wc-blog-post_author > .wc-comment-left .wc-comment-label,
+  #wpcomm .wc-blog-guest > .wc-comment-left .wc-comment-label {
+    color: $black;
+    background: $primary-colour;
+  }
+
+  .wc_show_hide_loggedin_username a {
+    font-weight: $fw-medium;
+    color: $black;
+  }
+
+  #wpcomm .wc-form-wrapper,
+  #wpcomm .wc-reply .wc-comment-right,
+  .wpdiscuz-front-actions {
+    background: $off-white;
+  }
+
+  #wpcomm .wc-form-wrapper,
+  .wpdiscuz-front-actions,
+  #wpcomm {
+    border: none;
+  }
+
+  .wpdiscuz-sort-button:hover {
+    color: $primary-colour;
+  }
+
+  #wpcomm .wc-cta-button:hover,
+  #wpcomm .wpf-cta:hover,
+  #wpcomm .wc-cta-active {
+    border-color: $primary-colour !important;
+    background: $primary-colour !important;
+  }
+
+  #wpcomm .wc-comment-link {
+    display: none;
+  }
+
+  #wpcomm .wc-field-textarea .wpdiscuz-textarea-wrap {
+    background: $white;
+  }
+
+  .wc_comm_submit,
+  .wc_save_edited_comment {
+    padding: 0.7em 1em;
+    color: $black;
+    background: $primary-colour;
+    border: none;
+  }
+
+  #wpcomm div.wpd-field-invalid span {
+    background: $secondary-colour;
+  }
+
+  #wpcomm div.wpd-field-invalid span:after {
+    border-bottom-color: $secondary-colour;
+  }
 }
