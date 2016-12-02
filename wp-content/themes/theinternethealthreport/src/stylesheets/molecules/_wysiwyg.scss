@@ -1,4 +1,6 @@
 .wysiwyg {
+  @include flow();
+
   .large-text {
     @include rem(font-size, 16);
     font-weight: $fw-medium;
