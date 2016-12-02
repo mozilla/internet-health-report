@@ -25,6 +25,7 @@
       @include display-context(table) {
         @include span-columns(3);
       }
+      vertical-align: top;
       margin-left: 0;
       margin-right: 0;
 
