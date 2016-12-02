@@ -8,14 +8,14 @@ import * as topojson from 'topojson';
 window.$ = $;
 
 class Choropleth {
-  constructor(el, dataUrl, dataUnits = ``, isDataOrdinal = false) {
+  constructor(el, dataUrl, dataUnits = ``, isDataOrdinal = false, shapeUrl) {
     this.el = el;
     this.aspectRatio = 0.6663;
     this.width = $(this.el).width();
     this.height = Math.ceil(this.aspectRatio * this.width);
     this.classes = [`choropleth__svg`, `choropleth__item`, `choropleth__tooltip`, `choropleth__legend`];
     this.mapWidth = this.width;
-    this.shapeUrl = `world-shape-data.json`;
+    this.shapeUrl = shapeUrl;
     this.dataUrl = dataUrl;
     this.dataUnits = dataUnits;
     this.isDataOrdinal = isDataOrdinal;
@@ -223,8 +223,9 @@ const loadChoropleths = () => {
     const url = $this.data(`url`);
     const units = $this.data(`units`);
     const ordinal = $this.data(`ordinal`);
+    const shapeData = $this.data(`world-shape-url`);
 
-    new Choropleth(`#${id}`, url, units, ordinal).render();
+    new Choropleth(`#${id}`, url, units, ordinal, shapeData).render();
   });
 };
 

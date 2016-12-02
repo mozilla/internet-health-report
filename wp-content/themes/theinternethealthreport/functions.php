@@ -54,6 +54,13 @@ function post_remove() {
 }
 add_action('admin_menu', 'post_remove');
 
+// Allow json file upload
+function my_myme_types($mime_types){
+  $mime_types['json'] = 'application/json';
+  return $mime_types;
+}
+add_filter('upload_mimes', 'my_myme_types', 1, 1);
+
 
 // Create Custom Post Types
 function register_custom_posts() {
