@@ -4,20 +4,24 @@
   background-color: $dark-grey;
 
   @include media($medium-screen-up) {
-    padding: em($space) em($space * 1.5);
+    padding: em($space * 1.5) em($space * 1.5);
   }
 
-  &__header {
+  &__footer {
+    @include clearfix();
+    margin-top: 2em;
+  }
+
+  &__share {
     position: relative;
     display: none;
-    text-align: center;
+
+    @include media($large-screen-up) {
+      float: left;
+    }
 
     .subsection & {
       display: block;
-    }
-
-    @include media($medium-screen-up) {
-      text-align: right;
     }
   }
 
@@ -42,7 +46,11 @@
     }
 
     + #{&} {
-      @include rem(margin-left, 20);
+      @include rem(margin-left, 10);
+
+      @include media($medium-screen-up) {
+        @include rem(margin-left, 20);
+      }
     }
 
     > * {
@@ -60,13 +68,13 @@
   }
 
   &__sources {
-    @include rem(margin-top, $space);
+    margin-top: 1em;
     @include rem(font-size, 14);
-    text-align: right;
-  }
 
-  &__source {
-    display: block;
+    @include media($large-screen-up) {
+      float: right;
+      margin-top: 0;
+    }
   }
 
   &__embed {
@@ -87,7 +95,6 @@
   &__textarea {
     width: 100%;
     height: em(60);
-    margin-top: 1em;
     overflow: hidden;
     border: none;
   }
