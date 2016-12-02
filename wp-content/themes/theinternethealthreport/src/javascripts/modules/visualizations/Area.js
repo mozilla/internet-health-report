@@ -21,10 +21,10 @@ class Area {
       xAxisTitle: `x-axis-title`,
       yAxis: `y-axis`,
       yAxisTitle: `y-axis-title`,
-      plot: `area__plot`,
-      plotOuter: `area__plot-outer`,
-      gridY: `area__grid-y`,
-      gridX: `area__grid-x`,
+      plot: `plot`,
+      plotOuter: `plot-outer`,
+      gridY: `grid-y`,
+      gridX: `grid-x`,
     };
     this.svg = d3.select(this.el)
       .append(`svg`)

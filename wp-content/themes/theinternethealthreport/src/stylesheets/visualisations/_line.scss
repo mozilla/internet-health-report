@@ -21,15 +21,8 @@
 
   &__data {
     fill: none;
-    stroke: $white;
-    @include rem(stroke-width, 2);
+    stroke: $primary-colour;
+    @include rem(stroke-width, 3);
     opacity: 0;
-  }
-
-  &__dot {
-    transform-origin: 50% 50%;
-    stroke: $white;
-    stroke-width: 2;
-    fill: $black;
   }
 }
