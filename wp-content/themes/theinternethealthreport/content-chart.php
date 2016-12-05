@@ -9,6 +9,7 @@
   $world_shape = get_field('data_world_shape', $ID);
   $xAxisTitle = get_field('x-axis_title', $ID);
   $yAxisTitle = get_field('y-axis_title', $ID);
+  $legendLabel = get_field('legend_label', $ID);
   $sourcesTitle = get_field('sources_title', $ID);
   $facebookShareText = get_field('facebook_share_text', $ID);
   $twitterShareText = get_field('twitter_share_text', $ID);
@@ -23,6 +24,7 @@
     <?php if ($world_shape) { echo 'data-world-shape-url="' . $world_shape . '"'; } ?>
     <?php if ($xAxisTitle) { echo 'data-x-axis-title="' . $xAxisTitle . '"'; } ?>
     <?php if ($yAxisTitle) { echo 'data-y-axis-title="' . $yAxisTitle . '"'; } ?>
+    <?php if ($legendLabel) { echo 'data-legend-label="' . $legendLabel . '"'; } ?>
     data-url="<?php echo $data_url; ?>"></div>
 
   <div class="data__footer">

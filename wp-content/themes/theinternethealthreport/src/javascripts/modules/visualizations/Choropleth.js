@@ -8,7 +8,7 @@ import * as topojson from 'topojson';
 window.$ = $;
 
 class Choropleth {
-  constructor(el, dataUrl, dataUnits = ``, isDataOrdinal = false, shapeUrl) {
+  constructor(el, dataUrl, dataUnits = ``, isDataOrdinal = false, shapeUrl, legendLabel) {
     this.el = el;
     this.aspectRatio = 0.6663;
     this.width = $(this.el).width();
@@ -19,6 +19,7 @@ class Choropleth {
     this.dataUrl = dataUrl;
     this.dataUnits = dataUnits;
     this.isDataOrdinal = isDataOrdinal;
+    this.legendLabel = legendLabel;
   }
 
   render() {
@@ -159,9 +160,10 @@ class Choropleth {
     const min = this.dataRange[0];
     const max = this.dataRange[1];
     const legendString = `<div class="legend legend--scale">` +
-      `<p class="legend__value">${Math.floor(min / 1)}%</p>` +
+      `<p class="legend__label">${this.legendLabel}</p>` +
+      `<p class="legend__value">${Math.floor(min / 1)}</p>` +
       `<div class="legend__scale"></div>` +
-      `<p class="legend__value">${Math.floor(max / 1)}%</p>` +
+      `<p class="legend__value">${Math.floor(max / 1)}</p>` +
     `</div>`;
 
     $(this.el).append(legendString);
@@ -185,8 +187,8 @@ class Choropleth {
 
   setData() {
     d3.selectAll(`.${this.classes[1]}`)
-      .attr(`fill-opacity`, d => {
-        return this.getOpacity(d[this.dataKeys[1]]);
+      .attr(`fill`, d => {
+        return this.getColour(d[this.dataKeys[1]]);
       });
   }
 
@@ -205,12 +207,15 @@ class Choropleth {
     this.dataRange = [min, max];
   }
 
-  getOpacity(value) {
-    const opacity = d3.scaleLinear()
+  getColour(value) {
+    const linearValue = d3.scaleLinear()
       .domain([this.dataRange[0], this.dataRange[1]])
-      .range([0.1, 1]);
+      .range([0, 1]);
+    const rgbValue = d3.interpolate(`#ffffff`, `#f0c72f`);
+    const constrainedValue = linearValue(value);
+    const colour = rgbValue(constrainedValue);
 
-    return opacity(value);
+    return colour;
   }
 }
 
@@ -224,8 +229,9 @@ const loadChoropleths = () => {
     const units = $this.data(`units`);
     const ordinal = $this.data(`ordinal`);
     const shapeData = $this.data(`world-shape-url`);
+    const legendLabel = $this.data(`legend-label`);
 
-    new Choropleth(`#${id}`, url, units, ordinal, shapeData).render();
+    new Choropleth(`#${id}`, url, units, ordinal, shapeData, legendLabel).render();
   });
 };
 

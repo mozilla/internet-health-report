@@ -5,9 +5,13 @@
 
   &--scale {
     position: absolute;
-    top: 2em;
-    left: 1em;
-    max-width: em(300);
+    top: 0;
+    left: 0;
+    text-align: left;
+
+    @include media($medium-screen-up) {
+      text-align: center;
+    }
   }
 
   &--donut {
@@ -71,9 +75,16 @@
     }
   }
 
+  &__label,
   &__value,
   &__name {
-    @include rem(font-size, 12);
+    @include rem(font-size, 14);
+    line-height: 1;
+    letter-spacing: 0.025em;
+  }
+
+  &__label {
+    margin-bottom: 0.5em;
   }
 
   &__name {
@@ -90,10 +101,13 @@
   }
 
   &__scale {
-    width: em(80);
-    height: em(10);
-    margin: 0 0.25em;
-    border-radius: em(10);
-    background: linear-gradient(to right, rgba($white, 0.1) 0%, $white 100%);
+    width: em(200);
+    height: em(15);
+    margin: 0 1em;
+    background: linear-gradient(to right, $white 0%, $primary-colour 100%);
+
+    @include media($medium-screen-up) {
+      height: em(25);
+    }
   }
 }
