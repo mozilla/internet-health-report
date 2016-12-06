@@ -6,18 +6,31 @@ import '../../plugins/noframework.waypoints';
 window.$ = $;
 
 class MultiLine {
-  constructor(el, dataUrl) {
+  constructor(el, dataUrl, xAxisTitle, yAxisTitle) {
     this.el = el;
     this.dataUrl = dataUrl;
+    this.xAxisTitle = xAxisTitle;
+    this.yAxisTitle = yAxisTitle;
     this.parseDate = d3.timeParse(`%d-%m-%Y`);
-    this.margin = {top: 20, right: 20, bottom: 30, left: 40};
-    this.classes = [`multiline__container`, `multiline__svg`, `multiline__data`, `multiline__dataset`, `x-axis`, `y-axis`];
+    this.margin = {top: 20, right: 20, bottom: 54, left: 60};
+    this.classes = {
+      multilineContainer: `multiline__container`,
+      multilineSvg: `multiline__svg`,
+      multilineData: `multiline__data`,
+      multilineDataset: `multiline__dataset`,
+      xAxis: `x-axis`,
+      xAxisTitle: `x-axis-title`,
+      yAxis: `y-axis`,
+      yAxisTitle: `y-axis-title`,
+      gridY: `grid-y`,
+      gridX: `grid-x`,
+    };
     this.legendClasses = [`legend`, `legend--multiline`, `legend__item`, `legend__key`, `legend__name`];
     this.svg = d3.select(this.el)
       .append(`div`)
-        .attr(`class`, this.classes[0])
+        .attr(`class`, this.classes.multilineContainer)
       .append(`svg`)
-        .attr(`class`, this.classes[1]);
+        .attr(`class`, this.classes.multilineSvg);
     this.g = this.svg.append(`g`)
       .attr(`transform`, `translate(${this.margin.left},${this.margin.top})`);
   }
@@ -51,14 +64,7 @@ class MultiLine {
     ]);
     this.z.domain(this.dataColumns.map((c) => c.id));
 
-    this.svg.select(`.${this.classes[4]}`)
-      .attr(`transform`, `translate(0,${this.innerHeight})`)
-      .call(d3.axisBottom(this.x).tickFormat(d3.timeFormat(`%Y`)));
-
-    this.svg.select(`.${this.classes[5]}`)
-      .call(d3.axisLeft(this.y));
-
-    this.svg.selectAll(`.${this.classes[2]}`)
+    this.svg.selectAll(`.${this.classes.multilineData}`)
       .attr(`d`, d => this.line(d.values))
       .style(`stroke`, d => this.z(d.id));
 
@@ -66,15 +72,43 @@ class MultiLine {
       this.renderLegend();
       this.animateChart();
     }
+
+    this.setAxes();
+  }
+
+  setAxes() {
+    this.svg.select(`.${this.classes.xAxis}`)
+      .attr(`transform`, `translate(0,${this.innerHeight})`)
+      .call(d3.axisBottom(this.x).tickFormat(d3.timeFormat(`%Y`)));
+
+    this.svg.select(`.${this.classes.yAxis}`)
+      .call(d3.axisLeft(this.y));
+
+    // Add x-axis grid lines
+    this.svg.select(`.${this.classes.gridY}`)
+      .attr(`transform`, `translate(0, ${this.innerHeight})`)
+      .call(d3.axisBottom(this.x).ticks(this.data.length).tickSize(-this.innerHeight).tickFormat(``));
+
+    // Add y-axis grid lines
+    this.svg.select(`.${this.classes.gridX}`)
+      .call(d3.axisLeft(this.y).tickSize(-this.innerWidth).tickFormat(``));
+
+    // Set x-axis title
+    this.svg.select(`.${this.classes.xAxisTitle}`)
+      .attr(`transform`, `translate(${this.width / 2}, ${this.height - 12})`);
+
+    // Set y-axis title
+    this.svg.select(`.${this.classes.yAxisTitle}`)
+      .attr(`transform`, `translate(12, ${this.height / 2}) rotate(-90)`);
   }
 
   animateChart() {
-    this.svg.selectAll(`.${this.classes[2]}`)
+    this.svg.selectAll(`.${this.classes.multilineData}`)
       .style(`opacity`, 0);
 
     $(this.el).addClass(`is-active`);
 
-    const paths = this.svg.selectAll(`.${this.classes[2]}`);
+    const paths = this.svg.selectAll(`.${this.classes.multilineData}`);
     const pathsLength = paths.size();
 
     for (let i = 0; i < pathsLength; i++) {
@@ -118,18 +152,39 @@ class MultiLine {
         };
       });
 
+      // append x-axis
       this.g.append(`g`)
-        .attr(`class`, this.classes[4]);
+        .attr(`class`, this.classes.xAxis);
+
+      // append y-axis
+      this.g.append(`g`)
+        .attr(`class`, this.classes.yAxis);
+
+      // append grid lines
+      this.g.append(`g`)
+        .attr(`class`, this.classes.gridY);
 
       this.g.append(`g`)
-        .attr(`class`, this.classes[5]);
+        .attr(`class`, this.classes.gridX);
 
-      this.g.selectAll(`.${this.classes[3]}`)
+      // Add titles to the axes
+      this.svg.append(`text`)
+        .attr(`text-anchor`, `middle`)
+        .attr(`class`, this.classes.xAxisTitle)
+        .text(this.xAxisTitle);
+
+      this.svg.append(`text`)
+        .attr(`text-anchor`, `middle`)
+        .attr(`class`, this.classes.yAxisTitle)
+        .text(this.yAxisTitle);
+
+      // append data
+      this.g.selectAll(`.${this.classes.multilineDataset}`)
         .data(this.dataColumns)
         .enter().append(`g`)
-          .attr(`class`, this.classes[3])
+          .attr(`class`, this.classes.multilineDataset)
         .append(`path`)
-          .attr(`class`, this.classes[2]);
+          .attr(`class`, this.classes.multilineData);
 
       const waypoint = new Waypoint({
         element: document.getElementById(this.el.substr(1)),
@@ -183,8 +238,10 @@ const loadMultiLineCharts = () => {
     const $this = $line.eq(index);
     const id = $this.attr(`id`);
     const url = $this.data(`url`);
+    const xAxisTitle = $this.data(`x-axis-title`);
+    const yAxisTitle = $this.data(`y-axis-title`);
 
-    new MultiLine(`#${id}`, url).render();
+    new MultiLine(`#${id}`, url, xAxisTitle, yAxisTitle).render();
   });
 };
 

@@ -108,7 +108,7 @@ class Donut {
               .range(constants.colorRangeDonut);
       } else {
         this.color = d3.scaleOrdinal()
-              .range(constants.colorRangeDonutMulti);
+              .range(constants.colorRange);
       }
 
       this.svgData.selectAll(`g`)

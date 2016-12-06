@@ -62,16 +62,12 @@
 
   &__key {
     width: em(16);
-    height: em(16);
+    height: em(3);
     background-color: $white;
 
     @include media($medium-screen-up) {
       width: em(20);
-      height: em(20);
-    }
-
-    .legend--multiline & {
-      border-radius: 50%;
+      height: em(3);
     }
   }
 
@@ -93,10 +89,6 @@
     .legend--donut & {
       max-width: calc(100% - #{rem(20)});
       @include rem(padding-right,10);
-    }
-
-    .legend--multiline & {
-      @include rem(padding-left,5);
     }
   }
 
