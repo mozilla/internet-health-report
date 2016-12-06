@@ -1,39 +1,33 @@
-.donuts {
-  text-align: center;
-
-  &__col {
-    display: inline-block;
-    vertical-align: top;
-    width: 100%;
-    @include rem(max-width, 320);
-  }
-}
+$donut-radius: 330;
 
 .donut {
   position: relative;
   overflow: hidden;
 
   &-col {
+    position: relative;
     display: inline-block;
     vertical-align: top;
-    max-width: em(360);
-    padding: em(15);
+    max-width: em($donut-radius + $space);
+    padding: em($space / 2);
     text-align: center;
   }
 
   &__svg-container {
     position: relative;
 
-    &:before {
-      content: '';
-      position: absolute;
-      top: 13%;
-      left: 13%;
-      display: block;
-      width: 74%;
-      height: 74%;
-      background-color: $primary-colour;
-      border-radius: 50%;
+    .donut--single & {
+      &:before {
+        content: '';
+        position: absolute;
+        top: 13%;
+        left: 13%;
+        display: block;
+        width: 74%;
+        height: 74%;
+        background-color: $primary-colour;
+        border-radius: 50%;
+      }
     }
 
     &:after {
@@ -54,13 +48,22 @@
 
   &__description {
     margin-top: 2em;
-  }
 
-  .donuts & {
-    margin: em($space * 0.5) 0;
+    .donut--multi + & {
+      position: absolute;
+      bottom: calc(50vw - #{em($space / 2)});
+      left: 50%;
+      transform: translate(-50%, 50%);
+      width: calc(100% * 0.6);
+      margin-top: 0;
+      @include rem(font-size, 21);
+      font-weight: $fw-medium;
+      letter-spacing: 0.025em;
+      color: $primary-colour;
 
-    @include media($small-screen-up) {
-      margin: em($space * 0.5);
+      @include media(min-width em($donut-radius + $space + $space)) {
+        bottom: em(($donut-radius + $space) / 2, 21);
+      }
     }
   }
 }

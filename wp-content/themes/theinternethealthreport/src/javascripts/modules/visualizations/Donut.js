@@ -12,8 +12,6 @@ class Donut {
     this.legendRectSize = 18;
     this.legendSpacing = 4;
     this.legendHeight = this.legendRectSize + this.legendSpacing;
-    this.color = d3.scaleOrdinal()
-      .range(constants.colorRangeDonut);
     this.classes = [`donut__svg-container`,`donut__svg`, `donut__g`, `donut__arc`, `donut__text`, `donut__layer`, `donut__value`];
     this.legendClasses = [`legend legend--donut`, `legend__item`, `legend__key`, `legend__name`];
     this.svg = d3.select(this.el)
@@ -33,9 +31,15 @@ class Donut {
       .attr(`width`, this.width)
       .attr(`height`, this.width);
 
-    this.arc = d3.arc()
-      .innerRadius(this.radius * 0.9)
-      .outerRadius(this.radius);
+    if (this.isSingleValue) {
+      this.arc = d3.arc()
+        .innerRadius(this.radius * 0.9)
+        .outerRadius(this.radius);
+    } else {
+      this.arc = d3.arc()
+        .innerRadius(this.radius * 0.6)
+        .outerRadius(this.radius);
+    }
 
     this.svgData
       .attr(`transform`, `translate(${this.radius}, ${this.radius})`);
@@ -100,6 +104,11 @@ class Donut {
         newData[this.dataKeys[0]] = `other`;
         newData[this.dataKeys[1]] = 100 - value;
         this.data.push(newData);
+        this.color = d3.scaleOrdinal()
+              .range(constants.colorRangeDonut);
+      } else {
+        this.color = d3.scaleOrdinal()
+              .range(constants.colorRangeDonutMulti);
       }
 
       this.svgData.selectAll(`g`)
@@ -113,7 +122,10 @@ class Donut {
 
       if (!this.isSingleValue) {
         this.renderLegend();
+        d3.select(this.el).attr(`class`, `donut--multi`);
       } else {
+        d3.select(this.el).attr(`class`, `donut--single`);
+
         this.svg.append(`text`)
           .attr(`class`, this.classes[6])
           .style(`font-size`, `58px`)
@@ -145,7 +157,7 @@ class Donut {
   }
 
   renderLegend() {
-    const $legend = d3.select(this.el).append(`ul`)
+    const $legend = d3.select(this.el).insert(`ul`, `:first-child`)
       .attr(`class`, this.legendClasses[0]);
 
     const legendItems = $legend.selectAll(`li`)
