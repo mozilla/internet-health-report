@@ -2,19 +2,34 @@
   $ID = get_the_ID();
   $permalink = get_permalink();
   $type = get_field('type', $ID);
+  // Data fields
   $data_url = get_field('data', $ID);
+  $data_url_two = get_field('secondary_data', $ID);
+  // Area fields
   $percentage = get_field('percentage_data', $ID);
+  // Choropleth fields
   $units = get_field('data_units', $ID);
+  $legendLabel = get_field('legend_label', $ID);
+  // Bar horizontal
   $margin_left = get_field('data_margin_left', $ID);
+  // Chart fields
   $xAxisTitle = get_field('x-axis_title', $ID);
   $yAxisTitle = get_field('y-axis_title', $ID);
-  $legendLabel = get_field('legend_label', $ID);
+  // Donut fields
+  $donut_description = get_field('donut_description', $ID);
+  $donut_description_two = get_field('secondary_donut_description', $ID);
+  // Sources
   $sourcesTitle = get_field('sources_title', $ID);
+  // Share fields
   $facebookShareText = get_field('facebook_share_text', $ID);
   $twitterShareText = get_field('twitter_share_text', $ID);
   $embedShareText = get_field('embed_text', $ID);
 ?>
-<div class="data">
+<div class="data <?php if ($type == 'donut js-donut') { echo 'data--donut'; } ?>">
+  <?php if ($type == 'donut js-donut') : ?>
+    <div class="donut-col">
+  <?php endif; ?>
+
   <div id="<?php echo 'chart-' . $ID; ?>"
     class="chart <?php echo $type; ?>"
     <?php if ($percentage) { echo 'data-percentage="true"'; } ?>
@@ -24,7 +39,23 @@
     <?php if ($xAxisTitle) { echo 'data-x-axis-title="' . $xAxisTitle . '"'; } ?>
     <?php if ($yAxisTitle) { echo 'data-y-axis-title="' . $yAxisTitle . '"'; } ?>
     <?php if ($legendLabel) { echo 'data-legend-label="' . $legendLabel . '"'; } ?>
-    data-url="<?php echo $data_url; ?>"></div>
+    data-url="<?php echo $data_url; ?>">
+  </div>
+
+  <?php if ($type == 'donut js-donut') : ?>
+      <?php if ($donut_description) { echo '<p class="donut__description">' . $donut_description . '</p>'; } ?>
+    </div>
+  <?php endif; ?>
+
+  <?php if ($data_url_two) : ?>
+    <div class="donut-col">
+      <div id="<?php echo 'chart-' . $ID . '-two'; ?>"
+        class="chart <?php echo $type; ?>"
+        data-url="<?php echo $data_url_two; ?>">
+      </div>
+      <?php if ($donut_description_two) { echo '<p class="donut__description">' . $donut_description_two . '</p>'; } ?>
+    </div>
+  <?php endif; ?>
 
   <div class="data__footer">
     <div class="data__share">

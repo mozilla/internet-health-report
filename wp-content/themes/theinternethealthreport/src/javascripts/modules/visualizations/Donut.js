@@ -13,7 +13,7 @@ class Donut {
     this.legendSpacing = 4;
     this.legendHeight = this.legendRectSize + this.legendSpacing;
     this.color = d3.scaleOrdinal()
-      .range(constants.colorRange);
+      .range(constants.colorRangeDonut);
     this.classes = [`donut__svg-container`,`donut__svg`, `donut__g`, `donut__arc`, `donut__text`, `donut__layer`, `donut__value`];
     this.legendClasses = [`legend legend--donut`, `legend__item`, `legend__key`, `legend__name`];
     this.svg = d3.select(this.el)
@@ -34,7 +34,7 @@ class Donut {
       .attr(`height`, this.width);
 
     this.arc = d3.arc()
-      .innerRadius((this.radius/10) * 7)
+      .innerRadius(this.radius * 0.9)
       .outerRadius(this.radius);
 
     this.svgData
@@ -116,8 +116,10 @@ class Donut {
       } else {
         this.svg.append(`text`)
           .attr(`class`, this.classes[6])
-          .style(`font-size`, `40px`)
-          .style(`fill`, `#fff`)
+          .style(`font-size`, `58px`)
+          .style(`font-weight`, `500`)
+          .style(`letter-spacing`, `-0.01em`)
+          .style(`fill`, `#000000`)
           .style(`opacity`, 0)
           .attr(`text-anchor`, `middle`)
           .attr(`alignment-baseline`, `central`)

@@ -7,6 +7,10 @@
     padding: em($space * 1.5) em($space * 1.5);
   }
 
+  &--donut {
+    text-align: center;
+  }
+
   &__footer {
     @include clearfix();
     margin-top: 2em;

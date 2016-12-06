@@ -13,10 +13,30 @@
   position: relative;
   overflow: hidden;
 
+  &-col {
+    display: inline-block;
+    vertical-align: top;
+    max-width: em(360);
+    padding: em(15);
+    text-align: center;
+  }
+
   &__svg-container {
     position: relative;
 
     &:before {
+      content: '';
+      position: absolute;
+      top: 13%;
+      left: 13%;
+      display: block;
+      width: 74%;
+      height: 74%;
+      background-color: $primary-colour;
+      border-radius: 50%;
+    }
+
+    &:after {
       content: '';
       display: block;
       width: 100%;
@@ -30,6 +50,10 @@
     top: 0;
     left: 0;
     display: block;
+  }
+
+  &__description {
+    margin-top: 2em;
   }
 
   .donuts & {
