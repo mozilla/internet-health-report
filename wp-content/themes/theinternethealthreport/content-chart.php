@@ -6,7 +6,6 @@
   $percentage = get_field('percentage_data', $ID);
   $units = get_field('data_units', $ID);
   $margin_left = get_field('data_margin_left', $ID);
-  $world_shape = get_field('data_world_shape', $ID);
   $xAxisTitle = get_field('x-axis_title', $ID);
   $yAxisTitle = get_field('y-axis_title', $ID);
   $legendLabel = get_field('legend_label', $ID);
@@ -21,7 +20,7 @@
     <?php if ($percentage) { echo 'data-percentage="true"'; } ?>
     <?php if ($units) { echo 'data-units="' . $units . '"'; } ?>
     <?php if ($margin_left) { echo 'data-margin-left="' . $margin_left . '"'; } ?>
-    <?php if ($world_shape) { echo 'data-world-shape-url="' . $world_shape . '"'; } ?>
+    <?php if ($type == 'choropleth js-choropleth') { echo 'data-world-shape-url="' . get_template_directory_uri() . '/js/world-shape-data.json"'; } ?>
     <?php if ($xAxisTitle) { echo 'data-x-axis-title="' . $xAxisTitle . '"'; } ?>
     <?php if ($yAxisTitle) { echo 'data-y-axis-title="' . $yAxisTitle . '"'; } ?>
     <?php if ($legendLabel) { echo 'data-legend-label="' . $legendLabel . '"'; } ?>
