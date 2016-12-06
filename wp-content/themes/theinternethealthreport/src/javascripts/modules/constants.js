@@ -11,6 +11,7 @@ export const $window = $(w);
 export const colorRangeBlack = [`#333333`, `#9a9a9a`];
 export const colorRangeDonut = [`#f0c72f`, `#797979`];
 export const colorRange = [`#f0c72f`, `#6f6fb0`, `#b2b2fc`, `#f0e2af`, `#f19fc4`, `#adfd35`, `#2dfffe`, `#feeb34`, `#f88ffd`, `#85d2f3`];
+export const colorRangeArea = [`#f0c72f`, `#f19fc4`, `#6f6fb0`, `#f0e2af`, `#85d2f3`, `#b2b2fc`];
 export const breakpointM = 768;
 export const breakpointL = 1024;
 export const chartFadeIn = 300;

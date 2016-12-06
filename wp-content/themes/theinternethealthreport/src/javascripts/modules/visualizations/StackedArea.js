@@ -6,18 +6,34 @@ import '../../plugins/noframework.waypoints';
 window.$ = $;
 
 class StackedArea {
-  constructor(el, dataUrl) {
+  constructor(el, dataUrl, xAxisTitle, yAxisTitle) {
     this.el = el;
     this.dataUrl = dataUrl;
-    this.margin = {top: 20, right: 20, bottom: 30, left: 40};
-    this.classes = [`stacked-area__svg`, `stacked-area__layer`, `x-axis`, `y-axis`];
+    this.xAxisTitle = xAxisTitle;
+    this.yAxisTitle = yAxisTitle;
+    this.margin = {top: 20, right: 20, bottom: 54, left: 60};
+    this.classes = {
+      stackedAreaSvg : `stacked-area__svg`,
+      stackedAreaLayer : `stacked-area__layer`,
+      xAxis : `x-axis`,
+      xAxisTitle: `x-axis-title`,
+      yAxis : `y-axis`,
+      yAxisTitle: `y-axis-title`,
+    };
+    this.legendClasses = {
+      legend : `legend`,
+      legendMultiline : `legend--stacked-area`,
+      legendItem : `legend__item`,
+      legendKey : `legend__key`,
+      legendName : `legend__name`,
+    };
     this.svg = d3.select(this.el)
       .append(`svg`)
-        .attr(`class`, this.classes[0]);
+        .attr(`class`, this.classes.stackedAreaSvg);
     this.g = this.svg.append(`g`)
       .attr(`transform`, `translate(${this.margin.left},${this.margin.top})`);
     this.z = d3.scaleOrdinal()
-      .range(constants.colorRange);
+      .range(constants.colorRangeArea);
     this.parseDate = d3.timeParse(`%Y %b %d`);
     this.stack = d3.stack();
   }
@@ -74,12 +90,20 @@ class StackedArea {
   }
 
   setAxes() {
-    this.svg.select(`.${this.classes[2]}`)
+    this.svg.select(`.${this.classes.xAxis}`)
       .attr(`transform`, `translate(0,${this.innerHeight})`)
       .call(d3.axisBottom(this.x));
 
-    this.svg.select(`.${this.classes[3]}`)
+    this.svg.select(`.${this.classes.yAxis}`)
       .call(d3.axisLeft(this.y).ticks(10, `%`));
+
+    // Set x-axis title
+    this.svg.select(`.${this.classes.xAxisTitle}`)
+      .attr(`transform`, `translate(${this.width / 2}, ${this.height - 12})`);
+
+    // Set y-axis title
+    this.svg.select(`.${this.classes.yAxisTitle}`)
+      .attr(`transform`, `translate(12, ${this.height / 2}) rotate(-90)`);
   }
 
   render() {
@@ -90,6 +114,7 @@ class StackedArea {
 
       this.data = data;
       this.keys = this.data.columns.slice(1);
+      console.log(this.keys);
 
       this.startData = this.data.map((datum) => {
         const startDatum = {};
@@ -105,29 +130,36 @@ class StackedArea {
 
       this.stack.keys(this.keys);
 
-      this.layer = this.g.selectAll(`.${this.classes[1]}`)
+      this.layer = this.g.selectAll(`.${this.classes.stackedAreaLayer}`)
         .data(this.stack(this.data))
         .enter().append(`g`)
-          .attr(`class`, this.classes[1]);
+          .attr(`class`, this.classes.stackedAreaLayer);
 
       this.layer.append(`path`)
         .style(`fill`, d => this.z(d.key));
 
-      this.layer.filter(d => d[d.length - 1][1] - d[d.length - 1][0] > 0.01)
-        .append(`text`)
-          .attr(`dy`, `.35em`)
-          .style(`font`, `10px sans-serif`)
-          .style(`text-anchor`, `end`)
-          .style(`fill`, `#fff`)
-          .text(d => d.key);
+      this.layer.filter(d => d[d.length - 1][1] - d[d.length - 1][0] > 0.01);
 
       // render x-axis
       this.g.append(`g`)
-        .attr(`class`, this.classes[2]);
+        .attr(`class`, this.classes.xAxis);
 
       // render y-axis
       this.g.append(`g`)
-        .attr(`class`, this.classes[3]);
+        .attr(`class`, this.classes.yAxis);
+
+      // Add titles to the axes
+      this.svg.append(`text`)
+        .attr(`text-anchor`, `middle`)
+        .attr(`class`, this.classes.xAxisTitle)
+        .text(this.xAxisTitle);
+
+      this.svg.append(`text`)
+        .attr(`text-anchor`, `middle`)
+        .attr(`class`, this.classes.yAxisTitle)
+        .text(this.yAxisTitle);
+
+      this.renderLegend();
 
       const waypoint = new Waypoint({
         element: document.getElementById(this.el.substr(1)),
@@ -140,6 +172,24 @@ class StackedArea {
     });
 
     $(window).on(`resize`, this.resize.bind(this));
+  }
+
+  renderLegend() {
+    const legend = d3.select(this.el).insert(`ul`, `:first-child`)
+      .attr(`class`, `${this.legendClasses.legend} ${this.legendClasses.legendMultiline}`);
+
+    const legendItems = legend.selectAll(`li`)
+      .data(this.keys)
+      .enter().append(`li`)
+      .attr(`class`, this.legendClasses.legendItem);
+
+    legendItems.append(`span`)
+      .attr(`class`, this.legendClasses.legendKey)
+      .style(`background-color`, d => this.z(d));
+
+    legendItems.append(`span`)
+      .attr(`class`, this.legendClasses.legendName)
+      .text((d, i) => this.keys[i]);
   }
 
   resize() {
@@ -162,8 +212,10 @@ const loadStackedAreaCharts = () => {
     const $this = $stackedArea.eq(index);
     const id = $this.attr(`id`);
     const url = $this.data(`url`);
+    const xAxisTitle = $this.data(`x-axis-title`);
+    const yAxisTitle = $this.data(`y-axis-title`);
 
-    new StackedArea(`#${id}`, url).render();
+    new StackedArea(`#${id}`, url, xAxisTitle, yAxisTitle).render();
   });
 };
 

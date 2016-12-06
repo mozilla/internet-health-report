@@ -25,7 +25,16 @@
     text-align: center;
 
     @include media($medium-screen-up) {
+      padding-left: em(60);
       text-align: left;
+    }
+  }
+
+  &--stacked-area {
+    margin-bottom: 1em;
+
+    @include media($medium-screen-up) {
+      padding-left: em(60);
     }
   }
 
@@ -36,7 +45,8 @@
     + #{&} {
       margin-top: em(5);
 
-      .legend--multiline & {
+      .legend--multiline &,
+      .legend--stacked-area & {
         margin-top: 0;
         margin-left: 1em;
       }
@@ -47,7 +57,8 @@
       margin: 0.25em;
     }
 
-    .legend--multiline & {
+    .legend--multiline &,
+    .legend--stacked-area & {
       display: inline-block;
     }
   }
@@ -68,6 +79,11 @@
     @include media($medium-screen-up) {
       width: em(20);
       height: em(3);
+    }
+
+    .legend--stacked-area & {
+      width: em(14);
+      height: em(14);
     }
   }
 
