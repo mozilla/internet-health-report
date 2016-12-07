@@ -6,50 +6,68 @@ import '../../plugins/noframework.waypoints';
 window.$ = $;
 
 class BarHorizontal {
-  constructor(el, dataUrl, marginLeft = 40, chartHeight = 300) {
+  constructor(el, dataUrl, marginLeft = 40, percentageData = false, xAxisTitle, yAxisTitle) {
     this.el = el;
     this.dataUrl = dataUrl;
-    this.margin = {top: 20, right: 20, bottom: 30, left: marginLeft};
-    this.chartHeight = chartHeight;
-    this.classes = [`bar-horizontal__svg`, `bar-horizontal__data`, `x-axis`, `y-axis`];
+    this.xAxisTitle = xAxisTitle;
+    this.yAxisTitle = yAxisTitle;
+    this.percentageData = percentageData;
+    this.margin = {top: 20, right: 20, bottom: 80, left: marginLeft, leftLabel: 30};
+    this.barHeight = 90;
+    this.classes = {
+      barHorizontalSvg: `bar-horizontal__svg`,
+      barHorizontalData: `bar-horizontal__data`,
+      barHorizontalValue: `bar-horizontal__value`,
+      xAxis: `x-axis`,
+      xAxisTitle: `x-axis-title`,
+      yAxis: `y-axis`,
+      yAxisTitle: `y-axis-title`,
+      gridY: `grid-y`,
+      gridX: `grid-x`,
+    };
     this.svg = d3.select(this.el)
       .append(`svg`)
-        .attr(`class`, this.classes[0]);
+        .attr(`class`, this.classes.barHorizontalSvg);
     this.svgData = this.svg.append(`g`)
-      .attr(`transform`, `translate(${this.margin.left},${this.margin.top})`);
+      .attr(`transform`, `translate(${this.margin.left + this.margin.leftLabel + 6},${this.margin.top})`);
   }
 
   setSizes(transition = false) {
     this.width = $(this.el).width();
     this.height = this.chartHeight;
-    this.innerWidth = this.width - this.margin.left - this.margin.right;
+    this.innerWidth = this.width - this.margin.left - this.margin.leftLabel - this.margin.right;
     this.innerHeight = this.height - this.margin.top - this.margin.bottom;
 
-    if (this.el === `#women-online`) {
+    if (this.percentageData) {
+      this.xDomainMax = 100;
+    } else if (this.el === `#chart-188`) {
       this.xDomainMax = constants.getWindowWidth() < constants.breakpointM ? 5 : 10;
     } else {
       this.xDomainMax = d3.max(this.data, d => d[this.dataKeys[1]]);
     }
 
     this.x = d3.scaleLinear()
+      .domain([0, this.xDomainMax])
       .rangeRound([0, this.innerWidth]);
 
     this.y = d3.scaleBand()
+      .domain(this.data.map(d => d[this.dataKeys[0]]))
       .rangeRound([0, this.innerHeight])
-      .padding(0.2);
+      .padding(0.4);
 
     this.svg
       .attr(`width`, this.width)
       .attr(`height`, this.height);
 
-    this.x.domain([0, this.xDomainMax]);
-    this.y.domain(this.data.map(d => d[this.dataKeys[0]]));
-
-    this.svg.selectAll(`.${this.classes[1]}`)
+    this.svg.selectAll(`.${this.classes.barHorizontalData}`)
       .attr(`x`, 0)
       .attr(`y`, d => this.y(d[this.dataKeys[0]]))
-      .attr(`height`, this.y.bandwidth())
-      .attr(`width`, d => this.x(d[this.dataKeys[1]]));
+      .attr(`width`, d => this.x(d[this.dataKeys[1]]))
+      .attr(`height`, this.y.bandwidth());
+
+    this.svg.selectAll(`.${this.classes.barHorizontalValue}`)
+      .attr(`x`, d => this.x(d[this.dataKeys[1]]) - 8)
+      .attr(`y`, d => this.y(d[this.dataKeys[0]]) + (this.barHeight * 0.311));
 
     this.setAxes();
 
@@ -64,38 +82,61 @@ class BarHorizontal {
 
     $(this.el).addClass(`is-active`);
 
-    this.svg.selectAll(`.${this.classes[1]}`)
+    this.svg.selectAll(`.${this.classes.barHorizontalData}`)
       .attr(`width`, 0)
       .style(`opacity`, 1);
 
-    this.svg.selectAll(`.${this.classes[1]}`)
+    this.svg.selectAll(`.${this.classes.barHorizontalData}`)
       .transition()
-        .delay((d, i) => {
-          return constants.chartFadeIn + (i * 150);
-        })
+        .delay((d, i) => constants.chartFadeIn + (i * 150))
         .ease(d3.easeExpOut)
         .duration(750)
         .attr(`width`, (d) => {
           return x(d[valueKey]);
         });
+
+    this.svgData.selectAll(`.${this.classes.barHorizontalValue}`)
+      .transition()
+        .delay((d, i) => constants.chartFadeIn + (i * 150) + 750)
+        .ease(d3.easeExpOut)
+        .duration(300)
+        .style(`opacity`, 1);
   }
 
   setAxes() {
-    if (this.el === `#women-online`) {
+    if (this.el === `#chart-188`) {
       this.axisBottom = constants.getWindowWidth() < constants.breakpointM ? d3.axisBottom(this.x).ticks(5) : d3.axisBottom(this.x).ticks(10);
     } else {
       this.axisBottom = constants.getWindowWidth() < constants.breakpointM ? d3.axisBottom(this.x).ticks(4) : d3.axisBottom(this.x);
     }
 
-    this.svg.select(`.${this.classes[2]}`)
-      .attr(`transform`, `translate(0,${this.innerHeight})`)
+    this.svg.select(`.${this.classes.xAxis}`)
+      .attr(`transform`, `translate(${this.margin.left + this.margin.leftLabel + 6}, ${this.innerHeight + this.margin.top})`)
       .call(this.axisBottom
         .tickFormat(this.tickFormat));
 
-    this.svg.select(`.${this.classes[3]}`)
+    this.svg.select(`.${this.classes.yAxis}`)
+      .attr(`transform`, `translate(${this.margin.left + this.margin.leftLabel + 6}, ${this.margin.top})`)
       .call(d3.axisLeft(this.y))
       .selectAll(`text`)
         .call(this.wrap, this.margin.left);
+
+    // Add x-axis grid lines
+    this.svg.select(`.${this.classes.gridY}`)
+      .attr(`transform`, `translate(0, ${this.innerHeight})`)
+      .call(d3.axisBottom(this.x).ticks(this.data.length).tickSize(-this.innerHeight).tickFormat(``));
+
+    // Add y-axis grid lines
+    this.svg.select(`.${this.classes.gridX}`)
+      .call(d3.axisLeft(this.y).tickSize(-this.innerWidth).tickFormat(``));
+
+    // Set x-axis title
+    this.svg.select(`.${this.classes.xAxisTitle}`)
+      .attr(`transform`, `translate(${this.width / 2}, ${this.height - 12})`);
+
+    // Set y-axis title
+    this.svg.select(`.${this.classes.yAxisTitle}`)
+      .attr(`transform`, `translate(12, ${this.height / 2}) rotate(-90)`);
   }
 
   render() {
@@ -108,19 +149,51 @@ class BarHorizontal {
       this.dataKeys = constants.getDataKeys(this.data);
       this.data.forEach(this.type.bind(this));
 
-      this.svgData.selectAll(`.${this.classes[1]}`)
-        .data(this.data)
-        .enter().append(`rect`)
-        .attr(`class`, this.classes[1])
-        .style(`opacity`, 0);
-
       // append x-axis
-      this.svgData.append(`g`)
-        .attr(`class`, this.classes[2]);
+      this.svg.append(`g`)
+        .attr(`class`, this.classes.xAxis);
 
       // append y-axis
+      this.svg.append(`g`)
+        .attr(`class`, this.classes.yAxis);
+
+      // append y-axis gridlines
       this.svgData.append(`g`)
-        .attr(`class`, this.classes[3]);
+        .attr(`class`, this.classes.gridY);
+
+      // append x-axis gridlines
+      this.svgData.append(`g`)
+        .attr(`class`, this.classes.gridX);
+
+      // add data bars
+      this.svgData.selectAll(`.${this.classes.barHorizontalData}`)
+        .data(this.data)
+        .enter().append(`rect`)
+        .attr(`class`, this.classes.barHorizontalData)
+        .style(`opacity`, 0);
+
+      // add data values to bars
+      this.svgData.selectAll(`.${this.classes.barHorizontalValue}`)
+        .data(this.data)
+        .enter().append(`text`)
+        .attr(`class`, this.classes.barHorizontalValue)
+        .text(d => d[this.dataKeys[1]])
+        .attr(`text-anchor`, `end`)
+        .style(`opacity`, 0);
+
+      // set chart height based on data length
+      this.chartHeight = this.data.length * this.barHeight;
+
+      // Add titles to the axes
+      this.svg.append(`text`)
+        .attr(`text-anchor`, `middle`)
+        .attr(`class`, this.classes.xAxisTitle)
+        .text(this.xAxisTitle);
+
+      this.svg.append(`text`)
+        .attr(`text-anchor`, `middle`)
+        .attr(`class`, this.classes.yAxisTitle)
+        .text(this.yAxisTitle);
 
       this.setTickFormat();
       this.setSizes();
@@ -213,9 +286,11 @@ const loadBarHorizontalCharts = () => {
     const id = $this.attr(`id`);
     const url = $this.data(`url`);
     const marginLeft = $this.data(`margin-left`);
-    const chartHeight = $this.data(`height`);
+    const percentageData = $this.data(`percentage`);
+    const xAxisTitle = $this.data(`x-axis-title`);
+    const yAxisTitle = $this.data(`y-axis-title`);
 
-    new BarHorizontal(`#${id}`, url, marginLeft, chartHeight).render();
+    new BarHorizontal(`#${id}`, url, marginLeft, percentageData, xAxisTitle, yAxisTitle).render();
   });
 };
 
