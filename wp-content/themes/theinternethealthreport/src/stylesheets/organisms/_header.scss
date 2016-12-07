@@ -51,7 +51,7 @@
     padding: em(6, 48) 0;
     font-family: $ff-secondary;
     @include rem(font-size, 22);
-    font-weight: $fw-medium;
+    font-weight: $fw-bold;
     line-height: 1.2;
     letter-spacing: 0.04em;
     background-color: $primary-colour;
@@ -135,11 +135,6 @@
   display: block;
   width: 100%;
 
-  @include media($medium-screen-up) {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
   &:before {
     content: '';
     display: block;
@@ -162,7 +157,6 @@
   }
 
   @include media($medium-screen-up) {
-    display: inline-block;
     width: em(83);
   }
 
@@ -192,9 +186,7 @@
   }
 
   @include media($medium-screen-up) {
-    display: inline-block;
     width: em(354);
-    margin-left: em(10);
   }
 
   &__bg {
