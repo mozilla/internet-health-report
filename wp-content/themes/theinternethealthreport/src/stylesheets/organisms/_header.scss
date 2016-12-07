@@ -5,26 +5,10 @@
 .header {
   position: relative;
   background: {
-    color: $grey2;
-    image: url('../assets/images/header.jpg');
+    color: $secondary-colour;
     repeat: no-repeat;
     position: center;
     size: cover;
-  }
-
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: {
-      image: url('../assets/images/header-bars.svg');
-      repeat: no-repeat;
-      position: center;
-      size: cover;
-    }
   }
 
   @include media($medium-screen-up) {
