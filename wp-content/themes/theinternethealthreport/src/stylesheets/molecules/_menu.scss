@@ -16,7 +16,7 @@
       margin-left: em(24);
 
       @include media($xlarge-screen-up) {
-        margin-left: em($space * 1.5);
+        margin-left: em($space * 2);
       }
     }
   }
@@ -27,16 +27,17 @@
     @include rem(height, $nav-height);
     z-index: 1;
     @include rem(font-size, 12);
-    font-weight: $fw-light;
     @include rem(line-height, $nav-height);
     letter-spacing: 0.025em;
     text-decoration: none;
     color: $dark-grey;
+    transition: all 0.1s ease;
 
     &:hover,
     &:active,
     &:focus {
       outline: none;
+      color: $white;
 
       &:before {
         opacity: 1;
@@ -55,7 +56,7 @@
       bottom: 0.8em;
       left: 0;
       z-index: -1;
-      background: $primary-colour;
+      background: $black;
       opacity: 0;
       transition: opacity 0.1s ease;
     }
@@ -64,7 +65,7 @@
 
 .current-menu-item {
   a {
-    font-weight: $fw-medium;
+    color: $white;
 
     &:before {
       opacity: 1;

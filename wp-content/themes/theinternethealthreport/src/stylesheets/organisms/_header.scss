@@ -22,10 +22,6 @@
   }
 
   &__nav-wrapper {
-    @include media($large-screen-up) {
-      @include wrapper();
-    }
-
     &.is-fixed {
       position: fixed;
       top: 0;
