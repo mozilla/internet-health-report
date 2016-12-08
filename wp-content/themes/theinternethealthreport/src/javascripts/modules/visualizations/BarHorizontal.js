@@ -140,6 +140,10 @@ class BarHorizontal {
   }
 
   render() {
+    if (!this.dataUrl) {
+      return false;
+    }
+
     d3.tsv(this.dataUrl, (error, data) => {
       if (error) {
         throw error;

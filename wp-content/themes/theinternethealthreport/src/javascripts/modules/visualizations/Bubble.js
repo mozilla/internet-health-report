@@ -13,6 +13,10 @@ class Bubble {
   }
 
   render() {
+    if (!this.dataUrl) {
+      return false;
+    }
+
     d3.csv(this.dataUrl, (error, data) => {
       if (error) {
         throw error;

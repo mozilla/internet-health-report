@@ -107,6 +107,10 @@ class StackedArea {
   }
 
   render() {
+    if (!this.dataUrl) {
+      return false;
+    }
+
     d3.tsv(this.dataUrl, this.type.bind(this), (error, data) => {
       if (error) {
         throw error;

@@ -46,6 +46,10 @@ class Choropleth {
   }
 
   loadData() {
+    if (!this.dataUrl) {
+      return false;
+    }
+
     d3.queue()
       .defer(d3.json, this.shapeUrl)
       .defer(d3.csv, this.dataUrl)
