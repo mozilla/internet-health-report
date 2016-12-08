@@ -10,11 +10,11 @@
   // Choropleth fields
   $units = get_field('data_units', $ID);
   $legendLabel = get_field('legend_label', $ID);
-  // Bar horizontal
-  $margin_left = get_field('data_margin_left', $ID);
   // Chart fields
   $xAxisTitle = get_field('x-axis_title', $ID);
   $yAxisTitle = get_field('y-axis_title', $ID);
+  $margin_left = get_field('data_margin_left', $ID);
+  $margin_bottom = get_field('data_margin_bottom', $ID);
   // Donut fields
   $donut_description = get_field('donut_description', $ID);
   $donut_description_two = get_field('secondary_donut_description', $ID);
@@ -35,6 +35,7 @@
     <?php if ($percentage) { echo 'data-percentage="true"'; } ?>
     <?php if ($units) { echo 'data-units="' . $units . '"'; } ?>
     <?php if ($margin_left) { echo 'data-margin-left="' . $margin_left . '"'; } ?>
+    <?php if ($margin_bottom) { echo 'data-margin-bottom="' . $margin_bottom . '"'; } ?>
     <?php if ($type == 'choropleth js-choropleth') { echo 'data-world-shape-url="' . get_template_directory_uri() . '/js/world-shape-data.json"'; } ?>
     <?php if ($xAxisTitle) { echo 'data-x-axis-title="' . $xAxisTitle . '"'; } ?>
     <?php if ($yAxisTitle) { echo 'data-y-axis-title="' . $yAxisTitle . '"'; } ?>
