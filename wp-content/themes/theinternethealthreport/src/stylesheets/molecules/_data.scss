@@ -77,7 +77,9 @@
 
     @include media($large-screen-up) {
       float: right;
+      max-width: 50%;
       margin-top: 0;
+      text-align: right;
     }
   }
 
