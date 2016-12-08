@@ -22,7 +22,7 @@ class StackedArea {
     };
     this.legendClasses = {
       legend : `legend`,
-      legendMultiline : `legend--stacked-area`,
+      legendMultiline : `legend--stacked`,
       legendItem : `legend__item`,
       legendKey : `legend__key`,
       legendName : `legend__name`,
@@ -114,7 +114,6 @@ class StackedArea {
 
       this.data = data;
       this.keys = this.data.columns.slice(1);
-      console.log(this.keys);
 
       this.startData = this.data.map((datum) => {
         const startDatum = {};

@@ -30,11 +30,11 @@
     }
   }
 
-  &--stacked-area {
+  &--stacked {
     margin-bottom: 1em;
 
     @include media($medium-screen-up) {
-      padding-left: em(60);
+      padding-left: em(55);
     }
   }
 
@@ -42,14 +42,13 @@
     display: block;
     text-align: left;
 
+    .legend--multiline &,
+    .legend--stacked & {
+      margin: em(5);
+    }
+
     + #{&} {
       margin-top: em(5);
-
-      .legend--multiline &,
-      .legend--stacked-area & {
-        margin-top: 0;
-        margin-left: 1em;
-      }
     }
 
     .legend--donut & {
@@ -58,7 +57,7 @@
     }
 
     .legend--multiline &,
-    .legend--stacked-area & {
+    .legend--stacked & {
       display: inline-block;
     }
   }
@@ -81,7 +80,7 @@
       height: em(3);
     }
 
-    .legend--stacked-area & {
+    .legend--stacked & {
       width: em(14);
       height: em(14);
     }
