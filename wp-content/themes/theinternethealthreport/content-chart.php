@@ -31,8 +31,20 @@
     <div class="donut-col">
   <?php endif; ?>
 
+  <?php
+    if ($type == 'choropleth js-choropleth') {
+      if ($isDataOrdinal) {
+        $choropleth_type = ' choropleth--ordinal';
+      } else {
+        $choropleth_type = ' choropleth--range';
+      }
+    } else {
+      $choropleth_type = '';
+    }
+  ?>
+
   <div id="<?php echo 'chart-' . $ID; ?>"
-    class="chart <?php echo $type; ?><?php if ($isDataOrdinal) { echo ' choropleth--ordinal'; } else { echo ' choropleth--range'; } ?>"
+    class="chart <?php echo $type . $choropleth_type; ?>"
     <?php if ($percentage) { echo 'data-percentage="true"'; } ?>
     <?php if ($units) { echo 'data-units="' . $units . '"'; } ?>
     <?php if ($margin_left) { echo 'data-margin-left="' . $margin_left . '"'; } ?>
