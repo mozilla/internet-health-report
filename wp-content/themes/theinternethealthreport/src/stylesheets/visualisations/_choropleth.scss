@@ -1,24 +1,31 @@
 .choropleth {
   position: relative;
 
-  &:before {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 0;
-    padding-bottom: 66.63%;
+  &--range {
+    padding-top: em(80);
+
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 0;
+      padding-bottom: 66.63%;
+    }
   }
 
   &__svg {
     display: block;
-    position: absolute;
-    top: em(80);
-    left: 0;
     background: {
       image: url('../assets/images/choropleth-grid-background.svg');
       repeat: no-repeat;
       position: left top;
       size: 100%;
+    }
+
+    .choropleth--range & {
+      position: absolute;
+      top: em(80);
+      left: 0;
     }
   }
 

@@ -13,7 +13,17 @@ class Choropleth {
     this.aspectRatio = 0.6663;
     this.width = $(this.el).width();
     this.height = Math.ceil(this.aspectRatio * this.width);
-    this.classes = [`choropleth__svg`, `choropleth__item`, `choropleth__tooltip`, `choropleth__legend`];
+    this.classes = {
+      choroplethSvg: `choropleth__svg`,
+      choroplethItem: `choropleth__item`,
+      choroplethTooltip: `choropleth__tooltip`,
+    };
+    this.legendClasses = {
+      choroplethLegend: `legend--choropleth-ordinal`,
+      legendItem: `legend__item`,
+      legendKey: `legend__key`,
+      legendName: `legend__name`,
+    };
     this.mapWidth = this.width;
     this.shapeUrl = shapeUrl;
     this.dataUrl = dataUrl;
@@ -26,7 +36,7 @@ class Choropleth {
     this.svg = d3.select(this.el).append(`svg`)
       .attr(`width`, `100%`)
       .attr(`height`, this.height)
-      .attr(`class`, this.classes[0])
+      .attr(`class`, this.classes.choroplethSvg)
       .append(`g`);
 
     this.loadData();
@@ -41,7 +51,7 @@ class Choropleth {
       this.height = Math.ceil(this.aspectRatio * this.width);
 
       TweenLite.set(chart, { scale: this.width / this.mapWidth });
-      d3.select(`.${this.classes[0]}`).attr(`height`, this.height);
+      d3.select(`.${this.classes.choroplethSvg}`).attr(`height`, this.height);
     });
   }
 
@@ -90,15 +100,15 @@ class Choropleth {
       }
     });
 
-    this.svg.selectAll(`.${this.classes[1]}`)
+    this.svg.selectAll(`.${this.classes.choroplethItem}`)
       .data(countries.features)
       .enter().append(`path`)
-      .attr(`class`, this.classes[1])
+      .attr(`class`, this.classes.choroplethItem)
       .attr(`id`, d => d.id, true)
       .attr(`d`, path);
 
     if (!this.isDataOrdinal) {
-      this.svg.selectAll(`.${this.classes[1]}`)
+      this.svg.selectAll(`.${this.classes.choroplethItem}`)
         .on(`mouseover`, d => {
           this.tooltip
             .html(() => {
@@ -151,13 +161,13 @@ class Choropleth {
 
     this.colorScale = d3.scaleOrdinal()
       .domain([this.scaleKeys])
-      .range(constants.colorRange);
+      .range(constants.colorRangeChoropleth);
   }
 
   draWTooltip() {
     this.tooltip = d3.select(this.el)
       .append(`div`)
-      .attr(`class`, this.classes[2]);
+      .attr(`class`, this.classes.choroplethTooltip);
   }
 
   drawLegend() {
@@ -174,30 +184,31 @@ class Choropleth {
   }
 
   drawOrdinalLegend() {
-    const legendId = $(this.el).next(`.legend`).attr(`id`);
-    const ordinalLegend = d3.select(`#${legendId}`).selectAll(`li`)
+    this.ordinalLegend = d3.select(this.el).insert(`ul`, `:first-child`)
+      .attr(`class`, this.legendClasses.choroplethLegend);
+    const ordinalLegend = d3.select(`.${this.legendClasses.choroplethLegend}`).selectAll(`li`)
       .data(this.scaleKeys)
       .enter().append(`li`)
-      .attr(`class`, `legend__item`);
+      .attr(`class`, this.legendClasses.legendItem);
 
     ordinalLegend.append(`span`)
-      .attr(`class`, `legend__key`)
+      .attr(`class`, this.legendClasses.legendKey)
       .style(`background-color`, d => this.colorScale(d));
 
     ordinalLegend.append(`span`)
-      .attr(`class`, `legend__name`)
+      .attr(`class`, this.legendClasses.legendName)
       .text((d, i) => this.scaleKeys[i]);
   }
 
   setData() {
-    d3.selectAll(`.${this.classes[1]}`)
+    d3.selectAll(`.${this.classes.choroplethItem}`)
       .attr(`fill`, d => {
         return this.getColour(d[this.dataKeys[1]]);
       });
   }
 
   setDataOrdinal() {
-    d3.selectAll(`.${this.classes[1]}`)
+    d3.selectAll(`.${this.classes.choroplethItem}`)
       .style(`fill`, d => {
         return this.colorScale(d[this.dataKeys[1]]);
       });

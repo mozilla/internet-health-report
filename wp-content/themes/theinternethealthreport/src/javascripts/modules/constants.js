@@ -11,6 +11,7 @@ export const $window = $(w);
 export const colorRangeBlack = [`#333333`, `#9a9a9a`];
 export const colorRangeDonut = [`#feeb34`, `#797979`];
 export const colorRange = [`#feeb34`, `#6f6fb0`, `#b2b2fc`, `#f0e2af`, `#f19fc4`, `#adfd35`, `#2dfffe`, `#f0c72f`, `#f88ffd`, `#85d2f3`];
+export const colorRangeChoropleth = [`#feeb34`, `#000000`, `#f0e2af`, `#feeb34`, `#6f6fb0`, `#adfd35`, `#2dfffe`, `#f0c72f`, `#f88ffd`, `#85d2f3`];
 export const colorRangeArea = [`#feeb34`, `#f19fc4`, `#6f6fb0`, `#f0e2af`, `#85d2f3`, `#b2b2fc`];
 export const breakpointM = 768;
 export const breakpointL = 1024;

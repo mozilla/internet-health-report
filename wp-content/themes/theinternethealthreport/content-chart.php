@@ -10,6 +10,7 @@
   // Choropleth fields
   $units = get_field('data_units', $ID);
   $legendLabel = get_field('legend_label', $ID);
+  $isDataOrdinal = get_field('is_data_ordinal', $ID);
   // Chart fields
   $xAxisTitle = get_field('x-axis_title', $ID);
   $yAxisTitle = get_field('y-axis_title', $ID);
@@ -31,7 +32,7 @@
   <?php endif; ?>
 
   <div id="<?php echo 'chart-' . $ID; ?>"
-    class="chart <?php echo $type; ?>"
+    class="chart <?php echo $type; ?><?php if ($isDataOrdinal) { echo ' choropleth--ordinal'; } else { echo ' choropleth--range'; } ?>"
     <?php if ($percentage) { echo 'data-percentage="true"'; } ?>
     <?php if ($units) { echo 'data-units="' . $units . '"'; } ?>
     <?php if ($margin_left) { echo 'data-margin-left="' . $margin_left . '"'; } ?>
@@ -40,6 +41,7 @@
     <?php if ($xAxisTitle) { echo 'data-x-axis-title="' . $xAxisTitle . '"'; } ?>
     <?php if ($yAxisTitle) { echo 'data-y-axis-title="' . $yAxisTitle . '"'; } ?>
     <?php if ($legendLabel) { echo 'data-legend-label="' . $legendLabel . '"'; } ?>
+    <?php if ($isDataOrdinal) { echo 'data-ordinal="' . $isDataOrdinal . '"'; } ?>
     data-url="<?php echo $data_url; ?>">
   </div>
 

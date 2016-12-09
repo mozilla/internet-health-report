@@ -38,6 +38,11 @@
     }
   }
 
+  &--choropleth-ordinal {
+    padding-left: 0;
+    padding-bottom: em($space);
+  }
+
   &__item {
     display: block;
     text-align: left;
@@ -45,6 +50,10 @@
     .legend--multiline &,
     .legend--stacked & {
       margin: em(5);
+    }
+
+    .legend--choropleth-ordinal & {
+      margin: em(5) em(16) em(5) em(5);
     }
 
     + #{&} {
@@ -57,7 +66,8 @@
     }
 
     .legend--multiline &,
-    .legend--stacked & {
+    .legend--stacked &,
+    .legend--choropleth-ordinal & {
       display: inline-block;
     }
   }
@@ -80,7 +90,8 @@
       height: em(3);
     }
 
-    .legend--stacked & {
+    .legend--stacked &,
+    .legend--choropleth-ordinal & {
       width: em(14);
       height: em(14);
     }
@@ -100,6 +111,10 @@
 
   &__name {
     @include rem(padding-left,10);
+
+    @include media($small-screen-down) {
+      max-width: calc(100% - #{rem(24)});
+    }
 
     .legend--donut & {
       max-width: calc(100% - #{rem(20)});
