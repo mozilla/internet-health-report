@@ -51,7 +51,7 @@ class Choropleth {
       this.height = Math.ceil(this.aspectRatio * this.width);
 
       TweenLite.set(chart, { scale: this.width / this.mapWidth });
-      d3.select(`.${this.classes.choroplethSvg}`).attr(`height`, this.height);
+      d3.selectAll(`.${this.classes.choroplethSvg}`).attr(`height`, this.height);
     });
   }
 
