@@ -1,5 +1,6 @@
 .choropleth {
   position: relative;
+  overflow: hidden;
 
   &--range {
     padding-top: em(80);
@@ -45,10 +46,14 @@
     border: em(1) solid $black;
     @include rem(border-radius, 5);
     opacity: 0;
-    transition: opacity 0.1s ease;
+    visibility: hidden;
+    transition: opacity 0.1s ease,
+                visibility 0s ease 0.1s;
 
     &.is-active {
       opacity: 1;
+      visibility: visible;
+      transition: opacity 0.1s ease;
     }
   }
 }

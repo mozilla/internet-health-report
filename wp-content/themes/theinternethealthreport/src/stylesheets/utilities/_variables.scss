@@ -55,6 +55,7 @@ $medium : em(768);
 $large  : em(1024);
 $xlarge : em(1280);
 
+$small-screen-down   : new-breakpoint(min-width $small - em(1));
 $small-screen-up     : new-breakpoint(min-width $small);
 $medium-screen-down  : new-breakpoint(max-width $medium - em(1));
 $medium-screen-up    : new-breakpoint(min-width $medium);
