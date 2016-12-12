@@ -45,11 +45,11 @@
 
   <div id="<?php echo 'chart-' . $ID; ?>"
     class="chart <?php echo $type . $choropleth_type; ?>"
-    <?php if ($percentage) { echo 'data-percentage="true"'; } ?>
+    <?php if ($percentage) { echo 'data-percentage="' . $percentage . '"'; } ?>
     <?php if ($units) { echo 'data-units="' . $units . '"'; } ?>
     <?php if ($margin_left) { echo 'data-margin-left="' . $margin_left . '"'; } ?>
     <?php if ($margin_bottom) { echo 'data-margin-bottom="' . $margin_bottom . '"'; } ?>
-    <?php if ($type == 'choropleth js-choropleth') { echo 'data-world-shape-url="' . get_template_directory_uri() . '/js/world-shape-data.json"'; } ?>
+    <?php if ($type == 'choropleth js-choropleth') { echo 'data-world-shape-url="' . get_template_directory_uri() . '/js/world-topo.json"'; } ?>
     <?php if ($xAxisTitle) { echo 'data-x-axis-title="' . $xAxisTitle . '"'; } ?>
     <?php if ($yAxisTitle) { echo 'data-y-axis-title="' . $yAxisTitle . '"'; } ?>
     <?php if ($legendLabel) { echo 'data-legend-label="' . $legendLabel . '"'; } ?>

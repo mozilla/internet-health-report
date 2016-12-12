@@ -87,7 +87,7 @@ class Choropleth {
       let countrySet = false;
 
       this.vizData.forEach((data) => {
-        if (country.id === data[this.dataKeys[0]]) {
+        if (country.properties.admin === data[this.dataKeys[0]]) {
           country[this.dataKeys[1]] = this.isDataOrdinal ? data[this.dataKeys[1]] : Number(data[this.dataKeys[1]]);
           countrySet = true;
         }
@@ -107,29 +107,29 @@ class Choropleth {
       .attr(`id`, d => d.id, true)
       .attr(`d`, path);
 
-    if (!this.isDataOrdinal) {
-      this.svg.selectAll(`.${this.classes.choroplethItem}`)
-        .on(`mouseover`, d => {
-          this.tooltip
-            .html(() => {
-              if (d[this.dataKeys[1]]) {
-                return `${d.id}: ${d[this.dataKeys[1]]}${this.dataUnits}`;
-              } else {
-                return `${d.id}: n/a`;
-              }
-            })
-            .classed(`is-active`, true);
-        })
-        .on(`mousemove`, () => {
-          this.tooltip
-            .style(`top`, `${d3.event.pageY - $(this.el).offset().top}px`)
-            .style(`left`, `${d3.event.pageX - $(this.el).offset().left}px`);
-        })
-        .on(`mouseout`, () => {
-          this.tooltip
-            .classed(`is-active`, false);
-        });
+    this.svg.selectAll(`.${this.classes.choroplethItem}`)
+      .on(`mouseover`, d => {
+        this.tooltip
+          .html(() => {
+            if (d[this.dataKeys[1]]) {
+              return `${d.properties.admin}: ${d[this.dataKeys[1]]}${this.dataUnits}`;
+            } else {
+              return `${d.properties.admin}: n/a`;
+            }
+          })
+          .classed(`is-active`, true);
+      })
+      .on(`mousemove`, () => {
+        this.tooltip
+          .style(`top`, `${d3.event.pageY - $(this.el).offset().top}px`)
+          .style(`left`, `${d3.event.pageX - $(this.el).offset().left}px`);
+      })
+      .on(`mouseout`, () => {
+        this.tooltip
+          .classed(`is-active`, false);
+      });
 
+    if (!this.isDataOrdinal) {
       this.setDataRange();
       this.setData();
       this.drawLegend();

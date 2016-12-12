@@ -6,10 +6,10 @@ import '../../plugins/noframework.waypoints';
 window.$ = $;
 
 class Area {
-  constructor(el, dataUrl, dataIsPercent, xAxisTitle, yAxisTitle) {
+  constructor(el, dataUrl, maxDataValue, xAxisTitle, yAxisTitle) {
     this.el = el;
     this.dataUrl = dataUrl;
-    this.dataIsPercent = dataIsPercent;
+    this.maxDataValue = maxDataValue;
     this.xAxisTitle = xAxisTitle;
     this.yAxisTitle = yAxisTitle;
     this.parseDate = d3.timeParse(`%d-%b-%y`);
@@ -45,7 +45,7 @@ class Area {
       .attr(`width`, this.width)
       .attr(`height`, this.height);
 
-    this.yMax = this.dataIsPercent ? 100 : d3.max(this.data, d => d[this.dataKeys[1]]);
+    this.yMax = this.maxDataValue > 0 ? this.maxDataValue : d3.max(this.data, d => d[this.dataKeys[1]]);
 
     this.x = d3.scaleTime()
       .range([0, this.innerWidth])

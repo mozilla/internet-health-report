@@ -6,12 +6,12 @@ import '../../plugins/noframework.waypoints';
 window.$ = $;
 
 class BarHorizontal {
-  constructor(el, dataUrl, marginLeft = 40, percentageData = false, xAxisTitle, yAxisTitle) {
+  constructor(el, dataUrl, marginLeft = 40, maxDataValue = 0, xAxisTitle, yAxisTitle) {
     this.el = el;
     this.dataUrl = dataUrl;
     this.xAxisTitle = xAxisTitle;
     this.yAxisTitle = yAxisTitle;
-    this.percentageData = percentageData;
+    this.maxDataValue = maxDataValue;
     this.margin = {top: 20, right: 20, bottom: 80, left: marginLeft, leftLabel: 30};
     this.barHeight = 90;
     this.classes = {
@@ -38,10 +38,8 @@ class BarHorizontal {
     this.innerWidth = this.width - this.margin.left - this.margin.leftLabel - this.margin.right;
     this.innerHeight = this.height - this.margin.top - this.margin.bottom;
 
-    if (this.percentageData) {
-      this.xDomainMax = 100;
-    } else if (this.el === `#chart-188`) {
-      this.xDomainMax = constants.getWindowWidth() < constants.breakpointM ? 5 : 10;
+    if (this.maxDataValue > 0) {
+      this.xDomainMax = this.maxDataValue;
     } else {
       this.xDomainMax = d3.max(this.data, d => d[this.dataKeys[1]]);
     }
@@ -290,11 +288,11 @@ const loadBarHorizontalCharts = () => {
     const id = $this.attr(`id`);
     const url = $this.data(`url`);
     const marginLeft = $this.data(`margin-left`);
-    const percentageData = $this.data(`percentage`);
+    const maxDataValue = $this.data(`percentage`);
     const xAxisTitle = $this.data(`x-axis-title`);
     const yAxisTitle = $this.data(`y-axis-title`);
 
-    new BarHorizontal(`#${id}`, url, marginLeft, percentageData, xAxisTitle, yAxisTitle).render();
+    new BarHorizontal(`#${id}`, url, marginLeft, maxDataValue, xAxisTitle, yAxisTitle).render();
   });
 };
 
