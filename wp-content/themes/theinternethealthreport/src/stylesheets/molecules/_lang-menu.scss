@@ -1,0 +1,106 @@
+.lang-menu {
+  position: relative;
+  display: block;
+
+  &__options {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    list-style: none;
+    padding: 0;
+    opacity: 0;
+    visibility: hidden;
+
+    .is-open + & {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__link {
+    display: block;
+    min-width: em(176, 12);
+    padding: em(10, 12) em(56, 12) em(10, 12) em(20, 12);
+    @include rem(font-size, 12);
+    letter-spacing: 0.01em;
+    text-decoration: none;
+
+    @include media($small-screen-up) {
+      padding: em(18, 12) em(56, 12) em(18, 12) em(20, 12);
+    }
+
+    @include media($medium-screen-up) {
+      padding: em(10, 12) em(56, 12) em(10, 12) em(20, 12);
+    }
+  }
+
+  &__inactive {
+    position: relative;
+    outline: none;
+    color: $white;
+    background: {
+      color: $black;
+    }
+    outline: 3px solid transparent;
+    transition: outline 0.1s ease;
+
+    &:hover,
+    &:active,
+    &:focus {
+      outline: 3px solid $primary-colour;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: em(24, 12);
+      bottom: 0;
+      transform: rotate(180deg);
+      width: em(8, 12);
+      background: {
+        color: $black;
+        image: url('../assets/icons/icon-arrowhead-up.svg');
+        repeat: no-repeat;
+        position: center center;
+        size: em(8, 12);
+      }
+      transition: transform 0.1s ease;
+
+      .is-open & {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  &__active {
+    color: $dark-grey;
+    background-color: $white;
+    transition: all 0.1s ease;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: em(23, 12);
+      bottom: 0;
+      width: em(10, 12);
+      background: {
+        image: url('../assets/icons/icon-tick.svg');
+        repeat: no-repeat;
+        position: center center;
+        size: em(10, 12);
+      }
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      outline: none;
+      color: $white;
+      background-color: $grey6;
+    }
+  }
+}

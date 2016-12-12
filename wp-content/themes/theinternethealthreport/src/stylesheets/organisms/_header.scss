@@ -77,7 +77,7 @@
   }
 
   &__link {
-    display: block;
+    display: inline-block;
     padding-top: em(12);
     padding-bottom: em(12);
     text-decoration: none;
@@ -86,9 +86,14 @@
       outline: none;
     }
 
-    @include media($medium-screen-up) {
-      display: inline-block;
+    @include media($small-screen-up) {
+      float: left;
+      margin-top: em(12);
       padding: 0;
+    }
+
+    @include media($medium-screen-up) {
+      margin-top: 0;
     }
   }
 
@@ -125,6 +130,17 @@
       @include media(min-width em(950)) {
         display: none;
       }
+    }
+  }
+
+  &__lang-menu {
+    @include media($small-screen-up) {
+      float: right;
+      margin-right: em(-$space / 2);
+    }
+
+    @include media($medium-screen-up) {
+      margin-right: 0;
     }
   }
 }

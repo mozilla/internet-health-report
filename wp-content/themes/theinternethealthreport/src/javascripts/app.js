@@ -49,3 +49,6 @@ fixNavInit();
 
 import { shareNavInit } from './modules/interaction/shareNav';
 shareNavInit();
+
+import { langMenuInit } from './modules/interaction/langMenu';
+langMenuInit();

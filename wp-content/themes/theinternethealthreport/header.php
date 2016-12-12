@@ -5,6 +5,8 @@
         <span class="mozilla-logo"><?php get_template_part('assets/images/mozilla', 'logo.svg'); ?></span>
         <span class="site-logo"><?php get_template_part('assets/images/site', 'logo.svg'); ?></span>
       </a>
+
+      <?php language_selector(); ?>
     </div>
 
     <nav class="header__nav js-header-nav">

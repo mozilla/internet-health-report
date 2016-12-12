@@ -93,7 +93,7 @@ add_action('init', 'register_custom_posts');
 
 // Include stylesheets / javascript
 function jquery_footer_load() {
-  if( !is_admin()) {
+  if ( !is_admin()) {
     wp_deregister_script('jquery');
     wp_register_script('jquery', '/wp-includes/js/jquery/jquery.js', FALSE, '1.11.0', TRUE);
     wp_enqueue_script('jquery');
@@ -192,6 +192,26 @@ function stringToId($str) {
   $strLower = strtolower($str);
   $id = preg_replace("/[\s_]/", "-", $strLower);
   return $id;
+}
+
+function language_selector() {
+  $languages = icl_get_languages('skip_missing=0&orderby=code');
+
+  if (!empty($languages)) {
+    echo '<div class=" header__lang-menu lang-menu">';
+
+    foreach ($languages as $l) {
+      if ($l['active']) echo '<a class="lang-menu__link lang-menu__inactive js-lang-menu" href="'.$l['url'].'">' . icl_disp_language($l['native_name']) . '</a>';
+    }
+
+    echo '<ul class="lang-menu__options">';
+      foreach ($languages as $l) {
+        if (!$l['active']) echo '<li class="lang-menu__option"><a class="lang-menu__link lang-menu__active" href="'.$l['url'].'">' . icl_disp_language($l['native_name']) . '</a></li>';
+      }
+    echo '</ul>';
+
+    echo '</div>';
+  }
 }
 
 ?>
