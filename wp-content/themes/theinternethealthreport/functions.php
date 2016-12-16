@@ -18,7 +18,6 @@ define('THEME_TEMPLATE_DIRECTORY', get_template_directory_uri());
 
 // Prevent File Modifications
 define('DISALLOW_FILE_MODS', true);
-show_admin_bar(false);
 
 /*
  * Setup function
