@@ -117,7 +117,7 @@ function theme_scripts() {
   wp_enqueue_style( 'theme-styles', get_template_directory_uri() . '/css/app.css');
   wp_enqueue_script( 'theme-script', get_template_directory_uri() . '/js/app.js', array('jquery'), '', true);
 
-  if (is_page_template('page_section.php') || is_singular('stories')) {
+  if (is_page_template('page_section.php') || is_page_template('page_about.php') || is_singular('stories')) {
     wp_enqueue_script( 'hypothesis', 'https://hypothes.is/embed.js#asyncload', '', '', true);
   }
 

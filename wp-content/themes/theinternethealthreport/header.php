@@ -28,7 +28,7 @@
           <h1 class="header__title"><?php the_title(); ?></h1>
           <p class="header__subtitle"><?php the_field('page_subtitle'); ?></p>
 
-        <?php elseif (is_page_template('page_section.php')) : ?>
+        <?php elseif (is_page_template('page_section.php') || is_page_template('page_about.php')) : ?>
 
           <h1 class="header__title"><?php the_field('page_subtitle'); ?></h1>
 
