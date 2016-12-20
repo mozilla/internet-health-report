@@ -62,7 +62,7 @@ class Choropleth {
 
     d3.queue()
       .defer(d3.json, this.shapeUrl)
-      .defer(d3.csv, this.dataUrl)
+      .defer(d3.tsv, this.dataUrl)
       .await(this.drawMap.bind(this));
   }
 

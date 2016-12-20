@@ -85,7 +85,7 @@ class Donut {
       return false;
     }
 
-    d3.csv(this.dataUrl, (error, data) => {
+    d3.tsv(this.dataUrl, (error, data) => {
       if (error) {
         throw error;
       }
