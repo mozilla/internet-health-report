@@ -11,7 +11,7 @@ class MultiLine {
     this.dataUrl = dataUrl;
     this.xAxisTitle = xAxisTitle;
     this.yAxisTitle = yAxisTitle;
-    this.parseDate = d3.timeParse(`%d-%m-%Y`);
+    this.parseDate = d3.timeParse(`%d-%b-%y`);
     this.margin = {top: 20, right: 20, bottom: 54, left: 60};
     this.classes = {
       multilineContainer: `multiline__container`,

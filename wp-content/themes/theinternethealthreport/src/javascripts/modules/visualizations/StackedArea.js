@@ -34,7 +34,8 @@ class StackedArea {
       .attr(`transform`, `translate(${this.margin.left},${this.margin.top})`);
     this.z = d3.scaleOrdinal()
       .range(constants.colorRangeArea);
-    this.parseDate = d3.timeParse(`%Y %b %d`);
+    // this.parseDate = d3.timeParse(`%Y %b %d`);
+    this.parseDate = d3.timeParse(`%d-%b-%y`);
     this.stack = d3.stack();
   }
 
