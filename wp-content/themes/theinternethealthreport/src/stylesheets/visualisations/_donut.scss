@@ -8,6 +8,7 @@ $donut-radius: 330;
     position: relative;
     display: inline-block;
     vertical-align: top;
+    width: 100%;
     max-width: em($donut-radius + $space);
     padding: em($space / 2);
     text-align: center;
