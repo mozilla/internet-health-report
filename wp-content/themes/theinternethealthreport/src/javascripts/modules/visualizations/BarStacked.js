@@ -6,12 +6,14 @@ import '../../plugins/noframework.waypoints';
 window.$ = $;
 
 class Bar {
-  constructor(el, dataUrl, xAxisTitle, yAxisTitle) {
+  constructor(el, dataUrl, xAxisTitle, yAxisTitle, marginLeft = 10, marginBottom = 40) {
     this.el = el;
     this.dataUrl = dataUrl;
     this.xAxisTitle = xAxisTitle;
     this.yAxisTitle = yAxisTitle;
-    this.margin = {top: 20, right: 20, bottom: 70, left: 50};
+    this.marginLeft = marginLeft;
+    this.marginBottom = marginBottom;
+    this.margin = {top: 20, right: 20, bottom: this.marginBottom, bottomTitle: 35, left: this.marginLeft, leftTitle: 40};
     this.classes = {
       barStackedSvg: `bar-stacked__svg`,
       barStackedData: `bar-stacked__data`,
@@ -37,14 +39,14 @@ class Bar {
       .append(`svg`)
         .attr(`class`, this.classes.barStackedSvg);
     this.svgData = this.svg.append(`g`)
-      .attr(`transform`, `translate(${this.margin.left},${this.margin.top})`);
+      .attr(`transform`, `translate(${this.margin.left + this.margin.leftTitle},${this.margin.top})`);
   }
 
   setSizes(transition = false) {
     this.width = $(this.el).width();
     this.height = constants.getWindowWidth() < constants.breakpointM ? 400 : Math.ceil(this.width * 0.52);
-    this.innerWidth = this.width - this.margin.left - this.margin.right;
-    this.innerHeight = this.height - this.margin.top - this.margin.bottom;
+    this.innerWidth = this.width - this.margin.left - this.margin.leftTitle - this.margin.right;
+    this.innerHeight = this.height - this.margin.top - this.margin.bottom - this.margin.bottomTitle;
 
     this.x = d3.scaleBand()
       .rangeRound([0, this.innerWidth])
@@ -247,8 +249,10 @@ const loadBarStackedCharts = () => {
     const url = $this.data(`url`);
     const xAxisTitle = $this.data(`x-axis-title`);
     const yAxisTitle = $this.data(`y-axis-title`);
+    const marginLeft = $this.data(`margin-left`);
+    const marginBottom = $this.data(`margin-bottom`);
 
-    new Bar(`#${id}`, url, xAxisTitle, yAxisTitle).render();
+    new Bar(`#${id}`, url, xAxisTitle, yAxisTitle, marginLeft, marginBottom).render();
   });
 };
 

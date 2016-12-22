@@ -12,7 +12,7 @@ class BarHorizontal {
     this.xAxisTitle = xAxisTitle;
     this.yAxisTitle = yAxisTitle;
     this.maxDataValue = maxDataValue;
-    this.margin = {top: 20, right: 20, bottom: 80, left: marginLeft, leftLabel: 30};
+    this.margin = {top: 20, right: 30, bottom: 80, left: marginLeft, leftLabel: 30};
     this.barHeight = 90;
     this.classes = {
       barHorizontalSvg: `bar-horizontal__svg`,
@@ -179,7 +179,20 @@ class BarHorizontal {
         .data(this.data)
         .enter().append(`text`)
         .attr(`class`, this.classes.barHorizontalValue)
-        .text(d => d[this.dataKeys[1]])
+        .text(d => {
+          const value = d[this.dataKeys[1]];
+          let formattedValue;
+
+          if (value >= 1000000000) {
+            formattedValue = `${value / 1000000000}b`;
+          } else if (value >= 1000000) {
+            formattedValue = `${value / 1000000}m`;
+          } else {
+            formattedValue = value;
+          }
+
+          return formattedValue;
+        })
         .attr(`text-anchor`, `end`)
         .style(`opacity`, 0);
 
