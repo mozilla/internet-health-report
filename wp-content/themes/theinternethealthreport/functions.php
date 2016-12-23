@@ -179,10 +179,9 @@ function get_facebook_share_url($page_url) {
   return $share_url;
 }
 
-function get_twitter_share_url($page_url, $text) {
-  $encoded_text = urlencode($text);
+function get_twitter_share_url($page_url, $text = '') {
   $encoded_url = urlencode($page_url);
-  $share_url = 'https://twitter.com/intent/tweet?url=' . $encoded_url . '&text=' . $encoded_text;
+  $share_url = 'https://twitter.com/intent/tweet?url=' . $encoded_url . '&text=' . $text;
 
   return $share_url;
 }
