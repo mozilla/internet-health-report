@@ -30,6 +30,9 @@ loadMultiLineCharts();
 import { loadBubbleCharts } from './modules/visualizations/Bubble';
 loadBubbleCharts();
 
+import { loadCustomCharts } from './modules/visualizations/Custom';
+loadCustomCharts();
+
 // Interaction
 
 import { smoothScrollInit } from './modules/interaction/smoothScroll';
