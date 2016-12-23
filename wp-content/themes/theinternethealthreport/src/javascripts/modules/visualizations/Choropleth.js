@@ -74,7 +74,6 @@ class Choropleth {
     this.shapeData = shapeData;
     this.vizData = vizData;
     this.dataKeys = constants.getDataKeys(this.vizData);
-    this.setOrdinalScale();
     this.draWTooltip();
 
     const countries = topojson.feature(this.shapeData, this.shapeData.objects[`countries`]);
@@ -134,6 +133,7 @@ class Choropleth {
       this.setData();
       this.drawLegend();
     } else {
+      this.setOrdinalScale();
       this.setDataOrdinal();
       this.drawOrdinalLegend();
     }
@@ -186,7 +186,7 @@ class Choropleth {
   drawOrdinalLegend() {
     this.ordinalLegend = d3.select(this.el).insert(`ul`, `:first-child`)
       .attr(`class`, this.legendClasses.choroplethLegend);
-    const ordinalLegend = d3.select(`.${this.legendClasses.choroplethLegend}`).selectAll(`li`)
+    const ordinalLegend = d3.select(`${this.el} .${this.legendClasses.choroplethLegend}`).selectAll(`li`)
       .data(this.scaleKeys)
       .enter().append(`li`)
       .attr(`class`, this.legendClasses.legendItem);
@@ -201,14 +201,14 @@ class Choropleth {
   }
 
   setData() {
-    d3.selectAll(`.${this.classes.choroplethItem}`)
+    d3.selectAll(`${this.el} .${this.classes.choroplethItem}`)
       .attr(`fill`, d => {
         return this.getColour(d[this.dataKeys[1]]);
       });
   }
 
   setDataOrdinal() {
-    d3.selectAll(`.${this.classes.choroplethItem}`)
+    d3.selectAll(`${this.el} .${this.classes.choroplethItem}`)
       .style(`fill`, d => {
         return this.colorScale(d[this.dataKeys[1]]);
       });
