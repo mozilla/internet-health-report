@@ -48,31 +48,32 @@
 
   &__title {
     display: inline;
-    padding: em(6, 48) 0;
+    padding: em(6, 20) 0;
     font-family: $ff-secondary;
-    @include rem(font-size, 22);
+    @include rem(font-size, 20);
     font-weight: $fw-bold;
     line-height: 1.2;
     letter-spacing: 0.04em;
     background-color: $primary-colour;
 
     @include media($medium-screen-up) {
-      @include rem(font-size, 48);
+      @include rem(font-size, 40);
       padding: em(6, 48) 0;
     }
   }
 
   &__subtitle {
-    margin-top: 1em;
+    margin-top: 0.8em;
     margin-left: auto;
     margin-right: auto;
-    @include rem(font-size, 14);
+    @include rem(font-size, 16);
     line-height: 1.62;
     letter-spacing: 0.01em;
 
     @include media($medium-screen-up) {
       max-width: em(680, 21);
-      @include rem(font-size, 21);
+      margin-top: 0.6em;
+      @include rem(font-size, 28);
     }
   }
 
