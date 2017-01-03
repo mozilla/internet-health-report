@@ -25,6 +25,8 @@
     position: relative;
     display: block;
     @include rem(height, $nav-height);
+    @include rem(padding-left, 2);
+    @include rem(padding-right, 2);
     z-index: 1;
     @include rem(font-size, 12);
     @include rem(line-height, $nav-height);
