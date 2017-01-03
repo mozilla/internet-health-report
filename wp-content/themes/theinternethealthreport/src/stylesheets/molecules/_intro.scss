@@ -1,12 +1,9 @@
 .intro {
   padding-top: em($space);
-  padding-bottom: em($space);
   text-align: center;
-  border-bottom: em(1) solid $off-white;
 
   @include media($medium-screen-up) {
     padding-top: em($space * 1.5);
-    padding-bottom: em($space * 1.5);
     border-color: $grey;
   }
 

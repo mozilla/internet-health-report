@@ -57,7 +57,7 @@
           @include span-columns(6);
         }
         vertical-align: top;
-        @include pad(#{em(12)} default #{em(12)} 0);
+        @include pad(0 default 0 0);
       }
 
       @include media($large-screen-up) {
@@ -71,7 +71,7 @@
 
         @include media($medium-screen-up) {
           margin-top: 0;
-          @include pad(#{em(12)} 0 #{em(12)} default);
+          @include pad(0 0 0 default);
           border-left: em(1) solid $grey;
         }
 
@@ -116,7 +116,7 @@
 
   &__link {
     display: block;
-    @include rem(margin-top, 14);
+    @include rem(margin-top, 10);
     text-decoration: none;
     transition: transform 0.2s ease;
 
@@ -143,7 +143,7 @@
   }
 
   &__title {
-    margin-top: 1em;
+    margin-top: 0.5em;
     @include rem(font-size, 19);
     font-family: $ff-secondary;
     font-weight: $fw-regular;
@@ -153,7 +153,7 @@
 
     @include media($medium-screen-up) {
       @include rem(font-size, 38);
-      margin-top: 0.6em;
+      margin-top: 0.2em;
     }
   }
 
