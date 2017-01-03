@@ -1,6 +1,9 @@
 .article {
+  padding-bottom: em($space);
+
   @include media($medium-screen-up) {
     padding-top: em($space * 2);
+    padding-bottom: em($space * 2);
   }
 
   &__main {

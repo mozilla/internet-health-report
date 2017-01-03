@@ -1,6 +1,7 @@
 <?php
   $title = get_the_title();
   $permalink = get_permalink();
+  $post_type = get_post_type();
 ?>
 
 <article class="article story wrapper js-article">
@@ -44,4 +45,12 @@
   </div>
 </article>
 
-<?php get_template_part('content', 'section-nav'); ?>
+<?php if ($post_type == 'stories') : ?>
+  <?php get_template_part('content', 'section-nav'); ?>
+<?php else : ?>
+  <?php if ( comments_open() || get_comments_number() ) : ?>
+    <div class="comments-wrapper wrapper">
+      <?php comments_template(); ?>
+    </div>
+  <?php endif; ?>
+<?php endif; ?>

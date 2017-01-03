@@ -13,6 +13,7 @@
 
   .article + & {
     margin-top: em($space);
+    padding-top: 0;
   }
 }
 
