@@ -113,8 +113,8 @@
 
       @include media($medium-screen-up) {
         font-weight: $fw-medium;
-        color: inherit;
-        background-color: $primary-colour;
+        color: $white;
+        background-color: $black;
 
         &:before {
           opacity: 1;
