@@ -158,6 +158,11 @@ function my_mce_before_init( $settings ) {
         'title' => 'Large Text',
         'selector' => 'p',
         'classes' => 'large-text'
+        ),
+        array(
+        'title' => 'Info Box',
+        'selector' => 'p',
+        'classes' => 'info-box'
         )
     );
 

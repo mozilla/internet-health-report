@@ -34,7 +34,8 @@
     }
   }
 
-  blockquote {
+  blockquote,
+  .info-box {
     max-width: em(530);
     margin: 3em 0;
     padding: em(38) em(12) em(12);
@@ -51,13 +52,24 @@
       line-height: 1;
     }
 
-    p {
+    p,
+    a {
       @include media($medium-screen-up) {
         @include rem(font-size, 28);
         font-weight: $fw-medium;
         color: $black;
         line-height: (38/28);
       }
+    }
+  }
+
+  .info-box {
+    max-width: 23em;
+    padding: em(12);
+    text-align: right;
+
+    &:before {
+      display: none;
     }
   }
 

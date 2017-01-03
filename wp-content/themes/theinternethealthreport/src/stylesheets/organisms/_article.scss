@@ -60,6 +60,15 @@
     }
   }
 
+  .info-box {
+    position: relative;
+
+    @include media($medium-screen-up) {
+      left: flex-grid(1, 12);
+      margin-left: auto;
+    }
+  }
+
   &__figure {
     margin: 0;
     padding-top: em($space);
