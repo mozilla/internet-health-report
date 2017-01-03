@@ -199,11 +199,11 @@
   width: em(210);
 
   &:before {
-    padding-bottom: 7.34%;
+    padding-bottom: 9.24%;
   }
 
   @include media($medium-screen-up) {
-    width: em(354);
+    width: em(274);
   }
 
   &__bg {
