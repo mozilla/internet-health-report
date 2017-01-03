@@ -55,7 +55,7 @@ $donut-radius: 330;
       bottom: calc(50vw - #{em($space / 2)});
       left: 50%;
       transform: translate(-50%, 50%);
-      width: calc(100% * 0.6);
+      width: 50%;
       margin-top: 0;
       @include rem(font-size, 21);
       font-weight: $fw-medium;
