@@ -34,8 +34,7 @@
     }
   }
 
-  blockquote,
-  .info-box {
+  blockquote {
     max-width: em(530);
     margin: 3em 0;
     padding: em(38) em(12) em(12);
@@ -52,8 +51,7 @@
       line-height: 1;
     }
 
-    p,
-    a {
+    p {
       @include media($medium-screen-up) {
         @include rem(font-size, 28);
         font-weight: $fw-medium;
@@ -64,12 +62,31 @@
   }
 
   .info-box {
-    max-width: 23em;
-    padding: em(12);
+    position: relative;
+    max-width: 17.5em;
+    margin: 1.5em 0 1.5em auto;
+    padding: 0.5em;
+    @include rem(font-size, 21);
     text-align: right;
+    line-height: 1.5;
+    background-color: $primary-colour;
 
-    &:before {
-      display: none;
+    @include media($medium-screen-up) {
+      left: flex-grid(1, 12);
+      @include rem(font-size, 26);
+    }
+
+    a {
+      font-weight: $fw-medium;
+      color: $black;
+      text-decoration: underline;
+      transition: opacity 0.1s ease;
+
+      &:hover,
+      &:active,
+      &:focus {
+        opacity: 0.6;
+      }
     }
   }
 
