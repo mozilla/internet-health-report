@@ -19,6 +19,9 @@
   // Donut fields
   $donut_description = get_field('donut_description', $ID);
   $donut_description_two = get_field('secondary_donut_description', $ID);
+  // Custom chart fields
+  $users_label = get_field('percentage_of_internet_users_label', $ID);
+  $content_label = get_field('percentage_of_internet_content_label', $ID);
   // Sources
   $sourcesTitle = get_field('sources_title', $ID);
   // Share fields
@@ -54,7 +57,12 @@
     <?php if ($yAxisTitle) { echo 'data-y-axis-title="' . $yAxisTitle . '"'; } ?>
     <?php if ($legendLabel) { echo 'data-legend-label="' . $legendLabel . '"'; } ?>
     <?php if ($isDataOrdinal) { echo 'data-ordinal="' . $isDataOrdinal . '"'; } ?>
+    <?php if ($type == 'custom js-custom') { echo 'style="background-image: url(' . $data_url . ')"'; } ?>
     data-url="<?php echo $data_url; ?>">
+    <?php if ($type == 'custom js-custom') : ?>
+      <p class="custom__label custom__label--first"><?php echo $users_label; ?></p>
+      <p class="custom__label custom__label--last"><?php echo $content_label; ?></p>
+    <?php endif; ?>
   </div>
 
   <?php if ($type == 'donut js-donut') : ?>

@@ -1,15 +1,62 @@
 .custom {
-  &:before {
+  background: {
+    repeat: no-repeat;
+    position: center bottom;
+    size: contain;
+  }
+
+  &:after {
     content: '';
     display: block;
     width: 100%;
     height: 0;
-    padding-bottom: 38.8%;
-    background: {
-      image: url('../assets/images/custom-chart.svg');
-      repeat: no-repeat;
-      position: center;
-      size: contain;
+    padding-bottom: 41%;
+  }
+
+  &__label {
+    position: relative;
+    padding-left: em(24, 14);
+    @include rem(font-size, 14);
+
+    @include media($medium-screen-up) {
+      display: inline-block;
+      vertical-align: middle;
+      padding-left: em(32, 14);
+    }
+
+    & + #{&} {
+      @include media($medium-screen-up) {
+        margin-left: em(24, 14);
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+      @include rem(width, 12);
+      @include rem(height, 12);
+      border-radius: 50%;
+
+      @include media($medium-screen-up) {
+        @include rem(width, 16);
+        @include rem(height, 16);
+      }
+    }
+
+    &--first {
+      &:before {
+        border: em(3, 14) solid $tertiary-colour;
+      }
+    }
+
+    &--last {
+      &:before {
+        background-color: $primary-colour;
+      }
     }
   }
 }
