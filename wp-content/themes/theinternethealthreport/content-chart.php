@@ -22,6 +22,15 @@
   // Custom chart fields
   $users_label = get_field('percentage_of_internet_users_label', $ID);
   $content_label = get_field('percentage_of_internet_content_label', $ID);
+  $label_english = get_field('label_english', $ID);
+  $label_russian = get_field('label_russian', $ID);
+  $label_german = get_field('label_german', $ID);
+  $label_japanese = get_field('label_japanese', $ID);
+  $label_spanish = get_field('label_spanish', $ID);
+  $label_french = get_field('label_french', $ID);
+  $label_portugese = get_field('label_portugese', $ID);
+  $label_chinese = get_field('label_chinese', $ID);
+  $label_arabic = get_field('label_arabic', $ID);
   // Sources
   $sourcesTitle = get_field('sources_title', $ID);
   // Share fields
@@ -57,11 +66,22 @@
     <?php if ($yAxisTitle) { echo 'data-y-axis-title="' . $yAxisTitle . '"'; } ?>
     <?php if ($legendLabel) { echo 'data-legend-label="' . $legendLabel . '"'; } ?>
     <?php if ($isDataOrdinal) { echo 'data-ordinal="' . $isDataOrdinal . '"'; } ?>
-    <?php if ($type == 'custom js-custom') { echo 'style="background-image: url(' . $data_url . ')"'; } ?>
+    <?php if ($label_english) { echo 'data-label-english="' . $label_english . '"'; } ?>
+    <?php if ($label_russian) { echo 'data-label-russian="' . $label_russian . '"'; } ?>
+    <?php if ($label_german) { echo 'data-label-german="' . $label_german . '"'; } ?>
+    <?php if ($label_japanese) { echo 'data-label-japanese="' . $label_japanese . '"'; } ?>
+    <?php if ($label_spanish) { echo 'data-label-spanish="' . $label_spanish . '"'; } ?>
+    <?php if ($label_french) { echo 'data-label-french="' . $label_french . '"'; } ?>
+    <?php if ($label_portugese) { echo 'data-label-portugese="' . $label_portugese . '"'; } ?>
+    <?php if ($label_chinese) { echo 'data-label-chinese="' . $label_chinese . '"'; } ?>
+    <?php if ($label_arabic) { echo 'data-label-arabic="' . $label_arabic . '"'; } ?>
     data-url="<?php echo $data_url; ?>">
     <?php if ($type == 'custom js-custom') : ?>
       <p class="custom__label custom__label--first"><?php echo $users_label; ?></p>
       <p class="custom__label custom__label--last"><?php echo $content_label; ?></p>
+      <div class="custom__chart">
+        <?php get_template_part('assets/images/custom', 'chart-english.svg'); ?>
+      </div>
     <?php endif; ?>
   </div>
 
