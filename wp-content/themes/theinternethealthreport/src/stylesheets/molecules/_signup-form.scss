@@ -31,7 +31,8 @@
     opacity: 0;
 
     &:focus,
-    &:active {
+    &:active,
+    &:checked {
       ~ .signup-form__checkbox-label {
         &:before {
           border-width: 2px;
@@ -42,7 +43,11 @@
     &:checked {
       ~ .signup-form__checkbox-label {
         &:before {
-          background-color: $black;
+          background: {
+            image: url('../assets/icons/tick.svg');
+            repeat: no-repeat;
+            position: center;
+          }
         }
       }
     }
@@ -88,5 +93,15 @@
     &:focus {
       outline: 1px solid $primary-colour;
     }
+  }
+
+  &__submission {
+    display: none;
+    color: $primary-colour;
+  }
+
+  &__notice {
+    @include rem(font-size, 12);
+    line-height: 1.2;
   }
 }

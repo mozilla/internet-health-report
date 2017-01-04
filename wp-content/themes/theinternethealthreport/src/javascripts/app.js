@@ -55,3 +55,6 @@ shareNavInit();
 
 import { langMenuInit } from './modules/interaction/langMenu';
 langMenuInit();
+
+import { signupFormInit } from './plugins/signupForm';
+signupFormInit();
