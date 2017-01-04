@@ -1,5 +1,4 @@
 /* global Waypoint */
-import * as constants from '../constants';
 import $ from 'jquery';
 import '../../plugins/noframework.waypoints';
 window.$ = $;

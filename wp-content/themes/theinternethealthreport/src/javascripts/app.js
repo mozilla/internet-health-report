@@ -58,3 +58,6 @@ langMenuInit();
 
 import { signupFormInit } from './plugins/signupForm';
 signupFormInit();
+
+import { analyticsInit } from './plugins/analytics';
+analyticsInit();
