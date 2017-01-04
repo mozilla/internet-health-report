@@ -197,6 +197,12 @@ function stringToId($str) {
   return $id;
 }
 
+function cc_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'cc_mime_types');
+
 function language_selector() {
   $languages = icl_get_languages('skip_missing=0&orderby=code');
 
