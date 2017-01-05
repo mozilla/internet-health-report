@@ -44,15 +44,13 @@ class Choropleth {
   }
 
   resizeChoropleth() {
-    window.requestAnimationFrame(() => {
-      const chart = $(this.el).find(`g`);
+    const chart = $(this.el).find(`g`);
 
-      this.width = $(this.el).width();
-      this.height = Math.ceil(this.aspectRatio * this.width);
+    this.width = $(this.el).width();
+    this.height = Math.ceil(this.aspectRatio * this.width);
 
-      TweenLite.set(chart, { scale: this.width / this.mapWidth });
-      d3.selectAll(`.${this.classes.choroplethSvg}`).attr(`height`, this.height);
-    });
+    TweenLite.set(chart, { scale: this.width / this.mapWidth });
+    d3.selectAll(`.${this.classes.choroplethSvg}`).attr(`height`, this.height);
   }
 
   loadData() {
