@@ -33,6 +33,9 @@ loadBubbleCharts();
 import { loadCustomCharts } from './modules/visualizations/Custom';
 loadCustomCharts();
 
+// import { loadTestCharts } from './modules/visualizations/Test';
+// loadTestCharts();
+
 // Interaction
 
 import { smoothScrollInit } from './modules/interaction/smoothScroll';
