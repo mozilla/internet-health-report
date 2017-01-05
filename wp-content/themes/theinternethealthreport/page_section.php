@@ -97,8 +97,6 @@
 
   <div class="subsection">
 
-    <div id="chart-test" class="chart-test" data-url="<?php echo get_template_directory_uri() . '/assets/test.tsv'; ?>"></div>
-
   <?php
     $subsection_index = 0;
     while (have_rows('subsections')) : the_row();
