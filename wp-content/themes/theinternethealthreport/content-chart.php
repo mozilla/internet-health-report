@@ -55,7 +55,7 @@
     }
   ?>
 
-  <div id="<?php echo 'chart-' . $ID; ?>"
+  <div id="<?php echo 'chart-' . $ID . rand(); ?>"
     class="chart <?php echo $type . $choropleth_type; ?>"
     <?php if ($percentage) { echo 'data-percentage="' . $percentage . '"'; } ?>
     <?php if ($units) { echo 'data-units="' . $units . '"'; } ?>
@@ -92,7 +92,7 @@
 
   <?php if ($data_url_two) : ?>
     <div class="donut-col">
-      <div id="<?php echo 'chart-' . $ID . '-two'; ?>"
+      <div id="<?php echo 'chart-' . $ID . rand(); ?>"
         class="chart <?php echo $type; ?>"
         data-url="<?php echo $data_url_two; ?>">
       </div>
