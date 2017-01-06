@@ -80,16 +80,19 @@ class Choropleth {
     const path = d3.geoPath()
       .projection(projection);
 
+    // Loop over each country in the shape data
     countries.features.forEach((country) => {
       let countrySet = false;
 
       this.vizData.forEach((data) => {
+        // For each data point, if the country name equals the data country name then add the data value to the country shape object
         if (country.properties.admin === data[this.dataKeys[0]]) {
           country[this.dataKeys[1]] = this.isDataOrdinal ? data[this.dataKeys[1]] : Number(data[this.dataKeys[1]]);
           countrySet = true;
         }
       });
 
+      // If the country shape name does not match a country name in the data
       if (!countrySet) {
         if (this.isDataOrdinal) {
           country[this.dataKeys[1]] = `Unknown`;
@@ -108,7 +111,7 @@ class Choropleth {
       .on(`mouseover`, d => {
         this.tooltip
           .html(() => {
-            if (d[this.dataKeys[1]]) {
+            if (d[this.dataKeys[1]] != undefined) {
               return `${d.properties.admin}: ${d[this.dataKeys[1]]}${this.dataUnits}`;
             } else {
               return `${d.properties.admin}: n/a`;
