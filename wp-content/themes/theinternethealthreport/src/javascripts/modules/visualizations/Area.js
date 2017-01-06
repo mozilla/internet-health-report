@@ -107,14 +107,14 @@ class Area {
       .duration(300)
       .delay(800)
       .ease(d3.easeCubicIn)
-      .style(`opacity`, 1);
+      .style(`opacity`, `1`);
 
     this.svg.selectAll(`.${this.classes.plotOuter}`)
       .transition()
       .duration(300)
       .delay(950)
       .ease(d3.easeCubicIn)
-      .style(`opacity`, 1);
+      .style(`opacity`, `1`);
   }
 
   setAxes() {
@@ -192,13 +192,13 @@ class Area {
         .data(this.data)
         .enter().append(`circle`)
         .attr(`class`, this.classes.plot)
-        .style(`opacity`, 0);
+        .style(`opacity`, `0`);
 
       this.g.selectAll(this.classes.plotOuter)
         .data(this.data)
         .enter().append(`circle`)
         .attr(`class`, this.classes.plotOuter)
-        .style(`opacity`, 0);
+        .style(`opacity`, `0`);
 
       // Add titles to the axes
       this.svg.append(`text`)

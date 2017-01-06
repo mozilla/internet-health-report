@@ -113,7 +113,6 @@ class Line {
     this.svg.select(`.${this.classes.data}`)
       .attr(`stroke-dasharray`, `${this.pathLength} ${this.pathLength}`)
       .attr(`stroke-dashoffset`, this.pathLength)
-      .style(`opacity`, 1)
       .transition()
         .duration(this.animationDuration)
         .ease(d3.easePolyInOut)
@@ -130,14 +129,14 @@ class Line {
         return i * 50;
       })
       .ease(d3.easeElasticIn)
-      .style(`opacity`, 1);
+      .style(`opacity`, `1`);
 
     this.svg.selectAll(`.${this.classes.plotOuter}`)
       .transition()
       .duration(300)
       .delay(950)
       .ease(d3.easeCubicIn)
-      .style(`opacity`, 1);
+      .style(`opacity`, `1`);
   }
 
   render() {
@@ -183,13 +182,13 @@ class Line {
         .enter().append(`circle`)
           .attr(`class`, this.classes.plot)
           .attr(`r`, 4.5)
-          .style(`opacity`, 0);
+          .style(`opacity`, `0`);
 
       this.svgData.selectAll(this.classes.plotOuter)
         .data(this.data)
         .enter().append(`circle`)
         .attr(`class`, this.classes.plotOuter)
-        .style(`opacity`, 0);
+        .style(`opacity`, `0`);
 
       // Add titles to the axes
       this.svg.append(`text`)

@@ -3,8 +3,13 @@
   $permalink = get_permalink();
   $type = get_field('type', $ID);
   // Data fields
-  $data_url = get_field('data', $ID);
-  $data_url_two = get_field('secondary_data', $ID);
+  // $data_url = get_field('data', $ID);
+  // $data_url_two = get_field('secondary_data', $ID);
+
+  $data_url_abs = get_field('data', $ID);
+  $data_url_two_abs = get_field('secondary_data', $ID);
+  $data_url = '/' . strstr($data_url_abs, 'wp-content');
+  $data_url_two = '/' . strstr($data_url_two_abs, 'wp-content');
   // Area fields
   $percentage = get_field('percentage_data', $ID);
   // Choropleth fields
@@ -61,7 +66,7 @@
     <?php if ($units) { echo 'data-units="' . $units . '"'; } ?>
     <?php if ($margin_left) { echo 'data-margin-left="' . $margin_left . '"'; } ?>
     <?php if ($margin_bottom) { echo 'data-margin-bottom="' . $margin_bottom . '"'; } ?>
-    <?php if ($type == 'choropleth js-choropleth') { echo 'data-world-shape-url="' . get_template_directory_uri() . '/js/world-topo.json"'; } ?>
+    <?php if ($type == 'choropleth js-choropleth') { echo 'data-world-shape-url="/wp-content/themes/theinternethealthreport/js/world-topo.json"'; } ?>
     <?php if ($xAxisTitle) { echo 'data-x-axis-title="' . $xAxisTitle . '"'; } ?>
     <?php if ($yAxisTitle) { echo 'data-y-axis-title="' . $yAxisTitle . '"'; } ?>
     <?php if ($legendLabel) { echo 'data-legend-label="' . $legendLabel . '"'; } ?>
@@ -90,7 +95,7 @@
     </div>
   <?php endif; ?>
 
-  <?php if ($data_url_two) : ?>
+  <?php if ($type == 'donut js-donut' && strlen($data_url_two) > 1) : ?>
     <div class="donut-col">
       <div id="<?php echo 'chart-' . $ID . rand(); ?>"
         class="chart <?php echo $type; ?>"

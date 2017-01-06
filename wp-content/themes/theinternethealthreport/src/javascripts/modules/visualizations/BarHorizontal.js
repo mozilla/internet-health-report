@@ -82,7 +82,7 @@ class BarHorizontal {
 
     this.svg.selectAll(`.${this.classes.barHorizontalData}`)
       .attr(`width`, 0)
-      .style(`opacity`, 1);
+      .style(`opacity`, `1`);
 
     this.svg.selectAll(`.${this.classes.barHorizontalData}`)
       .transition()
@@ -98,7 +98,7 @@ class BarHorizontal {
         .delay((d, i) => constants.chartFadeIn + (i * 150) + 750)
         .ease(d3.easeExpOut)
         .duration(300)
-        .style(`opacity`, 1);
+        .style(`opacity`, `1`);
   }
 
   setAxes() {
@@ -172,7 +172,7 @@ class BarHorizontal {
         .data(this.data)
         .enter().append(`rect`)
         .attr(`class`, this.classes.barHorizontalData)
-        .style(`opacity`, 0);
+        .style(`opacity`, `0`);
 
       // add data values to bars
       this.svgData.selectAll(`.${this.classes.barHorizontalValue}`)
@@ -194,7 +194,7 @@ class BarHorizontal {
           return formattedValue;
         })
         .attr(`text-anchor`, `end`)
-        .style(`opacity`, 0);
+        .style(`opacity`, `0`);
 
       // set chart height based on data length
       this.chartHeight = this.data.length * this.barHeight;

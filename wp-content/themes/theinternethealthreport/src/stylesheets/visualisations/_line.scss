@@ -24,5 +24,9 @@
     stroke: $primary-colour;
     @include rem(stroke-width, 3);
     opacity: 0;
+
+    @at-root .line.is-active & {
+      opacity: 1;
+    }
   }
 }

@@ -104,7 +104,7 @@ class MultiLine {
 
   animateChart() {
     this.svg.selectAll(`.${this.classes.multilineData}`)
-      .style(`opacity`, 0);
+      .style(`opacity`, `0`);
 
     $(this.el).addClass(`is-active`);
 
@@ -120,7 +120,7 @@ class MultiLine {
         .filter((d, index) => index === i)
         .attr(`stroke-dasharray`, `${pathLength} ${pathLength}`)
         .attr(`stroke-dashoffset`, pathLength)
-        .style(`opacity`, 1)
+        .style(`opacity`, `1`)
         .transition()
           .duration(500)
           .delay(i * 100)
