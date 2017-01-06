@@ -19,7 +19,7 @@
         </div>
 
         <div>
-          <select aria-required="true" id="id_country" class="signup-form__select" name="country" required="required">
+          <select id="id_country" class="signup-form__select" name="country" required="required">
             <option disabled selected value><?php the_field('signup_country_select', $front_page_ID); ?></option>
             <option value="af">Afghanistan</option>
             <option value="qz">Akrotiri</option>
@@ -277,7 +277,7 @@
             <option value="ua">Ukraine</option>
             <option value="ae">United Arab Emirates</option>
             <option value="gb">United Kingdom</option>
-            <option value="us" selected="selected">United States</option>
+            <option value="us">United States</option>
             <option value="uy">Uruguay</option>
             <option value="uz">Uzbekistan</option>
             <option value="vu">Vanuatu</option>
@@ -299,11 +299,11 @@
         <div id="newsletter_privacy" class="form_group form_group-agree">
           <label for="privacy">
             <input type="checkbox" id="privacy" name="privacy" class="signup-form__checkbox" required>
-            <span class="signup-form__checkbox-label"><?php the_field('signup_disclaimer', $front_page_ID); ?></span>
+            <div class="signup-form__checkbox-label"><?php the_field('signup_disclaimer', $front_page_ID); ?></div>
           </label>
         </div>
 
-        <div id="newsletter_submit">
+        <div>
           <button id="newsletter_submit" type="submit" class="signup-form__btn"><?php the_field('signup_submit', $front_page_ID); ?></button>
         </div>
 
