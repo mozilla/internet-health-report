@@ -72,7 +72,6 @@
         @include media($medium-screen-up) {
           margin-top: 0;
           @include pad(0 0 0 default);
-          border-left: em(1) solid $grey;
         }
 
         @include media($large-screen-up) {
