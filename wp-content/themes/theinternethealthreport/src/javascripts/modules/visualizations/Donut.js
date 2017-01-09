@@ -161,7 +161,7 @@ class Donut {
   }
 
   renderLegend() {
-    const $legend = d3.select(this.el).insert(`ul`, `:first-child`)
+    const $legend = d3.select(this.el).append(`ul`)
       .attr(`class`, this.legendClasses[0]);
 
     const legendItems = $legend.selectAll(`li`)
