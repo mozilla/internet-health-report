@@ -64,6 +64,19 @@
       transition: opacity 0.1s ease;
     }
   }
+
+  .current-menu-parent a {
+    outline: none;
+    color: $white;
+
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  .sub-menu {
+    display: none;
+  }
 }
 
 .current-menu-item {
