@@ -29,6 +29,7 @@
     @include rem(padding-right, 2);
     z-index: 1;
     @include rem(font-size, 12);
+    font-weight: $fw-medium;
     @include rem(line-height, $nav-height);
     letter-spacing: 0.025em;
     text-decoration: none;
