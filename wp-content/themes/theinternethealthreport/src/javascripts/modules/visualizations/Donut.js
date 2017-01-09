@@ -138,7 +138,7 @@ class Donut {
           .style(`fill`, `#000000`)
           .style(`opacity`, 0)
           .attr(`text-anchor`, `middle`)
-          .attr(`alignment-baseline`, `central`)
+          .attr(`dominant-baseline`, `middle`)
           .text(`${this.data[0][this.dataKeys[1]]}%`);
       }
 
