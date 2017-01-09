@@ -111,7 +111,7 @@ class Choropleth {
       .on(`mouseover`, d => {
         this.tooltip
           .html(() => {
-            if (d[this.dataKeys[1]] != undefined) {
+            if (d[this.dataKeys[1]] !== undefined) {
               return `${d.properties.admin}: ${d[this.dataKeys[1]]}${this.dataUnits}`;
             } else {
               return `${d.properties.admin}: n/a`;
