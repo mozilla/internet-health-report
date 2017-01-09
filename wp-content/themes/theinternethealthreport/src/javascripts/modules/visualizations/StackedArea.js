@@ -15,6 +15,7 @@ class StackedArea {
     this.classes = {
       stackedAreaSvg : `stacked-area__svg`,
       stackedAreaLayer : `stacked-area__layer`,
+      stackedBackground: `stacked-area__background`,
       xAxis : `x-axis`,
       xAxisTitle: `x-axis-title`,
       yAxis : `y-axis`,
@@ -47,6 +48,10 @@ class StackedArea {
     this.svg
       .attr(`width`, this.width)
       .attr(`height`, this.height);
+
+    this.svg.select(`.${this.classes.stackedBackground}`)
+      .attr(`width`, this.innerWidth)
+      .attr(`height`, this.innerHeight);
 
     this.x = d3.scaleTime()
       .range([0, this.innerWidth]);
@@ -81,13 +86,6 @@ class StackedArea {
 
     this.layer.selectAll(`path`)
       .attr(`d`, this.area);
-
-    // this.layer.selectAll(`path`)
-    //   .data(this.stack(this.data))
-    //   .transition()
-    //   .duration(800)
-    //   .ease(d3.easeExpOut)
-    //   .attr(`d`, this.area);
   }
 
   setAxes() {
@@ -133,6 +131,10 @@ class StackedArea {
       });
 
       this.stack.keys(this.keys);
+
+      this.backgroundLayer = this.g.append(`rect`)
+        .attr(`class`, this.classes.stackedBackground)
+        .style(`fill`, `rgb(255,255,255)`);
 
       this.layer = this.g.selectAll(`.${this.classes.stackedAreaLayer}`)
         .data(this.stack(this.data))
