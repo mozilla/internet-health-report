@@ -104,7 +104,7 @@
     letter-spacing: 0.01em;
 
     @include media($medium-screen-up) {
-      @include rem(font-size, 26);
+      @include rem(font-size, 32);
     }
   }
 }
