@@ -6,13 +6,14 @@ import '../../plugins/noframework.waypoints';
 window.$ = $;
 
 class Bar {
-  constructor(el, dataUrl, xAxisTitle, yAxisTitle, marginLeft = 10, marginBottom = 40) {
+  constructor(el, dataUrl, xAxisTitle, yAxisTitle, marginLeft = 10, marginBottom = 40, dataMax = false) {
     this.el = el;
     this.dataUrl = dataUrl;
     this.xAxisTitle = xAxisTitle;
     this.yAxisTitle = yAxisTitle;
     this.marginLeft = marginLeft;
     this.marginBottom = marginBottom;
+    this.dataMax = dataMax;
     this.margin = {top: 20, right: 20, bottom: this.marginBottom, bottomTitle: 35, left: this.marginLeft, leftTitle: 60};
     this.classes = {
       barSvg: `bar__svg`,
@@ -45,7 +46,7 @@ class Bar {
       .rangeRound([this.innerHeight, 0]);
 
     this.x.domain(this.data.map(d => d[this.dataKeys[0]]));
-    this.y.domain([0, d3.max(this.data, d => d[this.dataKeys[1]])]);
+    this.y.domain([0, this.dataMax ? this.dataMax : d3.max(this.data, d => d[this.dataKeys[1]])]);
 
     this.svg
       .attr(`width`, this.width)
@@ -173,14 +174,16 @@ class Bar {
     let dataValues = this.data.map((obj) => {
       return obj[this.dataKeys[1]];
     });
+    const maxDataValue = Math.max(...dataValues);
+    const formatNumber = d3.format(`.1f`);
+    const formatBillion = x => `${formatNumber(x / 1e9)}B`;
+    const formatMillion = x => `${formatNumber(x / 1e6)}M`;
+    const formatThousand = x => `${formatNumber(x / 1e3)}k`;
 
-    const minDataValue = Math.min(...dataValues);
-
-    if (minDataValue >= 1000000) {
-      this.tickFormat = d3.formatPrefix(`.0`, 1e6);
-    } else {
-      this.tickFormat = d3.formatPrefix(`.0`, 10);
-    }
+    this.tickFormat = maxDataValue >= 1e9 ? formatBillion
+      : maxDataValue >= 1e6 ? formatMillion
+      : maxDataValue >= 1e3 ? formatThousand
+      : d3.formatPrefix(`.0`, 10);
   }
 
   resize() {
@@ -205,8 +208,9 @@ const loadBarCharts = () => {
     const yAxisTitle = $this.data(`y-axis-title`);
     const marginLeft = $this.data(`margin-left`);
     const marginBottom = $this.data(`margin-bottom`);
+    const dataMax = $this.data(`percentage`);
 
-    new Bar(`#${id}`, url, xAxisTitle, yAxisTitle, marginLeft, marginBottom).render();
+    new Bar(`#${id}`, url, xAxisTitle, yAxisTitle, marginLeft, marginBottom, dataMax).render();
   });
 };
 

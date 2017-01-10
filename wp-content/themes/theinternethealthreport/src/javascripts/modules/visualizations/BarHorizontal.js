@@ -102,11 +102,7 @@ class BarHorizontal {
   }
 
   setAxes() {
-    if (this.el === `#chart-188`) {
-      this.axisBottom = constants.getWindowWidth() < constants.breakpointM ? d3.axisBottom(this.x).ticks(5) : d3.axisBottom(this.x).ticks(10);
-    } else {
-      this.axisBottom = constants.getWindowWidth() < constants.breakpointM ? d3.axisBottom(this.x).ticks(4) : d3.axisBottom(this.x);
-    }
+    this.axisBottom = constants.getWindowWidth() < constants.breakpointM ? d3.axisBottom(this.x).ticks(4) : d3.axisBottom(this.x);
 
     this.svg.select(`.${this.classes.xAxis}`)
       .attr(`transform`, `translate(${this.margin.left + this.margin.leftLabel + 6}, ${this.innerHeight + this.margin.top})`)
