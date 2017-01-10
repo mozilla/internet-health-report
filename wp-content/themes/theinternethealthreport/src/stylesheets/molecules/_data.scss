@@ -25,7 +25,7 @@
     }
 
     .subsection & {
-      display: block;
+      display: inline-block;
     }
   }
 
@@ -86,22 +86,42 @@
   &__embed {
     position: absolute;
     top: 100%;
-    right: 0;
+    left: 0;
     z-index: 1;
     width: 100%;
-    max-width: em(600);
+    max-width: em(250);
     margin-top: 1em;
-    padding: em($space);
+    padding: em(6);
     text-align: left;
     background-color: rgba($black,0.9);
     opacity: 0;
     visibility: hidden;
+
+    @include media($medium-screen-up) {
+      right: 0;
+      left: auto;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      right: em(20);
+      bottom: 100%;
+      border-bottom: em(9) solid $black;
+      border-left: em(7) solid transparent;
+      border-right: em(7) solid transparent;
+    }
   }
 
   &__textarea {
+    display: block;
     width: 100%;
-    height: em(60);
+    height: em(120);
     overflow: hidden;
     border: none;
+
+    &:focus {
+      outline: none;
+    }
   }
 }
