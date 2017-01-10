@@ -11,10 +11,12 @@
     position: relative;
   }
 
+  &__metadata {
+    color: rgba($dark-grey, 0.4);
+  }
+
   &__metadata,
   &__copy {
-    color: rgba($dark-grey, 0.4);
-
     @include media($medium-screen-up) {
       @include span-columns(8);
       @include shift(2);
@@ -45,7 +47,7 @@
     @include rem(font-size, 18);
     line-height: 1.62;
     letter-spacing: 0.01em;
-    color: $dark-grey;
+    color: $black;
 
     .article__metadata + & {
       margin-top: em($space * 0.75);
