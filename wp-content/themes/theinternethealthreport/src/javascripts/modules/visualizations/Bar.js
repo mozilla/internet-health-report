@@ -14,6 +14,7 @@ class Bar {
     this.marginLeft = marginLeft;
     this.marginBottom = marginBottom;
     this.dataMax = dataMax;
+    this.waypointInit = false;
     this.margin = {top: 20, right: 20, bottom: this.marginBottom, bottomTitle: 35, left: this.marginLeft, leftTitle: 60};
     this.classes = {
       barSvg: `bar__svg`,
@@ -32,7 +33,7 @@ class Bar {
       .attr(`transform`, `translate(${this.margin.left + this.margin.leftTitle}, ${this.margin.top})`);
   }
 
-  setSizes(transition = false) {
+  setSizes(transition = false, resize = false) {
     this.width = $(this.el).width();
     this.height = constants.getWindowWidth() < constants.breakpointM ? 400 : Math.ceil(this.width * 0.52);
     this.innerWidth = this.width - this.margin.left - this.margin.leftTitle - this.margin.right;
@@ -61,7 +62,9 @@ class Bar {
 
     if (transition) {
       this.animateChart();
-    } else {
+    }
+
+    if (resize && this.waypointInit) {
       this.svg.selectAll(`.${this.classes.barData}`)
         .attr(`y`, d => this.y(d[this.dataKeys[1]]))
         .attr(`height`, d => this.innerHeight - this.y(d[this.dataKeys[1]]));
@@ -156,11 +159,13 @@ class Bar {
         .attr(`class`, this.classes.barData);
 
       this.setTickFormat();
+      this.setSizes();
 
       const waypoint = new Waypoint({
         element: document.getElementById(this.el.substr(1)),
         handler: () => {
           this.setSizes(true);
+          this.waypointInit = true;
           waypoint.destroy();
         },
         offset: `50%`,
@@ -187,7 +192,7 @@ class Bar {
   }
 
   resize() {
-    this.setSizes();
+    this.setSizes(false, true);
   }
 
   type(d) {
