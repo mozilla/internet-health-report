@@ -166,6 +166,7 @@ class StackedArea {
         .text(this.yAxisTitle);
 
       this.renderLegend();
+      this.setSizes();
 
       const waypoint = new Waypoint({
         element: document.getElementById(this.el.substr(1)),
