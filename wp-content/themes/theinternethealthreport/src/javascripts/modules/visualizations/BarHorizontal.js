@@ -6,12 +6,13 @@ import '../../plugins/noframework.waypoints';
 window.$ = $;
 
 class BarHorizontal {
-  constructor(el, dataUrl, marginLeft = 40, maxDataValue = 0, xAxisTitle, yAxisTitle) {
+  constructor(el, dataUrl, marginLeft = 40, maxDataValue = 0, xAxisTitle, yAxisTitle, dataUnits = false) {
     this.el = el;
     this.dataUrl = dataUrl;
     this.xAxisTitle = xAxisTitle;
     this.yAxisTitle = yAxisTitle;
     this.maxDataValue = maxDataValue;
+    this.dataUnits = dataUnits;
     this.margin = {top: 20, right: 30, bottom: 80, left: marginLeft, leftLabel: 30};
     this.barHeight = 90;
     this.classes = {
@@ -177,15 +178,11 @@ class BarHorizontal {
         .attr(`class`, this.classes.barHorizontalValue)
         .text(d => {
           const value = d[this.dataKeys[1]];
-          let formattedValue;
-
-          if (value >= 1000000000) {
-            formattedValue = `${value / 1000000000}b`;
-          } else if (value >= 1000000) {
-            formattedValue = `${value / 1000000}m`;
-          } else {
-            formattedValue = value;
-          }
+          const formattedValue = value >= 1e9 ? `${value / 1e9}B`
+            : value >= 1e6 ? `${value / 1e6}M`
+            : value >= 1e3 ? `${value / 1e3}k`
+            : this.dataUnits === `%` ? `${value}%`
+            : value;
 
           return formattedValue;
         })
@@ -226,14 +223,18 @@ class BarHorizontal {
     let dataValues = this.data.map((obj) => {
       return obj[this.dataKeys[1]];
     });
+    const maxDataValue = Math.max(...dataValues);
+    const formatNumber = d3.format(`.1f`);
+    const formatBillion = x => `${formatNumber(x / 1e9)}B`;
+    const formatMillion = x => `${formatNumber(x / 1e6)}M`;
+    const formatThousand = x => `${formatNumber(x / 1e3)}k`;
+    const formatPercent = x => `${x}%`;
 
-    const minDataValue = Math.min(...dataValues);
-
-    if (minDataValue >= 1000000) {
-      this.tickFormat = d3.formatPrefix(`.0`, 1e6);
-    } else {
-      this.tickFormat = d3.formatPrefix(`.0`, 10);
-    }
+    this.tickFormat = maxDataValue >= 1e9 ? formatBillion
+      : maxDataValue >= 1e6 ? formatMillion
+      : maxDataValue >= 1e3 ? formatThousand
+      : this.dataUnits === `%` ? formatPercent
+      : d3.formatPrefix(`.0`, 10);
   }
 
   resize() {
@@ -300,8 +301,9 @@ const loadBarHorizontalCharts = () => {
     const maxDataValue = $this.data(`percentage`);
     const xAxisTitle = $this.data(`x-axis-title`);
     const yAxisTitle = $this.data(`y-axis-title`);
+    const dataUnits = $this.data(`units`);
 
-    new BarHorizontal(`#${id}`, url, marginLeft, maxDataValue, xAxisTitle, yAxisTitle).render();
+    new BarHorizontal(`#${id}`, url, marginLeft, maxDataValue, xAxisTitle, yAxisTitle, dataUnits).render();
   });
 };
 
