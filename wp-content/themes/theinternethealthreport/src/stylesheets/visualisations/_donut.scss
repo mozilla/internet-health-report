@@ -52,9 +52,9 @@ $donut-radius: 330;
 
     .donut--multi + & {
       position: absolute;
-      bottom: calc(50vw - #{em($space / 2)});
+      top: calc(50vw - #{em($space / 2)});
       left: 50%;
-      transform: translate(-50%, 50%);
+      transform: translate(-50%, -50%);
       width: 50%;
       margin-top: 0;
       @include rem(font-size, 21);
@@ -63,7 +63,7 @@ $donut-radius: 330;
       color: $primary-colour;
 
       @include media(min-width em($donut-radius + $space + $space)) {
-        bottom: em(($donut-radius + $space) / 2, 21);
+        top: em(($donut-radius + $space) / 2, 21);
       }
     }
   }
