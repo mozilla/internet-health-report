@@ -181,9 +181,9 @@ class Bar {
     });
     const maxDataValue = Math.max(...dataValues);
     const formatNumber = d3.format(`.1f`);
-    const formatBillion = x => `${formatNumber(x / 1e9)}B`;
-    const formatMillion = x => `${formatNumber(x / 1e6)}M`;
-    const formatThousand = x => `${formatNumber(x / 1e3)}k`;
+    const formatBillion = x => `${formatNumber(x / 1e9)}`;
+    const formatMillion = x => `${formatNumber(x / 1e6)}`;
+    const formatThousand = x => `${formatNumber(x / 1e3)}`;
 
     this.tickFormat = maxDataValue >= 1e9 ? formatBillion
       : maxDataValue >= 1e6 ? formatMillion
