@@ -4,12 +4,7 @@
 
 .header {
   position: relative;
-  background: {
-    color: $secondary-colour;
-    repeat: no-repeat;
-    position: center;
-    size: cover;
-  }
+  background-color: $secondary-colour;
 
   @include media($medium-screen-up) {
     height: em($header-height);
