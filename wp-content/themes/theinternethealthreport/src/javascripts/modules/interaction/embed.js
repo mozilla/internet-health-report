@@ -9,7 +9,8 @@ const showEmbedModal = (e) => {
 
   if (!$this.data(`ready`)) {
     const embedURL = $this.data(`embed`);
-    const iframeString = `<iframe width="100%" src="${embedURL}" frameborder="0" scrolling="no"></iframe>`;
+    const chartHeight = $this.parents(`.data`).outerHeight();
+    const iframeString = `<iframe width="100%" height="${chartHeight}" src="${embedURL}" frameborder="0"></iframe>`;
 
     $embed.find(`.data__textarea`).text(iframeString);
     $this.data(`ready`, true);
