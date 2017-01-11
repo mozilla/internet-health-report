@@ -125,7 +125,7 @@
             $sourceLink = get_sub_field('url');
 
             if ($sourceLink) {
-              $source = '<a class="data__source" href="' . $sourceLink . '">' . $sourceName . '</a>';
+              $source = '<a class="data__source" target="_blank" href="' . $sourceLink . '">' . $sourceName . '</a>';
             } else {
               $source = $sourceName;
             }
