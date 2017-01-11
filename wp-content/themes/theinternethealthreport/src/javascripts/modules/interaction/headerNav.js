@@ -8,7 +8,9 @@ const fixedClass = `is-fixed`;
 let headerNavOffsetTop;
 
 const fixNavUpdate = () => {
-  headerNavOffsetTop = $headerNav.offset().top;
+  if ($headerNav.length) {
+    headerNavOffsetTop = $headerNav.offset().top;
+  }
 };
 
 const fixNav = (scrollTop) => {

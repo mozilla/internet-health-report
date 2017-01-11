@@ -110,7 +110,9 @@ const signupFormInit = () => {
           return false;
       }
 
-      newsletterForm.addEventListener('submit', newsletterSubscribe, false);
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', newsletterSubscribe, false);
+      }
   })();
 };
 
