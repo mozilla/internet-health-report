@@ -1,4 +1,6 @@
 .multiline {
+  position: relative;
+
   &__container {
     position: relative;
 
@@ -25,5 +27,10 @@
     fill: none;
     stroke: $theme2;
     @include rem(stroke-width, 3);
+  }
+
+  &__plot {
+    fill: $white;
+    stroke-width: 2;
   }
 }

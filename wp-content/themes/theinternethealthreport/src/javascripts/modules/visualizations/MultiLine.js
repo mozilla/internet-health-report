@@ -22,8 +22,10 @@ class MultiLine {
       xAxisTitle: `x-axis-title`,
       yAxis: `y-axis`,
       yAxisTitle: `y-axis-title`,
+      plot: `multiline__plot`,
       gridY: `grid-y`,
       gridX: `grid-x`,
+      tooltip: `tooltip multiline__tooltip`,
     };
     this.legendClasses = [`legend`, `legend--multiline`, `legend__item`, `legend__key`, `legend__name`];
     this.svg = d3.select(this.el)
@@ -33,6 +35,9 @@ class MultiLine {
         .attr(`class`, this.classes.multilineSvg);
     this.g = this.svg.append(`g`)
       .attr(`transform`, `translate(${this.margin.left},${this.margin.top})`);
+    this.tooltip = d3.select(this.el)
+      .append(`div`)
+      .attr(`class`, this.classes.tooltip);
   }
 
   setSizes(transition = false) {
@@ -40,6 +45,7 @@ class MultiLine {
     this.height = constants.getWindowWidth() < constants.breakpointM ? 400 : Math.ceil(this.width * 0.52);
     this.innerWidth = this.width - this.margin.left - this.margin.right;
     this.innerHeight = this.height - this.margin.top - this.margin.bottom;
+    this.plotRadius = constants.getWindowWidth() < constants.breakpointM ? 2 : 3;
 
     this.svg
       .attr(`width`, this.width)
@@ -68,12 +74,38 @@ class MultiLine {
       .attr(`d`, d => this.line(d.values))
       .style(`stroke`, d => this.z(d.id));
 
+    // set plot position
+    this.svg.selectAll(`.${this.classes.plot}`)
+      .attr(`r`, this.plotRadius)
+      .attr(`cx`, d => this.x(d.date))
+      .attr(`cy`, d => this.y(d.dataValue))
+      .style(`stroke`, d => this.z(d.id));
+
     if (transition) {
       this.renderLegend();
       this.animateChart();
     }
 
     this.setAxes();
+    this.addTooltipEvents();
+  }
+
+  addTooltipEvents() {
+    this.svg.selectAll(`.${this.classes.plot}`)
+      .on(`mouseover`, d => {
+        this.tooltip
+          .html(`${d.dataValue}`)
+          .classed(`is-active`, true);
+      })
+      .on(`mousemove`, () => {
+        this.tooltip
+          .style(`top`, `${d3.event.pageY - $(this.el).offset().top}px`)
+          .style(`left`, `${d3.event.pageX - $(this.el).offset().left}px`);
+      })
+      .on(`mouseout`, () => {
+        this.tooltip
+          .classed(`is-active`, false);
+      });
   }
 
   setAxes() {
@@ -122,7 +154,7 @@ class MultiLine {
         .attr(`stroke-dashoffset`, pathLength)
         .style(`opacity`, `1`)
         .transition()
-          .duration(500)
+          .duration(600)
           .delay(i * 100)
           .ease(d3.easePolyInOut)
           .attr(`stroke-dashoffset`, 0)
@@ -131,6 +163,13 @@ class MultiLine {
               .attr(`stroke-dasharray`, `none`);
           });
     }
+
+    this.svg.selectAll(`.${this.classes.plot}`)
+      .transition()
+      .duration(500)
+      .delay(500)
+      .ease(d3.easeElasticIn)
+      .style(`opacity`, `1`);
   }
 
   render() {
@@ -149,6 +188,7 @@ class MultiLine {
           id: id,
           values: data.map(d => {
             return {
+              id: id,
               date: d.date,
               dataValue: d[id]
             };
@@ -189,6 +229,14 @@ class MultiLine {
           .attr(`class`, this.classes.multilineDataset)
         .append(`path`)
           .attr(`class`, this.classes.multilineData);
+
+      // append scatterplot plots
+      this.g.selectAll(`.${this.classes.multilineDataset}`).selectAll(`.${this.classes.plot}`)
+        .data(d => d.values)
+        .enter().append(`circle`)
+          .attr(`class`, this.classes.plot)
+          .attr(`r`, 4.5)
+          .style(`opacity`, `0`);
 
       const waypoint = new Waypoint({
         element: document.getElementById(this.el.substr(1)),
