@@ -1,7 +1,15 @@
 .annotator-frame {
   @include media($medium-screen-down) {
+    visibility: visible;
+    opacity: 1;
+    transition: margin-left 0.15s cubic-bezier(0.55, 0, 0.2, 0.8);
+
     &.annotator-collapsed {
-      display: none;
+      visibility: hidden;
+      opacity: 0;
+      transition: margin-left 0.15s cubic-bezier(0.55, 0, 0.2, 0.8)
+                  visibility 0s ease 0.15s,
+                  opacity 0s ease 0.15s;
     }
   }
 }
