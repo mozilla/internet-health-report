@@ -25,11 +25,15 @@ class Line {
       plotOuter: `plot-outer`,
       gridY: `grid-y`,
       gridX: `grid-x`,
+      tooltip: `tooltip line__tooltip`,
     };
     this.svg = d3.select(this.el).append(`svg`)
       .attr(`class`, this.classes.svg);
     this.svgData = this.svg.append(`g`)
       .attr(`transform`, `translate(${this.margin.left},${this.margin.top})`);
+    this.tooltip = d3.select(this.el)
+      .append(`div`)
+      .attr(`class`, this.classes.tooltip);
   }
 
   setSizes(transition = false) {
@@ -76,6 +80,25 @@ class Line {
     }
 
     this.setAxes();
+    this.addTooltipEvents();
+  }
+
+  addTooltipEvents() {
+    this.svg.selectAll(`.${this.classes.plot}`)
+      .on(`mouseover`, d => {
+        this.tooltip
+          .html(`${d[this.dataKeys[1]]}`)
+          .classed(`is-active`, true);
+      })
+      .on(`mousemove`, () => {
+        this.tooltip
+          .style(`top`, `${d3.event.pageY - $(this.el).offset().top}px`)
+          .style(`left`, `${d3.event.pageX - $(this.el).offset().left}px`);
+      })
+      .on(`mouseout`, () => {
+        this.tooltip
+          .classed(`is-active`, false);
+      });
   }
 
   setAxes() {
