@@ -242,7 +242,7 @@ function insert_fb_in_head() {
         echo '<meta property="og:url" content="' . get_permalink() . '"/>';
         echo '<meta property="og:site_name" content="' . get_bloginfo('name') . '"/>';
   if(!has_post_thumbnail( $post->ID )) { //the post does not have featured image, use a default image
-    $default_image = get_template_directory_uri() . '/assets/images/theinternethealthreport.svg'; //replace this with a default image on your server or an image in your media library
+    $default_image = get_template_directory_uri() . '/assets/images/theinternethealthreport.png'; //replace this with a default image on your server or an image in your media library
     echo '<meta property="og:image" content="' . $default_image . '"/>';
   }
   else{
