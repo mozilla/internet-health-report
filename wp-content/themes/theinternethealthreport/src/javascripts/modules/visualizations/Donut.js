@@ -19,6 +19,7 @@ class Donut {
       arc: `donut__arc`,
       layer: `donut__layer`,
       value: `donut__value`,
+      tooltip: `tooltip donut__tooltip`,
     };
     this.legendClasses = {
       donut: `legend legend--donut`,
@@ -33,6 +34,9 @@ class Donut {
         .attr(`class`, this.classes.svg);
     this.svgData = this.svg.append(`g`)
       .attr(`class`, this.classes.g);
+    this.tooltip = d3.select(this.el)
+      .append(`div`)
+      .attr(`class`, this.classes.tooltip);
   }
 
   setSizes(transition = false) {
@@ -65,6 +69,28 @@ class Donut {
       this.svg.selectAll(`.${this.classes.arc}`)
         .attr(`d`, this.arc);
     }
+
+    if (!this.isSingleValue) {
+      this.addTooltipEvents();
+    }
+  }
+
+  addTooltipEvents() {
+    this.svg.selectAll(`.${this.classes.arc}`)
+      .on(`mouseover`, d => {
+        this.tooltip
+          .html(`<strong>${d.data[this.dataKeys[0]]}</strong>: ${d.data[this.dataKeys[1]]}`)
+          .classed(`is-active`, true);
+      })
+      .on(`mousemove`, () => {
+        this.tooltip
+          .style(`top`, `${d3.event.pageY - $(this.el).offset().top}px`)
+          .style(`left`, `${d3.event.pageX - $(this.el).offset().left}px`);
+      })
+      .on(`mouseout`, () => {
+        this.tooltip
+          .classed(`is-active`, false);
+      });
   }
 
   animateChart() {

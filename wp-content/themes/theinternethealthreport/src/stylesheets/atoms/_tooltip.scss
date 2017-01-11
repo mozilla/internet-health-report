@@ -3,6 +3,7 @@
   transform: translate(-100%, -100%);
   max-width: em(200, 12);
   pointer-events: none;
+  z-index: 100;
   padding: 0.5em 1em;
   @include rem(font-size, 12);
   color: $white;
