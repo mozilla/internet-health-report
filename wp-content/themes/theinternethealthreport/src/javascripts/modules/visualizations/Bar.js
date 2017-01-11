@@ -25,12 +25,16 @@ class Bar {
       yAxisTitle: `y-axis-title`,
       gridY: `grid-y`,
       gridX: `grid-x`,
+      tooltip: `tooltip bar__tooltip`,
     };
     this.svg = d3.select(this.el)
       .append(`svg`)
         .attr(`class`, this.classes.barSvg);
     this.svgData = this.svg.append(`g`)
       .attr(`transform`, `translate(${this.margin.left + this.margin.leftTitle}, ${this.margin.top})`);
+    this.tooltip = d3.select(this.el)
+      .append(`div`)
+      .attr(`class`, this.classes.tooltip);
   }
 
   setSizes(transition = false, resize = false) {
@@ -59,6 +63,7 @@ class Bar {
       .attr(`width`, this.x.bandwidth());
 
     this.setAxes();
+    this.addTooltipEvents();
 
     if (transition) {
       this.animateChart();
@@ -69,6 +74,34 @@ class Bar {
         .attr(`y`, d => this.y(d[this.dataKeys[1]]))
         .attr(`height`, d => this.innerHeight - this.y(d[this.dataKeys[1]]));
     }
+  }
+
+  addTooltipEvents() {
+    this.svg.selectAll(`.${this.classes.barData}`)
+      .on(`mouseover`, d => {
+        const formatNumber = d3.format(`.4f`);
+        const formatBillion = x => formatNumber(x / 1e9);
+        const formatMillion = x => formatNumber(x / 1e6);
+        const formatThousand = x => formatNumber(x / 1e3);
+        const formatStandard = x => formatNumber(x);
+        const dataString = this.maxDataValue >= 1e9 ? formatBillion(d[this.dataKeys[1]])
+          : this.maxDataValue >= 1e6 ? formatMillion(d[this.dataKeys[1]])
+          : this.maxDataValue >= 1e3 ? formatThousand(d[this.dataKeys[1]])
+          : formatStandard;
+
+        this.tooltip
+          .html(`${parseFloat(dataString).toString()}`)
+          .classed(`is-active`, true);
+      })
+      .on(`mousemove`, () => {
+        this.tooltip
+          .style(`top`, `${d3.event.pageY - $(this.el).offset().top}px`)
+          .style(`left`, `${d3.event.pageX - $(this.el).offset().left}px`);
+      })
+      .on(`mouseout`, () => {
+        this.tooltip
+          .classed(`is-active`, false);
+      });
   }
 
   animateChart() {
@@ -179,16 +212,17 @@ class Bar {
     let dataValues = this.data.map((obj) => {
       return obj[this.dataKeys[1]];
     });
-    const maxDataValue = Math.max(...dataValues);
     const formatNumber = d3.format(`.1f`);
     const formatBillion = x => `${formatNumber(x / 1e9)}`;
     const formatMillion = x => `${formatNumber(x / 1e6)}`;
     const formatThousand = x => `${formatNumber(x / 1e3)}`;
+    const formatStandard = x => `${formatNumber(x)}`;
 
-    this.tickFormat = maxDataValue >= 1e9 ? formatBillion
-      : maxDataValue >= 1e6 ? formatMillion
-      : maxDataValue >= 1e3 ? formatThousand
-      : d3.formatPrefix(`.0`, 10);
+    this.maxDataValue = Math.max(...dataValues);
+    this.tickFormat = this.maxDataValue >= 1e9 ? formatBillion
+      : this.maxDataValue >= 1e6 ? formatMillion
+      : this.maxDataValue >= 1e3 ? formatThousand
+      : formatStandard;
   }
 
   resize() {

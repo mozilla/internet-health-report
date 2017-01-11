@@ -16,7 +16,7 @@ class Choropleth {
     this.classes = {
       choroplethSvg: `choropleth__svg`,
       choroplethItem: `choropleth__item`,
-      choroplethTooltip: `choropleth__tooltip`,
+      choroplethTooltip: `tooltip choropleth__tooltip`,
     };
     this.legendClasses = {
       choroplethLegend: `legend--choropleth-ordinal`,

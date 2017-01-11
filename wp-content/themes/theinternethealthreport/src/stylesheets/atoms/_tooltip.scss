@@ -1,0 +1,21 @@
+.tooltip {
+  position: absolute;
+  transform: translate(-100%, -100%);
+  max-width: em(200, 12);
+  pointer-events: none;
+  padding: 0.5em 1em;
+  @include rem(font-size, 12);
+  color: $white;
+  background-color: $black;
+  @include rem(border-radius, 5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.1s ease,
+              visibility 0s ease 0.1s;
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.1s ease;
+  }
+}
