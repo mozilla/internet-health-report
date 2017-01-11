@@ -12,15 +12,27 @@ class Donut {
     this.legendRectSize = 18;
     this.legendSpacing = 4;
     this.legendHeight = this.legendRectSize + this.legendSpacing;
-    this.classes = [`donut__svg-container`,`donut__svg`, `donut__g`, `donut__arc`, `donut__text`, `donut__layer`, `donut__value`];
-    this.legendClasses = [`legend legend--donut`, `legend__item`, `legend__key`, `legend__name`];
+    this.classes = {
+      container: `donut__svg-container`,
+      svg: `donut__svg`,
+      g: `donut__g`,
+      arc: `donut__arc`,
+      layer: `donut__layer`,
+      value: `donut__value`,
+    };
+    this.legendClasses = {
+      donut: `legend legend--donut`,
+      item: `legend__item`,
+      key: `legend__key`,
+      name: `legend__name`,
+    };
     this.svg = d3.select(this.el)
       .append(`div`)
-        .attr(`class`, this.classes[0])
+        .attr(`class`, this.classes.container)
       .append(`svg`)
-        .attr(`class`, this.classes[1]);
+        .attr(`class`, this.classes.svg);
     this.svgData = this.svg.append(`g`)
-      .attr(`class`, this.classes[2]);
+      .attr(`class`, this.classes.g);
   }
 
   setSizes(transition = false) {
@@ -44,13 +56,13 @@ class Donut {
     this.svgData
       .attr(`transform`, `translate(${this.radius}, ${this.radius})`);
 
-    this.svg.selectAll(`.${this.classes[6]}`)
+    this.svg.selectAll(`.${this.classes.value}`)
       .attr(`transform`, `translate(${this.radius}, ${this.radius})`);
 
     if (transition) {
       this.animateChart();
     } else {
-      this.svg.selectAll(`.${this.classes[3]}`)
+      this.svg.selectAll(`.${this.classes.arc}`)
         .attr(`d`, this.arc);
     }
   }
@@ -60,7 +72,7 @@ class Donut {
 
     $(this.el).addClass(`is-active`);
 
-    this.svg.selectAll(`.${this.classes[3]}`)
+    this.svg.selectAll(`.${this.classes.arc}`)
       .transition()
         .duration(arcAnimationDuration)
         .ease(d3.easeCubicOut)
@@ -73,7 +85,7 @@ class Donut {
           };
         });
 
-    this.svg.selectAll(`.${this.classes[6]}`)
+    this.svg.selectAll(`.${this.classes.value}`)
       .transition()
       .duration(300)
       .delay(arcAnimationDuration)
@@ -119,9 +131,9 @@ class Donut {
         .data(this.pie(this.data))
         .enter()
         .append(`g`)
-          .attr(`class`, this.classes[5])
+          .attr(`class`, this.classes.layer)
         .append(`path`)
-          .attr(`class`, this.classes[3])
+          .attr(`class`, this.classes.arc)
           .attr(`fill`, d => this.color(d.data[this.dataKeys[0]]));
 
       if (!this.isSingleValue) {
@@ -131,7 +143,7 @@ class Donut {
         d3.select(this.el).attr(`class`, `donut--single`);
 
         this.svg.append(`text`)
-          .attr(`class`, this.classes[6])
+          .attr(`class`, this.classes.value)
           .style(`font-size`, `58px`)
           .style(`font-weight`, `500`)
           .style(`letter-spacing`, `-0.01em`)
@@ -162,20 +174,20 @@ class Donut {
 
   renderLegend() {
     const $legend = d3.select(this.el).append(`ul`)
-      .attr(`class`, this.legendClasses[0]);
+      .attr(`class`, this.legendClasses.donut);
 
     const legendItems = $legend.selectAll(`li`)
       .data(this.color.domain())
       .enter()
       .append(`li`)
-        .attr(`class`, this.legendClasses[1]);
+        .attr(`class`, this.legendClasses.item);
 
     legendItems.append(`span`)
-      .attr(`class`, this.legendClasses[2])
+      .attr(`class`, this.legendClasses.key)
       .style(`background-color`, this.color);
 
     legendItems.append(`span`)
-        .attr(`class`, this.legendClasses[3])
+        .attr(`class`, this.legendClasses.name)
         .text(d => d);
   }
 
