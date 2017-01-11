@@ -87,7 +87,7 @@ class Bar {
         const dataString = this.maxDataValue >= 1e9 ? formatBillion(d[this.dataKeys[1]])
           : this.maxDataValue >= 1e6 ? formatMillion(d[this.dataKeys[1]])
           : this.maxDataValue >= 1e3 ? formatThousand(d[this.dataKeys[1]])
-          : formatStandard;
+          : formatStandard(d[this.dataKeys[1]]);
 
         this.tooltip
           .html(`${parseFloat(dataString).toString()}`)

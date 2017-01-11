@@ -25,12 +25,16 @@ class Area {
       plotOuter: `plot-outer`,
       gridY: `grid-y`,
       gridX: `grid-x`,
+      tooltip: `tooltip area__tooltip`,
     };
     this.svg = d3.select(this.el)
       .append(`svg`)
         .attr(`class`, this.classes.svg);
     this.g = this.svg.append(`g`)
       .attr(`transform`, `translate(${this.margin.left},${this.margin.top})`);
+    this.tooltip = d3.select(this.el)
+      .append(`div`)
+      .attr(`class`, this.classes.tooltip);
   }
 
   setSizes(transition = false) {
@@ -77,6 +81,7 @@ class Area {
       this.axisBottom = d3.axisBottom(this.x).ticks(4);
     }
     this.setAxes();
+    this.addTooltipEvents();
 
     if (transition) {
       this.animateChart();
@@ -84,6 +89,34 @@ class Area {
       this.svg.select(`.${this.classes.layer}`)
         .attr(`d`, this.area);
     }
+  }
+
+  addTooltipEvents() {
+    this.svg.selectAll(`.${this.classes.plot}`)
+      .on(`mouseover`, d => {
+        const formatNumber = d3.format(`.4f`);
+        const formatBillion = x => formatNumber(x / 1e9);
+        const formatMillion = x => formatNumber(x / 1e6);
+        const formatThousand = x => formatNumber(x / 1e3);
+        const formatStandard = x => formatNumber(x);
+        const dataString = this.maxDataValue >= 1e9 ? formatBillion(d[this.dataKeys[1]])
+          : this.maxDataValue >= 1e6 ? formatMillion(d[this.dataKeys[1]])
+          : this.maxDataValue >= 1e3 ? formatThousand(d[this.dataKeys[1]])
+          : formatStandard(d[this.dataKeys[1]]);
+
+        this.tooltip
+          .html(`${parseFloat(dataString).toString()}`)
+          .classed(`is-active`, true);
+      })
+      .on(`mousemove`, () => {
+        this.tooltip
+          .style(`top`, `${d3.event.pageY - $(this.el).offset().top}px`)
+          .style(`left`, `${d3.event.pageX - $(this.el).offset().left}px`);
+      })
+      .on(`mouseout`, () => {
+        this.tooltip
+          .classed(`is-active`, false);
+      });
   }
 
   animateChart() {
