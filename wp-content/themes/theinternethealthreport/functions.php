@@ -185,8 +185,10 @@ function get_facebook_share_url($page_url) {
 }
 
 function get_twitter_share_url($page_url, $text = '') {
+  $front_page_ID = get_option( 'page_on_front' );
   $encoded_url = urlencode($page_url);
-  $share_url = 'https://twitter.com/intent/tweet?url=' . $encoded_url . '&text=' . $text;
+  $hashtag = get_field('project_hashtag', $front_page_ID);
+  $share_url = 'https://twitter.com/intent/tweet?url=' . $encoded_url . '&text=' . $text . ' %23' . $hashtag;
 
   return $share_url;
 }
