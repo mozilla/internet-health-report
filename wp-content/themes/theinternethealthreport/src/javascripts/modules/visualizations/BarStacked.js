@@ -24,6 +24,7 @@ class Bar {
       yAxisTitle: `y-axis-title`,
       gridY: `grid-y`,
       gridX: `grid-x`,
+      tooltip: `tooltip bar-stacked__tooltip`,
     };
     this.legendClasses = {
       legend: `legend`,
@@ -40,6 +41,9 @@ class Bar {
         .attr(`class`, this.classes.barStackedSvg);
     this.svgData = this.svg.append(`g`)
       .attr(`transform`, `translate(${this.margin.left + this.margin.leftTitle},${this.margin.top})`);
+    this.tooltip = d3.select(this.el)
+      .append(`div`)
+      .attr(`class`, this.classes.tooltip);
   }
 
   setSizes(transition = false) {
@@ -67,20 +71,39 @@ class Bar {
     this.svgData.selectAll(`.${this.classes.barStackedData}`)
       .attr(`fill`, d => this.z(d.key));
 
-    this.svgData.selectAll(`.${this.classes.barStackedData} rect`)
+    this.svgData.selectAll(`.${this.classes.barStackedRect}`)
         .attr(`x`, d => this.x(d.data.Country))
         .attr(`y`, d => this.y(d[1]) + (this.y(d[0]) - this.y(d[1])))
         .attr(`width`, this.x.bandwidth());
 
     this.setAxes();
+    this.addTooltipEvents();
 
     if (transition) {
       this.animateChart();
     } else if ($(this.el).hasClass(`is-active`)) {
-      this.svg.selectAll(`.${this.classes.barStackedData} rect`)
+      this.svg.selectAll(`.${this.classes.barStackedRect}`)
         .attr(`y`, d => this.y(d[1]))
         .attr(`height`, d => this.y(d[0]) - this.y(d[1]));
     }
+  }
+
+  addTooltipEvents() {
+    this.svg.selectAll(`.${this.classes.barStackedRect}`)
+      .on(`mouseover`, d => {
+        this.tooltip
+          .html(`${d[1] - d[0]}`)
+          .classed(`is-active`, true);
+      })
+      .on(`mousemove`, () => {
+        this.tooltip
+          .style(`top`, `${d3.event.pageY - $(this.el).offset().top}px`)
+          .style(`left`, `${d3.event.pageX - $(this.el).offset().left}px`);
+      })
+      .on(`mouseout`, () => {
+        this.tooltip
+          .classed(`is-active`, false);
+      });
   }
 
   animateChart() {
@@ -90,7 +113,7 @@ class Bar {
     const transitionDuration = 300;
     const dataTypesLength = this.data.columns.slice(1).length;
 
-    this.svg.selectAll(`.${this.classes.barStackedData} rect`)
+    this.svg.selectAll(`.${this.classes.barStackedRect}`)
       .transition()
       .duration(transitionDuration)
       .ease(d3.easePolyOut)
@@ -186,9 +209,10 @@ class Bar {
         .data(this.stack.keys(this.data.columns.slice(1))(this.data))
         .enter().append(`g`)
           .attr(`class`, this.classes.barStackedData)
-        .selectAll(`rect`)
+        .selectAll(`.${this.classes.barStackedRect}`)
         .data(d => d)
-        .enter().append(`rect`);
+        .enter().append(`rect`)
+          .attr(`class`, this.classes.barStackedRect);
 
       this.renderLegend();
       this.setSizes();
