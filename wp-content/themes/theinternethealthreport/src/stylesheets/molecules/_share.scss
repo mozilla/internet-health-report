@@ -58,7 +58,7 @@
     @include rem(font-size, 18);
     font-weight: $fw-light;
     line-height: 1.2;
-    letter-spacing: 0.025em;
+    letter-spacing: 0;
 
     @include media($medium-screen-up) {
       @include rem(font-size, 14);

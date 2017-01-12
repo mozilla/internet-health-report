@@ -14,7 +14,7 @@
     @include rem(font-size, 18);
     font-weight: $fw-medium;
     line-height: 1.62;
-    letter-spacing: 0.025em;
+    letter-spacing: 0;
 
     @include media($medium-screen-up) {
       margin-left: 0;
@@ -33,7 +33,7 @@
     @include rem(font-size, 18);
     line-height: 1.62;
     font-weight: $fw-medium;
-    letter-spacing: 0.025em;
+    letter-spacing: 0;
     background-color: $primary-colour;
 
     @include media($medium-screen-up) {
@@ -56,7 +56,7 @@
     @include rem(font-size, 15);
     font-weight: $fw-medium;
     line-height: 1.38;
-    letter-spacing: 0.01em;
+    letter-spacing: 0;
 
     @include media($medium-screen-up) {
       @include span-columns(5);
@@ -68,7 +68,7 @@
     margin-top: 1em;
     @include rem(font-size, 15);
     line-height: 1.6;
-    letter-spacing: 0.01em;
+    letter-spacing: 0;
 
     @include media($medium-screen-up) {
       margin-top: 0;

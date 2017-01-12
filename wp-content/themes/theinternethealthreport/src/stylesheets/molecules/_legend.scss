@@ -102,7 +102,7 @@
   &__name {
     @include rem(font-size, 14);
     line-height: 1;
-    letter-spacing: 0.025em;
+    letter-spacing: 0;
   }
 
   &__label {

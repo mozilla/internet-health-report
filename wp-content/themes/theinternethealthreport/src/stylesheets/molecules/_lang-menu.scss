@@ -25,7 +25,7 @@
     min-width: em(176, 12);
     padding: em(10, 12) em(56, 12) em(10, 12) em(20, 12);
     @include rem(font-size, 12);
-    letter-spacing: 0.01em;
+    letter-spacing: 0;
     text-decoration: none;
 
     @include media($small-screen-up) {

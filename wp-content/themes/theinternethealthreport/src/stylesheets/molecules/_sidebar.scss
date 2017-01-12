@@ -73,7 +73,7 @@
     display: block;
     @include rem(font-size, 12);
     font-weight: $fw-medium;
-    letter-spacing: 0.025em;
+    letter-spacing: 0;
     text-decoration: none;
     color: $white;
 
@@ -140,7 +140,7 @@
     @include rem(font-size, 12);
     font-weight: $fw-medium;
     line-height: em($sidebar-height, 12);
-    letter-spacing: 0.025em;
+    letter-spacing: 0;
     text-align: left;
     color: $white;
     border: none;

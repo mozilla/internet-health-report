@@ -128,7 +128,7 @@
       display: inline;
       @include rem(font-size, 14);
       line-height: 1;
-      letter-spacing: 0.01em;
+      letter-spacing: 0;
       color: $black;
       border-bottom: 3px solid $primary-colour;
       transition: all 0.1s ease;
@@ -152,7 +152,7 @@
     font-family: $ff-secondary;
     font-weight: $fw-regular;
     line-height: 1.21;
-    letter-spacing: 0.025em;
+    letter-spacing: 0;
     color: $black;
 
     @include media($medium-screen-up) {
@@ -167,7 +167,7 @@
     @include rem(font-size, 14);
     line-height: 1.16;
     font-weight: $fw-medium;
-    letter-spacing: 0.025em;
+    letter-spacing: 0;
     color: $black;
     text-decoration: none;
     background-color: $primary-colour;
@@ -187,7 +187,7 @@
     .card--block & {
       @include rem(font-size, 14);
       line-height: (34/21);
-      letter-spacing: 0.01em;
+      letter-spacing: 0;
 
       @include media($medium-screen-up) {
         @include rem(font-size, 21);
@@ -198,7 +198,7 @@
   &__excerpt {
     @include rem(font-size, 14);
     line-height: (34/21);
-    letter-spacing: 0.01em;
+    letter-spacing: 0;
 
     @include media($medium-screen-up) {
       @include rem(font-size, 21);
@@ -210,7 +210,7 @@
     @include rem(font-size, 14);
     font-weight: $fw-medium;
     line-height: (23/15);
-    letter-spacing: 0.01em;
+    letter-spacing: 0;
     color: $black;
     text-decoration: none;
     border-bottom: 2px solid $primary-colour;

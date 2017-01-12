@@ -59,7 +59,7 @@ $donut-radius: 330;
       margin-top: 0;
       @include rem(font-size, 21);
       font-weight: $fw-medium;
-      letter-spacing: 0.025em;
+      letter-spacing: 0;
       color: $primary-colour;
 
       @include media(min-width em($donut-radius + $space + $space)) {

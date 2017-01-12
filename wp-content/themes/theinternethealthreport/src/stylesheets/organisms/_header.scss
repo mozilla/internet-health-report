@@ -48,7 +48,7 @@
     @include rem(font-size, 20);
     font-weight: $fw-bold;
     line-height: 1.2;
-    letter-spacing: 0.04em;
+    letter-spacing: 0;
     background-color: $primary-colour;
 
     @include media($medium-screen-up) {
@@ -63,7 +63,7 @@
     margin-right: auto;
     @include rem(font-size, 16);
     line-height: 1.62;
-    letter-spacing: 0.01em;
+    letter-spacing: 0;
 
     @include media($medium-screen-up) {
       max-width: em(680, 21);
