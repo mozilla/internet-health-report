@@ -1,5 +1,9 @@
 <?php
 
+@ini_set( 'upload_max_size' , '64M' );
+@ini_set( 'post_max_size', '64M');
+@ini_set( 'max_execution_time', '300' );
+
 // Remove wp_head junk
 remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wp_generator');
