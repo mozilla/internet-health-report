@@ -131,6 +131,10 @@
   }
 
   &__lang-menu {
+    @include media($small-screen-down) {
+      max-width: em(200);
+    }
+
     @include media($small-screen-up) {
       float: right;
       margin-right: em(-$space / 2);
