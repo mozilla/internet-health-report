@@ -50,6 +50,9 @@ socialShare();
 import { fixNavInit } from './modules/interaction/headerNav';
 fixNavInit();
 
+import { scrollToCurrentMenuItem } from './modules/interaction/menu';
+scrollToCurrentMenuItem();
+
 import { shareNavInit } from './modules/interaction/shareNav';
 shareNavInit();
 

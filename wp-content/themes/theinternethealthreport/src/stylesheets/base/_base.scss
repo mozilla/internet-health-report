@@ -2,6 +2,10 @@
 //  $Main
 //------------------------------------------------------------------------
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 *,
 :before,
 :after {
@@ -11,6 +15,7 @@
 
 html {
   -webkit-font-smoothing: antialiased;
+  overflow: -moz-scrollbars-none;
 }
 
 body {

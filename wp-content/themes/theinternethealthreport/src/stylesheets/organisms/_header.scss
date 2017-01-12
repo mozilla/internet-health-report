@@ -112,16 +112,17 @@
     background-color: $off-white;
     overflow: hidden;
 
-    &:before {
+    &:after {
       content: '';
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
       display: block;
-      width: em($space);
-      background: linear-gradient(to left, $black, $white);
-      opacity: 0.2;
+      width: em(24);
+      z-index: 1;
+      pointer-events: none;
+      background: linear-gradient(to right, rgba($off-white,0) 0%, $off-white 100%);
 
       @include media(min-width em(950)) {
         display: none;
