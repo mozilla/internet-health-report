@@ -1,0 +1,67 @@
+@media print {
+  body {
+    .header__nav,
+    .share,
+    .header__lang-menu,
+    .annotator-frame,
+    .footer,
+    .comments-wrapper,
+    .section__menu,
+    .btn,
+    .data__footer .data__share,
+    .card__thumb {
+      display: none;
+    }
+
+    .chart {
+      opacity: 1;
+    }
+
+    .legend--scale,
+    .multiline__svg,
+    .area__svg,
+    .line__svg {
+      position: relative;
+    }
+
+    .chart .grid-x line,
+    .chart .grid-x path,
+    .chart .grid-y line,
+    .chart .grid-y path {
+      opacity: 0.1;
+    }
+
+    .chart .x-axis text,
+    .chart .y-axis text,
+    #custom-chart text {
+      fill: $black;
+      color: $black;
+    }
+
+    #custom-chart line {
+      stroke: $black;
+    }
+
+    .choropleth--range {
+      padding-top: 0;
+    }
+
+    .chart .x-axis-title,
+    .chart .y-axis-title {
+      fill: $black;
+    }
+
+    a {
+      color: $black;
+    }
+
+    p a {
+      word-wrap: break-word;
+
+      &:after {
+        content: ' (' attr(href) ')';
+        font-size: 80%;
+      }
+    }
+  }
+}

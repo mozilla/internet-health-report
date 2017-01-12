@@ -209,7 +209,7 @@ function language_selector() {
   $languages = icl_get_languages('skip_missing=0&orderby=code');
 
   if (!empty($languages)) {
-    echo '<div class=" header__lang-menu lang-menu">';
+    echo '<div class="header__lang-menu lang-menu">';
 
     foreach ($languages as $l) {
       if ($l['active']) echo '<a class="lang-menu__link lang-menu__inactive js-lang-menu" href="'.$l['url'].'">' . icl_disp_language($l['native_name']) . '</a>';
