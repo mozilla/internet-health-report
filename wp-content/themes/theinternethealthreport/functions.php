@@ -60,6 +60,7 @@ add_action('admin_menu', 'post_remove');
 // Allow json file upload
 function my_myme_types($mime_types){
   $mime_types['json'] = 'application/json';
+  $mime_types['tsv'] = 'text/tab-separated-values';
   return $mime_types;
 }
 add_filter('upload_mimes', 'my_myme_types', 1, 1);
