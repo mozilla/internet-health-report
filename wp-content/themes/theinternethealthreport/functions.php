@@ -58,13 +58,13 @@ function post_remove() {
 add_action('admin_menu', 'post_remove');
 
 // Allow json file upload
-function my_myme_types($mime_types){
+function custom_upload_types($mime_types = array()) {
   $mime_types['json'] = 'application/json';
   $mime_types['tsv'] = 'text/tab-separated-values';
+  $mimes['svg'] = 'image/svg+xml';
   return $mime_types;
 }
-add_filter('upload_mimes', 'my_myme_types', 1, 1);
-
+add_filter('upload_mimes', 'custom_upload_types');
 
 // Create Custom Post Types
 function register_custom_posts() {
@@ -203,12 +203,6 @@ function stringToId($str) {
   $id = preg_replace("/[\s_]/", "-", $strLower);
   return $id;
 }
-
-function cc_mime_types($mimes) {
-  $mimes['svg'] = 'image/svg+xml';
-  return $mimes;
-}
-add_filter('upload_mimes', 'cc_mime_types');
 
 function language_selector() {
   $languages = icl_get_languages('skip_missing=0&orderby=code');
