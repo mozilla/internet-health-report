@@ -242,7 +242,15 @@ function insert_og_tags_in_head() {
   echo '<meta property="og:site_name" content="' . get_bloginfo('name') . '"/>';
 
   if (!has_post_thumbnail( $post->ID )) {
-    $default_image = get_template_directory_uri() . '/assets/images/theinternethealthreport.png';
+    $front_page_ID = get_option( 'page_on_front' );
+    $shareImage = get_field('share_image', $front_page_ID);
+
+    if ($shareImage) {
+      $default_image = $shareImage;
+    } else {
+      $default_image = get_template_directory_uri() . '/assets/images/theinternethealthreport.png';
+    }
+
     echo '<meta property="og:image" content="' . $default_image . '"/>';
   } else {
     $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
