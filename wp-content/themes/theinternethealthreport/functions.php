@@ -233,9 +233,11 @@ function insert_og_tags_in_head() {
   global $post;
   if (!is_singular()) { return; }
 
-  echo '<meta name="twitter:card" content="summary" />';
+  echo '<meta name="twitter:card" content="summary_large_image" />';
   echo '<meta name="twitter:site" content="@mozilla" />';
-  echo '<meta name="twitter:creator" content="@mozilla" />';
+  echo '<meta property="twitter:title" content="' . get_the_title() . '"/>';
+  echo '<meta property="twitter:description" content="' . get_bloginfo('description') . '"/>';
+
   echo '<meta property="og:title" content="' . get_the_title() . '"/>';
   echo '<meta property="og:type" content="website"/>';
   echo '<meta property="og:url" content="' . get_permalink() . '"/>';
@@ -252,6 +254,7 @@ function insert_og_tags_in_head() {
     }
 
     echo '<meta property="og:image" content="' . $default_image . '"/>';
+    echo '<meta property="twitter:image" content="' . $default_image . '"/>';
   } else {
     $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
     echo '<meta property="og:image" content="' . esc_attr( $thumbnail_src[0] ) . '"/>';
