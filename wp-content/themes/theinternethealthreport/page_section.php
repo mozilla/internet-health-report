@@ -1,5 +1,8 @@
 <?php /* Template Name: Section */ ?>
-<?php get_header(); ?>
+<?php
+  get_header();
+  $page_permalink = get_permalink();
+?>
 
 <?php
   if (have_rows('subsections')) :
@@ -110,12 +113,13 @@
   <?php
     elseif (get_row_layout() == 'subsection_chart') :
       $chart_title = get_sub_field('title');
+      $chart_id = strtolower(preg_replace('#[ -]+#', '-', $chart_title));
       $chart_subtitle = get_sub_field('subtitle');
       $chart_text = get_sub_field('text');
   ?>
 
   <?php if ($chart_title) : ?>
-    <h4 class="subsection__chart-title"><?php echo $chart_title; ?></h4>
+    <h4 id="<?php echo $chart_id; ?>" class="subsection__chart-title"><?php echo $chart_title; ?></h4>
   <?php endif; ?>
 
   <?php if ($chart_subtitle) : ?>
@@ -139,7 +143,8 @@
         setup_postdata($post);
     ?>
     <div class="subsection__chart">
-      <?php get_template_part('content', 'chart'); ?>
+      <?php /* get_template_part('content', 'chart'); */ ?>
+      <?php include(locate_template('content-chart.php')); ?>
     </div>
     <?php wp_reset_postdata(); ?>
     <?php endif; ?>

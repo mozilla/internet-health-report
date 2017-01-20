@@ -107,8 +107,8 @@
 
   <div class="data__footer">
     <div class="data__share">
-      <a href="<?php echo get_facebook_share_url($permalink); ?>" target="_blank" class="data__link js-social-share"><?php get_template_part('assets/icons/icon', 'facebook.svg'); ?> <span class="data__link-text"><?php echo $facebookShareText; ?></span></a>
-      <a href="<?php echo get_twitter_share_url($permalink, get_the_title($ID)); ?>" target="_blank" class="data__link js-social-share"><?php get_template_part('assets/icons/icon', 'twitter.svg'); ?> <span class="data__link-text"><?php echo $twitterShareText; ?></span></a>
+      <a href="<?php echo get_facebook_share_url($page_permalink . '%23' . $chart_id); ?>" target="_blank" class="data__link js-social-share"><?php get_template_part('assets/icons/icon', 'facebook.svg'); ?> <span class="data__link-text"><?php echo $facebookShareText; ?></span></a>
+      <a href="<?php echo get_twitter_share_url($page_permalink . '#' . $chart_id, get_the_title($ID)); ?>" target="_blank" class="data__link js-social-share"><?php get_template_part('assets/icons/icon', 'twitter.svg'); ?> <span class="data__link-text"><?php echo $twitterShareText; ?></span></a>
       <button class="data__link js-embed-toggle" data-embed="<?php echo $permalink; ?>"><?php get_template_part('assets/icons/icon', 'embed.svg'); ?> <span class="data__link-text"><?php echo $embedShareText; ?></span></button>
 
       <div class="data__embed js-embed">
