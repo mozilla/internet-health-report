@@ -2,6 +2,7 @@
 <?php
   get_header();
   $page_permalink = get_permalink();
+  $page_permalink_str = rtrim($page_permalink, '/');
 ?>
 
 <?php
