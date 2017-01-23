@@ -1,5 +1,5 @@
 {
-  "name": "Internet Health Report",
+  "name": "internet-health-report",
   "version": "1.0.0",
   "description": "Mozilla’s new open source initiative to document and explain what’s happening to the health of the Internet combining research from multiple sources.",
   "main": "gulpfile.js",

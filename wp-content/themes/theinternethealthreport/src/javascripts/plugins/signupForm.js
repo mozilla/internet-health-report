@@ -56,6 +56,8 @@ const signupFormInit = () => {
           while (newsletterErrors.firstChild) newsletterErrors.removeChild(newsletterErrors.firstChild);
 
           var fmt = document.getElementById('fmt').value;
+          var country = document.getElementById('id_country').value;
+          var lang = document.getElementById('lang').value;
           var email = document.getElementById('email').value;
           var newsletter = document.getElementById('newsletters').value;
           var privacy = document.querySelector('input[name="privacy"]:checked') ? '&privacy=true' : '';
@@ -63,6 +65,8 @@ const signupFormInit = () => {
                        '&newsletters=' + newsletter +
                        privacy +
                        '&fmt=' + fmt +
+                       '&lang=' + lang +
+                       '&country=' + country +
                        '&source_url=' + encodeURIComponent(document.location.href);
 
           var xhr = new XMLHttpRequest();
