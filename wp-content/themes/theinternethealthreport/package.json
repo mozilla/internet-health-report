@@ -1,21 +1,21 @@
 {
-  "name": "starter",
+  "name": "Internet Health Report",
   "version": "1.0.0",
-  "description": "A front-end starter template",
+  "description": "Mozilla’s new open source initiative to document and explain what’s happening to the health of the Internet combining research from multiple sources.",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/marcellegane/starter.git"
+    "url": "https://github.com/mozilla/internet-health-report"
   },
-  "author": "",
+  "author": "Mozilla",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/marcellegane/starter/issues"
+    "url": "https://github.com/mozilla/internet-health-report/issues"
   },
-  "homepage": "https://github.com/marcellegane/starter",
+  "homepage": "https://github.com/mozilla/internet-health-report",
   "devDependencies": {
     "browser-sync": "^2.11.0",
     "browserify": "^13.0.0",
