@@ -8,10 +8,10 @@ The site is built with Wordpress Multisite and hosting/deployment is managed thr
 
 ## Installation
 
-`cd wp-content/themes/theinternethealthreport`
-`npm install`
+    cd wp-content/themes/theinternethealthreport
+    npm install
 
 ## To run
 
-`cd wp-content/themes/theinternethealthreport`
-`gulp`
+    cd wp-content/themes/theinternethealthreport
+    gulp
