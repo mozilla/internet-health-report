@@ -227,7 +227,7 @@ class Choropleth {
     const linearValue = d3.scaleLinear()
       .domain([this.dataRange[0], this.dataRange[1]])
       .range([0, 1]);
-    const rgbValue = d3.interpolate(`#ffffff`, `#f0c72f`);
+    const rgbValue = d3.interpolate(`#ffffff`, `#feeb34`);
     const constrainedValue = linearValue(value);
     const colour = rgbValue(constrainedValue);
 
