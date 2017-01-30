@@ -16,6 +16,7 @@
   $units = get_field('data_units', $ID);
   $legendLabel = get_field('legend_label', $ID);
   $isDataOrdinal = get_field('is_data_ordinal', $ID);
+  $unknownLabel = get_field('unknown_data_label', $ID);
   // Chart fields
   $xAxisTitle = get_field('x-axis_title', $ID);
   $yAxisTitle = get_field('y-axis_title', $ID);
@@ -71,6 +72,7 @@
     <?php if ($yAxisTitle) { echo 'data-y-axis-title="' . $yAxisTitle . '"'; } ?>
     <?php if ($legendLabel) { echo 'data-legend-label="' . $legendLabel . '"'; } ?>
     <?php if ($isDataOrdinal) { echo 'data-ordinal="' . $isDataOrdinal . '"'; } ?>
+    <?php if ($unknownLabel) { echo 'data-unknown-label="' . $unknownLabel . '"'; } else { echo 'data-unknown-label=""'; } ?>
     <?php if ($label_english) { echo 'data-label-english="' . $label_english . '"'; } ?>
     <?php if ($label_russian) { echo 'data-label-russian="' . $label_russian . '"'; } ?>
     <?php if ($label_german) { echo 'data-label-german="' . $label_german . '"'; } ?>

@@ -8,7 +8,7 @@ import * as topojson from 'topojson';
 window.$ = $;
 
 class Choropleth {
-  constructor(el, dataUrl, dataUnits = ``, isDataOrdinal = false, shapeUrl, legendLabel) {
+  constructor(el, dataUrl, dataUnits = ``, isDataOrdinal = false, shapeUrl, legendLabel, unknownLabel) {
     this.el = el;
     this.aspectRatio = 0.6663;
     this.width = $(this.el).width();
@@ -30,6 +30,7 @@ class Choropleth {
     this.dataUnits = dataUnits;
     this.isDataOrdinal = isDataOrdinal;
     this.legendLabel = legendLabel;
+    this.unknownLabel = unknownLabel ? unknownLabel : ``;
   }
 
   render() {
@@ -95,7 +96,7 @@ class Choropleth {
       // If the country shape name does not match a country name in the data
       if (!countrySet) {
         if (this.isDataOrdinal) {
-          country[this.dataKeys[1]] = `Unknown`;
+          country[this.dataKeys[1]] = this.unknownLabel.length > 0 ? this.unknownLabel : ``;
         }
       }
     });
@@ -114,7 +115,7 @@ class Choropleth {
             if (d[this.dataKeys[1]] !== undefined) {
               return `${d.properties.admin}: ${d[this.dataKeys[1]]}${this.dataUnits}`;
             } else {
-              return `${d.properties.admin}: n/a`;
+              return `${d.properties.admin}: `;
             }
           })
           .classed(`is-active`, true);
@@ -199,6 +200,16 @@ class Choropleth {
     ordinalLegend.append(`span`)
       .attr(`class`, this.legendClasses.legendName)
       .text((d, i) => this.scaleKeys[i]);
+
+    if (this.unknownLabel.length > 0) {
+      const $legend = $(`${this.el} .${this.legendClasses.choroplethLegend}`);
+      const $unknownLi = $(`<li class="${this.legendClasses.legendItem}" ></li>`);
+
+      $unknownLi.append(`<span class="${this.legendClasses.legendKey}" style="background-color: #000000"></span>`);
+      $unknownLi.append(`<span class="${this.legendClasses.legendName}">${this.unknownLabel}</span>`);
+
+      $legend.append($unknownLi);
+    }
   }
 
   setData() {
@@ -211,7 +222,11 @@ class Choropleth {
   setDataOrdinal() {
     d3.selectAll(`${this.el} .${this.classes.choroplethItem}`)
       .style(`fill`, d => {
-        return this.colorScale(d[this.dataKeys[1]]);
+        if (d[this.dataKeys[1]].length === 0 || d[this.dataKeys[1]] === this.unknownLabel) {
+          return `#000000`;
+        } else {
+          return this.colorScale(d[this.dataKeys[1]]);
+        }
       });
   }
 
@@ -246,8 +261,9 @@ const loadChoropleths = () => {
     const ordinal = $this.data(`ordinal`);
     const shapeData = $this.data(`world-shape-url`);
     const legendLabel = $this.data(`legend-label`);
+    const unknownLabel = $this.data(`unknown-label`);
 
-    new Choropleth(`#${id}`, url, units, ordinal, shapeData, legendLabel).render();
+    new Choropleth(`#${id}`, url, units, ordinal, shapeData, legendLabel, unknownLabel).render();
   });
 };
 
